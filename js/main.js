@@ -29,22 +29,22 @@ async function loadAll() {
   try {
     const base = getBase();
     console.log('Loading from:', base);
-    const [statsRes, HittersRes, pitchersRes] = await Promise.all([
+    const [statsRes, HittersRes, PitchersRes] = await Promise.all([
       fetch(base + 'data/stats.json'),
       fetch(base + 'data/Hitters.csv'),
       fetch(base + 'data/Pitchers.csv')
     ]);
     if (!statsRes.ok)    throw new Error('stats.json 404');
     if (!HittersRes.ok)  throw new Error('Hitters.csv 404');
-    if (!pitchersRes.ok) throw new Error('Pitchers.csv 404');
+    if (!PitchersRes.ok) throw new Error('Pitchers.csv 404');
     const stats       = await statsRes.json();
     const HittersCsv  = await HittersRes.text();
-    const pitchersCsv = await pitchersRes.text();
+    const PitchersCsv = await PitchersRes.text();
     console.log('Hitters raw first line:', HittersCsv.split('\n')[0].substring(0, 80));
-    console.log('Pitchers raw first line:', pitchersCsv.split('\n')[0].substring(0, 80));
+    console.log('Pitchers raw first line:', PitchersCsv.split('\n')[0].substring(0, 80));
     const Hitters  = parseCSV(HittersCsv,  'hitting');
-    const pitchers = parseCSV(pitchersCsv, 'pitching');
-    const players  = [...Hitters, ...pitchers];
+    const Pitchers = parseCSV(PitchersCsv, 'pitching');
+    const players  = [...Hitters, ...Pitchers];
     console.log('Players parsed:', players.length);
     return { teams: stats.teams, zoneConfig: stats.zoneConfig, players };
   } catch (e) {
