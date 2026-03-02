@@ -53,11 +53,11 @@ async function loadAll() {
     const hittersCsv  = await hittersRes.text();
     const pitchersCsv = await pitchersRes.text();
 
-    console.log('hitters.csv rows:', hittersCsv.trim().split('\n').length - 1);
-    console.log('pitchers.csv rows:', pitchersCsv.trim().split('\n').length - 1);
+    console.log('Hitters.csv rows:', hittersCsv.trim().split('\n').length - 1);
+    console.log('Pitchers.csv rows:', pitchersCsv.trim().split('\n').length - 1);
 
-    const hitters  = parseCSV(hittersCsv,  'hitting');
-    const pitchers = parseCSV(pitchersCsv, 'pitching');
+    const hitters  = parseCSV(hittersCsv,  'Hitting');
+    const pitchers = parseCSV(pitchersCsv, 'Pitching');
     const players  = [...hitters, ...pitchers];
 
     console.log('Total players parsed:', players.length);
