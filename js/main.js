@@ -33,13 +33,19 @@ function getCurrentPage() {
 
 function getBase() {
   const p = window.location.pathname;
-  return (p.endsWith('/team.html') || p.endsWith('/player.html')) ? '../' : '';
+  // Find the repo root by looking for /Hope/
+  const match = p.match(/^(\/Hope\/)/);
+  const root = match ? match[1] : '/Hope/';
+  if (p.endsWith('/team.html') || p.endsWith('/player.html')) {
+    return root;
+  }
+  return root;
 }
 
 // ─── LOAD ALL DATA ────────────────────────────────
 async function loadAll() {
   try {
-    const base = getBase();
+    const base = '/Hope/';
     const [statsRes, hittersRes, pitchersRes] = await Promise.all([
       fetch(base + STATS_PATH),
       fetch(base + HITTERS_PATH),
