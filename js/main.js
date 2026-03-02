@@ -5,7 +5,13 @@
 ================================================ */
 
 const REPO_NAME = 'Hope';
+<<<<<<< HEAD
 const ROOT = '/Hope/';
+=======
+const STATS_PATH  = 'data/stats.json';
+const HITTERS_PATH  = 'data/hitters.csv';
+const PITCHERS_PATH = 'data/pitchers.csv';
+>>>>>>> 7236de1a6962071512fa302918958276aed8d417
 
 let DATA = null; // { teams, players, zoneConfig }
 
@@ -30,12 +36,27 @@ function getCurrentPage() {
 }
 
 function getBase() {
+<<<<<<< HEAD
   return ROOT;
+=======
+  const p = window.location.pathname;
+  // Find the repo root by looking for /Hope/
+  const match = p.match(/^(\/Hope\/)/);
+  const root = match ? match[1] : '/Hope/';
+  if (p.endsWith('/team.html') || p.endsWith('/player.html')) {
+    return root;
+  }
+  return root;
+>>>>>>> 7236de1a6962071512fa302918958276aed8d417
 }
 
 // ─── LOAD ALL DATA ────────────────────────────────
 async function loadAll() {
   try {
+<<<<<<< HEAD
+=======
+    const base = '/Hope/';
+>>>>>>> 7236de1a6962071512fa302918958276aed8d417
     const [statsRes, hittersRes, pitchersRes] = await Promise.all([
       fetch(ROOT + 'data/stats.json'),
       fetch(ROOT + 'data/hitters.csv'),
