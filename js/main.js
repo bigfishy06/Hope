@@ -4,7 +4,7 @@
    Teams from data/stats.json
 ================================================ */
 
-const REPO_NAME = 'BIG-FISHY';
+const REPO_NAME = 'Hope';
 const STATS_PATH  = 'data/stats.json';
 const HITTERS_PATH  = 'data/hitters.csv';
 const PITCHERS_PATH = 'data/pitchers.csv';
