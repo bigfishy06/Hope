@@ -29,22 +29,22 @@ async function loadAll() {
   try {
     const base = getBase();
     console.log('Loading from:', base);
-    const [statsRes, hittersRes, pitchersRes] = await Promise.all([
+    const [statsRes, HittersRes, pitchersRes] = await Promise.all([
       fetch(base + 'data/stats.json'),
       fetch(base + 'data/Hitters.csv'),
       fetch(base + 'data/Pitchers.csv')
     ]);
     if (!statsRes.ok)    throw new Error('stats.json 404');
-    if (!hittersRes.ok)  throw new Error('Hitters.csv 404');
+    if (!HittersRes.ok)  throw new Error('Hitters.csv 404');
     if (!pitchersRes.ok) throw new Error('Pitchers.csv 404');
     const stats       = await statsRes.json();
-    const hittersCsv  = await hittersRes.text();
+    const HittersCsv  = await HittersRes.text();
     const pitchersCsv = await pitchersRes.text();
-    console.log('Hitters raw first line:', hittersCsv.split('\n')[0].substring(0, 80));
+    console.log('Hitters raw first line:', HittersCsv.split('\n')[0].substring(0, 80));
     console.log('Pitchers raw first line:', pitchersCsv.split('\n')[0].substring(0, 80));
-    const hitters  = parseCSV(hittersCsv,  'hitting');
+    const Hitters  = parseCSV(HittersCsv,  'hitting');
     const pitchers = parseCSV(pitchersCsv, 'pitching');
-    const players  = [...hitters, ...pitchers];
+    const players  = [...Hitters, ...pitchers];
     console.log('Players parsed:', players.length);
     return { teams: stats.teams, zoneConfig: stats.zoneConfig, players };
   } catch (e) {
@@ -238,7 +238,7 @@ function initTeamPage() {
   const content = document.getElementById('roster-content');
   function renderRoster(type) {
     content.innerHTML = '';
-    const filtered = players.filter(function(p) { return type === 'hitters' ? !!p.hitting : !!p.pitching; });
+    const filtered = players.filter(function(p) { return type === 'Hitters' ? !!p.hitting : !!p.pitching; });
     const bar = document.createElement('div');
     bar.className = 'roster-filters';
     bar.innerHTML = '<input class="roster-search" id="roster-search-input" placeholder="Search ' + type + '…" />';
@@ -252,7 +252,7 @@ function initTeamPage() {
     }
     const card = document.createElement('div');
     card.className = 'stat-card fade-up';
-    card.innerHTML = '<div class="stat-card-header"><span class="stat-card-title">' + (type === 'hitters' ? 'Hitting' : 'Pitching') + ' Stats</span><span class="stat-card-subtitle">' + filtered.length + ' players</span></div>' + (type === 'hitters' ? buildHittingTable(filtered) : buildPitchingTable(filtered));
+    card.innerHTML = '<div class="stat-card-header"><span class="stat-card-title">' + (type === 'Hitters' ? 'Hitting' : 'Pitching') + ' Stats</span><span class="stat-card-subtitle">' + filtered.length + ' players</span></div>' + (type === 'Hitters' ? buildHittingTable(filtered) : buildPitchingTable(filtered));
     content.appendChild(card);
     initTableSort(card.querySelector('table'));
     initPlayerLinks(card);
@@ -268,7 +268,7 @@ function initTeamPage() {
       renderRoster(tab.dataset.tab);
     });
   });
-  renderRoster('hitters');
+  renderRoster('Hitters');
 }
 
 function buildHittingTable(players) {
