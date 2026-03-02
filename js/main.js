@@ -64,7 +64,7 @@ function parseCSV(text, statType) {
   console.log(statType, 'all headers:', JSON.stringify(headers));
   const players = [];
   for (let i = 1; i < lines.length; i++) {
-    const row = lines[i].split(delim).map(v => v.trim());
+    const row = smartSplit(lines[i], delim);
     if (!row[0]) continue;
     const obj = {};
     headers.forEach((h, idx) => { obj[h] = (row[idx] || '').trim(); });
@@ -489,6 +489,26 @@ function hexToRgba(hex, alpha) {
 
 function showError(msg) {
   document.body.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;min-height:100vh;font-family:sans-serif;font-size:32px;color:#888">'+msg+'</div>';
+}
+
+function smartSplit(line, delim) {
+  delim = delim || ',';
+  const result = [];
+  let cur = '', inQuotes = false;
+  for (let i = 0; i < line.length; i++) {
+    const c = line[i];
+    if (c === '"') {
+      if (inQuotes && line[i + 1] === '"') { cur += '"'; i++; }
+      else { inQuotes = !inQuotes; }
+    } else if (c === delim && !inQuotes) {
+      result.push(cur.trim());
+      cur = '';
+    } else {
+      cur += c;
+    }
+  }
+  result.push(cur.trim());
+  return result;
 }
 
 init();
