@@ -1,9 +1,9 @@
 /* v4 - 2026-03-02 - DATA DIAMOND main.js */
 
-const REPO_NAME = 'Hope';
+const REPO_NAME = 'data-diamond';
 
 function getBase() {
-  return 'https://bigfishy06.github.io/Hope/';
+  return 'https://bigfishy06.github.io/data-diamond/';
 }
 
 let DATA = null;
@@ -29,22 +29,22 @@ async function loadAll() {
   try {
     const base = getBase();
     console.log('Loading from:', base);
-    const [statsRes, HittersRes, pitchersRes] = await Promise.all([
+    const [statsRes, HittersRes, PitchersRes] = await Promise.all([
       fetch(base + 'data/stats.json'),
       fetch(base + 'data/Hitters.csv'),
       fetch(base + 'data/Pitchers.csv')
     ]);
     if (!statsRes.ok)    throw new Error('stats.json 404');
     if (!HittersRes.ok)  throw new Error('Hitters.csv 404');
-    if (!pitchersRes.ok) throw new Error('Pitchers.csv 404');
+    if (!PitchersRes.ok) throw new Error('Pitchers.csv 404');
     const stats       = await statsRes.json();
     const HittersCsv  = await HittersRes.text();
-    const pitchersCsv = await pitchersRes.text();
+    const PitchersCsv = await PitchersRes.text();
     console.log('Hitters raw first line:', HittersCsv.split('\n')[0].substring(0, 80));
-    console.log('Pitchers raw first line:', pitchersCsv.split('\n')[0].substring(0, 80));
+    console.log('Pitchers raw first line:', PitchersCsv.split('\n')[0].substring(0, 80));
     const Hitters  = parseCSV(HittersCsv,  'hitting');
-    const pitchers = parseCSV(pitchersCsv, 'pitching');
-    const players  = [...Hitters, ...pitchers];
+    const Pitchers = parseCSV(PitchersCsv, 'pitching');
+    const players  = [...Hitters, ...Pitchers];
     console.log('Players parsed:', players.length);
     return { teams: stats.teams, zoneConfig: stats.zoneConfig, players };
   } catch (e) {
@@ -64,7 +64,7 @@ function parseCSV(text, statType) {
   console.log(statType, 'all headers:', JSON.stringify(headers));
   const players = [];
   for (let i = 1; i < lines.length; i++) {
-    const row = lines[i].split(delim).map(v => v.trim());
+    const row = smartSplit(lines[i], delim);
     if (!row[0]) continue;
     const obj = {};
     headers.forEach((h, idx) => { obj[h] = (row[idx] || '').trim(); });
@@ -101,19 +101,23 @@ function parseCSV(text, statType) {
 }
 
 function resolveTeamId(raw) {
-  if (!raw) return '';
-  const s = raw.toLowerCase().trim();
-  if (DATA && DATA.teams) {
-    const direct  = DATA.teams.find(t => t.id === s);
-    if (direct) return direct.id;
-    const abbr    = DATA.teams.find(t => t.abbreviation.toLowerCase() === s);
-    if (abbr) return abbr.id;
-    const partial = DATA.teams.find(t =>
-      t.name.toLowerCase().includes(s) || s.includes(t.name.toLowerCase().split(' ')[0])
-    );
-    if (partial) return partial.id;
-  }
-  return s;
+  if (!raw) return 'unk';
+  const s = raw.trim().toLowerCase();
+  const map = {
+    'barrie baycats': 'bar',
+    'brantford red sox': 'bra',
+    'chatham-kent barnstormers': 'ckb',
+    'guelph royals': 'gue',
+    'hamilton cardinals': 'ham',
+    'kitchener panthers': 'kit',
+    'london majors': 'lon',
+    'toronto maple leafs': 'tor',
+    'welland jackfish': 'wel',
+    'bar': 'bar', 'bra': 'bra', 'ckb': 'ckb',
+    'gue': 'gue', 'ham': 'ham', 'kit': 'kit',
+    'lon': 'lon', 'tor': 'tor', 'wel': 'wel'
+  };
+  return map[s] || 'unk';
 }
 
 function initIndex() {
@@ -489,6 +493,26 @@ function hexToRgba(hex, alpha) {
 
 function showError(msg) {
   document.body.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;min-height:100vh;font-family:sans-serif;font-size:32px;color:#888">'+msg+'</div>';
+}
+
+function smartSplit(line, delim) {
+  delim = delim || ',';
+  const result = [];
+  let cur = '', inQuotes = false;
+  for (let i = 0; i < line.length; i++) {
+    const c = line[i];
+    if (c === '"') {
+      if (inQuotes && line[i + 1] === '"') { cur += '"'; i++; }
+      else { inQuotes = !inQuotes; }
+    } else if (c === delim && !inQuotes) {
+      result.push(cur.trim());
+      cur = '';
+    } else {
+      cur += c;
+    }
+  }
+  result.push(cur.trim());
+  return result;
 }
 
 init();

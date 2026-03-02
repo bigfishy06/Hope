@@ -11,9 +11,9 @@
   --bg-4: #172030;
   --border: rgba(255,255,255,0.07);
   --border-bright: rgba(255,255,255,0.14);
-  --gold: #E8C84A;
-  --gold-dim: rgba(232,200,74,0.15);
-  --gold-mid: rgba(232,200,74,0.4);
+   --gold: #FFB81C;
+   --gold-dim: rgba(255,184,28,0.15);
+   --gold-mid: rgba(255,184,28,0.4);
   --text: #e8edf5;
   --text-dim: #6b7d94;
   --text-mid: #9aafc4;
@@ -81,7 +81,7 @@ a { color: inherit; text-decoration: none; }
 .logo-diamond {
   width: 32px;
   height: 32px;
-  filter: drop-shadow(0 0 8px rgba(232,200,74,0.5));
+  filter: drop-shadow(0 0 8px rgba(255,184,28,0.5));
 }
 .logo-text {
   font-family: var(--font-display);
@@ -188,8 +188,8 @@ a { color: inherit; text-decoration: none; }
   position: absolute;
   inset: 0;
   background: 
-    radial-gradient(ellipse 80% 60% at 50% 100%, rgba(232,200,74,0.06) 0%, transparent 70%),
-    radial-gradient(ellipse 60% 80% at 80% 20%, rgba(91,154,244,0.04) 0%, transparent 60%),
+    radial-gradient(ellipse 80% 60% at 50% 100%, rgba(255,184,28,0.06) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 80% at 80% 20%, rgba(0,61,165,0.04) 0%, transparent 60%),
     var(--bg);
 }
 
@@ -201,9 +201,9 @@ a { color: inherit; text-decoration: none; }
   width: 600px;
   height: 300px;
   background: 
-    linear-gradient(to top, rgba(232,200,74,0.04) 0%, transparent 100%);
+    linear-gradient(135deg, rgba(0,0,0,0) 0%, rgba(255,184,28,0.03) 100%);
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-  border: 1px solid rgba(232,200,74,0.08);
+  border: 1px solid rgba(255,184,28,0.08);
 }
 
 .hero-content {
@@ -516,7 +516,7 @@ a { color: inherit; text-decoration: none; }
   inset: 0;
   background: 
     linear-gradient(to bottom, transparent 40%, var(--bg) 100%),
-    linear-gradient(135deg, rgba(0,0,0,0) 0%, rgba(232,200,74,0.03) 100%);
+    linear-gradient(135deg, rgba(0,0,0,0) 0%, rgba(255,184,28,0.03) 100%);
 }
 .team-hero .container, .player-hero .container {
   position: relative;
@@ -945,7 +945,7 @@ a { color: inherit; text-decoration: none; }
 }
 .scatter-dot:hover { transform: translate(-50%, -50%) scale(1.5); opacity: 1; }
 .scatter-dot.hit { background: var(--green); box-shadow: 0 0 6px rgba(61,214,140,0.6); }
-.scatter-dot.hr { background: var(--gold); box-shadow: 0 0 8px rgba(232,200,74,0.7); width: 12px; height: 12px; }
+.scatter-dot.hr { background: var(--gold); box-shadow: 0 0 8px rgba(255,184,28,0.7); width: 12px; height: 12px; }
 .scatter-dot.out { background: var(--red); opacity: 0.6; }
 .scatter-dot.whiff { background: rgba(255,255,255,0.3); }
 .scatter-dot.strike { background: var(--green); box-shadow: 0 0 6px rgba(61,214,140,0.6); }
