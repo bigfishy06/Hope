@@ -882,15 +882,56 @@ a { color: inherit; text-decoration: none; }
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid var(--border);
+  padding-bottom: 20px;
+  padding-left: 20px;
 }
+
+/* Scatter zone box — dynamic via JS */
 .scatter-zone-box {
   position: absolute;
-  top: 15%;
-  left: 15%;
-  right: 15%;
-  bottom: 15%;
-  border: 2px solid rgba(255,255,255,0.2);
+  border: 2px solid rgba(255,255,255,0.35);
   border-radius: 2px;
+  pointer-events: none;
+  z-index: 2;
+}
+.sz-grid-line {
+  position: absolute;
+  background: rgba(255,255,255,0.08);
+  pointer-events: none;
+}
+.sz-grid-line.sz-h { left: 0; right: 0; height: 1px; }
+.sz-grid-line.sz-v { top: 0; bottom: 0; width: 1px; }
+
+/* Axes */
+.scatter-axis-x {
+  position: absolute;
+  bottom: 0;
+  left: 0; right: 0;
+  height: 20px;
+  pointer-events: none;
+}
+.scatter-axis-x span {
+  position: absolute;
+  transform: translateX(-50%);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--text-dim);
+  bottom: 2px;
+}
+.scatter-axis-y {
+  position: absolute;
+  top: 0; bottom: 20px;
+  left: 0;
+  width: 20px;
+  pointer-events: none;
+}
+.scatter-axis-y span {
+  position: absolute;
+  transform: translateY(-50%);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--text-dim);
+  left: 2px;
 }
 .scatter-dot {
   position: absolute;

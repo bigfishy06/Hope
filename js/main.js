@@ -640,10 +640,31 @@ function renderZone(player, isHitter) {
     return `<div class="heatmap-cell" style="background:${color}" title="${pct}%"></div>`;
   }).join('');
 
-  // Build scatter HTML
+  // Build scatter HTML using XY coords
+  // x: -1=left zone edge, 0=center, +1=right zone edge
+  // y: 0=bottom zone edge, 1=top zone edge
+  const xMin = -1.8, xMax = 1.8, yMin = -0.5, yMax = 1.5;
+  const xRange = xMax - xMin;
+  const yRange = yMax - yMin;
+
   const dots = sz.scatterPoints.map(pt => {
-    return `<div class="scatter-dot ${pt.result}" style="left:${pt.x*100}%;top:${(1-pt.y)*100}%" title="${pt.result}"></div>`;
+    const leftPct = ((pt.x - xMin) / xRange * 100).toFixed(2);
+    const topPct  = ((1 - (pt.y - yMin) / yRange) * 100).toFixed(2);
+    const tip = `${pt.type || ''} ${pt.velo ? pt.velo + ' mph · ' : ''}${pt.result}`;
+    return `<div class="scatter-dot ${pt.result}" style="left:${leftPct}%;top:${topPct}%" title="${tip}"></div>`;
   }).join('');
+
+  // Strike zone box in % terms (zone spans x:-1 to +1, y:0 to 1)
+  const szLeft   = ((-1  - xMin) / xRange * 100).toFixed(2);
+  const szTop    = ((1   - (1   - yMin) / yRange) * 100).toFixed(2);
+  const szWidth  = ((1   - (-1)) / xRange * 100).toFixed(2);
+  const szHeight = ((1   - (0   - yMin) / yRange) - (1 - (1 - yMin) / yRange)).toFixed(2) + '%';
+
+  // Y axis inner thirds lines
+  const szThird1Top = ((1 - (0.333 - yMin) / yRange) * 100).toFixed(2);
+  const szThird2Top = ((1 - (0.667 - yMin) / yRange) * 100).toFixed(2);
+  const szXThird1   = ((-0.333 - xMin) / xRange * 100).toFixed(2);
+  const szXThird2   = ((0.333  - xMin) / xRange * 100).toFixed(2);
 
   // Build zone breakdown
   const locations = ['HI', 'IN', 'UP', 'IN', 'OUT', 'MID', 'MID', 'MID', 'MID', 'MID', 'LO', 'IN', 'DN', 'IN', 'OUT', 'OB', 'OB', 'OB', 'OB', 'OB', 'OB', 'OB', 'OB', 'OB', 'OB'];
@@ -685,7 +706,22 @@ function renderZone(player, isHitter) {
       <div class="zone-panel">
         <div class="zone-panel-title">Pitch Location Plot</div>
         <div class="scatter-container">
-          <div class="scatter-zone-box"></div>
+          <div class="scatter-zone-box" style="left:${szLeft}%;top:${szTop}%;width:${szWidth}%;height:${szHeight}">
+            <div class="sz-grid-line sz-h" style="top:33.3%"></div>
+            <div class="sz-grid-line sz-h" style="top:66.6%"></div>
+            <div class="sz-grid-line sz-v" style="left:33.3%"></div>
+            <div class="sz-grid-line sz-v" style="left:66.6%"></div>
+          </div>
+          <div class="scatter-axis-x">
+            <span style="left:${((-1-xMin)/xRange*100).toFixed(1)}%">-1</span>
+            <span style="left:${((0-xMin)/xRange*100).toFixed(1)}%">0</span>
+            <span style="left:${((1-xMin)/xRange*100).toFixed(1)}%">+1</span>
+          </div>
+          <div class="scatter-axis-y">
+            <span style="top:${((1-(1-yMin)/yRange)*100).toFixed(1)}%">1</span>
+            <span style="top:${((1-(0.5-yMin)/yRange)*100).toFixed(1)}%">.5</span>
+            <span style="top:${((1-(0-yMin)/yRange)*100).toFixed(1)}%">0</span>
+          </div>
           ${dots}
         </div>
         <div class="scatter-legend">

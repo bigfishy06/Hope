@@ -1,42 +1,60 @@
 {
   "teams": [
-    { "id": "bar", "name": "Barrie Baycats", "abbreviation": "BAR", "league": "CBL", "division": "Ontario", "primaryColor": "#1A3A6B", "secondaryColor": "#E8C84A" },
-    { "id": "bra", "name": "Brantford Red Sox", "abbreviation": "BRA", "league": "CBL", "division": "Ontario", "primaryColor": "#C8102E", "secondaryColor": "#0C2340" },
+    { "id": "bar", "name": "Barrie Baycats",           "abbreviation": "BAR", "league": "CBL", "division": "Ontario", "primaryColor": "#1A3A6B", "secondaryColor": "#E8C84A" },
+    { "id": "bra", "name": "Brantford Red Sox",         "abbreviation": "BRA", "league": "CBL", "division": "Ontario", "primaryColor": "#C8102E", "secondaryColor": "#0C2340" },
     { "id": "ckb", "name": "Chatham-Kent Barnstormers", "abbreviation": "CKB", "league": "CBL", "division": "Ontario", "primaryColor": "#2B5F35", "secondaryColor": "#D4A017" },
-    { "id": "gue", "name": "Guelph Royals", "abbreviation": "GUE", "league": "CBL", "division": "Ontario", "primaryColor": "#002F6C", "secondaryColor": "#C8A951" },
-    { "id": "ham", "name": "Hamilton Cardinals", "abbreviation": "HAM", "league": "CBL", "division": "Ontario", "primaryColor": "#C41E3A", "secondaryColor": "#1A1A1A" },
-    { "id": "kit", "name": "Kitchener Panthers", "abbreviation": "KIT", "league": "CBL", "division": "Ontario", "primaryColor": "#1C3D6E", "secondaryColor": "#E8A020" },
-    { "id": "lon", "name": "London Majors", "abbreviation": "LON", "league": "CBL", "division": "Ontario", "primaryColor": "#003087", "secondaryColor": "#E31837" },
-    { "id": "tor", "name": "Toronto Maple Leafs", "abbreviation": "TOR", "league": "CBL", "division": "Ontario", "primaryColor": "#003F87", "secondaryColor": "#FFFFFF" },
-    { "id": "wel", "name": "Welland Jackfish", "abbreviation": "WEL", "league": "CBL", "division": "Ontario", "primaryColor": "#1A6B3A", "secondaryColor": "#1A3A6B" }
+    { "id": "gue", "name": "Guelph Royals",             "abbreviation": "GUE", "league": "CBL", "division": "Ontario", "primaryColor": "#002F6C", "secondaryColor": "#C8A951" },
+    { "id": "ham", "name": "Hamilton Cardinals",         "abbreviation": "HAM", "league": "CBL", "division": "Ontario", "primaryColor": "#C41E3A", "secondaryColor": "#1A1A1A" },
+    { "id": "kit", "name": "Kitchener Panthers",         "abbreviation": "KIT", "league": "CBL", "division": "Ontario", "primaryColor": "#1C3D6E", "secondaryColor": "#E8A020" },
+    { "id": "lon", "name": "London Majors",              "abbreviation": "LON", "league": "CBL", "division": "Ontario", "primaryColor": "#003087", "secondaryColor": "#E31837" },
+    { "id": "tor", "name": "Toronto Maple Leafs",        "abbreviation": "TOR", "league": "CBL", "division": "Ontario", "primaryColor": "#003F87", "secondaryColor": "#FFFFFF" },
+    { "id": "wel", "name": "Welland Jackfish",           "abbreviation": "WEL", "league": "CBL", "division": "Ontario", "primaryColor": "#1A6B3A", "secondaryColor": "#1A3A6B" }
   ],
+
+  "zoneConfig": {
+    "note": "x: -1=left edge of zone, 0=center, +1=right edge of zone. y: 0=bottom edge of zone, 1=top edge. Points outside -1 to 1 range are outside the strike zone.",
+    "xMin": -1.8, "xMax": 1.8,
+    "yMin": -0.5, "yMax": 1.5
+  },
+
   "players": [
     {
       "id": "p001", "name": "Marcus Rivera", "team": "bar", "position": "OF", "number": 27, "bats": "R", "throws": "R",
       "hitting": { "avg": 0.312, "obp": 0.389, "slg": 0.541, "ops": 0.930, "hr": 28, "rbi": 94, "r": 101, "h": 167, "2b": 34, "3b": 4, "sb": 18, "bb": 72, "k": 118, "pa": 598, "ab": 536, "wRC_plus": 148, "babip": 0.341, "iso": 0.229 },
       "strikeZone": {
-        "heatmap": [
-          [0.18, 0.24, 0.31, 0.27, 0.15],
-          [0.22, 0.38, 0.51, 0.44, 0.21],
-          [0.28, 0.49, 0.63, 0.55, 0.29],
-          [0.24, 0.41, 0.58, 0.47, 0.24],
-          [0.12, 0.19, 0.28, 0.22, 0.11]
-        ],
+        "heatmap": [[0.18,0.24,0.31,0.27,0.15],[0.22,0.38,0.51,0.44,0.21],[0.28,0.49,0.63,0.55,0.29],[0.24,0.41,0.58,0.47,0.24],[0.12,0.19,0.28,0.22,0.11]],
         "pitchTypes": {
-          "fastball": { "avg": 0.341, "slg": 0.612, "whiff": 0.18 },
-          "slider": { "avg": 0.278, "slg": 0.467, "whiff": 0.31 },
+          "fastball":  { "avg": 0.341, "slg": 0.612, "whiff": 0.18 },
+          "slider":    { "avg": 0.278, "slg": 0.467, "whiff": 0.31 },
           "curveball": { "avg": 0.211, "slg": 0.368, "whiff": 0.38 },
-          "changeup": { "avg": 0.298, "slg": 0.521, "whiff": 0.24 }
+          "changeup":  { "avg": 0.298, "slg": 0.521, "whiff": 0.24 }
         },
         "scatterPoints": [
-          {"x": 0.2, "y": 0.7, "result": "hit"}, {"x": 0.5, "y": 0.8, "result": "hit"},
-          {"x": 0.8, "y": 0.6, "result": "out"}, {"x": 0.3, "y": 0.4, "result": "hit"},
-          {"x": 0.6, "y": 0.3, "result": "whiff"}, {"x": 0.4, "y": 0.6, "result": "hit"},
-          {"x": 0.7, "y": 0.7, "result": "hr"}, {"x": 0.2, "y": 0.5, "result": "out"},
-          {"x": 0.5, "y": 0.2, "result": "whiff"}, {"x": 0.9, "y": 0.4, "result": "out"},
-          {"x": 0.1, "y": 0.8, "result": "whiff"}, {"x": 0.6, "y": 0.6, "result": "hr"},
-          {"x": 0.3, "y": 0.3, "result": "hit"}, {"x": 0.8, "y": 0.8, "result": "hit"},
-          {"x": 0.4, "y": 0.1, "result": "whiff"}, {"x": 0.7, "y": 0.5, "result": "out"}
+          { "x": -0.70, "y": 0.85, "result": "hit",   "type": "Fastball",  "velo": 94.2 },
+          { "x":  0.20, "y": 0.55, "result": "hit",   "type": "Fastball",  "velo": 93.8 },
+          { "x":  0.55, "y": 0.30, "result": "hr",    "type": "Fastball",  "velo": 95.1 },
+          { "x": -0.35, "y": 0.25, "result": "hit",   "type": "Changeup",  "velo": 84.3 },
+          { "x":  0.10, "y": 0.70, "result": "out",   "type": "Slider",    "velo": 87.6 },
+          { "x":  0.75, "y": 0.80, "result": "out",   "type": "Fastball",  "velo": 94.7 },
+          { "x": -1.40, "y": 0.20, "result": "ball",  "type": "Curveball", "velo": 76.2 },
+          { "x":  1.50, "y": 0.60, "result": "ball",  "type": "Slider",    "velo": 86.9 },
+          { "x":  0.00, "y":-0.25, "result": "ball",  "type": "Curveball", "velo": 75.8 },
+          { "x": -0.60, "y": 1.20, "result": "ball",  "type": "Fastball",  "velo": 93.1 },
+          { "x":  0.40, "y": 0.15, "result": "hit",   "type": "Changeup",  "velo": 85.0 },
+          { "x": -0.20, "y": 0.50, "result": "hr",    "type": "Fastball",  "velo": 96.3 },
+          { "x":  0.90, "y":-0.10, "result": "whiff", "type": "Slider",    "velo": 88.1 },
+          { "x": -0.50, "y": 0.75, "result": "out",   "type": "Changeup",  "velo": 83.7 },
+          { "x":  0.60, "y": 0.50, "result": "hit",   "type": "Fastball",  "velo": 95.5 },
+          { "x": -0.30, "y": 0.95, "result": "out",   "type": "Slider",    "velo": 86.4 },
+          { "x":  0.45, "y":-0.05, "result": "whiff", "type": "Curveball", "velo": 76.8 },
+          { "x": -0.75, "y": 0.40, "result": "whiff", "type": "Slider",    "velo": 87.2 },
+          { "x":  0.30, "y": 0.65, "result": "hit",   "type": "Fastball",  "velo": 94.9 },
+          { "x": -0.10, "y": 0.45, "result": "hr",    "type": "Changeup",  "velo": 85.6 },
+          { "x":  0.65, "y": 0.75, "result": "out",   "type": "Slider",    "velo": 87.8 },
+          { "x": -0.55, "y":-0.15, "result": "whiff", "type": "Curveball", "velo": 76.0 },
+          { "x":  0.10, "y": 0.60, "result": "hit",   "type": "Fastball",  "velo": 95.3 },
+          { "x": -1.20, "y": 0.70, "result": "ball",  "type": "Fastball",  "velo": 93.0 },
+          { "x":  1.30, "y": 0.35, "result": "ball",  "type": "Slider",    "velo": 87.0 }
         ]
       }
     },
@@ -44,25 +62,39 @@
       "id": "p002", "name": "Derek Castillo", "team": "bar", "position": "SP", "number": 18, "bats": "R", "throws": "R",
       "pitching": { "era": 2.87, "whip": 1.01, "k9": 11.2, "bb9": 2.1, "hr9": 0.7, "fip": 2.94, "xfip": 3.12, "w": 15, "l": 5, "sv": 0, "ip": 188.2, "h": 152, "er": 60, "bb": 44, "k": 235, "gs": 30, "cg": 2, "sho": 1, "war": 6.1, "k_pct": 0.312, "bb_pct": 0.058 },
       "strikeZone": {
-        "heatmap": [
-          [0.45, 0.52, 0.48, 0.41, 0.38],
-          [0.51, 0.61, 0.67, 0.59, 0.44],
-          [0.48, 0.64, 0.72, 0.63, 0.47],
-          [0.42, 0.58, 0.65, 0.56, 0.41],
-          [0.34, 0.44, 0.51, 0.43, 0.32]
-        ],
+        "heatmap": [[0.45,0.52,0.48,0.41,0.38],[0.51,0.61,0.67,0.59,0.44],[0.48,0.64,0.72,0.63,0.47],[0.42,0.58,0.65,0.56,0.41],[0.34,0.44,0.51,0.43,0.32]],
         "pitchTypes": {
-          "4seam": { "velo": 96.4, "spin": 2310, "whiff": 0.28, "k_pct": 0.31 },
-          "slider": { "velo": 87.1, "spin": 2580, "whiff": 0.41, "k_pct": 0.38 },
+          "4seam":     { "velo": 96.4, "spin": 2310, "whiff": 0.28, "k_pct": 0.31 },
+          "slider":    { "velo": 87.1, "spin": 2580, "whiff": 0.41, "k_pct": 0.38 },
           "curveball": { "velo": 78.3, "spin": 2890, "whiff": 0.36, "k_pct": 0.34 },
-          "changeup": { "velo": 86.2, "spin": 1840, "whiff": 0.33, "k_pct": 0.29 }
+          "changeup":  { "velo": 86.2, "spin": 1840, "whiff": 0.33, "k_pct": 0.29 }
         },
         "scatterPoints": [
-          {"x": 0.3, "y": 0.7, "result": "strike"}, {"x": 0.5, "y": 0.5, "result": "strike"},
-          {"x": 0.7, "y": 0.6, "result": "ball"}, {"x": 0.4, "y": 0.4, "result": "strike"},
-          {"x": 0.6, "y": 0.8, "result": "strike"}, {"x": 0.2, "y": 0.3, "result": "ball"},
-          {"x": 0.8, "y": 0.4, "result": "strike"}, {"x": 0.5, "y": 0.7, "result": "strike"},
-          {"x": 0.3, "y": 0.2, "result": "ball"}, {"x": 0.6, "y": 0.5, "result": "strike"}
+          { "x":  0.10, "y": 0.75, "result": "strike", "type": "4seam",    "velo": 96.8 },
+          { "x": -0.50, "y": 0.55, "result": "strike", "type": "Slider",   "velo": 87.4 },
+          { "x":  0.60, "y": 0.30, "result": "strike", "type": "4seam",    "velo": 97.1 },
+          { "x": -1.10, "y": 1.25, "result": "ball",   "type": "Curveball","velo": 78.3 },
+          { "x":  0.30, "y": 0.10, "result": "strike", "type": "Changeup", "velo": 86.2 },
+          { "x":  1.40, "y": 0.60, "result": "ball",   "type": "4seam",    "velo": 96.4 },
+          { "x": -0.20, "y": 0.50, "result": "strike", "type": "Slider",   "velo": 87.9 },
+          { "x":  0.70, "y": 0.90, "result": "strike", "type": "4seam",    "velo": 95.9 },
+          { "x": -0.60, "y":-0.25, "result": "ball",   "type": "Curveball","velo": 77.8 },
+          { "x":  0.40, "y": 0.20, "result": "strike", "type": "Slider",   "velo": 88.2 },
+          { "x": -0.30, "y": 0.65, "result": "strike", "type": "4seam",    "velo": 96.6 },
+          { "x":  0.80, "y": 0.40, "result": "strike", "type": "Changeup", "velo": 85.8 },
+          { "x": -1.50, "y": 0.60, "result": "ball",   "type": "4seam",    "velo": 97.3 },
+          { "x":  0.20, "y":-0.30, "result": "ball",   "type": "Curveball","velo": 78.1 },
+          { "x":  0.50, "y": 0.80, "result": "strike", "type": "Slider",   "velo": 87.6 },
+          { "x": -0.40, "y": 0.35, "result": "strike", "type": "4seam",    "velo": 96.2 },
+          { "x":  0.00, "y": 0.55, "result": "strike", "type": "Changeup", "velo": 86.0 },
+          { "x":  1.60, "y": 0.85, "result": "ball",   "type": "Slider",   "velo": 87.0 },
+          { "x": -0.70, "y": 0.15, "result": "strike", "type": "Slider",   "velo": 88.4 },
+          { "x":  0.60, "y":-0.15, "result": "ball",   "type": "Curveball","velo": 78.6 },
+          { "x": -0.10, "y": 0.88, "result": "strike", "type": "4seam",    "velo": 97.0 },
+          { "x":  0.75, "y": 0.45, "result": "strike", "type": "Slider",   "velo": 87.2 },
+          { "x": -0.55, "y": 0.70, "result": "strike", "type": "4seam",    "velo": 96.5 },
+          { "x":  0.35, "y":-0.10, "result": "ball",   "type": "Curveball","velo": 77.5 },
+          { "x": -1.60, "y": 0.50, "result": "ball",   "type": "4seam",    "velo": 96.9 }
         ]
       }
     },
@@ -70,25 +102,34 @@
       "id": "p003", "name": "Tyler Okonkwo", "team": "kit", "position": "3B", "number": 31, "bats": "R", "throws": "R",
       "hitting": { "avg": 0.289, "obp": 0.358, "slg": 0.512, "ops": 0.870, "hr": 32, "rbi": 102, "r": 88, "h": 158, "2b": 29, "3b": 2, "sb": 5, "bb": 58, "k": 134, "pa": 578, "ab": 547, "wRC_plus": 138, "babip": 0.311, "iso": 0.223 },
       "strikeZone": {
-        "heatmap": [
-          [0.14, 0.21, 0.19, 0.17, 0.12],
-          [0.20, 0.42, 0.56, 0.38, 0.18],
-          [0.25, 0.55, 0.68, 0.52, 0.27],
-          [0.19, 0.38, 0.49, 0.35, 0.20],
-          [0.10, 0.16, 0.21, 0.15, 0.09]
-        ],
+        "heatmap": [[0.14,0.21,0.19,0.17,0.12],[0.20,0.42,0.56,0.38,0.18],[0.25,0.55,0.68,0.52,0.27],[0.19,0.38,0.49,0.35,0.20],[0.10,0.16,0.21,0.15,0.09]],
         "pitchTypes": {
-          "fastball": { "avg": 0.318, "slg": 0.589, "whiff": 0.21 },
-          "slider": { "avg": 0.241, "slg": 0.421, "whiff": 0.42 },
+          "fastball":  { "avg": 0.318, "slg": 0.589, "whiff": 0.21 },
+          "slider":    { "avg": 0.241, "slg": 0.421, "whiff": 0.42 },
           "curveball": { "avg": 0.198, "slg": 0.312, "whiff": 0.45 },
-          "changeup": { "avg": 0.271, "slg": 0.478, "whiff": 0.29 }
+          "changeup":  { "avg": 0.271, "slg": 0.478, "whiff": 0.29 }
         },
         "scatterPoints": [
-          {"x": 0.4, "y": 0.6, "result": "hit"}, {"x": 0.5, "y": 0.5, "result": "hr"},
-          {"x": 0.6, "y": 0.7, "result": "out"}, {"x": 0.3, "y": 0.4, "result": "whiff"},
-          {"x": 0.7, "y": 0.3, "result": "out"}, {"x": 0.5, "y": 0.8, "result": "hit"},
-          {"x": 0.2, "y": 0.6, "result": "whiff"}, {"x": 0.8, "y": 0.5, "result": "hit"},
-          {"x": 0.4, "y": 0.2, "result": "whiff"}, {"x": 0.6, "y": 0.4, "result": "hr"}
+          { "x":  0.50, "y": 0.50, "result": "hit",   "type": "Fastball",  "velo": 93.5 },
+          { "x": -0.30, "y": 0.75, "result": "out",   "type": "Fastball",  "velo": 92.8 },
+          { "x":  0.20, "y": 0.30, "result": "hr",    "type": "Fastball",  "velo": 94.6 },
+          { "x": -0.70, "y": 0.10, "result": "whiff", "type": "Curveball", "velo": 77.3 },
+          { "x":  0.80, "y": 0.85, "result": "out",   "type": "Slider",    "velo": 86.1 },
+          { "x": -0.10, "y": 0.60, "result": "hit",   "type": "Changeup",  "velo": 83.9 },
+          { "x":  1.40, "y": 0.45, "result": "ball",  "type": "Fastball",  "velo": 93.2 },
+          { "x": -1.50, "y": 0.70, "result": "ball",  "type": "Slider",    "velo": 85.7 },
+          { "x":  0.60, "y":-0.15, "result": "ball",  "type": "Curveball", "velo": 76.9 },
+          { "x": -0.50, "y": 1.20, "result": "ball",  "type": "Fastball",  "velo": 93.8 },
+          { "x":  0.30, "y": 0.40, "result": "hit",   "type": "Fastball",  "velo": 94.1 },
+          { "x": -0.20, "y": 0.05, "result": "whiff", "type": "Slider",    "velo": 86.5 },
+          { "x":  0.70, "y": 0.65, "result": "out",   "type": "Changeup",  "velo": 84.2 },
+          { "x": -0.60, "y": 0.35, "result": "whiff", "type": "Curveball", "velo": 77.8 },
+          { "x":  0.40, "y": 0.80, "result": "hr",    "type": "Fastball",  "velo": 95.0 },
+          { "x": -0.80, "y": 0.55, "result": "out",   "type": "Slider",    "velo": 85.9 },
+          { "x":  0.10, "y": 0.20, "result": "hit",   "type": "Changeup",  "velo": 84.7 },
+          { "x":  1.60, "y": 0.60, "result": "ball",  "type": "Fastball",  "velo": 93.0 },
+          { "x": -0.40, "y":-0.20, "result": "ball",  "type": "Curveball", "velo": 76.4 },
+          { "x":  0.55, "y": 0.50, "result": "out",   "type": "Slider",    "velo": 86.8 }
         ]
       }
     },
@@ -96,24 +137,34 @@
       "id": "p004", "name": "Jordan Webb", "team": "kit", "position": "SP", "number": 44, "bats": "L", "throws": "L",
       "pitching": { "era": 3.21, "whip": 1.09, "k9": 10.4, "bb9": 2.4, "hr9": 0.9, "fip": 3.34, "xfip": 3.28, "w": 13, "l": 7, "sv": 0, "ip": 174.1, "h": 161, "er": 62, "bb": 47, "k": 201, "gs": 28, "cg": 1, "sho": 0, "war": 4.8, "k_pct": 0.289, "bb_pct": 0.068 },
       "strikeZone": {
-        "heatmap": [
-          [0.41, 0.48, 0.44, 0.39, 0.35],
-          [0.47, 0.58, 0.64, 0.55, 0.41],
-          [0.45, 0.61, 0.69, 0.60, 0.44],
-          [0.39, 0.54, 0.62, 0.53, 0.38],
-          [0.31, 0.41, 0.48, 0.40, 0.29]
-        ],
+        "heatmap": [[0.41,0.48,0.44,0.39,0.35],[0.47,0.58,0.64,0.55,0.41],[0.45,0.61,0.69,0.60,0.44],[0.39,0.54,0.62,0.53,0.38],[0.31,0.41,0.48,0.40,0.29]],
         "pitchTypes": {
-          "4seam": { "velo": 93.8, "spin": 2180, "whiff": 0.24, "k_pct": 0.27 },
-          "cutter": { "velo": 89.2, "spin": 2340, "whiff": 0.31, "k_pct": 0.33 },
+          "4seam":     { "velo": 93.8, "spin": 2180, "whiff": 0.24, "k_pct": 0.27 },
+          "cutter":    { "velo": 89.2, "spin": 2340, "whiff": 0.31, "k_pct": 0.33 },
           "curveball": { "velo": 76.8, "spin": 2760, "whiff": 0.38, "k_pct": 0.36 },
-          "changeup": { "velo": 84.1, "spin": 1780, "whiff": 0.35, "k_pct": 0.31 }
+          "changeup":  { "velo": 84.1, "spin": 1780, "whiff": 0.35, "k_pct": 0.31 }
         },
         "scatterPoints": [
-          {"x": 0.4, "y": 0.6, "result": "strike"}, {"x": 0.5, "y": 0.5, "result": "strike"},
-          {"x": 0.3, "y": 0.7, "result": "ball"}, {"x": 0.6, "y": 0.4, "result": "strike"},
-          {"x": 0.7, "y": 0.7, "result": "strike"}, {"x": 0.2, "y": 0.2, "result": "ball"},
-          {"x": 0.5, "y": 0.3, "result": "strike"}, {"x": 0.8, "y": 0.6, "result": "ball"}
+          { "x": -0.40, "y": 0.75, "result": "strike", "type": "4seam",    "velo": 93.6 },
+          { "x":  0.50, "y": 0.50, "result": "strike", "type": "Cutter",   "velo": 89.0 },
+          { "x": -0.70, "y": 0.25, "result": "strike", "type": "4seam",    "velo": 94.1 },
+          { "x":  1.20, "y": 1.15, "result": "ball",   "type": "Curveball","velo": 76.5 },
+          { "x": -0.20, "y": 0.10, "result": "strike", "type": "Changeup", "velo": 84.3 },
+          { "x": -1.40, "y": 0.60, "result": "ball",   "type": "4seam",    "velo": 93.9 },
+          { "x":  0.30, "y": 0.40, "result": "strike", "type": "Cutter",   "velo": 89.4 },
+          { "x": -0.60, "y": 0.90, "result": "strike", "type": "4seam",    "velo": 93.4 },
+          { "x":  0.90, "y":-0.20, "result": "ball",   "type": "Curveball","velo": 77.0 },
+          { "x": -0.10, "y": 0.20, "result": "strike", "type": "Cutter",   "velo": 88.8 },
+          { "x":  0.40, "y": 0.65, "result": "strike", "type": "4seam",    "velo": 93.7 },
+          { "x": -0.80, "y": 0.45, "result": "strike", "type": "Changeup", "velo": 84.0 },
+          { "x":  1.50, "y": 0.70, "result": "ball",   "type": "4seam",    "velo": 94.2 },
+          { "x": -0.30, "y":-0.25, "result": "ball",   "type": "Curveball","velo": 76.8 },
+          { "x":  0.60, "y": 0.55, "result": "strike", "type": "Cutter",   "velo": 89.2 },
+          { "x": -0.50, "y": 0.15, "result": "strike", "type": "4seam",    "velo": 93.5 },
+          { "x":  0.10, "y": 0.55, "result": "strike", "type": "Changeup", "velo": 83.8 },
+          { "x":  1.30, "y": 0.10, "result": "ball",   "type": "Curveball","velo": 77.2 },
+          { "x": -0.65, "y": 1.25, "result": "ball",   "type": "4seam",    "velo": 93.8 },
+          { "x":  0.45, "y": 0.35, "result": "strike", "type": "Cutter",   "velo": 89.1 }
         ]
       }
     },
@@ -121,25 +172,34 @@
       "id": "p005", "name": "Carlos Mendes", "team": "wel", "position": "SS", "number": 6, "bats": "S", "throws": "R",
       "hitting": { "avg": 0.301, "obp": 0.371, "slg": 0.488, "ops": 0.859, "hr": 22, "rbi": 87, "r": 96, "h": 171, "2b": 38, "3b": 6, "sb": 28, "bb": 62, "k": 98, "pa": 612, "ab": 568, "wRC_plus": 133, "babip": 0.328, "iso": 0.187 },
       "strikeZone": {
-        "heatmap": [
-          [0.21, 0.28, 0.33, 0.30, 0.18],
-          [0.26, 0.44, 0.58, 0.49, 0.24],
-          [0.31, 0.52, 0.65, 0.57, 0.31],
-          [0.27, 0.45, 0.54, 0.42, 0.25],
-          [0.14, 0.22, 0.30, 0.24, 0.13]
-        ],
+        "heatmap": [[0.21,0.28,0.33,0.30,0.18],[0.26,0.44,0.58,0.49,0.24],[0.31,0.52,0.65,0.57,0.31],[0.27,0.45,0.54,0.42,0.25],[0.14,0.22,0.30,0.24,0.13]],
         "pitchTypes": {
-          "fastball": { "avg": 0.328, "slg": 0.541, "whiff": 0.16 },
-          "slider": { "avg": 0.261, "slg": 0.398, "whiff": 0.34 },
+          "fastball":  { "avg": 0.328, "slg": 0.541, "whiff": 0.16 },
+          "slider":    { "avg": 0.261, "slg": 0.398, "whiff": 0.34 },
           "curveball": { "avg": 0.224, "slg": 0.348, "whiff": 0.40 },
-          "changeup": { "avg": 0.287, "slg": 0.464, "whiff": 0.22 }
+          "changeup":  { "avg": 0.287, "slg": 0.464, "whiff": 0.22 }
         },
         "scatterPoints": [
-          {"x": 0.5, "y": 0.6, "result": "hit"}, {"x": 0.4, "y": 0.7, "result": "hit"},
-          {"x": 0.6, "y": 0.5, "result": "out"}, {"x": 0.3, "y": 0.5, "result": "hit"},
-          {"x": 0.7, "y": 0.4, "result": "whiff"}, {"x": 0.5, "y": 0.3, "result": "out"},
-          {"x": 0.2, "y": 0.7, "result": "whiff"}, {"x": 0.8, "y": 0.6, "result": "hit"},
-          {"x": 0.4, "y": 0.4, "result": "hit"}, {"x": 0.6, "y": 0.8, "result": "out"}
+          { "x":  0.30, "y": 0.65, "result": "hit",   "type": "Fastball",  "velo": 92.4 },
+          { "x": -0.60, "y": 0.45, "result": "hit",   "type": "Fastball",  "velo": 91.8 },
+          { "x":  0.70, "y": 0.80, "result": "out",   "type": "Slider",    "velo": 85.3 },
+          { "x": -0.20, "y": 0.05, "result": "whiff", "type": "Curveball", "velo": 75.1 },
+          { "x":  0.50, "y": 0.35, "result": "hit",   "type": "Changeup",  "velo": 82.7 },
+          { "x": -1.10, "y": 1.15, "result": "ball",  "type": "Fastball",  "velo": 92.0 },
+          { "x":  1.30, "y": 0.55, "result": "ball",  "type": "Slider",    "velo": 85.8 },
+          { "x": -0.40, "y": 0.25, "result": "hit",   "type": "Fastball",  "velo": 93.1 },
+          { "x":  0.20, "y": 0.90, "result": "out",   "type": "Changeup",  "velo": 83.2 },
+          { "x": -1.50, "y": 0.60, "result": "ball",  "type": "Fastball",  "velo": 91.6 },
+          { "x":  0.60, "y": 0.05, "result": "whiff", "type": "Curveball", "velo": 75.6 },
+          { "x": -0.30, "y": 0.50, "result": "hit",   "type": "Fastball",  "velo": 92.9 },
+          { "x":  0.10, "y": 0.55, "result": "hit",   "type": "Changeup",  "velo": 83.5 },
+          { "x":  0.80, "y": 0.15, "result": "out",   "type": "Slider",    "velo": 86.0 },
+          { "x": -0.70, "y": 0.70, "result": "whiff", "type": "Slider",    "velo": 85.5 },
+          { "x":  0.40, "y": 0.75, "result": "out",   "type": "Fastball",  "velo": 92.6 },
+          { "x": -0.50, "y":-0.25, "result": "ball",  "type": "Curveball", "velo": 74.9 },
+          { "x":  1.50, "y": 0.80, "result": "ball",  "type": "Fastball",  "velo": 91.4 },
+          { "x": -0.10, "y": 0.50, "result": "hit",   "type": "Fastball",  "velo": 93.0 },
+          { "x":  0.55, "y": 0.60, "result": "out",   "type": "Slider",    "velo": 85.2 }
         ]
       }
     },
@@ -147,25 +207,34 @@
       "id": "p006", "name": "Nathan Pryce", "team": "gue", "position": "1B", "number": 25, "bats": "L", "throws": "L",
       "hitting": { "avg": 0.278, "obp": 0.362, "slg": 0.531, "ops": 0.893, "hr": 35, "rbi": 108, "r": 84, "h": 152, "2b": 31, "3b": 1, "sb": 3, "bb": 74, "k": 142, "pa": 591, "ab": 547, "wRC_plus": 141, "babip": 0.298, "iso": 0.253 },
       "strikeZone": {
-        "heatmap": [
-          [0.16, 0.22, 0.28, 0.23, 0.14],
-          [0.21, 0.39, 0.52, 0.43, 0.20],
-          [0.27, 0.47, 0.61, 0.53, 0.28],
-          [0.22, 0.40, 0.55, 0.44, 0.22],
-          [0.11, 0.18, 0.25, 0.19, 0.10]
-        ],
+        "heatmap": [[0.16,0.22,0.28,0.23,0.14],[0.21,0.39,0.52,0.43,0.20],[0.27,0.47,0.61,0.53,0.28],[0.22,0.40,0.55,0.44,0.22],[0.11,0.18,0.25,0.19,0.10]],
         "pitchTypes": {
-          "fastball": { "avg": 0.304, "slg": 0.581, "whiff": 0.22 },
-          "slider": { "avg": 0.258, "slg": 0.445, "whiff": 0.37 },
+          "fastball":  { "avg": 0.304, "slg": 0.581, "whiff": 0.22 },
+          "slider":    { "avg": 0.258, "slg": 0.445, "whiff": 0.37 },
           "curveball": { "avg": 0.219, "slg": 0.374, "whiff": 0.43 },
-          "changeup": { "avg": 0.281, "slg": 0.498, "whiff": 0.26 }
+          "changeup":  { "avg": 0.281, "slg": 0.498, "whiff": 0.26 }
         },
         "scatterPoints": [
-          {"x": 0.3, "y": 0.6, "result": "hr"}, {"x": 0.5, "y": 0.7, "result": "hit"},
-          {"x": 0.7, "y": 0.5, "result": "out"}, {"x": 0.4, "y": 0.3, "result": "whiff"},
-          {"x": 0.6, "y": 0.6, "result": "hr"}, {"x": 0.2, "y": 0.5, "result": "hit"},
-          {"x": 0.8, "y": 0.7, "result": "out"}, {"x": 0.5, "y": 0.4, "result": "hit"},
-          {"x": 0.3, "y": 0.2, "result": "whiff"}, {"x": 0.7, "y": 0.3, "result": "out"}
+          { "x": -0.50, "y": 0.80, "result": "hr",    "type": "Fastball",  "velo": 93.2 },
+          { "x":  0.20, "y": 0.90, "result": "hit",   "type": "Fastball",  "velo": 92.5 },
+          { "x":  0.60, "y": 0.45, "result": "out",   "type": "Slider",    "velo": 85.0 },
+          { "x": -0.30, "y": 0.10, "result": "whiff", "type": "Curveball", "velo": 75.4 },
+          { "x":  0.40, "y": 0.70, "result": "hr",    "type": "Fastball",  "velo": 94.0 },
+          { "x": -0.70, "y": 0.55, "result": "hit",   "type": "Changeup",  "velo": 83.1 },
+          { "x":  1.20, "y": 0.80, "result": "ball",  "type": "Fastball",  "velo": 92.8 },
+          { "x": -0.10, "y": 0.35, "result": "hit",   "type": "Fastball",  "velo": 93.6 },
+          { "x":  0.80, "y": 0.20, "result": "whiff", "type": "Slider",    "velo": 85.7 },
+          { "x": -1.30, "y": 0.65, "result": "ball",  "type": "Fastball",  "velo": 92.1 },
+          { "x":  0.30, "y": 0.55, "result": "out",   "type": "Changeup",  "velo": 83.8 },
+          { "x": -0.60, "y":-0.20, "result": "ball",  "type": "Curveball", "velo": 75.9 },
+          { "x":  0.50, "y": 0.30, "result": "out",   "type": "Slider",    "velo": 86.2 },
+          { "x": -0.20, "y": 0.75, "result": "hit",   "type": "Fastball",  "velo": 93.9 },
+          { "x":  0.70, "y": 1.15, "result": "ball",  "type": "Fastball",  "velo": 92.3 },
+          { "x": -0.80, "y": 0.20, "result": "whiff", "type": "Curveball", "velo": 76.1 },
+          { "x":  0.10, "y": 0.60, "result": "hr",    "type": "Fastball",  "velo": 94.5 },
+          { "x": -0.40, "y": 0.45, "result": "out",   "type": "Slider",    "velo": 85.4 },
+          { "x":  1.40, "y": 0.40, "result": "ball",  "type": "Fastball",  "velo": 91.8 },
+          { "x": -1.00, "y": 0.85, "result": "ball",  "type": "Changeup",  "velo": 83.4 }
         ]
       }
     },
@@ -173,24 +242,34 @@
       "id": "p007", "name": "Eli Thornton", "team": "tor", "position": "C", "number": 12, "bats": "R", "throws": "R",
       "hitting": { "avg": 0.265, "obp": 0.341, "slg": 0.467, "ops": 0.808, "hr": 24, "rbi": 78, "r": 64, "h": 134, "2b": 26, "3b": 1, "sb": 2, "bb": 51, "k": 128, "pa": 511, "ab": 505, "wRC_plus": 121, "babip": 0.289, "iso": 0.202 },
       "strikeZone": {
-        "heatmap": [
-          [0.13, 0.19, 0.24, 0.20, 0.12],
-          [0.18, 0.34, 0.46, 0.38, 0.17],
-          [0.23, 0.43, 0.57, 0.49, 0.24],
-          [0.18, 0.35, 0.48, 0.39, 0.19],
-          [0.10, 0.15, 0.22, 0.17, 0.09]
-        ],
+        "heatmap": [[0.13,0.19,0.24,0.20,0.12],[0.18,0.34,0.46,0.38,0.17],[0.23,0.43,0.57,0.49,0.24],[0.18,0.35,0.48,0.39,0.19],[0.10,0.15,0.22,0.17,0.09]],
         "pitchTypes": {
-          "fastball": { "avg": 0.291, "slg": 0.512, "whiff": 0.24 },
-          "slider": { "avg": 0.234, "slg": 0.398, "whiff": 0.38 },
+          "fastball":  { "avg": 0.291, "slg": 0.512, "whiff": 0.24 },
+          "slider":    { "avg": 0.234, "slg": 0.398, "whiff": 0.38 },
           "curveball": { "avg": 0.198, "slg": 0.334, "whiff": 0.44 },
-          "changeup": { "avg": 0.267, "slg": 0.451, "whiff": 0.28 }
+          "changeup":  { "avg": 0.267, "slg": 0.451, "whiff": 0.28 }
         },
         "scatterPoints": [
-          {"x": 0.5, "y": 0.5, "result": "hit"}, {"x": 0.4, "y": 0.6, "result": "out"},
-          {"x": 0.6, "y": 0.7, "result": "hit"}, {"x": 0.3, "y": 0.4, "result": "whiff"},
-          {"x": 0.7, "y": 0.5, "result": "out"}, {"x": 0.5, "y": 0.3, "result": "hr"},
-          {"x": 0.2, "y": 0.6, "result": "whiff"}, {"x": 0.8, "y": 0.4, "result": "out"}
+          { "x":  0.40, "y": 0.50, "result": "hit",   "type": "Fastball",  "velo": 91.5 },
+          { "x": -0.20, "y": 0.70, "result": "out",   "type": "Fastball",  "velo": 90.8 },
+          { "x":  0.60, "y": 0.85, "result": "hit",   "type": "Slider",    "velo": 84.3 },
+          { "x": -0.50, "y": 0.15, "result": "whiff", "type": "Curveball", "velo": 74.6 },
+          { "x":  0.10, "y": 0.40, "result": "out",   "type": "Fastball",  "velo": 92.0 },
+          { "x": -1.00, "y": 0.60, "result": "ball",  "type": "Fastball",  "velo": 91.2 },
+          { "x":  1.20, "y": 0.35, "result": "ball",  "type": "Slider",    "velo": 84.8 },
+          { "x": -0.30, "y": 0.30, "result": "hit",   "type": "Changeup",  "velo": 82.1 },
+          { "x":  0.70, "y": 0.10, "result": "whiff", "type": "Curveball", "velo": 75.2 },
+          { "x": -1.30, "y": 0.75, "result": "ball",  "type": "Fastball",  "velo": 90.6 },
+          { "x":  0.30, "y": 0.60, "result": "hr",    "type": "Fastball",  "velo": 92.8 },
+          { "x": -0.60, "y": 0.45, "result": "out",   "type": "Slider",    "velo": 84.5 },
+          { "x":  0.50, "y":-0.15, "result": "ball",  "type": "Curveball", "velo": 74.9 },
+          { "x": -0.10, "y": 0.55, "result": "hit",   "type": "Changeup",  "velo": 82.6 },
+          { "x":  0.80, "y": 0.75, "result": "out",   "type": "Fastball",  "velo": 91.7 },
+          { "x": -0.40, "y":-0.25, "result": "ball",  "type": "Curveball", "velo": 75.5 },
+          { "x":  0.20, "y": 0.25, "result": "whiff", "type": "Slider",    "velo": 85.1 },
+          { "x": -0.70, "y": 0.85, "result": "ball",  "type": "Fastball",  "velo": 90.4 },
+          { "x":  0.55, "y": 0.50, "result": "hit",   "type": "Fastball",  "velo": 92.3 },
+          { "x": -0.25, "y": 0.65, "result": "out",   "type": "Changeup",  "velo": 82.9 }
         ]
       }
     },
@@ -198,25 +277,39 @@
       "id": "p008", "name": "Ramon Fuentes", "team": "ham", "position": "SP", "number": 22, "bats": "R", "throws": "R",
       "pitching": { "era": 2.54, "whip": 0.95, "k9": 12.1, "bb9": 1.8, "hr9": 0.6, "fip": 2.61, "xfip": 2.88, "w": 17, "l": 4, "sv": 0, "ip": 198.1, "h": 141, "er": 56, "bb": 40, "k": 267, "gs": 32, "cg": 3, "sho": 2, "war": 7.4, "k_pct": 0.338, "bb_pct": 0.051 },
       "strikeZone": {
-        "heatmap": [
-          [0.48, 0.55, 0.51, 0.44, 0.40],
-          [0.54, 0.64, 0.70, 0.62, 0.47],
-          [0.51, 0.67, 0.75, 0.66, 0.50],
-          [0.45, 0.60, 0.68, 0.58, 0.43],
-          [0.37, 0.47, 0.54, 0.46, 0.35]
-        ],
+        "heatmap": [[0.48,0.55,0.51,0.44,0.40],[0.54,0.64,0.70,0.62,0.47],[0.51,0.67,0.75,0.66,0.50],[0.45,0.60,0.68,0.58,0.43],[0.37,0.47,0.54,0.46,0.35]],
         "pitchTypes": {
-          "4seam": { "velo": 97.2, "spin": 2420, "whiff": 0.31, "k_pct": 0.34 },
-          "slider": { "velo": 88.4, "spin": 2640, "whiff": 0.45, "k_pct": 0.42 },
-          "splitter": { "velo": 85.7, "spin": 1620, "whiff": 0.48, "k_pct": 0.44 },
+          "4seam":     { "velo": 97.2, "spin": 2420, "whiff": 0.31, "k_pct": 0.34 },
+          "slider":    { "velo": 88.4, "spin": 2640, "whiff": 0.45, "k_pct": 0.42 },
+          "splitter":  { "velo": 85.7, "spin": 1620, "whiff": 0.48, "k_pct": 0.44 },
           "curveball": { "velo": 79.1, "spin": 2910, "whiff": 0.39, "k_pct": 0.37 }
         },
         "scatterPoints": [
-          {"x": 0.5, "y": 0.6, "result": "strike"}, {"x": 0.4, "y": 0.5, "result": "strike"},
-          {"x": 0.6, "y": 0.7, "result": "strike"}, {"x": 0.3, "y": 0.4, "result": "ball"},
-          {"x": 0.7, "y": 0.5, "result": "strike"}, {"x": 0.5, "y": 0.3, "result": "strike"},
-          {"x": 0.2, "y": 0.7, "result": "ball"}, {"x": 0.8, "y": 0.6, "result": "strike"},
-          {"x": 0.4, "y": 0.8, "result": "strike"}, {"x": 0.6, "y": 0.4, "result": "strike"}
+          { "x":  0.20, "y": 0.70, "result": "strike", "type": "4seam",    "velo": 97.4 },
+          { "x": -0.60, "y": 0.30, "result": "strike", "type": "Slider",   "velo": 88.6 },
+          { "x":  0.50, "y": 0.85, "result": "strike", "type": "4seam",    "velo": 97.8 },
+          { "x": -0.30, "y": 0.15, "result": "strike", "type": "Splitter", "velo": 85.9 },
+          { "x":  0.80, "y": 0.50, "result": "strike", "type": "Slider",   "velo": 88.1 },
+          { "x": -1.30, "y": 0.60, "result": "ball",   "type": "4seam",    "velo": 97.2 },
+          { "x":  0.10, "y": 0.40, "result": "strike", "type": "Splitter", "velo": 86.2 },
+          { "x": -0.70, "y": 0.80, "result": "strike", "type": "4seam",    "velo": 97.6 },
+          { "x":  1.40, "y": 0.25, "result": "ball",   "type": "Slider",   "velo": 88.3 },
+          { "x": -0.20, "y": 0.55, "result": "strike", "type": "Curveball","velo": 79.3 },
+          { "x":  0.60, "y": 0.20, "result": "strike", "type": "Splitter", "velo": 85.5 },
+          { "x": -0.80, "y":-0.20, "result": "ball",   "type": "Curveball","velo": 78.8 },
+          { "x":  0.30, "y": 0.60, "result": "strike", "type": "4seam",    "velo": 97.0 },
+          { "x": -0.40, "y": 0.90, "result": "strike", "type": "Slider",   "velo": 88.7 },
+          { "x":  1.60, "y": 0.70, "result": "ball",   "type": "4seam",    "velo": 97.5 },
+          { "x": -0.10, "y": 0.30, "result": "strike", "type": "Splitter", "velo": 85.8 },
+          { "x":  0.70, "y": 0.65, "result": "strike", "type": "4seam",    "velo": 97.3 },
+          { "x": -0.55, "y": 0.45, "result": "strike", "type": "Slider",   "velo": 88.0 },
+          { "x":  0.40, "y":-0.10, "result": "ball",   "type": "Curveball","velo": 79.0 },
+          { "x": -1.60, "y": 0.55, "result": "ball",   "type": "4seam",    "velo": 97.1 },
+          { "x":  0.00, "y": 0.75, "result": "strike", "type": "Splitter", "velo": 86.0 },
+          { "x": -0.65, "y": 0.10, "result": "strike", "type": "Slider",   "velo": 88.5 },
+          { "x":  0.55, "y": 0.40, "result": "strike", "type": "4seam",    "velo": 97.7 },
+          { "x": -0.25, "y": 0.65, "result": "strike", "type": "Splitter", "velo": 85.6 },
+          { "x":  0.90, "y": 1.20, "result": "ball",   "type": "4seam",    "velo": 97.2 }
         ]
       }
     }
