@@ -1,7 +1,7 @@
 /* v3 - 2026-03-02 */
 /* ================================================
    DATA DIAMOND — main.js
-   Loads players from data/hitters.csv and data/pitchers.csv
+   Loads players from data/Hitters.csv and data/pitchers.csv
    Teams from data/stats.json
 ================================================ */
 
@@ -39,26 +39,26 @@ async function loadAll() {
     const base = getBase();
     console.log('Loading data from base:', base);
 
-    const [statsRes, hittersRes, pitchersRes] = await Promise.all([
+    const [statsRes, HittersRes, pitchersRes] = await Promise.all([
       fetch(base + 'data/stats.json'),
       fetch(base + 'data/Hitters.csv'),
       fetch(base + 'data/Pitchers.csv')
     ]);
 
     if (!statsRes.ok)    throw new Error('stats.json failed: '   + statsRes.status);
-    if (!hittersRes.ok)  throw new Error('hitters.csv failed: '  + hittersRes.status);
+    if (!HittersRes.ok)  throw new Error('Hitters.csv failed: '  + HittersRes.status);
     if (!pitchersRes.ok) throw new Error('pitchers.csv failed: ' + pitchersRes.status);
 
     const stats       = await statsRes.json();
-    const hittersCsv  = await hittersRes.text();
+    const HittersCsv  = await HittersRes.text();
     const pitchersCsv = await pitchersRes.text();
 
-    console.log('Hitters.csv rows:', hittersCsv.trim().split('\n').length - 1);
+    console.log('Hitters.csv rows:', HittersCsv.trim().split('\n').length - 1);
     console.log('Pitchers.csv rows:', pitchersCsv.trim().split('\n').length - 1);
 
-    const hitters  = parseCSV(hittersCsv,  'Hitting');
+    const Hitters  = parseCSV(HittersCsv,  'Hitting');
     const pitchers = parseCSV(pitchersCsv, 'Pitching');
-    const players  = [...hitters, ...pitchers];
+    const players  = [...Hitters, ...pitchers];
 
     console.log('Total players parsed:', players.length);
 
@@ -261,7 +261,7 @@ function buildFeaturedPlayers() {
       <div class="empty-state" style="grid-column:1/-1">
         <div class="empty-state-icon">⚾</div>
         <h3>No players yet</h3>
-        <p>Add rows to <code>data/hitters.csv</code> or <code>data/pitchers.csv</code> to see players here.</p>
+        <p>Add rows to <code>data/Hitters.csv</code> or <code>data/pitchers.csv</code> to see players here.</p>
       </div>`;
     return;
   }
@@ -388,7 +388,7 @@ function initTeamPage() {
   function renderRoster(type) {
     content.innerHTML = '';
 
-    const filtered = players.filter(p => type === 'hitters' ? !!p.hitting : !!p.pitching);
+    const filtered = players.filter(p => type === 'Hitters' ? !!p.hitting : !!p.pitching);
 
     // Search bar
     const bar = document.createElement('div');
@@ -402,7 +402,7 @@ function initTeamPage() {
       empty.innerHTML = `
         <div class="empty-state-icon">⚾</div>
         <h3>No ${type} data yet</h3>
-        <p>Add rows with <code>team=${teamId}</code> to <code>data/${type === 'hitters' ? 'hitters' : 'pitchers'}.csv</code>.</p>
+        <p>Add rows with <code>team=${teamId}</code> to <code>data/${type === 'Hitters' ? 'Hitters' : 'pitchers'}.csv</code>.</p>
       `;
       content.appendChild(empty);
       return;
@@ -412,10 +412,10 @@ function initTeamPage() {
     card.className = 'stat-card fade-up';
     card.innerHTML = `
       <div class="stat-card-header">
-        <span class="stat-card-title">${type === 'hitters' ? 'Hitting' : 'Pitching'} Stats</span>
+        <span class="stat-card-title">${type === 'Hitters' ? 'Hitting' : 'Pitching'} Stats</span>
         <span class="stat-card-subtitle">${filtered.length} players · Click header to sort</span>
       </div>
-      ${type === 'hitters' ? buildHittingTable(filtered) : buildPitchingTable(filtered)}
+      ${type === 'Hitters' ? buildHittingTable(filtered) : buildPitchingTable(filtered)}
     `;
     content.appendChild(card);
     initTableSort(card.querySelector('table'));
@@ -437,7 +437,7 @@ function initTeamPage() {
     });
   });
 
-  renderRoster('hitters');
+  renderRoster('Hitters');
 }
 
 function buildHittingTable(players) {
