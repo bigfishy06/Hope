@@ -53,11 +53,11 @@ async function loadAll() {
     const hittersCsv  = await hittersRes.text();
     const pitchersCsv = await pitchersRes.text();
 
-    console.log('Hitters.csv rows:', hittersCsv.trim().split('\n').length - 1);
-    console.log('Pitchers.csv rows:', pitchersCsv.trim().split('\n').length - 1);
+    console.log('hitters.csv rows:', hittersCsv.trim().split('\n').length - 1);
+    console.log('pitchers.csv rows:', pitchersCsv.trim().split('\n').length - 1);
 
-    const hitters  = parseCSV(hittersCsv,  'Hitting');
-    const pitchers = parseCSV(pitchersCsv, 'Pitching');
+    const hitters  = parseCSV(hittersCsv,  'hitting');
+    const pitchers = parseCSV(pitchersCsv, 'pitching');
     const players  = [...hitters, ...pitchers];
 
     console.log('Total players parsed:', players.length);
@@ -84,11 +84,16 @@ function parseCSV(text, statType) {
   const lines = text.trim().split('\n').filter(l => l.trim());
   if (lines.length < 2) return [];
 
-  const headers = lines[0].split(',').map(h => h.trim());
+  // Auto-detect delimiter — tab or comma
+  const delim = lines[0].includes('\t') ? '\t' : ',';
+  console.log(statType, 'delimiter detected:', delim === '\t' ? 'TAB' : 'COMMA');
+
+  const headers = lines[0].split(delim).map(h => h.trim());
+  console.log(statType, 'headers:', headers);
   const players = [];
 
   for (let i = 1; i < lines.length; i++) {
-    const row = smartSplit(lines[i]);
+    const row = delim === '\t' ? lines[i].split('\t').map(v => v.trim()) : smartSplit(lines[i]);
     if (!row[0] || !row[0].trim()) continue;
 
     const obj = {};
