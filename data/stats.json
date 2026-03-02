@@ -1,39 +1,18 @@
 {
   "teams": [
-    { "id": "ari", "name": "Arizona Diamondbacks", "abbreviation": "ARI", "league": "NL", "division": "NL West", "primaryColor": "#A71930", "secondaryColor": "#E3D4AD" },
-    { "id": "atl", "name": "Atlanta Braves", "abbreviation": "ATL", "league": "NL", "division": "NL East", "primaryColor": "#CE1141", "secondaryColor": "#13274F" },
-    { "id": "bal", "name": "Baltimore Orioles", "abbreviation": "BAL", "league": "AL", "division": "AL East", "primaryColor": "#DF4601", "secondaryColor": "#000000" },
-    { "id": "bos", "name": "Boston Red Sox", "abbreviation": "BOS", "league": "AL", "division": "AL East", "primaryColor": "#BD3039", "secondaryColor": "#0C2340" },
-    { "id": "chc", "name": "Chicago Cubs", "abbreviation": "CHC", "league": "NL", "division": "NL Central", "primaryColor": "#0E3386", "secondaryColor": "#CC3433" },
-    { "id": "chw", "name": "Chicago White Sox", "abbreviation": "CWS", "league": "AL", "division": "AL Central", "primaryColor": "#27251F", "secondaryColor": "#C4CED4" },
-    { "id": "cin", "name": "Cincinnati Reds", "abbreviation": "CIN", "league": "NL", "division": "NL Central", "primaryColor": "#C6011F", "secondaryColor": "#000000" },
-    { "id": "cle", "name": "Cleveland Guardians", "abbreviation": "CLE", "league": "AL", "division": "AL Central", "primaryColor": "#00385D", "secondaryColor": "#E31937" },
-    { "id": "col", "name": "Colorado Rockies", "abbreviation": "COL", "league": "NL", "division": "NL West", "primaryColor": "#33006F", "secondaryColor": "#C4CED4" },
-    { "id": "det", "name": "Detroit Tigers", "abbreviation": "DET", "league": "AL", "division": "AL Central", "primaryColor": "#0C2340", "secondaryColor": "#FA4616" },
-    { "id": "hou", "name": "Houston Astros", "abbreviation": "HOU", "league": "AL", "division": "AL West", "primaryColor": "#002D62", "secondaryColor": "#EB6E1F" },
-    { "id": "kc", "name": "Kansas City Royals", "abbreviation": "KC", "league": "AL", "division": "AL Central", "primaryColor": "#004687", "secondaryColor": "#C09A5B" },
-    { "id": "laa", "name": "Los Angeles Angels", "abbreviation": "LAA", "league": "AL", "division": "AL West", "primaryColor": "#BA0021", "secondaryColor": "#003263" },
-    { "id": "lad", "name": "Los Angeles Dodgers", "abbreviation": "LAD", "league": "NL", "division": "NL West", "primaryColor": "#005A9C", "secondaryColor": "#EF3E42" },
-    { "id": "mia", "name": "Miami Marlins", "abbreviation": "MIA", "league": "NL", "division": "NL East", "primaryColor": "#00A3E0", "secondaryColor": "#EF3340" },
-    { "id": "mil", "name": "Milwaukee Brewers", "abbreviation": "MIL", "league": "NL", "division": "NL Central", "primaryColor": "#12284B", "secondaryColor": "#FFC52F" },
-    { "id": "min", "name": "Minnesota Twins", "abbreviation": "MIN", "league": "AL", "division": "AL Central", "primaryColor": "#002B5C", "secondaryColor": "#D31145" },
-    { "id": "nym", "name": "New York Mets", "abbreviation": "NYM", "league": "NL", "division": "NL East", "primaryColor": "#002D72", "secondaryColor": "#FF5910" },
-    { "id": "nyy", "name": "New York Yankees", "abbreviation": "NYY", "league": "AL", "division": "AL East", "primaryColor": "#003087", "secondaryColor": "#C4CED4" },
-    { "id": "oak", "name": "Oakland Athletics", "abbreviation": "OAK", "league": "AL", "division": "AL West", "primaryColor": "#003831", "secondaryColor": "#EFB21E" },
-    { "id": "phi", "name": "Philadelphia Phillies", "abbreviation": "PHI", "league": "NL", "division": "NL East", "primaryColor": "#E81828", "secondaryColor": "#002D72" },
-    { "id": "pit", "name": "Pittsburgh Pirates", "abbreviation": "PIT", "league": "NL", "division": "NL Central", "primaryColor": "#27251F", "secondaryColor": "#FDB827" },
-    { "id": "sd", "name": "San Diego Padres", "abbreviation": "SD", "league": "NL", "division": "NL West", "primaryColor": "#2F241D", "secondaryColor": "#FFC425" },
-    { "id": "sf", "name": "San Francisco Giants", "abbreviation": "SF", "league": "NL", "division": "NL West", "primaryColor": "#FD5A1E", "secondaryColor": "#27251F" },
-    { "id": "sea", "name": "Seattle Mariners", "abbreviation": "SEA", "league": "AL", "division": "AL West", "primaryColor": "#0C2C56", "secondaryColor": "#005C5C" },
-    { "id": "stl", "name": "St. Louis Cardinals", "abbreviation": "STL", "league": "NL", "division": "NL Central", "primaryColor": "#C41E3A", "secondaryColor": "#0C2340" },
-    { "id": "tb", "name": "Tampa Bay Rays", "abbreviation": "TB", "league": "AL", "division": "AL East", "primaryColor": "#092C5C", "secondaryColor": "#8FBCE6" },
-    { "id": "tex", "name": "Texas Rangers", "abbreviation": "TEX", "league": "AL", "division": "AL West", "primaryColor": "#003278", "secondaryColor": "#C0111F" },
-    { "id": "tor", "name": "Toronto Blue Jays", "abbreviation": "TOR", "league": "AL", "division": "AL East", "primaryColor": "#134A8E", "secondaryColor": "#1D2D5C" },
-    { "id": "wsh", "name": "Washington Nationals", "abbreviation": "WSH", "league": "NL", "division": "NL East", "primaryColor": "#AB0003", "secondaryColor": "#14225A" }
+    { "id": "bar", "name": "Barrie Baycats", "abbreviation": "BAR", "league": "CBL", "division": "Ontario", "primaryColor": "#1A3A6B", "secondaryColor": "#E8C84A" },
+    { "id": "bra", "name": "Brantford Red Sox", "abbreviation": "BRA", "league": "CBL", "division": "Ontario", "primaryColor": "#C8102E", "secondaryColor": "#0C2340" },
+    { "id": "ckb", "name": "Chatham-Kent Barnstormers", "abbreviation": "CKB", "league": "CBL", "division": "Ontario", "primaryColor": "#2B5F35", "secondaryColor": "#D4A017" },
+    { "id": "gue", "name": "Guelph Royals", "abbreviation": "GUE", "league": "CBL", "division": "Ontario", "primaryColor": "#002F6C", "secondaryColor": "#C8A951" },
+    { "id": "ham", "name": "Hamilton Cardinals", "abbreviation": "HAM", "league": "CBL", "division": "Ontario", "primaryColor": "#C41E3A", "secondaryColor": "#1A1A1A" },
+    { "id": "kit", "name": "Kitchener Panthers", "abbreviation": "KIT", "league": "CBL", "division": "Ontario", "primaryColor": "#1C3D6E", "secondaryColor": "#E8A020" },
+    { "id": "lon", "name": "London Majors", "abbreviation": "LON", "league": "CBL", "division": "Ontario", "primaryColor": "#003087", "secondaryColor": "#E31837" },
+    { "id": "tor", "name": "Toronto Maple Leafs", "abbreviation": "TOR", "league": "CBL", "division": "Ontario", "primaryColor": "#003F87", "secondaryColor": "#FFFFFF" },
+    { "id": "wel", "name": "Welland Jackfish", "abbreviation": "WEL", "league": "CBL", "division": "Ontario", "primaryColor": "#1A6B3A", "secondaryColor": "#1A3A6B" }
   ],
   "players": [
     {
-      "id": "p001", "name": "Marcus Rivera", "team": "lad", "position": "OF", "number": 27, "bats": "R", "throws": "R",
+      "id": "p001", "name": "Marcus Rivera", "team": "bar", "position": "OF", "number": 27, "bats": "R", "throws": "R",
       "hitting": { "avg": 0.312, "obp": 0.389, "slg": 0.541, "ops": 0.930, "hr": 28, "rbi": 94, "r": 101, "h": 167, "2b": 34, "3b": 4, "sb": 18, "bb": 72, "k": 118, "pa": 598, "ab": 536, "wRC_plus": 148, "babip": 0.341, "iso": 0.229 },
       "strikeZone": {
         "heatmap": [
@@ -62,7 +41,7 @@
       }
     },
     {
-      "id": "p002", "name": "Derek Castillo", "team": "lad", "position": "SP", "number": 18, "bats": "R", "throws": "R",
+      "id": "p002", "name": "Derek Castillo", "team": "bar", "position": "SP", "number": 18, "bats": "R", "throws": "R",
       "pitching": { "era": 2.87, "whip": 1.01, "k9": 11.2, "bb9": 2.1, "hr9": 0.7, "fip": 2.94, "xfip": 3.12, "w": 15, "l": 5, "sv": 0, "ip": 188.2, "h": 152, "er": 60, "bb": 44, "k": 235, "gs": 30, "cg": 2, "sho": 1, "war": 6.1, "k_pct": 0.312, "bb_pct": 0.058 },
       "strikeZone": {
         "heatmap": [
@@ -88,7 +67,7 @@
       }
     },
     {
-      "id": "p003", "name": "Tyler Okonkwo", "team": "nyy", "position": "3B", "number": 31, "bats": "R", "throws": "R",
+      "id": "p003", "name": "Tyler Okonkwo", "team": "kit", "position": "3B", "number": 31, "bats": "R", "throws": "R",
       "hitting": { "avg": 0.289, "obp": 0.358, "slg": 0.512, "ops": 0.870, "hr": 32, "rbi": 102, "r": 88, "h": 158, "2b": 29, "3b": 2, "sb": 5, "bb": 58, "k": 134, "pa": 578, "ab": 547, "wRC_plus": 138, "babip": 0.311, "iso": 0.223 },
       "strikeZone": {
         "heatmap": [
@@ -114,7 +93,7 @@
       }
     },
     {
-      "id": "p004", "name": "Jordan Webb", "team": "nyy", "position": "SP", "number": 44, "bats": "L", "throws": "L",
+      "id": "p004", "name": "Jordan Webb", "team": "kit", "position": "SP", "number": 44, "bats": "L", "throws": "L",
       "pitching": { "era": 3.21, "whip": 1.09, "k9": 10.4, "bb9": 2.4, "hr9": 0.9, "fip": 3.34, "xfip": 3.28, "w": 13, "l": 7, "sv": 0, "ip": 174.1, "h": 161, "er": 62, "bb": 47, "k": 201, "gs": 28, "cg": 1, "sho": 0, "war": 4.8, "k_pct": 0.289, "bb_pct": 0.068 },
       "strikeZone": {
         "heatmap": [
@@ -139,7 +118,7 @@
       }
     },
     {
-      "id": "p005", "name": "Carlos Mendes", "team": "hou", "position": "SS", "number": 6, "bats": "S", "throws": "R",
+      "id": "p005", "name": "Carlos Mendes", "team": "wel", "position": "SS", "number": 6, "bats": "S", "throws": "R",
       "hitting": { "avg": 0.301, "obp": 0.371, "slg": 0.488, "ops": 0.859, "hr": 22, "rbi": 87, "r": 96, "h": 171, "2b": 38, "3b": 6, "sb": 28, "bb": 62, "k": 98, "pa": 612, "ab": 568, "wRC_plus": 133, "babip": 0.328, "iso": 0.187 },
       "strikeZone": {
         "heatmap": [
@@ -165,7 +144,7 @@
       }
     },
     {
-      "id": "p006", "name": "Nathan Pryce", "team": "atl", "position": "1B", "number": 25, "bats": "L", "throws": "L",
+      "id": "p006", "name": "Nathan Pryce", "team": "gue", "position": "1B", "number": 25, "bats": "L", "throws": "L",
       "hitting": { "avg": 0.278, "obp": 0.362, "slg": 0.531, "ops": 0.893, "hr": 35, "rbi": 108, "r": 84, "h": 152, "2b": 31, "3b": 1, "sb": 3, "bb": 74, "k": 142, "pa": 591, "ab": 547, "wRC_plus": 141, "babip": 0.298, "iso": 0.253 },
       "strikeZone": {
         "heatmap": [
@@ -191,7 +170,7 @@
       }
     },
     {
-      "id": "p007", "name": "Eli Thornton", "team": "bos", "position": "C", "number": 12, "bats": "R", "throws": "R",
+      "id": "p007", "name": "Eli Thornton", "team": "tor", "position": "C", "number": 12, "bats": "R", "throws": "R",
       "hitting": { "avg": 0.265, "obp": 0.341, "slg": 0.467, "ops": 0.808, "hr": 24, "rbi": 78, "r": 64, "h": 134, "2b": 26, "3b": 1, "sb": 2, "bb": 51, "k": 128, "pa": 511, "ab": 505, "wRC_plus": 121, "babip": 0.289, "iso": 0.202 },
       "strikeZone": {
         "heatmap": [
@@ -216,7 +195,7 @@
       }
     },
     {
-      "id": "p008", "name": "Ramon Fuentes", "team": "sd", "position": "SP", "number": 22, "bats": "R", "throws": "R",
+      "id": "p008", "name": "Ramon Fuentes", "team": "ham", "position": "SP", "number": 22, "bats": "R", "throws": "R",
       "pitching": { "era": 2.54, "whip": 0.95, "k9": 12.1, "bb9": 1.8, "hr9": 0.6, "fip": 2.61, "xfip": 2.88, "w": 17, "l": 4, "sv": 0, "ip": 198.1, "h": 141, "er": 56, "bb": 40, "k": 267, "gs": 32, "cg": 3, "sho": 2, "war": 7.4, "k_pct": 0.338, "bb_pct": 0.051 },
       "strikeZone": {
         "heatmap": [
