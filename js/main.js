@@ -1,3 +1,4 @@
+/* v3 - 2026-03-02 */
 /* ================================================
    DATA DIAMOND — main.js
    Loads players from data/hitters.csv and data/pitchers.csv
@@ -40,8 +41,8 @@ async function loadAll() {
 
     const [statsRes, hittersRes, pitchersRes] = await Promise.all([
       fetch(base + 'data/stats.json'),
-      fetch(base + 'data/hitters.csv'),
-      fetch(base + 'data/pitchers.csv')
+      fetch(base + 'data/Hitters.csv'),
+      fetch(base + 'data/Pitchers.csv')
     ]);
 
     if (!statsRes.ok)    throw new Error('stats.json failed: '   + statsRes.status);
