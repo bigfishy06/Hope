@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team Roster — Data Diamond</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body class="team-page">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <a href="index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none">
+          <svg class="logo-diamond" viewBox="0 0 40 40" fill="none">
+            <polygon points="20,2 38,20 20,38 2,20" stroke="#E8C84A" stroke-width="2.5" fill="none"/>
+            <polygon points="20,9 31,20 20,31 9,20" stroke="#E8C84A" stroke-width="1.5" fill="rgba(232,200,74,0.12)"/>
+            <circle cx="20" cy="20" r="3" fill="#E8C84A"/>
+          </svg>
+          <span class="logo-text">Data<em>Diamond</em></span>
+        </a>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Teams</a>
+        <a href="#" class="nav-link">Players</a>
+        <a href="#" class="nav-link">Leaderboards</a>
+      </nav>
+      <div class="header-search">
+        <input type="text" id="global-search" placeholder="Search players…" autocomplete="off" />
+        <div id="search-dropdown" class="search-dropdown hidden"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- TEAM HERO -->
+  <section class="team-hero" id="team-hero">
+    <div class="team-hero-bg" id="team-hero-bg"></div>
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Teams</a> <span>/</span> <span id="bc-team-name"></span>
+      </div>
+      <div class="team-hero-content">
+        <div class="team-abbr-display" id="team-abbr-display"></div>
+        <div class="team-info">
+          <p class="team-division-label" id="team-division-label"></p>
+          <h1 class="team-full-name" id="team-full-name">Loading…</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROSTER TABS -->
+  <div class="report-tabs-bar">
+    <div class="container">
+      <div class="report-tabs">
+        <button class="report-tab active" data-tab="hitters">Hitters</button>
+        <button class="report-tab" data-tab="pitchers">Pitchers</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="report-content container" id="roster-content">
+    <!-- filled by JS -->
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="logo small">
+          <svg class="logo-diamond" viewBox="0 0 40 40" fill="none">
+            <polygon points="20,2 38,20 20,38 2,20" stroke="#E8C84A" stroke-width="2.5" fill="none"/>
+            <circle cx="20" cy="20" r="3" fill="#E8C84A"/>
+          </svg>
+          <span class="logo-text">Data<em>Diamond</em></span>
+        </div>
+        <p class="footer-note">Sample data only. Not affiliated with MLB.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

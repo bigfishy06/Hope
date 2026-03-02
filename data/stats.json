@@ -1,0 +1,245 @@
+{
+  "teams": [
+    { "id": "ari", "name": "Arizona Diamondbacks", "abbreviation": "ARI", "league": "NL", "division": "NL West", "primaryColor": "#A71930", "secondaryColor": "#E3D4AD" },
+    { "id": "atl", "name": "Atlanta Braves", "abbreviation": "ATL", "league": "NL", "division": "NL East", "primaryColor": "#CE1141", "secondaryColor": "#13274F" },
+    { "id": "bal", "name": "Baltimore Orioles", "abbreviation": "BAL", "league": "AL", "division": "AL East", "primaryColor": "#DF4601", "secondaryColor": "#000000" },
+    { "id": "bos", "name": "Boston Red Sox", "abbreviation": "BOS", "league": "AL", "division": "AL East", "primaryColor": "#BD3039", "secondaryColor": "#0C2340" },
+    { "id": "chc", "name": "Chicago Cubs", "abbreviation": "CHC", "league": "NL", "division": "NL Central", "primaryColor": "#0E3386", "secondaryColor": "#CC3433" },
+    { "id": "chw", "name": "Chicago White Sox", "abbreviation": "CWS", "league": "AL", "division": "AL Central", "primaryColor": "#27251F", "secondaryColor": "#C4CED4" },
+    { "id": "cin", "name": "Cincinnati Reds", "abbreviation": "CIN", "league": "NL", "division": "NL Central", "primaryColor": "#C6011F", "secondaryColor": "#000000" },
+    { "id": "cle", "name": "Cleveland Guardians", "abbreviation": "CLE", "league": "AL", "division": "AL Central", "primaryColor": "#00385D", "secondaryColor": "#E31937" },
+    { "id": "col", "name": "Colorado Rockies", "abbreviation": "COL", "league": "NL", "division": "NL West", "primaryColor": "#33006F", "secondaryColor": "#C4CED4" },
+    { "id": "det", "name": "Detroit Tigers", "abbreviation": "DET", "league": "AL", "division": "AL Central", "primaryColor": "#0C2340", "secondaryColor": "#FA4616" },
+    { "id": "hou", "name": "Houston Astros", "abbreviation": "HOU", "league": "AL", "division": "AL West", "primaryColor": "#002D62", "secondaryColor": "#EB6E1F" },
+    { "id": "kc", "name": "Kansas City Royals", "abbreviation": "KC", "league": "AL", "division": "AL Central", "primaryColor": "#004687", "secondaryColor": "#C09A5B" },
+    { "id": "laa", "name": "Los Angeles Angels", "abbreviation": "LAA", "league": "AL", "division": "AL West", "primaryColor": "#BA0021", "secondaryColor": "#003263" },
+    { "id": "lad", "name": "Los Angeles Dodgers", "abbreviation": "LAD", "league": "NL", "division": "NL West", "primaryColor": "#005A9C", "secondaryColor": "#EF3E42" },
+    { "id": "mia", "name": "Miami Marlins", "abbreviation": "MIA", "league": "NL", "division": "NL East", "primaryColor": "#00A3E0", "secondaryColor": "#EF3340" },
+    { "id": "mil", "name": "Milwaukee Brewers", "abbreviation": "MIL", "league": "NL", "division": "NL Central", "primaryColor": "#12284B", "secondaryColor": "#FFC52F" },
+    { "id": "min", "name": "Minnesota Twins", "abbreviation": "MIN", "league": "AL", "division": "AL Central", "primaryColor": "#002B5C", "secondaryColor": "#D31145" },
+    { "id": "nym", "name": "New York Mets", "abbreviation": "NYM", "league": "NL", "division": "NL East", "primaryColor": "#002D72", "secondaryColor": "#FF5910" },
+    { "id": "nyy", "name": "New York Yankees", "abbreviation": "NYY", "league": "AL", "division": "AL East", "primaryColor": "#003087", "secondaryColor": "#C4CED4" },
+    { "id": "oak", "name": "Oakland Athletics", "abbreviation": "OAK", "league": "AL", "division": "AL West", "primaryColor": "#003831", "secondaryColor": "#EFB21E" },
+    { "id": "phi", "name": "Philadelphia Phillies", "abbreviation": "PHI", "league": "NL", "division": "NL East", "primaryColor": "#E81828", "secondaryColor": "#002D72" },
+    { "id": "pit", "name": "Pittsburgh Pirates", "abbreviation": "PIT", "league": "NL", "division": "NL Central", "primaryColor": "#27251F", "secondaryColor": "#FDB827" },
+    { "id": "sd", "name": "San Diego Padres", "abbreviation": "SD", "league": "NL", "division": "NL West", "primaryColor": "#2F241D", "secondaryColor": "#FFC425" },
+    { "id": "sf", "name": "San Francisco Giants", "abbreviation": "SF", "league": "NL", "division": "NL West", "primaryColor": "#FD5A1E", "secondaryColor": "#27251F" },
+    { "id": "sea", "name": "Seattle Mariners", "abbreviation": "SEA", "league": "AL", "division": "AL West", "primaryColor": "#0C2C56", "secondaryColor": "#005C5C" },
+    { "id": "stl", "name": "St. Louis Cardinals", "abbreviation": "STL", "league": "NL", "division": "NL Central", "primaryColor": "#C41E3A", "secondaryColor": "#0C2340" },
+    { "id": "tb", "name": "Tampa Bay Rays", "abbreviation": "TB", "league": "AL", "division": "AL East", "primaryColor": "#092C5C", "secondaryColor": "#8FBCE6" },
+    { "id": "tex", "name": "Texas Rangers", "abbreviation": "TEX", "league": "AL", "division": "AL West", "primaryColor": "#003278", "secondaryColor": "#C0111F" },
+    { "id": "tor", "name": "Toronto Blue Jays", "abbreviation": "TOR", "league": "AL", "division": "AL East", "primaryColor": "#134A8E", "secondaryColor": "#1D2D5C" },
+    { "id": "wsh", "name": "Washington Nationals", "abbreviation": "WSH", "league": "NL", "division": "NL East", "primaryColor": "#AB0003", "secondaryColor": "#14225A" }
+  ],
+  "players": [
+    {
+      "id": "p001", "name": "Marcus Rivera", "team": "lad", "position": "OF", "number": 27, "bats": "R", "throws": "R",
+      "hitting": { "avg": 0.312, "obp": 0.389, "slg": 0.541, "ops": 0.930, "hr": 28, "rbi": 94, "r": 101, "h": 167, "2b": 34, "3b": 4, "sb": 18, "bb": 72, "k": 118, "pa": 598, "ab": 536, "wRC_plus": 148, "babip": 0.341, "iso": 0.229 },
+      "strikeZone": {
+        "heatmap": [
+          [0.18, 0.24, 0.31, 0.27, 0.15],
+          [0.22, 0.38, 0.51, 0.44, 0.21],
+          [0.28, 0.49, 0.63, 0.55, 0.29],
+          [0.24, 0.41, 0.58, 0.47, 0.24],
+          [0.12, 0.19, 0.28, 0.22, 0.11]
+        ],
+        "pitchTypes": {
+          "fastball": { "avg": 0.341, "slg": 0.612, "whiff": 0.18 },
+          "slider": { "avg": 0.278, "slg": 0.467, "whiff": 0.31 },
+          "curveball": { "avg": 0.211, "slg": 0.368, "whiff": 0.38 },
+          "changeup": { "avg": 0.298, "slg": 0.521, "whiff": 0.24 }
+        },
+        "scatterPoints": [
+          {"x": 0.2, "y": 0.7, "result": "hit"}, {"x": 0.5, "y": 0.8, "result": "hit"},
+          {"x": 0.8, "y": 0.6, "result": "out"}, {"x": 0.3, "y": 0.4, "result": "hit"},
+          {"x": 0.6, "y": 0.3, "result": "whiff"}, {"x": 0.4, "y": 0.6, "result": "hit"},
+          {"x": 0.7, "y": 0.7, "result": "hr"}, {"x": 0.2, "y": 0.5, "result": "out"},
+          {"x": 0.5, "y": 0.2, "result": "whiff"}, {"x": 0.9, "y": 0.4, "result": "out"},
+          {"x": 0.1, "y": 0.8, "result": "whiff"}, {"x": 0.6, "y": 0.6, "result": "hr"},
+          {"x": 0.3, "y": 0.3, "result": "hit"}, {"x": 0.8, "y": 0.8, "result": "hit"},
+          {"x": 0.4, "y": 0.1, "result": "whiff"}, {"x": 0.7, "y": 0.5, "result": "out"}
+        ]
+      }
+    },
+    {
+      "id": "p002", "name": "Derek Castillo", "team": "lad", "position": "SP", "number": 18, "bats": "R", "throws": "R",
+      "pitching": { "era": 2.87, "whip": 1.01, "k9": 11.2, "bb9": 2.1, "hr9": 0.7, "fip": 2.94, "xfip": 3.12, "w": 15, "l": 5, "sv": 0, "ip": 188.2, "h": 152, "er": 60, "bb": 44, "k": 235, "gs": 30, "cg": 2, "sho": 1, "war": 6.1, "k_pct": 0.312, "bb_pct": 0.058 },
+      "strikeZone": {
+        "heatmap": [
+          [0.45, 0.52, 0.48, 0.41, 0.38],
+          [0.51, 0.61, 0.67, 0.59, 0.44],
+          [0.48, 0.64, 0.72, 0.63, 0.47],
+          [0.42, 0.58, 0.65, 0.56, 0.41],
+          [0.34, 0.44, 0.51, 0.43, 0.32]
+        ],
+        "pitchTypes": {
+          "4seam": { "velo": 96.4, "spin": 2310, "whiff": 0.28, "k_pct": 0.31 },
+          "slider": { "velo": 87.1, "spin": 2580, "whiff": 0.41, "k_pct": 0.38 },
+          "curveball": { "velo": 78.3, "spin": 2890, "whiff": 0.36, "k_pct": 0.34 },
+          "changeup": { "velo": 86.2, "spin": 1840, "whiff": 0.33, "k_pct": 0.29 }
+        },
+        "scatterPoints": [
+          {"x": 0.3, "y": 0.7, "result": "strike"}, {"x": 0.5, "y": 0.5, "result": "strike"},
+          {"x": 0.7, "y": 0.6, "result": "ball"}, {"x": 0.4, "y": 0.4, "result": "strike"},
+          {"x": 0.6, "y": 0.8, "result": "strike"}, {"x": 0.2, "y": 0.3, "result": "ball"},
+          {"x": 0.8, "y": 0.4, "result": "strike"}, {"x": 0.5, "y": 0.7, "result": "strike"},
+          {"x": 0.3, "y": 0.2, "result": "ball"}, {"x": 0.6, "y": 0.5, "result": "strike"}
+        ]
+      }
+    },
+    {
+      "id": "p003", "name": "Tyler Okonkwo", "team": "nyy", "position": "3B", "number": 31, "bats": "R", "throws": "R",
+      "hitting": { "avg": 0.289, "obp": 0.358, "slg": 0.512, "ops": 0.870, "hr": 32, "rbi": 102, "r": 88, "h": 158, "2b": 29, "3b": 2, "sb": 5, "bb": 58, "k": 134, "pa": 578, "ab": 547, "wRC_plus": 138, "babip": 0.311, "iso": 0.223 },
+      "strikeZone": {
+        "heatmap": [
+          [0.14, 0.21, 0.19, 0.17, 0.12],
+          [0.20, 0.42, 0.56, 0.38, 0.18],
+          [0.25, 0.55, 0.68, 0.52, 0.27],
+          [0.19, 0.38, 0.49, 0.35, 0.20],
+          [0.10, 0.16, 0.21, 0.15, 0.09]
+        ],
+        "pitchTypes": {
+          "fastball": { "avg": 0.318, "slg": 0.589, "whiff": 0.21 },
+          "slider": { "avg": 0.241, "slg": 0.421, "whiff": 0.42 },
+          "curveball": { "avg": 0.198, "slg": 0.312, "whiff": 0.45 },
+          "changeup": { "avg": 0.271, "slg": 0.478, "whiff": 0.29 }
+        },
+        "scatterPoints": [
+          {"x": 0.4, "y": 0.6, "result": "hit"}, {"x": 0.5, "y": 0.5, "result": "hr"},
+          {"x": 0.6, "y": 0.7, "result": "out"}, {"x": 0.3, "y": 0.4, "result": "whiff"},
+          {"x": 0.7, "y": 0.3, "result": "out"}, {"x": 0.5, "y": 0.8, "result": "hit"},
+          {"x": 0.2, "y": 0.6, "result": "whiff"}, {"x": 0.8, "y": 0.5, "result": "hit"},
+          {"x": 0.4, "y": 0.2, "result": "whiff"}, {"x": 0.6, "y": 0.4, "result": "hr"}
+        ]
+      }
+    },
+    {
+      "id": "p004", "name": "Jordan Webb", "team": "nyy", "position": "SP", "number": 44, "bats": "L", "throws": "L",
+      "pitching": { "era": 3.21, "whip": 1.09, "k9": 10.4, "bb9": 2.4, "hr9": 0.9, "fip": 3.34, "xfip": 3.28, "w": 13, "l": 7, "sv": 0, "ip": 174.1, "h": 161, "er": 62, "bb": 47, "k": 201, "gs": 28, "cg": 1, "sho": 0, "war": 4.8, "k_pct": 0.289, "bb_pct": 0.068 },
+      "strikeZone": {
+        "heatmap": [
+          [0.41, 0.48, 0.44, 0.39, 0.35],
+          [0.47, 0.58, 0.64, 0.55, 0.41],
+          [0.45, 0.61, 0.69, 0.60, 0.44],
+          [0.39, 0.54, 0.62, 0.53, 0.38],
+          [0.31, 0.41, 0.48, 0.40, 0.29]
+        ],
+        "pitchTypes": {
+          "4seam": { "velo": 93.8, "spin": 2180, "whiff": 0.24, "k_pct": 0.27 },
+          "cutter": { "velo": 89.2, "spin": 2340, "whiff": 0.31, "k_pct": 0.33 },
+          "curveball": { "velo": 76.8, "spin": 2760, "whiff": 0.38, "k_pct": 0.36 },
+          "changeup": { "velo": 84.1, "spin": 1780, "whiff": 0.35, "k_pct": 0.31 }
+        },
+        "scatterPoints": [
+          {"x": 0.4, "y": 0.6, "result": "strike"}, {"x": 0.5, "y": 0.5, "result": "strike"},
+          {"x": 0.3, "y": 0.7, "result": "ball"}, {"x": 0.6, "y": 0.4, "result": "strike"},
+          {"x": 0.7, "y": 0.7, "result": "strike"}, {"x": 0.2, "y": 0.2, "result": "ball"},
+          {"x": 0.5, "y": 0.3, "result": "strike"}, {"x": 0.8, "y": 0.6, "result": "ball"}
+        ]
+      }
+    },
+    {
+      "id": "p005", "name": "Carlos Mendes", "team": "hou", "position": "SS", "number": 6, "bats": "S", "throws": "R",
+      "hitting": { "avg": 0.301, "obp": 0.371, "slg": 0.488, "ops": 0.859, "hr": 22, "rbi": 87, "r": 96, "h": 171, "2b": 38, "3b": 6, "sb": 28, "bb": 62, "k": 98, "pa": 612, "ab": 568, "wRC_plus": 133, "babip": 0.328, "iso": 0.187 },
+      "strikeZone": {
+        "heatmap": [
+          [0.21, 0.28, 0.33, 0.30, 0.18],
+          [0.26, 0.44, 0.58, 0.49, 0.24],
+          [0.31, 0.52, 0.65, 0.57, 0.31],
+          [0.27, 0.45, 0.54, 0.42, 0.25],
+          [0.14, 0.22, 0.30, 0.24, 0.13]
+        ],
+        "pitchTypes": {
+          "fastball": { "avg": 0.328, "slg": 0.541, "whiff": 0.16 },
+          "slider": { "avg": 0.261, "slg": 0.398, "whiff": 0.34 },
+          "curveball": { "avg": 0.224, "slg": 0.348, "whiff": 0.40 },
+          "changeup": { "avg": 0.287, "slg": 0.464, "whiff": 0.22 }
+        },
+        "scatterPoints": [
+          {"x": 0.5, "y": 0.6, "result": "hit"}, {"x": 0.4, "y": 0.7, "result": "hit"},
+          {"x": 0.6, "y": 0.5, "result": "out"}, {"x": 0.3, "y": 0.5, "result": "hit"},
+          {"x": 0.7, "y": 0.4, "result": "whiff"}, {"x": 0.5, "y": 0.3, "result": "out"},
+          {"x": 0.2, "y": 0.7, "result": "whiff"}, {"x": 0.8, "y": 0.6, "result": "hit"},
+          {"x": 0.4, "y": 0.4, "result": "hit"}, {"x": 0.6, "y": 0.8, "result": "out"}
+        ]
+      }
+    },
+    {
+      "id": "p006", "name": "Nathan Pryce", "team": "atl", "position": "1B", "number": 25, "bats": "L", "throws": "L",
+      "hitting": { "avg": 0.278, "obp": 0.362, "slg": 0.531, "ops": 0.893, "hr": 35, "rbi": 108, "r": 84, "h": 152, "2b": 31, "3b": 1, "sb": 3, "bb": 74, "k": 142, "pa": 591, "ab": 547, "wRC_plus": 141, "babip": 0.298, "iso": 0.253 },
+      "strikeZone": {
+        "heatmap": [
+          [0.16, 0.22, 0.28, 0.23, 0.14],
+          [0.21, 0.39, 0.52, 0.43, 0.20],
+          [0.27, 0.47, 0.61, 0.53, 0.28],
+          [0.22, 0.40, 0.55, 0.44, 0.22],
+          [0.11, 0.18, 0.25, 0.19, 0.10]
+        ],
+        "pitchTypes": {
+          "fastball": { "avg": 0.304, "slg": 0.581, "whiff": 0.22 },
+          "slider": { "avg": 0.258, "slg": 0.445, "whiff": 0.37 },
+          "curveball": { "avg": 0.219, "slg": 0.374, "whiff": 0.43 },
+          "changeup": { "avg": 0.281, "slg": 0.498, "whiff": 0.26 }
+        },
+        "scatterPoints": [
+          {"x": 0.3, "y": 0.6, "result": "hr"}, {"x": 0.5, "y": 0.7, "result": "hit"},
+          {"x": 0.7, "y": 0.5, "result": "out"}, {"x": 0.4, "y": 0.3, "result": "whiff"},
+          {"x": 0.6, "y": 0.6, "result": "hr"}, {"x": 0.2, "y": 0.5, "result": "hit"},
+          {"x": 0.8, "y": 0.7, "result": "out"}, {"x": 0.5, "y": 0.4, "result": "hit"},
+          {"x": 0.3, "y": 0.2, "result": "whiff"}, {"x": 0.7, "y": 0.3, "result": "out"}
+        ]
+      }
+    },
+    {
+      "id": "p007", "name": "Eli Thornton", "team": "bos", "position": "C", "number": 12, "bats": "R", "throws": "R",
+      "hitting": { "avg": 0.265, "obp": 0.341, "slg": 0.467, "ops": 0.808, "hr": 24, "rbi": 78, "r": 64, "h": 134, "2b": 26, "3b": 1, "sb": 2, "bb": 51, "k": 128, "pa": 511, "ab": 505, "wRC_plus": 121, "babip": 0.289, "iso": 0.202 },
+      "strikeZone": {
+        "heatmap": [
+          [0.13, 0.19, 0.24, 0.20, 0.12],
+          [0.18, 0.34, 0.46, 0.38, 0.17],
+          [0.23, 0.43, 0.57, 0.49, 0.24],
+          [0.18, 0.35, 0.48, 0.39, 0.19],
+          [0.10, 0.15, 0.22, 0.17, 0.09]
+        ],
+        "pitchTypes": {
+          "fastball": { "avg": 0.291, "slg": 0.512, "whiff": 0.24 },
+          "slider": { "avg": 0.234, "slg": 0.398, "whiff": 0.38 },
+          "curveball": { "avg": 0.198, "slg": 0.334, "whiff": 0.44 },
+          "changeup": { "avg": 0.267, "slg": 0.451, "whiff": 0.28 }
+        },
+        "scatterPoints": [
+          {"x": 0.5, "y": 0.5, "result": "hit"}, {"x": 0.4, "y": 0.6, "result": "out"},
+          {"x": 0.6, "y": 0.7, "result": "hit"}, {"x": 0.3, "y": 0.4, "result": "whiff"},
+          {"x": 0.7, "y": 0.5, "result": "out"}, {"x": 0.5, "y": 0.3, "result": "hr"},
+          {"x": 0.2, "y": 0.6, "result": "whiff"}, {"x": 0.8, "y": 0.4, "result": "out"}
+        ]
+      }
+    },
+    {
+      "id": "p008", "name": "Ramon Fuentes", "team": "sd", "position": "SP", "number": 22, "bats": "R", "throws": "R",
+      "pitching": { "era": 2.54, "whip": 0.95, "k9": 12.1, "bb9": 1.8, "hr9": 0.6, "fip": 2.61, "xfip": 2.88, "w": 17, "l": 4, "sv": 0, "ip": 198.1, "h": 141, "er": 56, "bb": 40, "k": 267, "gs": 32, "cg": 3, "sho": 2, "war": 7.4, "k_pct": 0.338, "bb_pct": 0.051 },
+      "strikeZone": {
+        "heatmap": [
+          [0.48, 0.55, 0.51, 0.44, 0.40],
+          [0.54, 0.64, 0.70, 0.62, 0.47],
+          [0.51, 0.67, 0.75, 0.66, 0.50],
+          [0.45, 0.60, 0.68, 0.58, 0.43],
+          [0.37, 0.47, 0.54, 0.46, 0.35]
+        ],
+        "pitchTypes": {
+          "4seam": { "velo": 97.2, "spin": 2420, "whiff": 0.31, "k_pct": 0.34 },
+          "slider": { "velo": 88.4, "spin": 2640, "whiff": 0.45, "k_pct": 0.42 },
+          "splitter": { "velo": 85.7, "spin": 1620, "whiff": 0.48, "k_pct": 0.44 },
+          "curveball": { "velo": 79.1, "spin": 2910, "whiff": 0.39, "k_pct": 0.37 }
+        },
+        "scatterPoints": [
+          {"x": 0.5, "y": 0.6, "result": "strike"}, {"x": 0.4, "y": 0.5, "result": "strike"},
+          {"x": 0.6, "y": 0.7, "result": "strike"}, {"x": 0.3, "y": 0.4, "result": "ball"},
+          {"x": 0.7, "y": 0.5, "result": "strike"}, {"x": 0.5, "y": 0.3, "result": "strike"},
+          {"x": 0.2, "y": 0.7, "result": "ball"}, {"x": 0.8, "y": 0.6, "result": "strike"},
+          {"x": 0.4, "y": 0.8, "result": "strike"}, {"x": 0.6, "y": 0.4, "result": "strike"}
+        ]
+      }
+    }
+  ]
+}

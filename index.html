@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Diamond — MLB Analytics</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <svg class="logo-diamond" viewBox="0 0 40 40" fill="none">
+          <polygon points="20,2 38,20 20,38 2,20" stroke="#E8C84A" stroke-width="2.5" fill="none"/>
+          <polygon points="20,9 31,20 20,31 9,20" stroke="#E8C84A" stroke-width="1.5" fill="rgba(232,200,74,0.12)"/>
+          <circle cx="20" cy="20" r="3" fill="#E8C84A"/>
+        </svg>
+        <span class="logo-text">Data<em>Diamond</em></span>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link active">Teams</a>
+        <a href="#" class="nav-link" id="nav-players">Players</a>
+        <a href="#" class="nav-link">Leaderboards</a>
+      </nav>
+      <div class="header-search">
+        <input type="text" id="global-search" placeholder="Search players…" autocomplete="off" />
+        <div id="search-dropdown" class="search-dropdown hidden"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="diamond-field"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-label">2025 Season · MLB Analytics</p>
+      <h1 class="hero-title">Where Every<br/><span>Pitch Has Data.</span></h1>
+      <p class="hero-sub">Deep stats, strike zone intelligence, and season reports for all 30 MLB teams.</p>
+    </div>
+    <div class="hero-ticker">
+      <div class="ticker-track" id="stat-ticker">
+        <!-- filled by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- LEAGUE FILTER -->
+  <section class="teams-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">All Teams</h2>
+        <div class="filter-tabs">
+          <button class="filter-tab active" data-filter="all">All 30</button>
+          <button class="filter-tab" data-filter="AL">American League</button>
+          <button class="filter-tab" data-filter="NL">National League</button>
+          <button class="filter-tab" data-filter="AL East">AL East</button>
+          <button class="filter-tab" data-filter="AL Central">AL Central</button>
+          <button class="filter-tab" data-filter="AL West">AL West</button>
+          <button class="filter-tab" data-filter="NL East">NL East</button>
+          <button class="filter-tab" data-filter="NL Central">NL Central</button>
+          <button class="filter-tab" data-filter="NL West">NL West</button>
+        </div>
+      </div>
+      <div class="teams-grid" id="teams-grid">
+        <!-- filled by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PLAYERS STRIP -->
+  <section class="featured-section">
+    <div class="container">
+      <h2 class="section-title">Featured Players</h2>
+      <div class="players-strip" id="featured-players">
+        <!-- filled by JS -->
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="logo small">
+          <svg class="logo-diamond" viewBox="0 0 40 40" fill="none">
+            <polygon points="20,2 38,20 20,38 2,20" stroke="#E8C84A" stroke-width="2.5" fill="none"/>
+            <circle cx="20" cy="20" r="3" fill="#E8C84A"/>
+          </svg>
+          <span class="logo-text">Data<em>Diamond</em></span>
+        </div>
+        <p class="footer-note">Sample data only. Not affiliated with MLB.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

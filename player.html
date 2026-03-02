@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Player Report — Data Diamond</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body class="player-page">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <a href="index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none">
+          <svg class="logo-diamond" viewBox="0 0 40 40" fill="none">
+            <polygon points="20,2 38,20 20,38 2,20" stroke="#E8C84A" stroke-width="2.5" fill="none"/>
+            <polygon points="20,9 31,20 20,31 9,20" stroke="#E8C84A" stroke-width="1.5" fill="rgba(232,200,74,0.12)"/>
+            <circle cx="20" cy="20" r="3" fill="#E8C84A"/>
+          </svg>
+          <span class="logo-text">Data<em>Diamond</em></span>
+        </a>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Teams</a>
+        <a href="#" class="nav-link">Players</a>
+        <a href="#" class="nav-link">Leaderboards</a>
+      </nav>
+      <div class="header-search">
+        <input type="text" id="global-search" placeholder="Search players…" autocomplete="off" />
+        <div id="search-dropdown" class="search-dropdown hidden"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- PLAYER HERO -->
+  <section class="player-hero" id="player-hero">
+    <div class="player-hero-bg" id="player-hero-bg"></div>
+    <div class="container">
+      <div class="breadcrumb" id="breadcrumb">
+        <a href="index.html">Teams</a> <span>/</span> <a href="#" id="bc-team"></a> <span>/</span> <span id="bc-player"></span>
+      </div>
+      <div class="player-hero-content">
+        <div class="player-number-display" id="player-number-display"></div>
+        <div class="player-info">
+          <div class="player-badges" id="player-badges"></div>
+          <h1 class="player-name" id="player-name">Loading…</h1>
+          <div class="player-meta" id="player-meta"></div>
+        </div>
+        <div class="player-headline-stats" id="player-headline-stats"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REPORT TABS -->
+  <div class="report-tabs-bar">
+    <div class="container">
+      <div class="report-tabs" id="report-tabs">
+        <button class="report-tab active" data-tab="overview">Overview</button>
+        <button class="report-tab" data-tab="season">Season Report</button>
+        <button class="report-tab" data-tab="zone">Strike Zone</button>
+        <button class="report-tab" data-tab="splits">Pitch Splits</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- REPORT CONTENT -->
+  <div class="report-content container" id="report-content">
+    <!-- filled by JS -->
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="logo small">
+          <svg class="logo-diamond" viewBox="0 0 40 40" fill="none">
+            <polygon points="20,2 38,20 20,38 2,20" stroke="#E8C84A" stroke-width="2.5" fill="none"/>
+            <circle cx="20" cy="20" r="3" fill="#E8C84A"/>
+          </svg>
+          <span class="logo-text">Data<em>Diamond</em></span>
+        </div>
+        <p class="footer-note">Sample data only. Not affiliated with MLB.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
