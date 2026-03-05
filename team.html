@@ -1,6 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>
+  const HASH = '2700114b0b68384c38a1018ac02dd3825205f695857ec23f9d1493280452b3a2';
+  const key  = 'dd_auth';
+
+  async function sha256(str) {
+    const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
+    return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,'0')).join('');
+  }
+
+  async function checkAuth() {
+    if (sessionStorage.getItem(key) === 'ok') return;
+    while (true) {
+      const pwd = prompt('Enter password to access Data Diamond:');
+      if (pwd === null) { document.body.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100vh;color:#888;font-family:sans-serif;font-size:24px">Access denied.</div>'; return; }
+      const hash = await sha256(pwd);
+      if (hash === HASH) { sessionStorage.setItem(key, 'ok'); return; }
+      alert('Incorrect password.');
+    }
+  }
+
+  checkAuth();
+</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Team Roster — Data Diamond</title>
