@@ -12,14 +12,140 @@
 
   async function checkAuth() {
     if (sessionStorage.getItem(key) === 'ok') return;
-    while (true) {
-      const pwd = prompt('Enter password to access Data Diamond:');
-      if (pwd === null) { document.body.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100vh;color:#888;font-family:sans-serif;font-size:24px">Access denied.</div>'; return; }
-      const hash = await sha256(pwd);
-      if (hash === HASH) { sessionStorage.setItem(key, 'ok'); return; }
-      alert('Incorrect password.');
-    }
+
+    // Inject overlay
+    const overlay = document.createElement('div');
+    overlay.id = 'auth-overlay';
+    overlay.innerHTML = `
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500&display=swap');
+        #auth-overlay {
+          position:fixed;inset:0;z-index:99999;
+          background:#080c12;
+          display:flex;align-items:center;justify-content:center;
+          font-family:'Inter',sans-serif;
+        }
+        #auth-overlay .auth-bg {
+          position:absolute;inset:0;
+          background:
+            radial-gradient(ellipse 60% 60% at 50% 40%, rgba(255,184,28,0.06) 0%, transparent 70%),
+            radial-gradient(ellipse 40% 40% at 80% 80%, rgba(0,61,165,0.08) 0%, transparent 60%);
+        }
+        #auth-overlay .auth-box {
+          position:relative;z-index:1;
+          width:100%;max-width:420px;
+          padding:48px 40px;
+          background:rgba(13,20,32,0.95);
+          border:1px solid rgba(255,184,28,0.15);
+          border-radius:4px;
+          box-shadow:0 0 80px rgba(0,0,0,0.6), 0 0 40px rgba(255,184,28,0.04);
+          text-align:center;
+        }
+        #auth-overlay .auth-logo {
+          display:flex;align-items:center;justify-content:center;gap:10px;
+          margin-bottom:32px;
+        }
+        #auth-overlay .auth-logo svg { width:36px;height:36px; }
+        #auth-overlay .auth-logo-text {
+          font-family:'Bebas Neue',sans-serif;
+          font-size:28px;letter-spacing:0.05em;
+          color:#fff;
+        }
+        #auth-overlay .auth-logo-text em {
+          color:#FFB81C;font-style:normal;
+        }
+        #auth-overlay h2 {
+          font-family:'Bebas Neue',sans-serif;
+          font-size:13px;letter-spacing:0.15em;
+          color:rgba(255,255,255,0.35);
+          margin:0 0 32px;
+          text-transform:uppercase;
+        }
+        #auth-overlay .auth-input-wrap {
+          position:relative;margin-bottom:16px;
+        }
+        #auth-overlay input {
+          width:100%;box-sizing:border-box;
+          padding:14px 16px;
+          background:rgba(255,255,255,0.04);
+          border:1px solid rgba(255,255,255,0.1);
+          border-radius:3px;
+          color:#fff;
+          font-family:'DM Mono',monospace;
+          font-size:14px;letter-spacing:0.05em;
+          outline:none;
+          transition:border-color 0.2s;
+        }
+        #auth-overlay input:focus {
+          border-color:rgba(255,184,28,0.5);
+          background:rgba(255,184,28,0.03);
+        }
+        #auth-overlay input::placeholder { color:rgba(255,255,255,0.2); }
+        #auth-overlay button {
+          width:100%;padding:14px;
+          background:#FFB81C;
+          border:none;border-radius:3px;
+          color:#080c12;
+          font-family:'Bebas Neue',sans-serif;
+          font-size:18px;letter-spacing:0.1em;
+          cursor:pointer;
+          transition:background 0.2s, transform 0.1s;
+        }
+        #auth-overlay button:hover { background:#ffc94d; }
+        #auth-overlay button:active { transform:scale(0.98); }
+        #auth-overlay .auth-error {
+          margin-top:12px;height:16px;
+          font-size:12px;letter-spacing:0.05em;
+          color:#ff4444;
+          font-family:'DM Mono',monospace;
+        }
+      </style>
+      <div class="auth-bg"></div>
+      <div class="auth-box">
+        <div class="auth-logo">
+          <svg viewBox="0 0 40 40" fill="none">
+            <polygon points="20,2 38,20 20,38 2,20" stroke="#FFB81C" stroke-width="2.5" fill="none"/>
+            <polygon points="20,9 31,20 20,31 9,20" stroke="#FFB81C" stroke-width="1.5" fill="rgba(255,184,28,0.12)"/>
+            <circle cx="20" cy="20" r="3" fill="#FFB81C"/>
+          </svg>
+          <span class="auth-logo-text">Data<em>Diamond</em></span>
+        </div>
+        <h2>Canadian Baseball League · Restricted Access</h2>
+        <div class="auth-input-wrap">
+          <input type="password" id="auth-input" placeholder="Enter password" autocomplete="off" />
+        </div>
+        <button id="auth-btn">Enter</button>
+        <div class="auth-error" id="auth-error"></div>
+      </div>
+    `;
+    document.body.appendChild(overlay);
+    document.getElementById('auth-input').focus();
+
+    return new Promise(resolve => {
+      async function attempt() {
+        const pwd  = document.getElementById('auth-input').value;
+        const hash = await sha256(pwd);
+        if (hash === HASH) {
+          sessionStorage.setItem(key, 'ok');
+          overlay.style.opacity = '0';
+          overlay.style.transition = 'opacity 0.4s';
+          setTimeout(() => overlay.remove(), 400);
+          resolve();
+        } else {
+          document.getElementById('auth-error').textContent = 'Incorrect password — try again.';
+          document.getElementById('auth-input').value = '';
+          document.getElementById('auth-input').focus();
+        }
+      }
+      document.getElementById('auth-btn').addEventListener('click', attempt);
+      document.getElementById('auth-input').addEventListener('keydown', e => {
+        if (e.key === 'Enter') attempt();
+      });
+    });
   }
+
+  checkAuth();
+</script>
 
   checkAuth();
 </script>
