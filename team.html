@@ -12,6 +12,8 @@
 
   async function checkAuth() {
     if (sessionStorage.getItem(key) === 'ok') return;
+
+    // Inject overlay
     const overlay = document.createElement('div');
     overlay.id = 'auth-overlay';
     overlay.innerHTML = `
@@ -49,7 +51,9 @@
           font-size:28px;letter-spacing:0.05em;
           color:#fff;
         }
-        #auth-overlay .auth-logo-text em { color:#FFB81C;font-style:normal; }
+        #auth-overlay .auth-logo-text em {
+          color:#FFB81C;font-style:normal;
+        }
         #auth-overlay h2 {
           font-family:'Bebas Neue',sans-serif;
           font-size:13px;letter-spacing:0.15em;
@@ -57,7 +61,9 @@
           margin:0 0 32px;
           text-transform:uppercase;
         }
-        #auth-overlay .auth-input-wrap { position:relative;margin-bottom:16px; }
+        #auth-overlay .auth-input-wrap {
+          position:relative;margin-bottom:16px;
+        }
         #auth-overlay input {
           width:100%;box-sizing:border-box;
           padding:14px 16px;
@@ -113,7 +119,8 @@
       </div>
     `;
     document.body.appendChild(overlay);
-    setTimeout(() => document.getElementById('auth-input').focus(), 50);
+    document.getElementById('auth-input').focus();
+
     return new Promise(resolve => {
       async function attempt() {
         const pwd  = document.getElementById('auth-input').value;
@@ -131,11 +138,13 @@
         }
       }
       document.getElementById('auth-btn').addEventListener('click', attempt);
-      document.getElementById('auth-input').addEventListener('keydown', e => { if (e.key === 'Enter') attempt(); });
+      document.getElementById('auth-input').addEventListener('keydown', e => {
+        if (e.key === 'Enter') attempt();
+      });
     });
   }
 
-  window.onload = checkAuth;
+  checkAuth();
 </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
