@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Data Diamond — CBL</title>
+  <title>Data Diamond — CBL Stats</title>
   <link rel="stylesheet" href="css/style.css" />
 <script>
   const HASH = '2700114b0b68384c38a1018ac02dd3825205f695857ec23f9d1493280452b3a2';
@@ -210,9 +210,10 @@
         </a>
       </div>
       <nav class="main-nav">
-        <a href="teams.html"   class="nav-link">Teams</a>
-        <a href="players.html" class="nav-link">Players</a>
-        <a href="league.html"  class="nav-link">Leaderboards</a>
+        <a href="index.html"   class="nav-link active">Home</a>
+        <a href="league.html"  class="nav-link">League Stats</a>
+        <a href="teams.html"   class="nav-link">Team Stats</a>
+        <a href="players.html" class="nav-link">Player Stats</a>
       </nav>
       <div class="header-search">
         <input type="text" id="global-search" placeholder="Search players…" autocomplete="off" />
@@ -237,13 +238,13 @@
   <!-- TICKER -->
   <div class="ticker-wrap"><div class="ticker-track" id="stat-ticker"></div></div>
 
-  <!-- TEAMS SECTION -->
+  <!-- TEAMS -->
   <div class="container" style="padding-top:48px;padding-bottom:80px">
     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;flex-wrap:wrap;gap:12px">
       <h2 class="section-title" style="margin-bottom:0">CBL <span>TEAMS</span></h2>
-      <div style="display:flex;gap:8px" id="team-filters">
-        <button class="zone-filter-btn active" data-filter="all">All 9 Teams</button>
-        <button class="zone-filter-btn" data-filter="cbl">CBL</button>
+      <div style="display:flex;gap:8px">
+        <button class="zone-filter-btn active">All 9 Teams</button>
+        <button class="zone-filter-btn">CBL</button>
       </div>
     </div>
     <div class="teams-grid" id="teams-grid"></div>
