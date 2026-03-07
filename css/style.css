@@ -468,3 +468,30 @@ body {
 
 /* ── HIDDEN ──────────────────────────────────────── */
 .hidden { display: none !important; }
+
+/* ── HOME HERO ────────────────────────────────────── */
+.home-hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex; align-items: center;
+  overflow: hidden;
+}
+.home-hero-bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 70% 70% at 50% 50%, rgba(0,61,165,0.12) 0%, transparent 65%),
+    radial-gradient(ellipse 40% 40% at 80% 20%, rgba(255,184,28,0.06) 0%, transparent 50%),
+    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.01'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.home-hero-inner { position: relative; z-index: 1; padding: 80px 0; }
+.home-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(56px, 10vw, 120px);
+  letter-spacing: 4px; line-height: 0.9;
+  color: var(--text); margin: 16px 0 24px;
+}
+.home-hero-title span { color: var(--gold); }
+.home-hero-sub {
+  font-size: 16px; color: var(--text-dim);
+  max-width: 520px; line-height: 1.7;
+}

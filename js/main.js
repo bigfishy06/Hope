@@ -37,7 +37,8 @@ async function init() {
   initGlobalSearch();
 
   const path = window.location.pathname.split('/').pop() || 'index.html';
-  if (path === 'index.html' || path === '')  initLeaguePage();
+  if (path === 'index.html' || path === '')  initHomePage();
+  if (path === 'league.html')                initLeaguePage();
   if (path === 'teams.html')                 initTeamsPage();
   if (path === 'players.html')               initPlayersPage();
 }
@@ -154,6 +155,46 @@ function initGlobalSearch() {
   });
   document.addEventListener('click', function(e) {
     if (!e.target.closest('.header-search')) dropdown.classList.add('hidden');
+  });
+}
+
+// ══════════════════════════════════════════════════
+// HOME PAGE
+// ══════════════════════════════════════════════════
+function initHomePage() {
+  buildHomeTeamsGrid();
+}
+
+function buildHomeTeamsGrid() {
+  const grid = document.getElementById('teams-grid');
+  if (!grid) return;
+  TEAMS.forEach(function(team, i) {
+    const playerCount = DATA.summary.filter(function(p) {
+      const t = resolveTeam(p.batter_team);
+      return t && t.id === team.id;
+    }).length;
+    const card = document.createElement('div');
+    card.className = 'team-card fade-up';
+    card.style.setProperty('--team-color', team.primaryColor);
+    card.style.animationDelay = (i * 0.04) + 's';
+    card.innerHTML =
+      '<div class="team-abbr">' + team.abbreviation + '</div>' +
+      '<div class="team-name">' + team.name + '</div>' +
+      '<div class="team-footer">' +
+      '<span class="team-player-count">' + playerCount + ' player' + (playerCount !== 1 ? 's' : '') + '</span>' +
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;color:var(--text-dim)"><path d="M5 12h14M12 5l7 7-7 7"/></svg>' +
+      '</div>';
+    card.addEventListener('click', function() { navigate('teams.html?team=' + team.id); });
+    grid.appendChild(card);
+  });
+
+  // Filter buttons
+  const filterBtns = document.querySelectorAll('#team-filters .zone-filter-btn');
+  filterBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      filterBtns.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+    });
   });
 }
 

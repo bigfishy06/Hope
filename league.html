@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Data Diamond — CBL</title>
+  <title>Leaderboards — Data Diamond</title>
   <link rel="stylesheet" href="css/style.css" />
 <script>
   const HASH = '2700114b0b68384c38a1018ac02dd3825205f695857ec23f9d1493280452b3a2';
@@ -195,7 +195,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 </head>
-<body class="home-page">
+<body class="league-page">
 
   <header class="site-header">
     <div class="header-inner">
@@ -212,7 +212,7 @@
       <nav class="main-nav">
         <a href="teams.html"   class="nav-link">Teams</a>
         <a href="players.html" class="nav-link">Players</a>
-        <a href="league.html"  class="nav-link">Leaderboards</a>
+        <a href="league.html"  class="nav-link active">Leaderboards</a>
       </nav>
       <div class="header-search">
         <input type="text" id="global-search" placeholder="Search players…" autocomplete="off" />
@@ -221,32 +221,25 @@
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="home-hero">
-    <div class="home-hero-bg"></div>
-    <div class="container home-hero-inner">
-      <p class="hero-eyebrow">2025 Season · Canadian Baseball League</p>
-      <h1 class="home-hero-title">
-        WHERE EVERY<br>
-        <span>PITCH HAS DATA.</span>
-      </h1>
-      <p class="home-hero-sub">Deep stats, strike zone intelligence, and season reports for all 9 CBL teams across Ontario.</p>
+  <section class="page-hero">
+    <div class="hero-bg"></div>
+    <div class="container">
+      <p class="hero-eyebrow">Canadian Baseball League</p>
+      <h1 class="hero-title">LEADER<br><span>BOARDS</span></h1>
+      <p class="hero-subtitle">Top performers across all 9 CBL teams</p>
     </div>
   </section>
 
-  <!-- TICKER -->
   <div class="ticker-wrap"><div class="ticker-track" id="stat-ticker"></div></div>
 
-  <!-- TEAMS SECTION -->
-  <div class="container" style="padding-top:48px;padding-bottom:80px">
-    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;flex-wrap:wrap;gap:12px">
-      <h2 class="section-title" style="margin-bottom:0">CBL <span>TEAMS</span></h2>
-      <div style="display:flex;gap:8px" id="team-filters">
-        <button class="zone-filter-btn active" data-filter="all">All 9 Teams</button>
-        <button class="zone-filter-btn" data-filter="cbl">CBL</button>
+  <div class="container" style="padding-top:40px;padding-bottom:80px">
+    <div class="tabs-bar">
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="hitting">Hitting</button>
+        <button class="tab-btn" data-tab="pitching">Pitching</button>
       </div>
     </div>
-    <div class="teams-grid" id="teams-grid"></div>
+    <div id="tab-content"></div>
   </div>
 
   <footer class="site-footer">
