@@ -292,7 +292,7 @@ function renderPitchingLeaderboards(container) {
       const p = pitcherMap[s.pitcher];
       p.pitches++;
       if (s.outcome === 'Strikeout Swinging' || s.outcome === 'Strikeout Looking') p.k++;
-      if (s.outcome === 'Walk') p.bb++;
+      if (s.outcome === 'Walk' || s.outcome === 'Intentional Walk') p.bb++;
       if (['Single','Double','Triple','Home Run'].includes(s.outcome)) p.hits++;
       if (['Called Strike','Swinging Strike','Foul'].includes(s.outcome)) p.strikes++;
       if (s.outcome === 'Ball') p.balls++;
@@ -601,7 +601,7 @@ function renderPlayerDetail(name, type, content) {
     const sc  = pitch.scatter;
     const tot = sc.length;
     const ks  = sc.filter(function(s) { return s.outcome === 'Strikeout Swinging' || s.outcome === 'Strikeout Looking'; }).length;
-    const bbs = sc.filter(function(s) { return s.outcome === 'Walk'; }).length;
+    const bbs = sc.filter(function(s) { return s.outcome === 'Walk' || s.outcome === 'Intentional Walk'; }).length;
     const strPct = tot > 0 ? Math.round(sc.filter(function(s) { return ['Called Strike','Swinging Strike','Foul'].includes(s.outcome); }).length / tot * 100) : 0;
     [['PITCHES', tot], ['K', ks], ['BB', bbs], ['STR%', strPct + '%']].forEach(function(s) {
       hl.innerHTML += '<div class="hs-stat"><span class="hs-val">' + s[1] + '</span><span class="hs-lbl">' + s[0] + '</span></div>';
@@ -667,7 +667,7 @@ function renderOverview(name, type, sum, pitch) {
     const sc  = pitch.scatter;
     const tot = sc.length;
     const ks  = sc.filter(function(s) { return s.outcome === 'Strikeout Swinging' || s.outcome === 'Strikeout Looking'; }).length;
-    const bbs = sc.filter(function(s) { return s.outcome === 'Walk'; }).length;
+    const bbs = sc.filter(function(s) { return s.outcome === 'Walk' || s.outcome === 'Intentional Walk'; }).length;
     const str = sc.filter(function(s) { return ['Called Strike','Swinging Strike','Foul'].includes(s.outcome); }).length;
     const inZone = sc.filter(function(s) { return s.x >= -1 && s.x <= 1 && s.y >= 0 && s.y <= 1; }).length;
     const bars = [
@@ -723,7 +723,7 @@ function renderSeasonStats(name, type, sum, pitch) {
     const sc  = pitch.scatter;
     const tot = sc.length;
     const ks  = sc.filter(function(s) { return s.outcome === 'Strikeout Swinging' || s.outcome === 'Strikeout Looking'; }).length;
-    const bbs = sc.filter(function(s) { return s.outcome === 'Walk'; }).length;
+    const bbs = sc.filter(function(s) { return s.outcome === 'Walk' || s.outcome === 'Intentional Walk'; }).length;
     const str = sc.filter(function(s) { return ['Called Strike','Swinging Strike','Foul'].includes(s.outcome); }).length;
     const swStr = sc.filter(function(s) { return s.outcome === 'Swinging Strike'; }).length;
     const calStr = sc.filter(function(s) { return s.outcome === 'Called Strike'; }).length;
@@ -798,7 +798,7 @@ function renderZone(name, type, pitch, container) {
 
   function dotColor(s) {
     if (['Single','Double','Triple','Home Run'].includes(s.outcome)) return '#4ade80';
-    if (['Groundout','Flyout','Popout','Lineout','Double Play'].includes(s.outcome)) return '#f87171';
+    if (['Groundout','Flyout','Popout','Lineout','Double Play','Triple Play','Error','Truncated Out','Caught Stealing'].includes(s.outcome)) return '#f87171';
     if (s.outcome === 'Strikeout Swinging' || s.outcome === 'Strikeout Looking') return '#f87171';
     if (s.outcome === 'Called Strike' || s.outcome === 'Swinging Strike' || s.outcome === 'Foul') return '#FFB81C';
     return '#4a5568';
