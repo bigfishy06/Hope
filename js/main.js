@@ -992,7 +992,8 @@ function renderZone(name, type, pitch, container) {
     ctx.fillText(filtered.length + ' / ' + totalPts + ' pitches shown', PAD_L, H - 10);
   }
 
-  drawZone();
+  // Defer until DOM is painted
+  requestAnimationFrame(function() { drawZone(); });
 
   // ── Tooltip on hover ───────────────────────────
   var tooltip = document.getElementById('zone-tooltip');
