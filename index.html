@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Diamond — CBL Stats</title>
+  <link rel="stylesheet" href="css/style.css" />
 <script>
   const HASH = '2700114b0b68384c38a1018ac02dd3825205f695857ec23f9d1493280452b3a2';
   const key  = 'dd_auth';
@@ -11,9 +15,8 @@
   }
 
   async function checkAuth() {
-    if (sessionStorage.getItem(key) === 'ok') return;
+    if (sessionStorage.getItem(key) === 'ok' || localStorage.getItem(key) === 'ok') return;
 
-    // Inject overlay
     const overlay = document.createElement('div');
     overlay.id = 'auth-overlay';
     overlay.innerHTML = `
@@ -51,9 +54,7 @@
           font-size:28px;letter-spacing:0.05em;
           color:#fff;
         }
-        #auth-overlay .auth-logo-text em {
-          color:#FFB81C;font-style:normal;
-        }
+        #auth-overlay .auth-logo-text em { color:#FFB81C;font-style:normal; }
         #auth-overlay h2 {
           font-family:'Bebas Neue',sans-serif;
           font-size:13px;letter-spacing:0.15em;
@@ -61,10 +62,8 @@
           margin:0 0 32px;
           text-transform:uppercase;
         }
-        #auth-overlay .auth-input-wrap {
-          position:relative;margin-bottom:16px;
-        }
-        #auth-overlay input {
+        #auth-overlay .auth-input-wrap { position:relative;margin-bottom:16px; }
+        #auth-overlay input[type="password"] {
           width:100%;box-sizing:border-box;
           padding:14px 16px;
           background:rgba(255,255,255,0.04);
@@ -76,11 +75,48 @@
           outline:none;
           transition:border-color 0.2s;
         }
-        #auth-overlay input:focus {
+        #auth-overlay input[type="password"]:focus {
           border-color:rgba(255,184,28,0.5);
           background:rgba(255,184,28,0.03);
         }
-        #auth-overlay input::placeholder { color:rgba(255,255,255,0.2); }
+        #auth-overlay input[type="password"]::placeholder { color:rgba(255,255,255,0.2); }
+        #auth-overlay .remember-wrap {
+          display:flex;align-items:center;justify-content:flex-start;
+          gap:10px;
+          margin-bottom:20px;
+          cursor:pointer;
+        }
+        #auth-overlay .remember-wrap input[type="checkbox"] {
+          appearance:none;-webkit-appearance:none;
+          width:18px;height:18px;
+          border:1px solid rgba(255,184,28,0.4);
+          border-radius:3px;
+          background:rgba(255,255,255,0.04);
+          cursor:pointer;
+          position:relative;
+          flex-shrink:0;
+          transition:background 0.2s, border-color 0.2s;
+        }
+        #auth-overlay .remember-wrap input[type="checkbox"]:checked {
+          background:#FFB81C;
+          border-color:#FFB81C;
+        }
+        #auth-overlay .remember-wrap input[type="checkbox"]:checked::after {
+          content:'';
+          position:absolute;
+          left:4px;top:1px;
+          width:5px;height:9px;
+          border:2px solid #080c12;
+          border-top:none;border-left:none;
+          transform:rotate(45deg);
+        }
+        #auth-overlay .remember-label {
+          font-family:'Inter',sans-serif;
+          font-size:13px;
+          color:rgba(255,255,255,0.45);
+          cursor:pointer;
+          user-select:none;
+        }
         #auth-overlay button {
           width:100%;padding:14px;
           background:#FFB81C;
@@ -114,19 +150,28 @@
         <div class="auth-input-wrap">
           <input type="password" id="auth-input" placeholder="Enter password" autocomplete="off" />
         </div>
+        <label class="remember-wrap">
+          <input type="checkbox" id="auth-remember" />
+          <span class="remember-label">Remember me on this device</span>
+        </label>
         <button id="auth-btn">Enter</button>
         <div class="auth-error" id="auth-error"></div>
       </div>
-    `;
+    \`;
     document.body.appendChild(overlay);
     document.getElementById('auth-input').focus();
 
     return new Promise(resolve => {
       async function attempt() {
-        const pwd  = document.getElementById('auth-input').value;
-        const hash = await sha256(pwd);
+        const pwd      = document.getElementById('auth-input').value;
+        const remember = document.getElementById('auth-remember').checked;
+        const hash     = await sha256(pwd);
         if (hash === HASH) {
-          sessionStorage.setItem(key, 'ok');
+          if (remember) {
+            localStorage.setItem(key, 'ok');
+          } else {
+            sessionStorage.setItem(key, 'ok');
+          }
           overlay.style.opacity = '0';
           overlay.style.transition = 'opacity 0.4s';
           setTimeout(() => overlay.remove(), 400);
@@ -146,31 +191,28 @@
 
   document.addEventListener('DOMContentLoaded', checkAuth);
 </script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Data Diamond — CBL Analytics</title>
-  <link rel="stylesheet" href="css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 </head>
-<body>
+<body class="index-page">
 
-  <!-- HEADER -->
   <header class="site-header">
     <div class="header-inner">
       <div class="logo">
-        <svg class="logo-diamond" viewBox="0 0 40 40" fill="none">
-          <polygon points="20,2 38,20 20,38 2,20" stroke="#E8C84A" stroke-width="2.5" fill="none"/>
-          <polygon points="20,9 31,20 20,31 9,20" stroke="#E8C84A" stroke-width="1.5" fill="rgba(232,200,74,0.12)"/>
-          <circle cx="20" cy="20" r="3" fill="#E8C84A"/>
-        </svg>
-        <span class="logo-text">Data<em>Diamond</em></span>
+        <a href="index.html">
+          <svg class="logo-diamond" viewBox="0 0 40 40" fill="none">
+            <polygon points="20,2 38,20 20,38 2,20" stroke="#FFB81C" stroke-width="2.5" fill="none"/>
+            <polygon points="20,9 31,20 20,31 9,20" stroke="#FFB81C" stroke-width="1.5" fill="rgba(255,184,28,0.12)"/>
+            <circle cx="20" cy="20" r="3" fill="#FFB81C"/>
+          </svg>
+          <span class="logo-text">Data<em>Diamond</em></span>
+        </a>
       </div>
       <nav class="main-nav">
-        <a href="index.html" class="nav-link active">Teams</a>
-        <a href="#" class="nav-link" id="nav-players">Players</a>
-        <a href="#" class="nav-link">Leaderboards</a>
+        <a href="index.html" class="nav-link active">League Stats</a>
+        <a href="teams.html" class="nav-link">Team Stats</a>
+        <a href="players.html" class="nav-link">Player Stats</a>
       </nav>
       <div class="header-search">
         <input type="text" id="global-search" placeholder="Search players…" autocomplete="off" />
@@ -179,60 +221,43 @@
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-bg">
-      <div class="diamond-field"></div>
-    </div>
-    <div class="hero-content">
-      <p class="hero-label">2026 Season · Canadian Baseball League</p>
-      <h1 class="hero-title">Where Every<br/><span>Pitch Has Data.</span></h1>
-      <p class="hero-sub">Deep stats, strike zone intelligence, and season reports for all 9 CBL teams across Ontario.</p>
-    </div>
-    <div class="hero-ticker">
-      <div class="ticker-track" id="stat-ticker">
-        <!-- filled by JS -->
-      </div>
+  <section class="page-hero">
+    <div class="hero-bg"></div>
+    <div class="container">
+      <p class="hero-eyebrow">Canadian Baseball League</p>
+      <h1 class="hero-title">LEAGUE<br><span>STATS</span></h1>
+      <p class="hero-subtitle">Pitch-by-pitch data across all CBL teams</p>
     </div>
   </section>
 
-  <!-- LEAGUE FILTER -->
-  <section class="teams-section">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">CBL Teams</h2>
-        <div class="filter-tabs">
-          <button class="filter-tab active" data-filter="all">All 9 Teams</button>
-          <button class="filter-tab" data-filter="CBL">CBL</button>
-        </div>
-      </div>
-      <div class="teams-grid" id="teams-grid">
-        <!-- filled by JS -->
-      </div>
-    </div>
-  </section>
+  <div class="ticker-wrap"><div class="ticker-track" id="stat-ticker"></div></div>
 
-  <!-- FEATURED PLAYERS STRIP -->
-  <section class="featured-section">
-    <div class="container">
-      <h2 class="section-title">Featured Players</h2>
-      <div class="players-strip" id="featured-players">
-        <!-- filled by JS -->
+  <div class="container" style="padding-top:40px;padding-bottom:80px">
+
+    <div class="tabs-bar">
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="hitting">Hitting</button>
+        <button class="tab-btn" data-tab="pitching">Pitching</button>
       </div>
     </div>
-  </section>
+
+    <div id="tab-content"></div>
+
+  </div>
 
   <footer class="site-footer">
     <div class="container">
       <div class="footer-inner">
-        <div class="logo small">
-          <svg class="logo-diamond" viewBox="0 0 40 40" fill="none">
-            <polygon points="20,2 38,20 20,38 2,20" stroke="#E8C84A" stroke-width="2.5" fill="none"/>
-            <circle cx="20" cy="20" r="3" fill="#E8C84A"/>
-          </svg>
-          <span class="logo-text">Data<em>Diamond</em></span>
+        <div class="logo">
+          <a href="index.html" style="display:flex;align-items:center;gap:8px;text-decoration:none">
+            <svg class="logo-diamond" viewBox="0 0 40 40" fill="none" style="width:24px;height:24px">
+              <polygon points="20,2 38,20 20,38 2,20" stroke="#FFB81C" stroke-width="2.5" fill="none"/>
+              <circle cx="20" cy="20" r="3" fill="#FFB81C"/>
+            </svg>
+            <span class="logo-text" style="font-size:16px">Data<em>Diamond</em></span>
+          </a>
         </div>
-        <p class="footer-note">Sample data only. Not affiliated with MLB.</p>
+        <p class="footer-note">CBL Pitch Data · Not affiliated with MLB</p>
       </div>
     </div>
   </footer>
