@@ -800,7 +800,7 @@ function renderZone(name, type, pitch, container) {
   }
 
   if (!points.length) {
-    container.innerHTML = '<div class="empty-state"><div class="empty-state-icon">🎯</div><h3>No pitch location data</h3></div>';
+    container.innerHTML = '<div class="empty-state"><div class="empty-state-icon">&#127919;</div><h3>No pitch location data</h3></div>';
     return;
   }
 
@@ -816,27 +816,22 @@ function renderZone(name, type, pitch, container) {
     'Sinker':       '#22d3ee'
   };
   var FALLBACK_COLORS = ['#f87171','#60a5fa','#a78bfa','#34d399','#fb923c','#facc15','#f472b6','#22d3ee'];
-
-  // Collect unique pitch types in data
   var typeSet = [];
   points.forEach(function(s) {
     var t = s.pitch_type || s.type || 'Unknown';
     if (!typeSet.includes(t)) typeSet.push(t);
   });
   typeSet.sort();
-
-  // Assign colors to types
   var typeColorMap = {};
   typeSet.forEach(function(t, i) {
     typeColorMap[t] = PITCH_COLORS[t] || FALLBACK_COLORS[i % FALLBACK_COLORS.length];
   });
-
   function dotColor(s) {
     var t = s.pitch_type || s.type || 'Unknown';
     return typeColorMap[t] || '#6b7a9a';
   }
 
-  // Outcome filter options
+  // Outcome filters
   var RESULT_FILTERS = [
     { lbl: 'All',        val: 'all'       },
     { lbl: 'Hits',       val: 'hit'       },
@@ -846,7 +841,6 @@ function renderZone(name, type, pitch, container) {
     { lbl: 'Balls',      val: 'ball'      },
     { lbl: 'Strikes',    val: 'strike'    }
   ];
-
   function resultMatch(s, filter) {
     if (filter === 'all') return true;
     var o = s.outcome || '';
@@ -867,7 +861,6 @@ function renderZone(name, type, pitch, container) {
   var swStr    = points.filter(function(s){ return s.outcome==='Swinging Strike'; }).length;
   var chases   = points.filter(function(s){ return (s.x<-1||s.x>1||s.y<0||s.y>1)&&(s.outcome==='Swinging Strike'||s.outcome==='Foul'); }).length;
 
-  // Build legend HTML
   var legendHTML = typeSet.map(function(t) {
     return '<div class="legend-item"><div class="legend-dot" style="background:' + typeColorMap[t] + '"></div>' + t + '</div>';
   }).join('');
@@ -878,7 +871,16 @@ function renderZone(name, type, pitch, container) {
     '<span class="stat-card-subtitle">' + totalPts + ' pitches plotted</span></div>' +
     '<div class="zone-container">' +
 
-    // Result filters (was pitch type, now outcome)
+    // View mode toggles
+    '<div style="margin-bottom:16px">' +
+    '<div style="font-family:var(--font-mono);font-size:10px;color:var(--text-dim);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px">View</div>' +
+    '<div class="zone-controls" id="zone-view-btns">' +
+    '<button class="zone-filter-btn active" data-view="scatter">Scatter</button>' +
+    '<button class="zone-filter-btn" data-view="grid">Zone Grid</button>' +
+    '<button class="zone-filter-btn" data-view="heatmap">Heat Map</button>' +
+    '</div></div>' +
+
+    // Outcome filters
     '<div style="margin-bottom:20px">' +
     '<div style="font-family:var(--font-mono);font-size:10px;color:var(--text-dim);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px">Filter by Outcome</div>' +
     '<div class="zone-controls" id="zone-result-filters">' +
@@ -886,21 +888,16 @@ function renderZone(name, type, pitch, container) {
       return '<button class="zone-filter-btn' + (r.val==='all'?' active':'') + '" data-result="' + r.val + '">' + r.lbl + '</button>';
     }).join('') + '</div></div>' +
 
-    // Main layout: canvas + sidebar
+    // Canvas + sidebar
     '<div class="zone-wrap">' +
     '<div class="zone-canvas-wrap" style="position:relative">' +
     '<canvas id="zone-canvas" width="360" height="400"></canvas>' +
     '<div id="zone-tooltip" class="zone-tooltip hidden"></div>' +
     '</div>' +
     '<div style="flex:1;min-width:160px">' +
-
-    // Legend (pitch types)
-    '<div class="zone-legend" style="margin-bottom:20px">' +
+    '<div class="zone-legend" id="zone-legend" style="margin-bottom:20px">' +
     '<div style="font-family:var(--font-mono);font-size:10px;color:var(--text-dim);letter-spacing:1px;text-transform:uppercase;margin-bottom:10px">Pitch Type</div>' +
-    legendHTML +
-    '</div>' +
-
-    // Zone stats
+    legendHTML + '</div>' +
     '<div class="zone-stats-grid">' +
     '<div class="zone-stat-box"><div class="zone-stat-val">' + totalPts + '</div><div class="zone-stat-lbl">Pitches</div></div>' +
     '<div class="zone-stat-box"><div class="zone-stat-val">' + fmt1(inZone/totalPts*100) + '%</div><div class="zone-stat-lbl">Zone%</div></div>' +
@@ -910,8 +907,9 @@ function renderZone(name, type, pitch, container) {
     '<div class="zone-stat-box"><div class="zone-stat-val">' + chases + '</div><div class="zone-stat-lbl">Chases</div></div>' +
     '</div></div></div></div></div>';
 
-  // ── Canvas drawing ──────────────────────────────
+  // ── Canvas setup ──────────────────────────────
   var activeResult = 'all';
+  var activeView   = 'scatter';
 
   var X_MIN = -2.5, X_MAX = 2.5;
   var Y_MIN = -0.8, Y_MAX = 1.5;
@@ -928,39 +926,33 @@ function renderZone(name, type, pitch, container) {
   function fromCanvasX(cx) { return X_MIN + ((cx - PAD_L) / PW) * (X_MAX - X_MIN); }
   function fromCanvasY(cy) { return Y_MIN + (PH - (cy - PAD_T)) / PH * (Y_MAX - Y_MIN); }
 
-  function drawZone() {
-    ctx.clearRect(0, 0, W, H);
-
-    // Background
+  // ── Shared background drawing ──────────────────
+  function drawBackground() {
     ctx.fillStyle = '#0e1525';
     ctx.fillRect(0, 0, W, H);
 
-    // Subtle grid lines
     ctx.strokeStyle = 'rgba(255,184,28,0.05)';
     ctx.lineWidth = 1;
-    [-2, -1, 0, 1, 2].forEach(function(xv) {
+    [-2,-1,0,1,2].forEach(function(xv) {
       var cx = toCanvasX(xv);
-      ctx.beginPath(); ctx.moveTo(cx, PAD_T); ctx.lineTo(cx, PAD_T + PH); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(cx, PAD_T); ctx.lineTo(cx, PAD_T+PH); ctx.stroke();
     });
-    [-0.5, 0, 0.5, 1.0].forEach(function(yv) {
+    [-0.5,0,0.5,1.0].forEach(function(yv) {
       var cy = toCanvasY(yv);
-      ctx.beginPath(); ctx.moveTo(PAD_L, cy); ctx.lineTo(PAD_L + PW, cy); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(PAD_L, cy); ctx.lineTo(PAD_L+PW, cy); ctx.stroke();
     });
 
-    // Home plate indicator
-    var plateY = toCanvasY(Y_MIN + 0.05);
-    var plateCx = toCanvasX(0);
+    // Home plate
+    var plateCx = toCanvasX(0), plateY = toCanvasY(Y_MIN+0.05);
     ctx.fillStyle = 'rgba(255,255,255,0.06)';
     ctx.beginPath();
-    ctx.moveTo(plateCx, plateY - 4);
-    ctx.lineTo(plateCx - 8, plateY + 4);
-    ctx.lineTo(plateCx + 8, plateY + 4);
-    ctx.closePath();
-    ctx.fill();
+    ctx.moveTo(plateCx, plateY-4);
+    ctx.lineTo(plateCx-8, plateY+4);
+    ctx.lineTo(plateCx+8, plateY+4);
+    ctx.closePath(); ctx.fill();
 
     // Strike zone box
-    var zx1 = toCanvasX(-1), zx2 = toCanvasX(1);
-    var zy1 = toCanvasY(1),  zy2 = toCanvasY(0);
+    var zx1=toCanvasX(-1), zx2=toCanvasX(1), zy1=toCanvasY(1), zy2=toCanvasY(0);
     ctx.fillStyle = 'rgba(255,184,28,0.03)';
     ctx.fillRect(zx1, zy1, zx2-zx1, zy2-zy1);
     ctx.strokeStyle = 'rgba(255,184,28,0.7)';
@@ -970,51 +962,233 @@ function renderZone(name, type, pitch, container) {
     // Inner 3x3 grid
     ctx.strokeStyle = 'rgba(255,184,28,0.18)';
     ctx.lineWidth = 0.8;
-    for (var i = 1; i < 3; i++) {
-      var xi = zx1 + (i/3)*(zx2-zx1);
-      var yi = zy1 + (i/3)*(zy2-zy1);
-      ctx.beginPath(); ctx.moveTo(xi, zy1); ctx.lineTo(xi, zy2); ctx.stroke();
-      ctx.beginPath(); ctx.moveTo(zx1, yi); ctx.lineTo(zx2, yi); ctx.stroke();
+    for (var i=1; i<3; i++) {
+      var xi=zx1+(i/3)*(zx2-zx1), yi=zy1+(i/3)*(zy2-zy1);
+      ctx.beginPath(); ctx.moveTo(xi,zy1); ctx.lineTo(xi,zy2); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(zx1,yi); ctx.lineTo(zx2,yi); ctx.stroke();
     }
 
     // Axis labels
     ctx.fillStyle = '#4a5568';
     ctx.font = '10px DM Mono, monospace';
     ctx.textAlign = 'center';
-    [-2, -1, 0, 1, 2].forEach(function(xv) {
-      ctx.fillText(xv, toCanvasX(xv), H - 10);
-    });
+    [-2,-1,0,1,2].forEach(function(xv) { ctx.fillText(xv, toCanvasX(xv), H-10); });
     ctx.textAlign = 'right';
-    [-0.5, 0, 0.5, 1.0].forEach(function(yv) {
-      ctx.fillText(yv.toFixed(1), PAD_L - 6, toCanvasY(yv) + 4);
-    });
+    [-0.5,0,0.5,1.0].forEach(function(yv) { ctx.fillText(yv.toFixed(1), PAD_L-6, toCanvasY(yv)+4); });
 
-    // Zone label
     ctx.fillStyle = 'rgba(255,184,28,0.25)';
     ctx.font = '9px DM Mono, monospace';
     ctx.textAlign = 'center';
-    ctx.fillText('STRIKE ZONE', toCanvasX(0), zy1 - 6);
+    ctx.fillText('STRIKE ZONE', toCanvasX(0), zy1-6);
+  }
 
-    // Filter points
-    var filtered = points.filter(function(s) {
-      return resultMatch(s, activeResult);
-    });
-
-    // Draw all dots
+  // ── Scatter draw ───────────────────────────────
+  function drawScatter(filtered) {
     filtered.forEach(function(s) {
-      var cx = toCanvasX(s.x);
-      var cy = toCanvasY(s.y);
-      var color = dotColor(s);
+      var cx=toCanvasX(s.x), cy=toCanvasY(s.y), color=dotColor(s);
       ctx.beginPath();
-      ctx.arc(cx, cy, 4.5, 0, Math.PI * 2);
-      ctx.fillStyle = color + 'bb';
+      ctx.arc(cx, cy, 4.5, 0, Math.PI*2);
+      ctx.fillStyle = color+'bb';
       ctx.fill();
       ctx.strokeStyle = color;
       ctx.lineWidth = 0.8;
       ctx.stroke();
     });
+  }
 
-    // Count label
+  // ── Zone Grid draw (4 cols x 3 rows = 12 zones like Savant) ──
+  // Zone layout: x cols = [-1,-0.33], [-0.33,0.33], [0.33,1] + outside left/right
+  // y rows = [0,0.33], [0.33,0.67], [0.67,1] + outside hi/lo
+  // Savant uses a 3x3 inside + border zones = 9 inner + 5 border = 14 total
+  // We'll do the full 4-col x 3-row grid: left-out, inner-left, inner-mid, inner-right, right-out
+  //                                        high-out, row1, row2, row3, low-out
+  function drawGrid(filtered) {
+    // Define 5 x-bands and 5 y-bands (3 inner + 2 outer each)
+    var xBands = [-2.5, -1, -0.333, 0.333, 1, 2.5];
+    var yBands = [-0.8, 0, 0.333,  0.667, 1, 1.5];
+
+    // Count pitches per cell
+    var grid = [];
+    var maxCount = 0;
+    for (var row=0; row<5; row++) {
+      grid[row] = [];
+      for (var col=0; col<5; col++) {
+        var count = filtered.filter(function(s) {
+          return s.x >= xBands[col] && s.x < xBands[col+1] &&
+                 s.y >= yBands[row] && s.y < yBands[row+1];
+        }).length;
+        grid[row][col] = count;
+        if (count > maxCount) maxCount = count;
+      }
+    }
+
+    // Draw cells (y rows go bottom to top in data, top to bottom on canvas)
+    for (var row=0; row<5; row++) {
+      for (var col=0; col<5; col++) {
+        var count = grid[row][col];
+        var cx1 = toCanvasX(xBands[col]);
+        var cx2 = toCanvasX(xBands[col+1]);
+        var cy1 = toCanvasY(yBands[row+1]); // top of cell on canvas
+        var cy2 = toCanvasY(yBands[row]);   // bottom of cell on canvas
+        var cw  = cx2 - cx1;
+        var ch  = cy2 - cy1;
+
+        // Inner zone cells (rows 1-3, cols 1-3)
+        var isInner = (row >= 1 && row <= 3 && col >= 1 && col <= 3);
+
+        if (count === 0) {
+          ctx.fillStyle = isInner ? 'rgba(255,184,28,0.04)' : 'rgba(255,255,255,0.01)';
+        } else {
+          var intensity = maxCount > 0 ? count / maxCount : 0;
+          if (isInner) {
+            // Gold gradient for inner zone
+            var r = Math.round(255);
+            var g = Math.round(100 + 84 * intensity);
+            var b = Math.round(28 * (1 - intensity));
+            ctx.fillStyle = 'rgba(' + r + ',' + g + ',' + b + ',' + (0.15 + 0.65*intensity) + ')';
+          } else {
+            // Blue tint for outer zones
+            ctx.fillStyle = 'rgba(96,165,250,' + (0.05 + 0.4*intensity) + ')';
+          }
+        }
+        ctx.fillRect(cx1, cy1, cw, ch);
+
+        // Cell border
+        ctx.strokeStyle = isInner ? 'rgba(255,184,28,0.25)' : 'rgba(255,255,255,0.06)';
+        ctx.lineWidth = 0.5;
+        ctx.strokeRect(cx1, cy1, cw, ch);
+
+        // Count label
+        if (count > 0) {
+          ctx.fillStyle = count/maxCount > 0.5 ? '#fff' : 'rgba(255,255,255,0.7)';
+          ctx.font = 'bold ' + (isInner ? '14' : '11') + 'px DM Mono, monospace';
+          ctx.textAlign = 'center';
+          ctx.fillText(count, cx1 + cw/2, cy1 + ch/2 + 5);
+        }
+      }
+    }
+  }
+
+  // ── Heat map draw ──────────────────────────────
+  function drawHeatmap(filtered) {
+    if (!filtered.length) return;
+
+    // Create offscreen canvas for smooth gaussian blur effect
+    var GRID_W = 40, GRID_H = 40;
+    var density = [];
+    for (var i=0; i<GRID_H; i++) {
+      density[i] = new Float32Array(GRID_W);
+    }
+
+    var SIGMA = 3.0; // blur radius in grid cells
+
+    filtered.forEach(function(s) {
+      // Map data coords to grid coords
+      var gx = ((s.x - X_MIN) / (X_MAX - X_MIN)) * GRID_W;
+      var gy = GRID_H - ((s.y - Y_MIN) / (Y_MAX - Y_MIN)) * GRID_H;
+
+      // Gaussian splat
+      var radius = Math.ceil(SIGMA * 3);
+      for (var dy=-radius; dy<=radius; dy++) {
+        for (var dx=-radius; dx<=radius; dx++) {
+          var px = Math.round(gx + dx);
+          var py = Math.round(gy + dy);
+          if (px < 0 || px >= GRID_W || py < 0 || py >= GRID_H) continue;
+          var dist2 = dx*dx + dy*dy;
+          density[py][px] += Math.exp(-dist2 / (2 * SIGMA * SIGMA));
+        }
+      }
+    });
+
+    // Find max density
+    var maxD = 0;
+    for (var i=0; i<GRID_H; i++) {
+      for (var j=0; j<GRID_W; j++) {
+        if (density[i][j] > maxD) maxD = density[i][j];
+      }
+    }
+    if (maxD === 0) return;
+
+    // Draw heatmap cells
+    var cellW = PW / GRID_W;
+    var cellH = PH / GRID_H;
+
+    for (var i=0; i<GRID_H; i++) {
+      for (var j=0; j<GRID_W; j++) {
+        var val = density[i][j] / maxD;
+        if (val < 0.01) continue;
+
+        // Color: cool blue -> green -> yellow -> hot red (like Savant)
+        var r, g, b;
+        if (val < 0.25) {
+          var t = val / 0.25;
+          r = Math.round(0   + t * 0);
+          g = Math.round(0   + t * 100);
+          b = Math.round(180 + t * 75);
+        } else if (val < 0.5) {
+          var t = (val - 0.25) / 0.25;
+          r = Math.round(0   + t * 50);
+          g = Math.round(100 + t * 155);
+          b = Math.round(255 - t * 255);
+        } else if (val < 0.75) {
+          var t = (val - 0.5) / 0.25;
+          r = Math.round(50  + t * 205);
+          g = Math.round(255 - t * 55);
+          b = 0;
+        } else {
+          var t = (val - 0.75) / 0.25;
+          r = 255;
+          g = Math.round(200 - t * 200);
+          b = 0;
+        }
+
+        ctx.fillStyle = 'rgba(' + r + ',' + g + ',' + b + ',' + (0.15 + val * 0.75) + ')';
+        ctx.fillRect(
+          PAD_L + j * cellW,
+          PAD_T + i * cellH,
+          cellW + 0.5,
+          cellH + 0.5
+        );
+      }
+    }
+
+    // Heat map color scale legend drawn on canvas
+    var scaleX = PAD_L + PW - 12;
+    var scaleH = PH * 0.5;
+    var scaleY = PAD_T + PH * 0.25;
+    var grad = ctx.createLinearGradient(0, scaleY, 0, scaleY + scaleH);
+    grad.addColorStop(0,    'rgba(255,0,0,0.9)');
+    grad.addColorStop(0.33, 'rgba(255,200,0,0.9)');
+    grad.addColorStop(0.66, 'rgba(0,255,0,0.9)');
+    grad.addColorStop(1,    'rgba(0,0,180,0.9)');
+    ctx.fillStyle = grad;
+    ctx.fillRect(scaleX, scaleY, 8, scaleH);
+    ctx.strokeStyle = 'rgba(255,255,255,0.2)';
+    ctx.lineWidth = 0.5;
+    ctx.strokeRect(scaleX, scaleY, 8, scaleH);
+    ctx.fillStyle = 'rgba(255,255,255,0.5)';
+    ctx.font = '8px DM Mono, monospace';
+    ctx.textAlign = 'left';
+    ctx.fillText('HI', scaleX + 11, scaleY + 8);
+    ctx.fillText('LO', scaleX + 11, scaleY + scaleH);
+  }
+
+  // ── Main draw ──────────────────────────────────
+  function drawZone() {
+    ctx.clearRect(0, 0, W, H);
+    drawBackground();
+
+    var filtered = points.filter(function(s) { return resultMatch(s, activeResult); });
+
+    if      (activeView === 'scatter') drawScatter(filtered);
+    else if (activeView === 'grid')    drawGrid(filtered);
+    else if (activeView === 'heatmap') drawHeatmap(filtered);
+
+    // Update legend visibility
+    var legend = document.getElementById('zone-legend');
+    if (legend) legend.style.display = activeView === 'scatter' ? '' : 'none';
+
+    // Pitch count
     ctx.fillStyle = 'rgba(106,123,154,0.6)';
     ctx.font = '10px DM Mono, monospace';
     ctx.textAlign = 'left';
@@ -1023,10 +1197,11 @@ function renderZone(name, type, pitch, container) {
 
   requestAnimationFrame(function() { drawZone(); });
 
-  // ── Tooltip ────────────────────────────────────
+  // ── Tooltip (scatter only) ─────────────────────
   var tooltip = document.getElementById('zone-tooltip');
 
   canvas.addEventListener('mousemove', function(e) {
+    if (activeView !== 'scatter') { tooltip.classList.add('hidden'); return; }
     var rect = canvas.getBoundingClientRect();
     var mx = (e.clientX - rect.left) * (W / rect.width);
     var my = (e.clientY - rect.top)  * (H / rect.height);
@@ -1034,28 +1209,28 @@ function renderZone(name, type, pitch, container) {
     var best = null, bestDist = Infinity;
     var filtered = points.filter(function(s) { return resultMatch(s, activeResult); });
     filtered.forEach(function(s) {
-      var px = toCanvasX(s.x), py = toCanvasY(s.y);
-      var dist = Math.sqrt((mx-px)*(mx-px) + (my-py)*(my-py));
+      var px=toCanvasX(s.x), py=toCanvasY(s.y);
+      var dist = Math.sqrt((mx-px)*(mx-px)+(my-py)*(my-py));
       if (dist < bestDist && dist < 14) { bestDist = dist; best = s; }
     });
 
     if (best) {
       canvas.style.cursor = 'pointer';
-      var ttx = toCanvasX(best.x), tty = toCanvasY(best.y);
-      var offX = ttx > W * 0.65 ? -180 : 12;
-      var offY = tty > H * 0.65 ? -110 : 8;
-      tooltip.style.left = (ttx + offX) + 'px';
-      tooltip.style.top  = (tty + offY) + 'px';
+      var ttx=toCanvasX(best.x), tty=toCanvasY(best.y);
+      var offX = ttx > W*0.65 ? -180 : 12;
+      var offY = tty > H*0.65 ? -110 : 8;
+      tooltip.style.left = (ttx+offX)+'px';
+      tooltip.style.top  = (tty+offY)+'px';
       var t = best.pitch_type || best.type || 'Unknown';
-      var dotStyle = 'display:inline-block;width:10px;height:10px;border-radius:50%;background:' + typeColorMap[t] + ';margin-right:6px;vertical-align:middle';
+      var dotStyle = 'display:inline-block;width:10px;height:10px;border-radius:50%;background:'+typeColorMap[t]+';margin-right:6px;vertical-align:middle';
       tooltip.innerHTML =
-        '<div class="zt-pitch"><span style="' + dotStyle + '"></span>' + t + '</div>' +
-        '<div class="zt-row"><span>Outcome</span><span>' + (best.outcome || '—') + '</span></div>' +
-        '<div class="zt-row"><span>Count</span><span>'   + (best.count   || '—') + '</span></div>' +
-        '<div class="zt-row"><span>Pitcher</span><span>' + (best.pitcher || '—') + '</span></div>' +
-        (best.contact ? '<div class="zt-row"><span>Contact</span><span>' + best.contact + '</span></div>' : '') +
-        (best.spray   ? '<div class="zt-row"><span>Spray</span><span>'   + best.spray   + '</span></div>' : '') +
-        '<div class="zt-coords">x: ' + (best.x != null ? best.x.toFixed(3) : '—') + '  y: ' + (best.y != null ? best.y.toFixed(3) : '—') + '</div>';
+        '<div class="zt-pitch"><span style="'+dotStyle+'"></span>'+t+'</div>'+
+        '<div class="zt-row"><span>Outcome</span><span>'+(best.outcome||'—')+'</span></div>'+
+        '<div class="zt-row"><span>Count</span><span>'+(best.count||'—')+'</span></div>'+
+        '<div class="zt-row"><span>Pitcher</span><span>'+(best.pitcher||'—')+'</span></div>'+
+        (best.contact ? '<div class="zt-row"><span>Contact</span><span>'+best.contact+'</span></div>' : '')+
+        (best.spray   ? '<div class="zt-row"><span>Spray</span><span>'+best.spray+'</span></div>' : '')+
+        '<div class="zt-coords">x: '+(best.x!=null?best.x.toFixed(3):'—')+'  y: '+(best.y!=null?best.y.toFixed(3):'—')+'</div>';
       tooltip.classList.remove('hidden');
     } else {
       canvas.style.cursor = 'default';
@@ -1068,7 +1243,17 @@ function renderZone(name, type, pitch, container) {
     canvas.style.cursor = 'default';
   });
 
-  // ── Result filter buttons ──────────────────────
+  // ── Filter buttons ─────────────────────────────
+  container.querySelectorAll('#zone-view-btns .zone-filter-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      container.querySelectorAll('#zone-view-btns .zone-filter-btn').forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      activeView = btn.dataset.view;
+      tooltip.classList.add('hidden');
+      drawZone();
+    });
+  });
+
   container.querySelectorAll('#zone-result-filters .zone-filter-btn').forEach(function(btn) {
     btn.addEventListener('click', function() {
       container.querySelectorAll('#zone-result-filters .zone-filter-btn').forEach(function(b){ b.classList.remove('active'); });
