@@ -1127,22 +1127,21 @@ function renderZone(name, type, pitch, container) {
       if (p.w <= 0 || p.h <= 0) return;
       var intensity = z.intensity !== undefined ? z.intensity : (maxOuter > 0 ? z.count/maxOuter : 0);
       ctx.fillStyle = z.count === 0
-        ? 'rgba(96,165,250,0.07)'
+        ? 'rgba(96,165,250,0.12)'
         : 'rgba(96,165,250,'+(0.1+0.55*intensity)+')';
       ctx.fillRect(p.x, p.y, p.w, p.h);
-      ctx.strokeStyle = 'rgba(96,165,250,0.35)';
-      ctx.lineWidth = 1;
+      ctx.strokeStyle = 'rgba(96,165,250,0.55)';
+      ctx.lineWidth = 1.5;
       ctx.strokeRect(p.x, p.y, p.w, p.h);
-      if (z.count > 0) {
-        ctx.save();
-        ctx.beginPath(); ctx.rect(p.x+1, p.y+1, p.w-2, p.h-2); ctx.clip();
-        ctx.fillStyle = intensity > 0.55 ? '#fff' : 'rgba(255,255,255,0.85)';
-        ctx.font = 'bold 12px DM Mono, monospace';
-        ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-        ctx.fillText(z.pct.toFixed(1)+'%', p.x+p.w/2, p.y+p.h/2);
-        ctx.textBaseline = 'alphabetic';
-        ctx.restore();
-      }
+      // Always show percentage (including 0%)
+      ctx.save();
+      ctx.beginPath(); ctx.rect(p.x+1, p.y+1, p.w-2, p.h-2); ctx.clip();
+      ctx.fillStyle = intensity > 0.55 ? '#fff' : 'rgba(255,255,255,0.75)';
+      ctx.font = 'bold 12px DM Mono, monospace';
+      ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+      ctx.fillText(z.pct.toFixed(1)+'%', p.x+p.w/2, p.y+p.h/2);
+      ctx.textBaseline = 'alphabetic';
+      ctx.restore();
     });
 
     // ── Draw inner cells ──
@@ -1163,16 +1162,14 @@ function renderZone(name, type, pitch, container) {
       ctx.strokeStyle = 'rgba(255,184,28,0.5)';
       ctx.lineWidth = 1.5;
       ctx.strokeRect(cx1, cy1, cw, ch);
-      if (z.count > 0) {
-        ctx.save();
-        ctx.beginPath(); ctx.rect(cx1+1, cy1+1, cw-2, ch-2); ctx.clip();
-        ctx.fillStyle = intensity > 0.55 ? '#fff' : 'rgba(255,255,255,0.85)';
-        ctx.font = 'bold 13px DM Mono, monospace';
-        ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-        ctx.fillText(z.pct.toFixed(1)+'%', cx1+cw/2, cy1+ch/2);
-        ctx.textBaseline = 'alphabetic';
-        ctx.restore();
-      }
+      ctx.save();
+      ctx.beginPath(); ctx.rect(cx1+1, cy1+1, cw-2, ch-2); ctx.clip();
+      ctx.fillStyle = intensity > 0.55 ? '#fff' : 'rgba(255,255,255,0.75)';
+      ctx.font = 'bold 13px DM Mono, monospace';
+      ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+      ctx.fillText(z.pct.toFixed(1)+'%', cx1+cw/2, cy1+ch/2);
+      ctx.textBaseline = 'alphabetic';
+      ctx.restore();
     });
   }
 
