@@ -1102,11 +1102,16 @@ function renderZone(name, type, pitch, container) {
     // TL: left strip, top half   | TR: right strip, top half
     // BL: left strip, bottom half| BR: right strip, bottom half
     // Each outer zone fills the full canvas height on its side (top to bottom)
-    // Strips span full canvas height (0..H), split at SMidY into top/bottom halves
-    outer[0].px = { x:CX1,     y:0,     w:SX1-GAP-CX1,   h:SMidY   }; // TL: left, top half
-    outer[1].px = { x:SX2+GAP, y:0,     w:CX2-(SX2+GAP), h:SMidY   }; // TR: right, top half
-    outer[2].px = { x:CX1,     y:SMidY, w:SX1-GAP-CX1,   h:H-SMidY }; // BL: left, bottom half
-    outer[3].px = { x:SX2+GAP, y:SMidY, w:CX2-(SX2+GAP), h:H-SMidY }; // BR: right, bottom half
+    // 4 equal corner squares, same size as one inner cell
+    // Positioned at the 4 diagonal corners of the strike zone
+    var cellPxW = SX2 - SX1;  // full zone width in pixels
+    var cellPxH = SY2 - SY1;  // full zone height in pixels
+    var sqW = (cellPxW / 3);  // one inner cell width
+    var sqH = (cellPxH / 3);  // one inner cell height
+    outer[0].px = { x:SX1-GAP-sqW, y:SY1-GAP-sqH, w:sqW, h:sqH }; // TL
+    outer[1].px = { x:SX2+GAP,     y:SY1-GAP-sqH, w:sqW, h:sqH }; // TR
+    outer[2].px = { x:SX1-GAP-sqW, y:SY2+GAP,     w:sqW, h:sqH }; // BL
+    outer[3].px = { x:SX2+GAP,     y:SY2+GAP,     w:sqW, h:sqH }; // BR
 
     // Merge BL into TL and BR into TR so we only draw 2 outer rects
     outer[0].count += outer[2].count; outer[0].pct += outer[2].pct;
