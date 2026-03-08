@@ -1118,35 +1118,38 @@ function renderZone(name, type, pitch, container) {
     //       │  BL-cap│  (below) │ BR-cap │  ← bottom cap spans zone x-range, from SY2+GAP to CY2
     //   CY2 └────────┴──────────┴────────┘
 
+    // Zone x-midpoint in canvas px — caps split here so each L connects to its side strip
+    var SMidX = (SX1 + SX2) / 2;
+
     var lShapes = [
-      { // TL: left side strip (CX1 to SX1-GAP, CY1 to CMidY) + top cap (SX1 to SX2, CY1 to SY1-GAP)
+      { // TL: left side strip + left-half top cap (both meet at SX1/SMidX boundary)
         rects: [
-          { x:CX1,   y:CY1,      w:SX1-GAP-CX1, h:CMidY-CY1     }, // left side, top half
-          { x:SX1,   y:CY1,      w:SX2-SX1,     h:SY1-GAP-CY1   }  // top cap, zone-width
+          { x:CX1,   y:CY1,  w:SX1-GAP-CX1, h:CMidY-CY1    }, // left side, top half
+          { x:SX1,   y:CY1,  w:SMidX-SX1,   h:SY1-GAP-CY1  }  // top cap, left half of zone
         ],
         labelX: CX1 + (SX1-GAP-CX1)/2, labelY: CY1 + (CMidY-CY1)/2,
         z: outer[0]
       },
-      { // TR: right side strip (SX2+GAP to CX2, CY1 to CMidY) + top cap (SX1 to SX2, CY1 to SY1-GAP)
+      { // TR: right side strip + right-half top cap
         rects: [
-          { x:SX2+GAP, y:CY1,    w:CX2-(SX2+GAP), h:CMidY-CY1   }, // right side, top half
-          { x:SX1,     y:CY1,    w:SX2-SX1,        h:SY1-GAP-CY1 }  // top cap, zone-width
+          { x:SX2+GAP, y:CY1,  w:CX2-(SX2+GAP), h:CMidY-CY1   }, // right side, top half
+          { x:SMidX,   y:CY1,  w:SX2-SMidX,      h:SY1-GAP-CY1 }  // top cap, right half of zone
         ],
         labelX: SX2+GAP + (CX2-(SX2+GAP))/2, labelY: CY1 + (CMidY-CY1)/2,
         z: outer[1]
       },
-      { // BL: left side strip (CX1 to SX1-GAP, CMidY to CY2) + bottom cap (SX1 to SX2, SY2+GAP to CY2)
+      { // BL: left side strip + left-half bottom cap
         rects: [
-          { x:CX1,   y:CMidY,    w:SX1-GAP-CX1, h:CY2-CMidY     }, // left side, bottom half
-          { x:SX1,   y:SY2+GAP,  w:SX2-SX1,     h:CY2-(SY2+GAP) }  // bottom cap, zone-width
+          { x:CX1,   y:CMidY,   w:SX1-GAP-CX1, h:CY2-CMidY    }, // left side, bottom half
+          { x:SX1,   y:SY2+GAP, w:SMidX-SX1,   h:CY2-(SY2+GAP)}  // bottom cap, left half of zone
         ],
         labelX: CX1 + (SX1-GAP-CX1)/2, labelY: CMidY + (CY2-CMidY)/2,
         z: outer[2]
       },
-      { // BR: right side strip (SX2+GAP to CX2, CMidY to CY2) + bottom cap (SX1 to SX2, SY2+GAP to CY2)
+      { // BR: right side strip + right-half bottom cap
         rects: [
-          { x:SX2+GAP, y:CMidY,  w:CX2-(SX2+GAP), h:CY2-CMidY   }, // right side, bottom half
-          { x:SX1,     y:SY2+GAP,w:SX2-SX1,        h:CY2-(SY2+GAP)}  // bottom cap, zone-width
+          { x:SX2+GAP, y:CMidY,   w:CX2-(SX2+GAP), h:CY2-CMidY    }, // right side, bottom half
+          { x:SMidX,   y:SY2+GAP, w:SX2-SMidX,      h:CY2-(SY2+GAP)}  // bottom cap, right half of zone
         ],
         labelX: SX2+GAP + (CX2-(SX2+GAP))/2, labelY: CMidY + (CY2-CMidY)/2,
         z: outer[3]
