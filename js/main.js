@@ -1030,113 +1030,136 @@ function renderZone(name, type, pitch, container) {
   }
 
   // ── Zone Grid: Savant-style 13 zones ─────────────────────────────
-  // 9 inner 3x3 + 4 corner squares same size as one inner cell,
-  // positioned just outside the diagonal corners with a small gap.
   function drawGrid(filtered) {
     var total = filtered.length;
 
-    // Strike zone data coords
+    // Strike zone boundaries
     var ZX1=-1, ZX2=1, ZY1=0, ZY2=1;
-    var cellW = (ZX2-ZX1)/3;   // data width of one inner cell  = 0.667
-    var cellH = (ZY2-ZY1)/3;   // data height of one inner cell = 0.333
-    var GAP   = 0.08;           // small gap in data coords between corner and zone edge
+    var cW = (ZX2-ZX1)/3, cH = (ZY2-ZY1)/3; // inner cell size
 
-    // 9 inner zones (left→right, top→bottom in data space)
+    // ── 9 inner cells (data coords) ──
     var inner = [];
     for (var row=0; row<3; row++) {
       for (var col=0; col<3; col++) {
         inner.push({
-          x1: ZX1 + col*cellW,
-          x2: ZX1 + (col+1)*cellW,
-          y1: ZY1 + (2-row)*cellH,   // row 0 = top = highest y
-          y2: ZY1 + (3-row)*cellH,
+          x1: ZX1+col*cW,     x2: ZX1+(col+1)*cW,
+          y1: ZY2-(row+1)*cH, y2: ZY2-row*cH,  // top row first
           outer: false
         });
       }
     }
 
-    // 4 outer zones — each covers a full quadrant outside the strike zone.
-    // Visually rendered as corner squares (same size as inner cell) but data-wise
-    // they capture ALL pitches in their quadrant so percentages sum to 100%.
-    // Render coords use corner-square size; count coords use full quadrant.
-    var corners = [
-      { x1: X_MIN, x2: ZX1, y1: ZY2, y2: Y_MAX,  // data: full top-left quadrant
-        rx1: ZX1-GAP-cellW, rx2: ZX1-GAP, ry1: ZY2+GAP, ry2: ZY2+GAP+cellH, outer:true }, // TL
-      { x1: ZX2,  x2: X_MAX, y1: ZY2, y2: Y_MAX,  // data: full top-right quadrant
-        rx1: ZX2+GAP, rx2: ZX2+GAP+cellW, ry1: ZY2+GAP, ry2: ZY2+GAP+cellH, outer:true }, // TR
-      { x1: X_MIN, x2: ZX1, y1: Y_MIN, y2: ZY1,   // data: full bottom-left quadrant
-        rx1: ZX1-GAP-cellW, rx2: ZX1-GAP, ry1: ZY1-GAP-cellH, ry2: ZY1-GAP, outer:true }, // BL
-      { x1: ZX2,  x2: X_MAX, y1: Y_MIN, y2: ZY1,  // data: full bottom-right quadrant
-        rx1: ZX2+GAP, rx2: ZX2+GAP+cellW, ry1: ZY1-GAP-cellH, ry2: ZY1-GAP, outer:true }  // BR
-    ];
-
-    var zones = corners.concat(inner);
-
-    // Count pitches per zone
-    zones.forEach(function(z) {
+    // ── Count inner cells ──
+    inner.forEach(function(z) {
       z.count = 0;
       filtered.forEach(function(s) {
         if (s.x >= z.x1 && s.x < z.x2 && s.y >= z.y1 && s.y < z.y2) z.count++;
       });
-      z.pct = total > 0 ? z.count / total * 100 : 0;
+      z.pct = total > 0 ? z.count/total*100 : 0;
     });
+
+    // ── 4 outer zones: every non-inner pitch assigned by quadrant ──
+    // Split at x=ZX1/ZX2 and y midpoint of zone
+    var yMid = (ZY1+ZY2)/2; // 0.5
+    var outer = [
+      { label:'TL', count:0 }, // left of zone, upper half
+      { label:'TR', count:0 }, // right of zone, upper half
+      { label:'BL', count:0 }, // left of zone, lower half
+      { label:'BR', count:0 }  // right of zone, lower half
+    ];
+    filtered.forEach(function(s) {
+      var inInner = inner.some(function(z) {
+        return s.x >= z.x1 && s.x < z.x2 && s.y >= z.y1 && s.y < z.y2;
+      });
+      if (inInner) return;
+      // Assign to quadrant based on which side of zone and vertical midpoint
+      var isLeft = s.x < ZX1 || (s.x < ZX2 && s.x < (ZX1+ZX2)/2);
+      var isTop  = s.y >= yMid;
+      // Simpler: just use x<0 and y>=0.5 since zone is symmetric around those
+      isLeft = s.x < 0;
+      isTop  = s.y >= yMid;
+      if      ( isLeft &&  isTop) outer[0].count++;
+      else if (!isLeft &&  isTop) outer[1].count++;
+      else if ( isLeft && !isTop) outer[2].count++;
+      else                        outer[3].count++;
+    });
+    outer.forEach(function(z) { z.pct = total > 0 ? z.count/total*100 : 0; });
 
     var maxInner = 0, maxOuter = 0;
-    zones.forEach(function(z) {
-      if (!z.outer && z.count > maxInner) maxInner = z.count;
-      if ( z.outer && z.count > maxOuter) maxOuter = z.count;
-    });
+    inner.forEach(function(z) { if (z.count > maxInner) maxInner = z.count; });
+    outer.forEach(function(z) { if (z.count > maxOuter) maxOuter = z.count; });
 
-    function drawZoneCell(z) {
-      // Corners render as small squares (rx coords); inner cells use data coords directly
-      var dx1 = z.outer ? z.rx1 : z.x1;
-      var dx2 = z.outer ? z.rx2 : z.x2;
-      var dy1 = z.outer ? z.ry1 : z.y1;
-      var dy2 = z.outer ? z.ry2 : z.y2;
-      var cx1 = toCanvasX(dx1), cx2 = toCanvasX(dx2);
-      var cy1 = toCanvasY(dy2), cy2 = toCanvasY(dy1);  // y flipped for canvas
-      var cw = cx2-cx1, ch = cy2-cy1;
-      var maxRef = z.outer ? maxOuter : maxInner;
-      var intensity = maxRef > 0 ? z.count / maxRef : 0;
+    // ── Canvas coords for the strike zone box ──
+    var SX1 = toCanvasX(ZX1), SX2 = toCanvasX(ZX2);
+    var SY1 = toCanvasY(ZY2), SY2 = toCanvasY(ZY1); // note: Y is flipped
+    var SMidY = toCanvasY(yMid);
+    // Left/right strip widths and canvas edges
+    var CX1 = toCanvasX(X_MIN), CX2 = toCanvasX(X_MAX);
+    var CY1 = toCanvasY(Y_MAX), CY2 = toCanvasY(Y_MIN);
+    var GAP = 4; // px gap between outer rect and zone box
 
-      // Fill colour
-      if (z.count === 0) {
-        ctx.fillStyle = z.outer ? 'rgba(96,165,250,0.08)' : 'rgba(255,184,28,0.05)';
-      } else if (!z.outer) {
-        // Blue (low) → Gold (high)
-        var r = Math.round(96  + (255-96)  * intensity);
-        var g = Math.round(165 + (184-165) * intensity);
-        var b = Math.round(250 + (28 -250) * intensity);
-        ctx.fillStyle = 'rgba('+r+','+g+','+b+','+(0.3+0.65*intensity)+')';
-      } else {
-        ctx.fillStyle = 'rgba(96,165,250,'+(0.08+0.45*intensity)+')';
-      }
-      ctx.fillRect(cx1, cy1, cw, ch);
+    // Outer render rects (pixel coords):
+    // TL: left strip, top half   | TR: right strip, top half
+    // BL: left strip, bottom half| BR: right strip, bottom half
+    outer[0].px = { x:CX1,      y:CY1,       w:SX1-GAP-CX1,    h:SMidY-CY1    }; // TL
+    outer[1].px = { x:SX2+GAP,  y:CY1,       w:CX2-(SX2+GAP),  h:SMidY-CY1    }; // TR
+    outer[2].px = { x:CX1,      y:SMidY,     w:SX1-GAP-CX1,    h:CY2-SMidY    }; // BL
+    outer[3].px = { x:SX2+GAP,  y:SMidY,     w:CX2-(SX2+GAP),  h:CY2-SMidY    }; // BR
 
-      // Border
-      ctx.strokeStyle = z.outer ? 'rgba(96,165,250,0.5)' : 'rgba(255,184,28,0.5)';
-      ctx.lineWidth   = 1.5;
-      ctx.strokeRect(cx1, cy1, cw, ch);
-
-      // Count label (like Savant shows raw counts, not %)
+    // ── Draw outer zones ──
+    outer.forEach(function(z) {
+      var p = z.px;
+      if (p.w <= 0 || p.h <= 0) return;
+      var intensity = maxOuter > 0 ? z.count/maxOuter : 0;
+      ctx.fillStyle = z.count === 0
+        ? 'rgba(96,165,250,0.07)'
+        : 'rgba(96,165,250,'+(0.1+0.55*intensity)+')';
+      ctx.fillRect(p.x, p.y, p.w, p.h);
+      ctx.strokeStyle = 'rgba(96,165,250,0.35)';
+      ctx.lineWidth = 1;
+      ctx.strokeRect(p.x, p.y, p.w, p.h);
       if (z.count > 0) {
         ctx.save();
-        ctx.beginPath();
-        ctx.rect(cx1+1, cy1+1, cw-2, ch-2);
-        ctx.clip();
+        ctx.beginPath(); ctx.rect(p.x+1, p.y+1, p.w-2, p.h-2); ctx.clip();
+        ctx.fillStyle = intensity > 0.55 ? '#fff' : 'rgba(255,255,255,0.85)';
+        ctx.font = 'bold 12px DM Mono, monospace';
+        ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+        ctx.fillText(z.pct.toFixed(1)+'%', p.x+p.w/2, p.y+p.h/2);
+        ctx.textBaseline = 'alphabetic';
+        ctx.restore();
+      }
+    });
+
+    // ── Draw inner cells ──
+    inner.forEach(function(z) {
+      var cx1=toCanvasX(z.x1), cx2=toCanvasX(z.x2);
+      var cy1=toCanvasY(z.y2), cy2=toCanvasY(z.y1);
+      var cw=cx2-cx1, ch=cy2-cy1;
+      var intensity = maxInner > 0 ? z.count/maxInner : 0;
+      if (z.count === 0) {
+        ctx.fillStyle = 'rgba(255,184,28,0.05)';
+      } else {
+        var r=Math.round(96+(255-96)*intensity);
+        var g=Math.round(165+(184-165)*intensity);
+        var b=Math.round(250+(28-250)*intensity);
+        ctx.fillStyle = 'rgba('+r+','+g+','+b+','+(0.3+0.65*intensity)+')';
+      }
+      ctx.fillRect(cx1, cy1, cw, ch);
+      ctx.strokeStyle = 'rgba(255,184,28,0.5)';
+      ctx.lineWidth = 1.5;
+      ctx.strokeRect(cx1, cy1, cw, ch);
+      if (z.count > 0) {
+        ctx.save();
+        ctx.beginPath(); ctx.rect(cx1+1, cy1+1, cw-2, ch-2); ctx.clip();
         ctx.fillStyle = intensity > 0.55 ? '#fff' : 'rgba(255,255,255,0.85)';
         ctx.font = 'bold 13px DM Mono, monospace';
-        ctx.textAlign = 'center';
-        ctx.textBaseline = 'middle';
+        ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
         ctx.fillText(z.pct.toFixed(1)+'%', cx1+cw/2, cy1+ch/2);
         ctx.textBaseline = 'alphabetic';
         ctx.restore();
       }
-    }
-
-    zones.forEach(drawZoneCell);
+    });
   }
-
 
   // ── Heat map draw ────────────────────────────────
   function drawHeatmap(filtered) {
