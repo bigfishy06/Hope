@@ -1066,9 +1066,9 @@ function renderZone(name, type, pitch, container) {
       { label:'BL', count:0 }, // left of zone AND below zone
       { label:'BR', count:0 }  // right of zone AND below zone
     ];
-    // Midpoints in data space — halfway across the full canvas bounds
-    var xMid = (X_MIN + X_MAX) / 2;
-    var yMid = (Y_MIN + Y_MAX) / 2;
+    // Midpoints in data space
+    var xMid = (ZX1 + ZX2) / 2; // horizontal midpoint of the strike zone
+    var yMid = (ZY1 + ZY2) / 2; // vertical midpoint of the strike zone
     filtered.forEach(function(s) {
       var inInner = inner.some(function(z) {
         return s.x >= z.x1 && s.x < z.x2 && s.y >= z.y1 && s.y < z.y2;
@@ -1118,42 +1118,14 @@ function renderZone(name, type, pitch, container) {
     //       │  BL-cap│  (below) │ BR-cap │  ← bottom cap spans zone x-range, from SY2+GAP to CY2
     //   CY2 └────────┴──────────┴────────┘
 
-    // Zone x-midpoint in canvas px — caps split here so each L connects to its side strip
-    var SMidX = (SX1 + SX2) / 2;
+    var cellW = (SX2 - SX1) / 3;
+    var cellH = (SY2 - SY1) / 3;
 
     var lShapes = [
-      { // TL: left side strip + left-half top cap (both meet at SX1/SMidX boundary)
-        rects: [
-          { x:CX1,   y:CY1,  w:SX1-GAP-CX1, h:CMidY-CY1    }, // left side, top half
-          { x:SX1,   y:CY1,  w:SMidX-SX1,   h:SY1-GAP-CY1  }  // top cap, left half of zone
-        ],
-        labelX: CX1 + (SX1-GAP-CX1)/2, labelY: CY1 + (CMidY-CY1)/2,
-        z: outer[0]
-      },
-      { // TR: right side strip + right-half top cap
-        rects: [
-          { x:SX2+GAP, y:CY1,  w:CX2-(SX2+GAP), h:CMidY-CY1   }, // right side, top half
-          { x:SMidX,   y:CY1,  w:SX2-SMidX,      h:SY1-GAP-CY1 }  // top cap, right half of zone
-        ],
-        labelX: SX2+GAP + (CX2-(SX2+GAP))/2, labelY: CY1 + (CMidY-CY1)/2,
-        z: outer[1]
-      },
-      { // BL: left side strip + left-half bottom cap
-        rects: [
-          { x:CX1,   y:CMidY,   w:SX1-GAP-CX1, h:CY2-CMidY    }, // left side, bottom half
-          { x:SX1,   y:SY2+GAP, w:SMidX-SX1,   h:CY2-(SY2+GAP)}  // bottom cap, left half of zone
-        ],
-        labelX: CX1 + (SX1-GAP-CX1)/2, labelY: CMidY + (CY2-CMidY)/2,
-        z: outer[2]
-      },
-      { // BR: right side strip + right-half bottom cap
-        rects: [
-          { x:SX2+GAP, y:CMidY,   w:CX2-(SX2+GAP), h:CY2-CMidY    }, // right side, bottom half
-          { x:SMidX,   y:SY2+GAP, w:SX2-SMidX,      h:CY2-(SY2+GAP)}  // bottom cap, right half of zone
-        ],
-        labelX: SX2+GAP + (CX2-(SX2+GAP))/2, labelY: CMidY + (CY2-CMidY)/2,
-        z: outer[3]
-      }
+      { rects: [{ x:SX1-GAP-cellW, y:SY1-GAP-cellH, w:cellW, h:cellH }], labelX: SX1-GAP-cellW/2, labelY: SY1-GAP-cellH/2, z: outer[0] }, // TL
+      { rects: [{ x:SX2+GAP,       y:SY1-GAP-cellH, w:cellW, h:cellH }], labelX: SX2+GAP+cellW/2, labelY: SY1-GAP-cellH/2, z: outer[1] }, // TR
+      { rects: [{ x:SX1-GAP-cellW, y:SY2+GAP,       w:cellW, h:cellH }], labelX: SX1-GAP-cellW/2, labelY: SY2+GAP+cellH/2, z: outer[2] }, // BL
+      { rects: [{ x:SX2+GAP,       y:SY2+GAP,       w:cellW, h:cellH }], labelX: SX2+GAP+cellW/2, labelY: SY2+GAP+cellH/2, z: outer[3] }  // BR
     ];
 
     // ── Draw L-shaped outer zones ──
