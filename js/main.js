@@ -1055,12 +1055,19 @@ function renderZone(name, type, pitch, container) {
       }
     }
 
-    // 4 corner squares — same size as one inner cell, offset by GAP outside zone
+    // 4 outer zones — each covers a full quadrant outside the strike zone.
+    // Visually rendered as corner squares (same size as inner cell) but data-wise
+    // they capture ALL pitches in their quadrant so percentages sum to 100%.
+    // Render coords use corner-square size; count coords use full quadrant.
     var corners = [
-      { x1: ZX1-GAP-cellW, x2: ZX1-GAP, y1: ZY2+GAP, y2: ZY2+GAP+cellH, outer:true }, // TL
-      { x1: ZX2+GAP,       x2: ZX2+GAP+cellW, y1: ZY2+GAP, y2: ZY2+GAP+cellH, outer:true }, // TR
-      { x1: ZX1-GAP-cellW, x2: ZX1-GAP, y1: ZY1-GAP-cellH, y2: ZY1-GAP, outer:true }, // BL
-      { x1: ZX2+GAP,       x2: ZX2+GAP+cellW, y1: ZY1-GAP-cellH, y2: ZY1-GAP, outer:true }  // BR
+      { x1: X_MIN, x2: ZX1, y1: ZY2, y2: Y_MAX,  // data: full top-left quadrant
+        rx1: ZX1-GAP-cellW, rx2: ZX1-GAP, ry1: ZY2+GAP, ry2: ZY2+GAP+cellH, outer:true }, // TL
+      { x1: ZX2,  x2: X_MAX, y1: ZY2, y2: Y_MAX,  // data: full top-right quadrant
+        rx1: ZX2+GAP, rx2: ZX2+GAP+cellW, ry1: ZY2+GAP, ry2: ZY2+GAP+cellH, outer:true }, // TR
+      { x1: X_MIN, x2: ZX1, y1: Y_MIN, y2: ZY1,   // data: full bottom-left quadrant
+        rx1: ZX1-GAP-cellW, rx2: ZX1-GAP, ry1: ZY1-GAP-cellH, ry2: ZY1-GAP, outer:true }, // BL
+      { x1: ZX2,  x2: X_MAX, y1: Y_MIN, y2: ZY1,  // data: full bottom-right quadrant
+        rx1: ZX2+GAP, rx2: ZX2+GAP+cellW, ry1: ZY1-GAP-cellH, ry2: ZY1-GAP, outer:true }  // BR
     ];
 
     var zones = corners.concat(inner);
@@ -1081,8 +1088,13 @@ function renderZone(name, type, pitch, container) {
     });
 
     function drawZoneCell(z) {
-      var cx1 = toCanvasX(z.x1), cx2 = toCanvasX(z.x2);
-      var cy1 = toCanvasY(z.y2), cy2 = toCanvasY(z.y1);  // y flipped for canvas
+      // Corners render as small squares (rx coords); inner cells use data coords directly
+      var dx1 = z.outer ? z.rx1 : z.x1;
+      var dx2 = z.outer ? z.rx2 : z.x2;
+      var dy1 = z.outer ? z.ry1 : z.y1;
+      var dy2 = z.outer ? z.ry2 : z.y2;
+      var cx1 = toCanvasX(dx1), cx2 = toCanvasX(dx2);
+      var cy1 = toCanvasY(dy2), cy2 = toCanvasY(dy1);  // y flipped for canvas
       var cw = cx2-cx1, ch = cy2-cy1;
       var maxRef = z.outer ? maxOuter : maxInner;
       var intensity = maxRef > 0 ? z.count / maxRef : 0;
