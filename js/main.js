@@ -1022,11 +1022,15 @@ function renderZone(name, type, pitch, container) {
     // 13 zones: 9 inner 3x3 + 4 outer corner squares (same size as inner cells)
     // Outer corners sit just outside the zone at each diagonal corner
     var zones = [
-      // Outer corners (4) — each same size as one inner cell, positioned at the 4 diagonal corners
-      { x1:XI1-xT, x2:XI1,   y1:YI2,      y2:YI2+yT, outer:true, label:'TL' },
-      { x1:XI2,    x2:XI2+xT, y1:YI2,     y2:YI2+yT, outer:true, label:'TR' },
-      { x1:XI1-xT, x2:XI1,   y1:YI1-yT,  y2:YI1,    outer:true, label:'BL' },
-      { x1:XI2,    x2:XI2+xT, y1:YI1-yT, y2:YI1,    outer:true, label:'BR' },
+      // Outer corners (4) — each extends to the canvas midpoint so they all meet
+      // Top-left: from canvas left to zone left, from zone top to canvas top
+      { x1:XL,  x2:XI1, y1:(YI2+YT_)/2, y2:YT_, outer:true, label:'TL' },
+      // Top-right: from zone right to canvas right, from zone top to canvas top
+      { x1:XI2, x2:XR,  y1:(YI2+YT_)/2, y2:YT_, outer:true, label:'TR' },
+      // Bottom-left: from canvas left to zone left, from canvas bottom to zone bottom
+      { x1:XL,  x2:XI1, y1:YB, y2:(YI1+YB)/2,   outer:true, label:'BL' },
+      // Bottom-right: from zone right to canvas right, from canvas bottom to zone bottom
+      { x1:XI2, x2:XR,  y1:YB, y2:(YI1+YB)/2,   outer:true, label:'BR' },
       // Inner 3x3 (row top→bottom, col left→right)
       { x1:XI1+0*xT, x2:XI1+1*xT, y1:YI1+2*yT, y2:YI2, outer:false },
       { x1:XI1+1*xT, x2:XI1+2*xT, y1:YI1+2*yT, y2:YI2, outer:false },
@@ -1090,13 +1094,14 @@ function renderZone(name, type, pitch, container) {
   }
 
 
-  // ── Heat map draw (pixel-level, bilinear interpolation) ──────────
+  // ── Heat map draw (free-flowing, full canvas) ────────────────────
   function drawHeatmap(filtered) {
     if (!filtered.length) return;
 
-    var GRID_W = 80, GRID_H = 80;
+    // Render density at full canvas resolution so heat bleeds to edges
+    var GRID_W = W, GRID_H = H;
     var density = new Float32Array(GRID_W * GRID_H);
-    var SIGMA = 6.0;  // large sigma = smooth blobs, not dots
+    var SIGMA = 18.0; // large sigma for smooth free-flowing blobs
 
     filtered.forEach(function(s) {
       var gx = ((s.x - X_MIN) / (X_MAX - X_MIN)) * GRID_W;
@@ -1116,20 +1121,12 @@ function renderZone(name, type, pitch, container) {
     for (var i = 0; i < density.length; i++) { if (density[i] > maxD) maxD = density[i]; }
     if (maxD === 0) return;
 
-    var imgData = ctx.createImageData(PW, PH);
-    for (var py = 0; py < PH; py++) {
-      for (var px = 0; px < PW; px++) {
-        var gx = (px / PW) * GRID_W;
-        var gy = (py / PH) * GRID_H;
-        var gxi = Math.min(Math.floor(gx), GRID_W-2);
-        var gyi = Math.min(Math.floor(gy), GRID_H-2);
-        var fx = gx - gxi, fy = gy - gyi;
-        var v00 = density[ gyi    * GRID_W + gxi   ];
-        var v10 = density[ gyi    * GRID_W + gxi+1 ];
-        var v01 = density[(gyi+1) * GRID_W + gxi   ];
-        var v11 = density[(gyi+1) * GRID_W + gxi+1 ];
-        var val = (v00*(1-fx)*(1-fy) + v10*fx*(1-fy) + v01*(1-fx)*fy + v11*fx*fy) / maxD;
-        if (val < 0.005) continue;
+    // Draw full-canvas ImageData so heat bleeds freely to all edges
+    var imgData = ctx.createImageData(W, H);
+    for (var py = 0; py < H; py++) {
+      for (var px = 0; px < W; px++) {
+        var val = density[py * GRID_W + px] / maxD;
+        if (val < 0.003) continue;
         var r, g, b;
         if (val < 0.25) {
           var t = val/0.25; r=0; g=Math.round(t*120); b=Math.round(180+t*75);
@@ -1140,14 +1137,14 @@ function renderZone(name, type, pitch, container) {
         } else {
           var t=(val-0.75)/0.25; r=255; g=Math.round(255-t*255); b=0;
         }
-        var idx = (py * PW + px) * 4;
+        var idx = (py * W + px) * 4;
         imgData.data[idx]   = r;
         imgData.data[idx+1] = g;
         imgData.data[idx+2] = b;
-        imgData.data[idx+3] = Math.round((0.4 + val*0.58)*255);
+        imgData.data[idx+3] = Math.round((0.15 + val*0.80)*255);
       }
     }
-    ctx.putImageData(imgData, PAD_L, PAD_T);
+    ctx.putImageData(imgData, 0, 0);
 
     // Color scale
     var scaleX=PAD_L+PW+4, scaleH=PH*0.6, scaleY=PAD_T+PH*0.2;
@@ -1167,8 +1164,12 @@ function renderZone(name, type, pitch, container) {
     ctx.clearRect(0, 0, W * DPR, H * DPR);
     var clean = (activeView === 'grid' || activeView === 'heatmap');
 
-    // Same bounds for all views so strike zone is same size
-    setBounds(CLEAN_BOUNDS.xMin, CLEAN_BOUNDS.xMax, CLEAN_BOUNDS.yMin, CLEAN_BOUNDS.yMax);
+    // Scatter uses its own bounds; grid/heatmap use clean bounds
+    if (activeView === 'scatter') {
+      setBounds(SCATTER_BOUNDS.xMin, SCATTER_BOUNDS.xMax, SCATTER_BOUNDS.yMin, SCATTER_BOUNDS.yMax);
+    } else {
+      setBounds(CLEAN_BOUNDS.xMin, CLEAN_BOUNDS.xMax, CLEAN_BOUNDS.yMin, CLEAN_BOUNDS.yMax);
+    }
 
     drawBackground(clean ? {clean:true} : {});
 
