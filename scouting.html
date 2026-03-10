@@ -897,12 +897,10 @@
         Array(5).fill(CPW/5),y);y+=4;
       var subXY=sub.filter(function(s){return s.x!=null&&s.y!=null;});
       if(subXY.length){
-        var iw=80,ih=92,gap=16;
-        d.addImage(mkScatter(subXY),'PNG',ML,y,iw,ih);
-        d.addImage(mkHeat(subXY),'PNG',ML+iw+gap,y,iw,ih);
+        var iw=100,ih=115;
+        d.addImage(mkHeat(subXY),'PNG',ML,y,iw,ih);
         d.setFont('helvetica','normal');d.setFontSize(6);st(d,CO.dim);
-        d.text('Scatter', ML+iw/2,        y+ih+3,{align:'center'});
-        d.text('Heat Map',ML+iw+gap+iw/2, y+ih+3,{align:'center'});
+        d.text('vs. '+(hand==='R'?'RHH':'LHH')+' Heat Map',ML+iw/2,y+ih+3,{align:'center'});
         y+=ih+8;
       }
       y+=4;
