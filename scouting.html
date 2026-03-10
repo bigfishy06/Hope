@@ -882,8 +882,6 @@
       });
       y=drawTbl(d,atH,atR,atW,y,[2,5]);y+=2;
     }
-    var scXY=sc.filter(function(s){return s.x!=null&&s.y!=null;});
-    if(scXY.length){y=drawSec(d,'Strike Zone Analysis',y);y=addCharts(d,scXY,y);}
     // Build RHH and LHH splits side by side
     var splitData=['R','L'].map(function(hand){
       var sub=sc.filter(function(s){return s.batter_side===hand;});
