@@ -886,7 +886,7 @@
     if(scXY.length){y=drawSec(d,'Strike Zone Analysis',y);y=addCharts(d,scXY,y);}
     ['R','L'].forEach(function(hand){
       var sub=sc.filter(function(s){return s.batter_side===hand;});if(!sub.length)return;
-      if(y>250){d.addPage();drawBg(d);y=MT+8;}
+      if(y>210){d.addPage();drawBg(d);y=MT+8;}
       y=drawSec(d,'vs '+(hand==='R'?'Right':'Left')+'-Handed Batters',y);
       var sk=sub.filter(function(s){return s.outcome==='Strikeout Swinging'||s.outcome==='Strikeout Looking';}).length;
       var sb=sub.filter(function(s){return s.outcome==='Walk'||s.outcome==='Intentional Walk';}).length;
@@ -894,7 +894,18 @@
       var sz=sub.filter(function(s){return s.x!=null&&s.x>=-1&&s.x<=1&&s.y!=null&&s.y>=0&&s.y<=1;}).length;
       y=drawTbl(d,['PITCHES','K','BB','STR%','ZN%'],
         [[sub.length,sk,sb,f1(xp(ss,sub.length))+'%',f1(xp(sz,sub.length))+'%'].map(String)],
-        Array(5).fill(CPW/5),y);y+=2;
+        Array(5).fill(CPW/5),y);y+=4;
+      var subXY=sub.filter(function(s){return s.x!=null&&s.y!=null;});
+      if(subXY.length){
+        var iw=80,ih=92,gap=16;
+        d.addImage(mkScatter(subXY),'PNG',ML,y,iw,ih);
+        d.addImage(mkHeat(subXY),'PNG',ML+iw+gap,y,iw,ih);
+        d.setFont('helvetica','normal');d.setFontSize(6);st(d,CO.dim);
+        d.text('Scatter', ML+iw/2,        y+ih+3,{align:'center'});
+        d.text('Heat Map',ML+iw+gap+iw/2, y+ih+3,{align:'center'});
+        y+=ih+8;
+      }
+      y+=4;
     });
     drawFoot(d,player.name,'PITCHER');
     d.save('scouting_'+player.name.replace(/ /g,'_')+'_pitcher.pdf');
