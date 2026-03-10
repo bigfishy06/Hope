@@ -1,321 +1,1027 @@
-"1","0","0","0","'0-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Kyrose","Sato","R","R","Fastball","Groundout","Ground Ball","Straightaway","0","-1.15888","0.396241"
-"1","1","0","0","'0-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Penalver","Sato","L","R","Offspeed","Ball","","","0","1.35166","0.233577"
-"1","1","1","0","'1-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Penalver","Sato","L","R","Offspeed","Groundout","Ground Ball","Pull","0","0.662929","-0.197262"
-"1","2","0","0","'0-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Parsons","Sato","R","R","Breaking Ball","Called Strike","","","0","0.57406","0.215992"
-"1","2","0","1","'0-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Parsons","Sato","R","R","Breaking Ball","Popout","Pop Up","Straightaway","0","0.507409","0.145651"
-"1","0","0","0","'0-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Dos Santos","Vargas","L","R","Fastball","Called Strike","","","0","0.8851","0.268748"
-"1","0","0","1","'0-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Dos Santos","Vargas","L","R","Fastball","Swinging Strike","","","0","1.0184","0.0137611"
-"1","0","0","2","'0-2","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Dos Santos","Vargas","L","R","Breaking Ball","Ball","","","0","0.8851","-0.285189"
-"1","0","1","2","'1-2","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Dos Santos","Vargas","L","R","Fastball","Ball","","","0","1.50718","-0.214848"
-"1","0","2","2","'2-2","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Dos Santos","Vargas","L","R","Breaking Ball","Ball","","","0","-0.6701","-0.214848"
-"1","0","3","2","'3-2","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Dos Santos","Vargas","L","R","Breaking Ball","Strikeout Swinging","","","0","1.17392","-0.0389948"
-"1","1","0","0","'0-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Ross","Vargas","R","R","Fastball","Ball","","","0","-0.892271","0.497357"
-"1","1","1","0","'1-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Ross","Vargas","R","R","Fastball","Called Strike","","","0","-0.625666","0.224785"
-"1","1","1","1","'1-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Ross","Vargas","R","R","Breaking Ball","Ball","","","0","-1.53657","-0.680858"
-"1","1","2","1","'2-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Ross","Vargas","R","R","Breaking Ball","Ball","","","0","-1.29218","-0.373115"
-"1","1","3","1","'3-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Ross","Vargas","R","R","Fastball","Called Strike","","","0","0.907317","0.690795"
-"1","1","3","2","'3-2","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Ross","Vargas","R","R","Breaking Ball","Strikeout Swinging","","","0","-1.04779","-0.496213"
-"1","2","0","0","'0-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Moreno","Vargas","L","R","Breaking Ball","Called Strike","","","0","0.0630657","0.857856"
-"1","2","0","1","'0-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Moreno","Vargas","L","R","Fastball","Single","Ground Ball","Opposite Field","0","1.10727","0.646832"
-"1","2","0","0","'0-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Castaldo","Vargas","L","R","Fastball","Ball","","","100","-1.13666","0.638039"
-"1","2","1","0","'1-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Castaldo","Vargas","L","R","Breaking Ball","Ball","","","100","1.39609","-0.100543"
-"1","2","2","0","'2-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Castaldo","Vargas","L","R","Breaking Ball","Ball","","","100","1.56272","0.849063"
-"1","2","3","0","'3-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Castaldo","Vargas","L","R","Fastball","Walk","","","100","1.28501","0.347882"
-"1","2","0","0","'0-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Knecht","Vargas","R","R","Breaking Ball","Groundout","Ground Ball","Straightaway","110","-0.492363","0.365467"
-"2","0","0","0","'0-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Ibarra","Sato","R","R","Offspeed","Swinging Strike","","","0","-0.78119","0.347882"
-"2","0","0","1","'0-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Ibarra","Sato","R","R","Breaking Ball","Popout","Pop Up","Opposite Field","0","0.040849","0.163236"
-"2","1","0","0","'0-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Towers","Sato","L","R","Fastball","Ball","","","0","1.28501","0.514942"
-"2","1","1","0","'1-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Towers","Sato","L","R","Breaking Ball","Ball","","","0","0.018631","-0.54897"
-"2","1","2","0","'2-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Towers","Sato","L","R","Breaking Ball","Called Strike","","","0","1.21836","0.224785"
-"2","1","2","1","'2-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Towers","Sato","L","R","Fastball","Foul","","","0","1.17392","-0.08296"
-"2","1","2","2","'2-2","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Towers","Sato","L","R","Breaking Ball","Foul","","","0","-1.09223","0.172029"
-"2","1","2","2","'2-2","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Towers","Sato","L","R","Breaking Ball","Strikeout Swinging","","","0","-1.15888","-0.19726"
-"2","2","0","0","'0-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Cabral","Sato","R","R","Breaking Ball","Groundout","Ground Ball","Opposite Field","0","-0.00359","0.602869"
-"2","0","0","0","'0-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Dei Banning","Vargas","R","R","Fastball","Called Strike","","","0","0.685146","0.189614"
-"2","0","0","1","'0-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Dei Banning","Vargas","R","R","Fastball","Called Strike","","","0","-0.93671","0.532527"
-"2","0","0","2","'0-2","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Dei Banning","Vargas","R","R","Breaking Ball","Ball","","","0","-0.20354","-0.24123"
-"2","0","1","2","'1-2","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Dei Banning","Vargas","R","R","Fastball","Ball","","","0","-0.89227","0.040139"
-"2","0","2","2","'2-2","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Dei Banning","Vargas","R","R","Breaking Ball","Strikeout Swinging","","","0","-0.69232","0.470979"
-"2","1","0","0","'0-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Cecchetto","Vargas","R","R","Breaking Ball","Ball","","","0","-1.62544","-0.41708"
-"2","1","1","0","'1-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Cecchetto","Vargas","R","R","Breaking Ball","Called Strike","","","0","-0.71453","0.119273"
-"2","1","1","1","'1-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Cecchetto","Vargas","R","R","Breaking Ball","Ball","","","0","1.28501","0.638039"
-"2","1","2","1","'2-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Cecchetto","Vargas","R","R","Fastball","Swinging Strike","","","0","-0.44793","0.550113"
-"2","1","2","2","'2-2","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Cecchetto","Vargas","R","R","Fastball","Ball","","","0","1.24057","0.119273"
-"2","1","3","2","'3-2","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Cecchetto","Vargas","R","R","Fastball","Walk","","","0","1.46275","-0.19726"
-"2","1","0","0","'0-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","D. Marra","Vargas","R","R","Fastball","Ball","","","100","1.35166","0.761136"
-"2","1","1","0","'1-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","D. Marra","Vargas","R","R","Breaking Ball","Ball","","","100","-1.46992","-0.53138"
-"2","1","2","0","'2-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","D. Marra","Vargas","R","R","Breaking Ball","Called Strike","","","10","-0.6701","0.928197"
-"2","1","2","1","'2-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","D. Marra","Vargas","R","R","Breaking Ball","Foul","","","10","0.285237","0.585283"
-"2","1","2","2","'2-2","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","D. Marra","Vargas","R","R","Breaking Ball","Single","Ground Ball","Straightaway","10","-0.8034","0.136858"
-"2","1","0","0","'0-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","J. Marra","Vargas","L","R","Fastball","Called Strike","","","101","0.396323","0.488564"
-"2","1","0","1","'0-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","J. Marra","Vargas","L","R","Fastball","Foul","","","101","0.462974","0.690795"
-"2","1","0","2","'0-2","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","J. Marra","Vargas","L","R","Fastball","Ball","","","101","1.5294","0.224785"
-"2","1","1","2","'1-2","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","J. Marra","Vargas","L","R","Fastball","Ball","","","101","1.6627","0.769929"
-"2","1","2","2","'2-2","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","J. Marra","Vargas","L","R","Fastball","Foul","","","11","1.12949","0.312711"
-"2","1","2","2","'2-2","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","J. Marra","Vargas","L","R","Fastball","Popout","Pop Up","Straightaway","11","1.15171","0.427016"
-"2","2","0","0","'0-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Dos Santos","Vargas","L","R","Fastball","Called Strike","","","11","0.840666","0.251163"
-"2","2","0","1","'0-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Dos Santos","Vargas","L","R","Fastball","Ball","","","11","1.55161","0.875441"
-"2","2","1","1","'1-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Dos Santos","Vargas","L","R","Breaking Ball","Ball","","","11","0.462974","-0.19726"
-"2","2","2","1","'2-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Dos Santos","Vargas","L","R","Breaking Ball","Ball","","","11","0.063066","-0.21485"
-"2","2","3","1","'3-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Dos Santos","Vargas","L","R","Fastball","Walk","","","11","1.48496","0.787514"
-"2","2","0","0","'0-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Ross","Vargas","R","R","Fastball","Called Strike","","","111","0.707363","0.743551"
-"2","2","0","1","'0-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Ross","Vargas","R","R","Fastball","Ball","","","111","0.218586","1.19198"
-"2","2","1","1","'1-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Ross","Vargas","R","R","Breaking Ball","Ball","","","111","0.529626","-0.31157"
-"2","2","2","1","'2-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Ross","Vargas","R","R","Fastball","Groundout","Ground Ball","Pull","111","0.285237","0.532527"
-"3","0","0","0","'0-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Kowara","Lepard","R","R","Fastball","Swinging Strike","","","0","0.57406","0.655625"
-"3","0","0","1","'0-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Kowara","Lepard","R","R","Fastball","Foul","","","0","0.596277","0.444601"
-"3","0","0","2","'0-2","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Kowara","Lepard","R","R","Fastball","Ball","","","0","1.41831","0.180821"
-"3","0","1","2","'1-2","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Kowara","Lepard","R","R","Fastball","Ball","","","0","-0.0702371","1.09526"
-"3","0","2","2","'2-2","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Kowara","Lepard","R","R","Fastball","Strikeout Looking","","","0","0.0852829","0.523735"
-"3","1","0","0","'0-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Cain-Plante","Lepard","R","R","Fastball","Swinging Strike","","","0","-0.04802","0.849063"
-"3","1","0","1","'0-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Cain-Plante","Lepard","R","R","Fastball","Foul","","","0","0.596277","0.585283"
-"3","1","0","2","'0-2","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Cain-Plante","Lepard","R","R","Breaking Ball","Strikeout Swinging","","","0","-0.847837","0.066517"
-"3","2","0","0","'0-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Lawson","Lepard","R","R","Fastball","Ball","","","0","-1.35883","0.0137611"
-"3","2","1","0","'1-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Lawson","Lepard","R","R","Fastball","Swinging Strike","","","0","0.507409","0.339089"
-"3","2","1","1","'1-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Lawson","Lepard","R","R","Breaking Ball","Ball","","","0","-0.714534","-0.0477874"
-"3","2","2","1","'2-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Lawson","Lepard","R","R","Fastball","Ball","","","0","-1.15888","0.54132"
-"3","2","3","1","'3-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Lawson","Lepard","R","R","Fastball","Single","Line Drive","Pull","0","0.529626","0.558905"
-"3","2","0","0","'0-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Kyrose","Lepard","R","R","Fastball","Called Strike","","","100","-0.247974","0.734758"
-"3","2","0","1","'0-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Kyrose","Lepard","R","R","Breaking Ball","Called Strike","","","100","0.907317","0.629247"
-"3","2","0","2","'0-2","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Kyrose","Lepard","R","R","Breaking Ball","Ball","","","100","-1.22553","-0.250018"
-"3","2","1","2","'1-2","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","","","","","","Truncated Out","","","",\N,\N
-"3","0","0","0","'0-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Moreno","Vargas","L","R","Fastball","Single","Line Drive","Pull","0","0.685146","0.180821"
-"3","0","0","0","'0-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Castaldo","Vargas","L","R","Breaking Ball","Ball","","","10","-0.625666","-0.258811"
-"3","0","1","0","'1-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Castaldo","Vargas","L","R","Breaking Ball","Ball","","","10","0.996186","1.23594"
-"3","0","2","0","'2-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Castaldo","Vargas","L","R","Breaking Ball","Ball","","","10","0.440757","-0.557761"
-"3","0","3","0","'3-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Castaldo","Vargas","L","R","Fastball","Called Strike","","","1","0.796231","0.620454"
-"3","0","3","1","'3-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Castaldo","Vargas","L","R","Breaking Ball","Swinging Strike","","","1","0.596277","-0.214848"
-"3","0","3","2","'3-2","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Castaldo","Vargas","L","R","Offspeed","Walk","","","1","1.26279","-0.250018"
-"3","0","0","0","'0-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","1","1","Knecht","Vargas","R","R","Breaking Ball","Ball","","","101","-1.46992","-0.548968"
-"3","0","1","0","'1-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Knecht","Vargas","R","R","Breaking Ball","Ball","","","10","-0.82562","-0.628102"
-"3","0","2","0","'2-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Knecht","Vargas","R","R","Fastball","Called Strike","","","10","0.840666","0.550113"
-"3","0","2","1","'2-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Knecht","Vargas","R","R","Breaking Ball","Flyout","Fly Ball","Straightaway","10","-0.625666","0.145651"
-"3","1","0","0","'0-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Dei Banning","Vargas","R","R","Fastball","Foul","","","10","0.674037","0.8051"
-"3","1","0","1","'0-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Dei Banning","Vargas","R","R","Breaking Ball","Called Strike","","","10","-0.736751","0.066517"
-"3","1","0","2","'0-2","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Dei Banning","Vargas","R","R","Breaking Ball","Strikeout Looking","","","10","-0.470146","0.330297"
-"3","2","0","0","'0-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Cecchetto","Vargas","L","R","Breaking Ball","Ball","","","10","-1.89204","0.427016"
-"3","2","1","0","'1-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","1","0","Cecchetto","Vargas","L","R","Breaking Ball","Single","Ground Ball","Pull","10","0.72958","0.8051"
-"3","2","0","0","'0-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","D. Marra","Vargas","R","R","Breaking Ball","Ball","","","10","-1.82539","-0.250018"
-"3","2","1","0","'1-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","D. Marra","Vargas","R","R","Breaking Ball","Called Strike","","","10","-0.6701","0.286333"
-"3","2","1","1","'1-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","D. Marra","Vargas","R","R","Breaking Ball","Ball","","","10","-0.847837","0.066517"
-"3","2","2","1","'2-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","D. Marra","Vargas","R","R","Fastball","Ball","","","10","1.24057","0.136858"
-"3","2","3","1","'3-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","D. Marra","Vargas","R","R","Breaking Ball","Called Strike","","","10","-0.692317","0.119273"
-"3","2","3","2","'3-2","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","D. Marra","Vargas","R","R","Breaking Ball","Single","","","10","0.685146","0.479772"
-"3","2","0","0","'0-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","J.Marra","Vargas","L","R","Fastball","Ball","","","10","-0.35906","1.11284"
-"3","2","1","0","'1-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","J.Marra","Vargas","L","R","Fastball","Swinging Strike","","","10","0.0186314","0.629247"
-"3","2","1","1","'1-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","J.Marra","Vargas","L","R","Fastball","Ball","","","10","1.32944","1.24473"
-"3","2","2","1","'2-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","J.Marra","Vargas","L","R","Breaking Ball","Swinging Strike","","","10","-0.181323","0.119273"
-"3","2","2","2","'2-2","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","J.Marra","Vargas","L","R","Fastball","Strikeout Looking","","","10","0.718471","0.281937"
-"4","0","0","0","'0-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Kyrose","Lepard","R","R","Fastball","Called Strike","","","0","-0.225757","0.875441"
-"4","0","0","1","'0-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Kyrose","Lepard","R","R","Fastball","Swinging Strike","","","0","-0.04802","0.787514"
-"4","0","0","2","'0-2","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Kyrose","Lepard","R","R","Fastball","Strikeout Swinging","","","0","0.774014","0.725966"
-"4","1","0","0","'0-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Penalver","Lepard","L","R","Fastball","Called Strike","","","0","0.618494","0.286333"
-"4","1","0","1","'0-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Penalver","Lepard","L","R","Fastball","Single","Line Drive","Pull","0","0.685146","0.189614"
-"4","1","0","0","'0-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Parsons","Lepard","R","R","Fastball","Swinging Strike","","","100","0.662929","0.558905"
-"4","1","0","1","'0-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Parsons","Lepard","R","R","Fastball","Ball","","","100","-0.225757","1.1656"
-"4","1","1","1","'1-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Parsons","Lepard","R","R","Breaking Ball","Foul","","","100","-0.647883","0.303919"
-"4","1","1","2","'1-2","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Parsons","Lepard","R","R","Fastball","Strikeout Swinging","","","100","0.640711","0.638039"
-"4","2","0","0","'0-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Ibarra","Lepard","R","R","","Error","","","100",\N,\N
-"4","2","0","0","'0-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Towers","Lepard","L","R","Breaking Ball","Swinging Strike","","","110","-1.42548","0.00496848"
-"4","2","0","1","'0-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Towers","Lepard","L","R","Fastball","Groundout","Ground Ball","Pull","110","0.707363","0.682003"
-"4","0","0","0","'0-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Dos Santos","Martinez","L","R","Fastball","Called Strike","","","0","0.551843","0.198407"
-"4","0","0","1","'0-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Dos Santos","Martinez","L","R","Fastball","Ball","","","0","1.41831","1.01612"
-"4","0","1","1","'1-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Dos Santos","Martinez","L","R","Fastball","Called Strike","","","0","1.24057","0.787514"
-"4","0","1","2","'1-2","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Dos Santos","Martinez","L","R","Fastball","Ball","","","0","1.12949","-0.0214095"
-"4","0","2","2","'2-2","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Dos Santos","Martinez","L","R","Fastball","Ball","","","0","1.35166","0.576491"
-"4","0","3","2","'3-2","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Dos Santos","Martinez","L","R","Fastball","Foul","","","0","0.685146","0.813892"
-"4","0","3","2","'3-2","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Dos Santos","Martinez","L","R","Breaking Ball","Strikeout Looking","","","0","-0.136889","0.11048"
-"4","1","0","0","'0-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Dos Santos","Martinez","L","R","Breaking Ball","Ball","","","0","-1.22553","0.215992"
-"4","1","1","0","'1-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Dos Santos","Martinez","L","R","Fastball","Groundout","","","0","0.685146","0.67321"
-"4","2","0","0","'0-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Moreno","Martinez","L","R","Fastball","Ball","","","0","1.35166","0.128066"
-"4","2","1","0","'1-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Moreno","Martinez","L","R","Breaking Ball","Foul","","","0","0.485191","0.514942"
-"4","2","1","1","'1-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Moreno","Martinez","L","R","Breaking Ball","Ball","","","0","0.685146","-0.258811"
-"4","2","2","1","'2-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Moreno","Martinez","L","R","Fastball","Called Strike","","","0","0.796231","0.594076"
-"4","2","2","2","'2-2","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Moreno","Martinez","L","R","Breaking Ball","Strikeout Swinging","","","0","-1.24775","0.0313464"
-"5","0","0","0","'0-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Cabral","Rodriguez","R","R","Fastball","Ball","","","0","0.0852829","-0.206055"
-"5","0","1","0","'1-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Cabral","Rodriguez","R","R","Fastball","Ball","","","0","0.751797","1.08646"
-"5","0","2","0","'2-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Cabral","Rodriguez","R","R","Fastball","Ball","","","0","0.640711","1.14801"
-"5","0","3","0","'3-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Cabral","Rodriguez","R","R","Fastball","Called Strike","","","0","-0.00358571","0.743551"
-"5","0","3","1","'3-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Cabral","Rodriguez","R","R","Fastball","Single","Line Drive","Straightaway","0","0.640711","0.383052"
-"5","0","0","0","'0-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Kowara","Rodriguez","R","R","Fastball","Single","","","100","-0.04802","0.207199"
-"5","0","0","0","'0-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Cain-Plante","Rodriguez","L","R","Breaking Ball","Ball","","","110","-0.136889","-0.214848"
-"5","0","1","0","'1-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Cain-Plante","Rodriguez","L","R","Breaking Ball","Ball","","","110","1.48496","0.725966"
-"5","0","2","0","'2-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Cain-Plante","Rodriguez","L","R","Fastball","Flyout","Fly Ball","Opposite Field","110","-0.04802","0.936989"
-"5","1","0","0","'0-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Lawson","Rodriguez","R","R","Fastball","Swinging Strike","","","110","0.0408486","0.84027"
-"5","1","0","1","'0-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Lawson","Rodriguez","R","R","Breaking Ball","Ball","","","11","-1.26996","-0.232433"
-"5","1","1","1","'1-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Lawson","Rodriguez","R","R","Fastball","Foul","","","11","0.840666","0.708381"
-"5","1","1","2","'1-2","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Lawson","Rodriguez","R","R","Breaking Ball","Ball","","","11","1.24057","0.189614"
-"5","1","2","2","'2-2","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","1","1","Lawson","Rodriguez","R","R","Fastball","Single","Line Drive","Straightaway","11","0.0186314","0.664417"
-"5","1","0","0","'0-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Kyrose","Rodriguez","R","R","Breaking Ball","Called Strike","","","101","0.818449","0.558905"
-"5","1","0","1","'0-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Kyrose","Rodriguez","R","R","Breaking Ball","Foul","","","101","-0.447929","0.259955"
-"5","1","0","2","'0-2","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Kyrose","Rodriguez","R","R","Fastball","Ball","","","101","1.0184","1.11284"
-"5","1","1","2","'1-2","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Kyrose","Rodriguez","R","R","Breaking Ball","Foul","","","101","0.751797","0.339089"
-"5","1","1","2","'1-2","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Kyrose","Rodriguez","R","R","Fastball","Ball","","","101","0.796231","1.17439"
-"5","1","2","2","'2-2","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","1","1","Kyrose","Rodriguez","R","R","Breaking Ball","Strikeout Swinging","","","101","-0.78119","0.119273"
-"5","2","0","0","'0-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Penalver","Rodriguez","L","R","Fastball","Ball","","","10","1.28501","0.594076"
-"5","2","1","0","'1-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Penalver","Rodriguez","L","R","Breaking Ball","Called Strike","","","10","0.818449","0.092895"
-"5","2","1","1","'1-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Penalver","Rodriguez","L","R","Breaking Ball","Ball","","","10","-0.6701","-0.38191"
-"5","2","2","1","'2-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Penalver","Rodriguez","L","R","Breaking Ball","Ball","","","10","-2.24752","-0.23243"
-"5","2","3","1","'3-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Penalver","Rodriguez","L","R","Fastball","Called Strike","","","10","0.485191","0.936989"
-"5","2","3","2","'3-2","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Penalver","Rodriguez","L","R","Fastball","Groundout","Ground Ball","Pull","10","0.907317","0.682003"
-"5","0","0","0","'0-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Castaldo","Martinez","L","R","Fastball","Ball","","","0","0.929534","1.09526"
-"5","0","1","0","'1-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Castaldo","Martinez","L","R","Fastball","Ball","","","0","1.28501","0.611661"
-"5","0","2","0","'2-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Castaldo","Martinez","L","R","Fastball","Ball","","","0","0.840666","1.20077"
-"5","0","3","0","'3-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Castaldo","Martinez","L","R","Fastball","Called Strike","","","0","0.0408486","0.945782"
-"5","0","3","1","'3-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Castaldo","Martinez","L","R","Breaking Ball","Single","","","0","0.285237","0.215992"
-"5","0","0","0","'0-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Knecht","Martinez","R","R","Breaking Ball","Groundout","Ground Ball","Opposite Field","100","-0.559014","0.37426"
-"5","1","0","0","'0-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","2","2","Dei Banning","Martinez","R","R","Fastball","Home Run","Fly Ball","Opposite Field","100","0.285237","0.268748"
-"5","1","0","0","'0-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Cecchetto","Martinez","R","R","Fastball","Ball","","","0","-0.98114","1.20077"
-"5","1","1","0","'1-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Cecchetto","Martinez","R","R","Breaking Ball","Groundout","Ground Ball","Pull","0","-0.381277","0.479772"
-"5","2","0","0","'0-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","D. Marra","Martinez","R","R","Fastball","Called Strike","","","0","-0.6701","0.303919"
-"5","2","0","1","'0-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","D. Marra","Martinez","R","R","Fastball","Ball","","","0","-0.8034","-0.07417"
-"5","2","1","1","'1-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","D. Marra","Martinez","R","R","Breaking Ball","Called Strike","","","0","-0.6701","0.558905"
-"5","2","1","2","'1-2","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","D. Marra","Martinez","R","R","Breaking Ball","Flyout","Fly Ball","Opposite Field","0","-0.8034","0.07531"
-"6","0","0","0","'0-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Parsons","Alvarado","R","L","Fastball","Ball","","","0","1.44053","-0.02141"
-"6","0","1","0","'1-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Parsons","Alvarado","R","L","Fastball","Double","","","0","-0.62567","0.725966"
-"6","0","0","0","'0-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Ibarra","Alvarado","R","L","Fastball","Ball","","","10","-1.3144","1.03371"
-"6","0","1","0","'1-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","1","1","Ibarra","Alvarado","R","L","Breaking Ball","Single","Ground Ball","Pull","10","0.41854","0.479772"
-"6","0","0","0","'0-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Towers","Alvarado","L","L","Fastball","Hit By Pitch","","","100","-1.75874","1.0425"
-"6","0","0","0","'0-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Cabral","Alvarado","R","L","Fastball","Ball","","","110","-1.35883","0.752344"
-"6","0","1","0","'1-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Cabral","Alvarado","R","L","Fastball","Swinging Strike","","","110","-0.38128","0.963367"
-"6","0","1","1","'1-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Cabral","Alvarado","R","L","Breaking Ball","Ball","","","110","-1.64765","0.629247"
-"6","0","2","1","'2-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Cabral","Alvarado","R","L","Breaking Ball","Flyout","Fly Ball","Pull","110","0.973969","0.066517"
-"6","1","0","0","'0-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Kowara","Alvarado","R","L","Fastball","Ball","","","110","1.26279","-0.575346"
-"6","1","1","0","'1-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Kowara","Alvarado","R","L","Fastball","Called Strike","","","11","0.818449","0.699588"
-"6","1","1","1","'1-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Kowara","Alvarado","R","L","Breaking Ball","Called Strike","","","11","-0.714534","0.558905"
-"6","1","1","2","'1-2","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","1","1","Kowara","Alvarado","R","L","Breaking Ball","Ball","","","11","1.64048","-0.346738"
-"6","1","2","2","'2-2","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Kowara","Alvarado","R","L","Breaking Ball","Ball","","","1","-1.42548","-0.162092"
-"6","1","3","2","'3-2","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Kowara","Alvarado","R","L","Fastball","Foul","","","1","-0.381277","0.585283"
-"6","1","3","2","'3-2","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Kowara","Alvarado","R","L","Fastball","Foul","","","1","0.929534","0.418223"
-"6","1","3","2","'3-2","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","1","1","Kowara","Alvarado","R","L","Fastball","Sacrifice Fly","Fly Ball","Straightaway","1","-0.51458","0.50615"
-"6","2","0","0","'0-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Cain-Plante","Alvarado","L","L","Fastball","Called Strike","","","0","0.307454","0.532528"
-"6","2","0","1","'0-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Cain-Plante","Alvarado","L","L","Breaking Ball","Ball","","","0","0.1075","-0.241226"
-"6","2","1","1","'1-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Cain-Plante","Alvarado","L","L","Breaking Ball","Ball","","","0","-1.13666","0.576491"
-"6","2","2","1","'2-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Cain-Plante","Alvarado","L","L","Fastball","Swinging Strike","","","0","-0.736751","0.497357"
-"6","2","2","2","'2-2","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Cain-Plante","Alvarado","L","L","Breaking Ball","Ball","","","0","1.41831","-0.329152"
-"6","2","3","2","'3-2","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Cain-Plante","Alvarado","L","L","Fastball","Foul","","","0","-1.13666","0.875441"
-"6","2","3","2","'3-2","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Cain-Plante","Alvarado","L","L","Fastball","Single","Ground Ball","Opposite Field","0","-0.736751","0.849063"
-"6","2","0","0","'0-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Lawson","Alvarado","R","L","Breaking Ball","Ball","","","100","-1.95869","1.13922"
-"6","2","1","0","'1-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Lawson","Alvarado","R","L","Fastball","Double","Line Drive","Pull","100","0.329671","0.585283"
-"6","2","0","0","'0-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Kyrose","Alvarado","R","L","Fastball","Ball","","","11","-1.53657","1.13043"
-"6","2","1","0","'1-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Kyrose","Alvarado","R","L","Fastball","Called Strike","","","11","0.307454","0.725966"
-"6","2","1","1","'1-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Kyrose","Alvarado","R","L","Fastball","Ball","","","11","-1.69209","1.17439"
-"6","2","2","1","'2-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Kyrose","Alvarado","R","L","Fastball","Foul","","","11","-1.20331","0.884233"
-"6","2","2","2","'2-2","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Kyrose","Alvarado","R","L","Fastball","Strikeout Swinging","","","11","0.57406","0.857856"
-"6","0","0","0","'0-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","J.Marra","Martinez","L","R","Fastball","Called Strike","","","0","0.618494","0.233577"
-"6","0","0","1","'0-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","J.Marra","Martinez","L","R","Breaking Ball","Ball","","","0","0.951751","-0.32036"
-"6","0","1","1","'1-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","J.Marra","Martinez","L","R","Fastball","Called Strike","","","0","0.618494","0.136858"
-"6","0","1","2","'1-2","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","J.Marra","Martinez","L","R","Fastball","Ball","","","0","1.21836","0.488564"
-"6","0","2","2","'2-2","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","J.Marra","Martinez","L","R","Breaking Ball","Single","Line Drive","Straightaway","0","0.951751","0.11048"
-"6","0","0","0","'0-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Dos Santos","Martinez","L","R","Fastball","Single","Line Drive","Opposite Field","100","0.41854","0.391845"
-"6","0","0","0","'0-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Lampreia","Martinez","R","R","Fastball","Called Strike","","","110","0.8851","0.488564"
-"6","0","0","1","'0-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Lampreia","Martinez","R","R","Fastball","Groundout","Ground Ball","Straightaway","110","0.840666","0.224785"
-"6","1","0","0","'0-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Moreno","Martinez","L","R","Fastball","Ball","","","110","1.97374","0.321504"
-"6","1","1","0","'1-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Moreno","Martinez","L","R","Breaking Ball","Called Strike","","","110","0.818449","0.435808"
-"6","1","1","1","'1-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Moreno","Martinez","L","R","Breaking Ball","Ball","","","110","1.5294","0.470979"
-"6","1","2","1","'2-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Moreno","Martinez","L","R","Fastball","Ball","","","110","1.30723","0.136858"
-"6","1","3","1","'3-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Moreno","Martinez","L","R","Fastball","Flyout","Fly Ball","Pull","110","0.8851","-0.0741654"
-"6","2","0","0","'0-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Castaldo","Martinez","L","R","Fastball","Ball","","","101","1.41831","0.743551"
-"6","2","1","0","'1-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Castaldo","Martinez","L","R","Fastball","Called Strike","","","101","1.24057","0.339089"
-"6","2","1","1","'1-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Castaldo","Martinez","L","R","Fastball","Ball","","","101","1.5294","0.954575"
-"6","2","2","1","'2-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Castaldo","Martinez","L","R","Fastball","Ball","","","101","1.19614","0.550113"
-"6","2","3","1","'3-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Castaldo","Martinez","L","R","Fastball","Walk","","","101","1.12949","0.136858"
-"6","2","0","0","'0-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Knecht","Martinez","R","R","Breaking Ball","Called Strike","","","111","0.929534","0.761136"
-"6","2","0","1","'0-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","1","1","Knecht","Martinez","R","R","Fastball","Single","Ground Ball","Pull","111","-0.270191","0.893026"
-"6","2","0","0","'0-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Carrington","Martinez","L","R","Breaking Ball","Ball","","","101","1.46275","0.136858"
-"6","2","1","0","'1-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Carrington","Martinez","L","R","Fastball","Called Strike","","","101","0.774014","0.497357"
-"6","2","1","1","'1-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Carrington","Martinez","L","R","Fastball","Called Strike","","","101","1.12949","0.321504"
-"6","2","1","2","'1-2","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Carrington","Martinez","L","R","Breaking Ball","Strikeout Swinging","","","101","1.19614","0.312711"
-"7","0","0","0","'0-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Penalver","Newton","L","R","Fastball","Called Strike","","","0","0.662929","0.251163"
-"7","0","0","1","'0-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Penalver","Newton","L","R","Breaking Ball","Ball","","","0","1.26279","1.21835"
-"7","0","1","1","'1-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Penalver","Newton","L","R","Breaking Ball","Ball","","","0","1.0184","1.35024"
-"7","0","2","1","'2-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Penalver","Newton","L","R","Breaking Ball","Called Strike","","","0","-0.470146","0.884233"
-"7","0","2","2","'2-2","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Penalver","Newton","L","R","Fastball","Foul","","","0","0.240803","0.444601"
-"7","0","2","2","'2-2","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Penalver","Newton","L","R","Breaking Ball","Ball","","","0","0.929534","1.20077"
-"7","0","3","2","'3-2","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Penalver","Newton","L","R","Fastball","Groundout","Ground Ball","Pull","0","-0.181323","0.321504"
-"7","1","0","0","'0-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Parsons","Newton","R","R","Fastball","Ball","","","0","-1.22553","1.05129"
-"7","1","1","0","'1-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Parsons","Newton","R","R","Fastball","Flyout","Fly Ball","Straightaway","0","0.440757","0.470979"
-"7","2","0","0","'0-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Ibarra","Newton","R","R","Fastball","Ball","","","0","-0.536797","1.10405"
-"7","2","1","0","'1-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Ibarra","Newton","R","R","Breaking Ball","Swinging Strike","","","0","-1.02557","0.470979"
-"7","2","1","1","'1-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Ibarra","Newton","R","R","Breaking Ball","Single","Line Drive","Pull","0","-0.781186","0.339089"
-"7","2","0","0","'0-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Ibarra","Newton","L","R","Fastball","Called Strike","","","100","-0.381277","0.717173"
-"7","2","0","1","'0-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Ibarra","Newton","L","R","Breaking Ball","Ball","","","100","1.32944","0.743551"
-"7","2","1","1","'1-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Ibarra","Newton","L","R","Fastball","Foul","","","100","0.8851","0.286333"
-"7","2","1","2","'1-2","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Ibarra","Newton","L","R","Breaking Ball","Strikeout Swinging","","","100","-1.20331","-0.170885"
-"7","0","0","0","'0-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Cecchetto","Martinez","R","R","Fastball","Ball","","","0","-0.82562","0.453394"
-"7","0","1","0","'1-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Cecchetto","Martinez","R","R","Breaking Ball","Swinging Strike","","","0","-0.625666","0.0577244"
-"7","0","1","1","'1-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Cecchetto","Martinez","R","R","Fastball","Single","Pop Up","Straightaway","0","0.26302","0.479772"
-"7","0","0","0","'0-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Cecchetto","Martinez","R","R","","Called Strike","","","100","-0.714534","0.312711"
-"7","0","0","1","'0-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Cecchetto","Martinez","R","R","Breaking Ball","Ball","","","100","-0.6701","-0.197262"
-"7","0","1","1","'1-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Cecchetto","Martinez","R","R","Breaking Ball","Foul","","","100","0.640711","0.479772"
-"7","0","1","2","'1-2","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Cecchetto","Martinez","R","R","Breaking Ball","Popout","Pop Up","Pull","100","0.685146","0.119273"
-"7","1","0","0","'0-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","J.Marra","Martinez","L","R","Fastball","Ball","","","100","1.48496","-0.153299"
-"7","1","1","0","'1-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","J.Marra","Martinez","L","R","Fastball","Called Strike","","","100","1.17392","0.594076"
-"7","1","1","1","'1-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","J.Marra","Martinez","L","R","Fastball","Ball","","","100","1.24057","0.215992"
-"7","1","2","1","'2-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","J.Marra","Martinez","L","R","Fastball","Ball","","","100","1.15171","0.128066"
-"7","1","3","1","'3-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","J.Marra","Martinez","L","R","Fastball","Called Strike","","","100","-0.00358571","0.813892"
-"7","1","3","2","'3-2","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","J.Marra","Martinez","L","R","","Pickoff","","","100",\N,\N
-"7","2","0","0","'0-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","J.Marra","Martinez","L","R","Fastball","Foul","","","100","-0.0258029","0.717173"
-"7","2","0","1","'0-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","J.Marra","Martinez","L","R","Breaking Ball","Ball","","","100","-0.381277","-0.267604"
-"7","2","1","1","'1-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Dos Santos","Martinez","L","R","Fastball","Groundout","Ground Ball","Straightaway","100","0.8851","0.321504"
-"8","0","0","0","'0-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Cabral","Newton","R","R","Breaking Ball","Ball","","","0","-0.6701","1.20956"
-"8","0","1","0","'1-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Cabral","Newton","R","R","Fastball","Ball","","","0","-1.15888","0.725966"
-"8","0","2","0","'2-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Cabral","Newton","R","R","Fastball","Popout","Pop Up","Opposite Field","0","0.929534","0.550113"
-"8","1","0","0","'0-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Kowara","Newton","R","R","Breaking Ball","Ball","","","0","-0.51458","0.0401391"
-"8","1","1","0","'1-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Kowara","Newton","R","R","Fastball","Called Strike","","","0","0.1075","0.50615"
-"8","1","1","1","'1-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Kowara","Newton","R","R","Breaking Ball","Ball","","","0","0.951751","1.20077"
-"8","1","2","1","'2-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","1","1","Kowara","Newton","R","R","Fastball","Home Run","Fly Ball","Straightaway","0","-0.381277","0.145651"
-"8","1","0","0","'0-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Bauer","Newton","L","R","Fastball","Ball","","","0","1.15171","1.13043"
-"8","1","1","0","'1-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Bauer","Newton","L","R","Fastball","Called Strike","","","0","0.8851","0.470979"
-"8","1","1","1","'1-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Bauer","Newton","L","R","Fastball","Groundout","Ground Ball","Pull","0","0.662929","0.128066"
-"8","2","0","0","'0-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Lawson","Richardson","R","L","Fastball","Swinging Strike","","","0","0.240803","0.893026"
-"8","2","0","1","'0-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Lawson","Richardson","R","L","Fastball","Called Strike","","","0","0.618494","0.664417"
-"8","2","0","2","'0-2","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Lawson","Richardson","R","L","Fastball","Foul","","","0","-0.04802","0.857856"
-"8","2","0","2","'0-2","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Lawson","Richardson","R","L","Fastball","Foul","","","0","0.662929","0.778722"
-"8","2","0","2","'0-2","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Lawson","Richardson","R","L","Fastball","Foul","","","0","0.462974","0.488564"
-"8","2","0","2","'0-2","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Lawson","Richardson","R","L","Breaking Ball","Groundout","Ground Ball","Pull","0","0.796231","0.066517"
-"8","0","0","0","'0-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Lampreia","Martinez","R","R","Fastball","Called Strike","","","0","0.41854","0.831478"
-"8","0","0","1","'0-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Lampreia","Martinez","R","R","Breaking Ball","Swinging Strike","","","0","-0.847837","0.066517"
-"8","0","0","2","'0-2","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Lampreia","Martinez","R","R","Fastball","Foul","","","0","0.796231","0.866648"
-"8","0","0","2","'0-2","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Lampreia","Martinez","R","R","Breaking Ball","Flyout","","","0","-0.736751","0.172029"
-"8","1","0","0","'0-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Moreno","Martinez","L","R","Fastball","Foul","","","0","0.907317","0.37426"
-"8","1","0","1","'0-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Moreno","Martinez","L","R","Breaking Ball","Ball","","","0","0.596277","-0.18847"
-"8","1","1","1","'1-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Moreno","Martinez","L","R","Breaking Ball","Swinging Strike","","","0","0.507409","-0.241226"
-"8","1","1","2","'1-2","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Moreno","Martinez","L","R","Breaking Ball","Foul","","","0","0.285237","0.400638"
-"8","1","1","2","'1-2","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Moreno","Martinez","L","R","Fastball","Foul","","","0","1.50718","0.0313464"
-"8","1","1","2","'1-2","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Moreno","Martinez","L","R","Fastball","Ball","","","0","1.59605","-0.197262"
-"8","1","2","2","'2-2","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Moreno","Martinez","L","R","Fastball","Strikeout Looking","","","0","0.818449","0.97216"
-"8","2","0","0","'0-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Castaldo","Martinez","L","R","Fastball","Foul","","","0","0.862883","0.163236"
-"8","2","0","1","'0-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Castaldo","Martinez","L","R","Fastball","Swinging Strike","","","0","0.818449","0.24237"
-"8","2","0","2","'0-2","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Castaldo","Martinez","L","R","Fastball","Strikeout Swinging","","","0","0.751797","-0.0477874"
-"9","0","0","0","'0-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Kyrose","Richardson","R","L","Fastball","Swinging Strike","","","0","0.57406","0.233577"
-"9","0","0","1","'0-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Kyrose","Richardson","R","L","Breaking Ball","Double","","","0","0.818449","0.136858"
-"9","0","0","0","'0-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Penalver","Richardson","L","L","Fastball","Foul","","","10","1.06284","0.787514"
-"9","0","0","1","'0-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Penalver","Richardson","","","Breaking Ball","Ball","","","10","1.35166","-0.214848"
-"9","0","1","1","'1-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","","","","","","Truncated Out","","","10",\N,\N
-"9","1","0","0","'0-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Penalver","Richardson","L","L","Fastball","Called Strike","","","0","0.907317","0.427016"
-"9","1","0","1","'0-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Penalver","Richardson","L","L","Fastball","Single","Ground Ball","Pull","0","0.640711","0.54132"
-"9","1","0","0","'0-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Parsons","Richardson","R","L","Fastball","Foul","","","100","0.707363","0.884233"
-"9","1","0","1","'0-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Parsons","Richardson","R","L","Fastball","Ball","","","100","-0.270191","1.1656"
-"9","1","1","1","'1-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Parsons","Richardson","R","L","Fastball","Ball","","","100","-1.78096","1.15681"
-"9","1","2","1","'2-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Parsons","Richardson","R","L","Fastball","Ball","","","10","-1.33661","1.13922"
-"9","1","3","1","'3-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Parsons","Richardson","R","L","Fastball","Swinging Strike","","","10","1.12949","0.910611"
-"9","1","3","2","'3-2","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Parsons","Richardson","R","L","Fastball","Strikeout Swinging","","","10","-0.247974","1.10405"
-"9","2","0","0","'0-0","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Ibarra","Richardson","R","L","Breaking Ball","Called Strike","","","10","1.17392","0.611661"
-"9","2","0","1","'0-1","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Ibarra","Richardson","R","L","Fastball","Foul","","","10","1.10727","0.884233"
-"9","2","0","2","'0-2","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Ibarra","Richardson","R","L","Fastball","Ball","","","10","1.5294","0.339089"
-"9","2","1","2","'1-2","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Ibarra","Richardson","R","L","Fastball","Foul","","","10","-0.98114","1.13922"
-"9","2","1","2","'1-2","2025-05-11","Kitchener Panthers","Toronto Maple Leafs","0","0","Ibarra","Richardson","R","L","Fastball","Popout","Pop Up","Straightaway","10","0.662929","1.07767"
-"9","0","0","0","'0-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Knecht","Mauris","R","R","Fastball","Foul","","","0","-0.159106","0.664417"
-"9","0","0","1","'0-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Knecht","Mauris","R","R","Fastball","Ball","","","0","-0.425711","0.092895"
-"9","0","1","1","'1-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Knecht","Mauris","R","R","Breaking Ball","Called Strike","","","0","-0.603449","0.550113"
-"9","0","1","2","'1-2","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Knecht","Mauris","R","R","Breaking Ball","Ball","","","0","-1.22553","-0.179677"
-"9","0","2","2","'2-2","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Knecht","Mauris","R","R","Breaking Ball","Flyout","Fly Ball","Straightaway","0","-0.114671","0.523735"
-"9","1","0","0","'0-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Mejia","Mauris","R","R","Breaking Ball","Called Strike","","","0","1.15171","0.444601"
-"9","1","0","1","'0-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Mejia","Mauris","R","R","Breaking Ball","Swinging Strike","","","0","0.72958","0.0841023"
-"9","1","0","2","'0-2","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Mejia","Mauris","R","R","Breaking Ball","Strikeout Swinging","","","0","-1.15888","-0.329152"
-"9","2","0","0","'0-0","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Cecchetto","Mauris","R","R","Fastball","Called Strike","","","0","-0.447929","0.611661"
-"9","2","0","1","'0-1","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Cecchetto","Mauris","R","R","Breaking Ball","Swinging Strike","","","0","0.862883","0.347882"
-"9","2","0","2","'0-2","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Cecchetto","Mauris","R","R","Breaking Ball","Foul","","","0","-0.847837","-0.0917507"
-"9","2","0","2","'0-2","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Cecchetto","Mauris","R","R","Breaking Ball","Ball","","","0","-1.26996","-0.267604"
-"9","2","1","2","'1-2","2025-05-11","Toronto Maple Leafs","Kitchener Panthers","0","0","Cecchetto","Mauris","R","R","Breaking Ball","Strikeout Swinging","","","0","-0.0702371","0.0401391"
+1,0,0,0,'0-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Kyrose,Sato,R,R,Fastball,Groundout,Ground Ball,Straightaway,0,-1.15888,0.396241
+1,1,0,0,'0-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Penalver,Sato,L,R,Offspeed,Ball,,,0,1.35166,0.233577
+1,1,1,0,'1-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Penalver,Sato,L,R,Offspeed,Groundout,Ground Ball,Pull,0,0.662929,-0.197262
+1,2,0,0,'0-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Parsons,Sato,R,R,Breaking Ball,Called Strike,,,0,0.57406,0.215992
+1,2,0,1,'0-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Parsons,Sato,R,R,Breaking Ball,Popout,Pop Up,Straightaway,0,0.507409,0.145651
+1,0,0,0,'0-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Dos Santos,Vargas,L,R,Fastball,Called Strike,,,0,0.8851,0.268748
+1,0,0,1,'0-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Dos Santos,Vargas,L,R,Fastball,Swinging Strike,,,0,1.0184,0.0137611
+1,0,0,2,'0-2,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Dos Santos,Vargas,L,R,Breaking Ball,Ball,,,0,0.8851,-0.285189
+1,0,1,2,'1-2,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Dos Santos,Vargas,L,R,Fastball,Ball,,,0,1.50718,-0.214848
+1,0,2,2,'2-2,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Dos Santos,Vargas,L,R,Breaking Ball,Ball,,,0,-0.6701,-0.214848
+1,0,3,2,'3-2,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Dos Santos,Vargas,L,R,Breaking Ball,Strikeout Swinging,,,0,1.17392,-0.0389948
+1,1,0,0,'0-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Ross,Vargas,R,R,Fastball,Ball,,,0,-0.892271,0.497357
+1,1,1,0,'1-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Ross,Vargas,R,R,Fastball,Called Strike,,,0,-0.625666,0.224785
+1,1,1,1,'1-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Ross,Vargas,R,R,Breaking Ball,Ball,,,0,-1.53657,-0.680858
+1,1,2,1,'2-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Ross,Vargas,R,R,Breaking Ball,Ball,,,0,-1.29218,-0.373115
+1,1,3,1,'3-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Ross,Vargas,R,R,Fastball,Called Strike,,,0,0.907317,0.690795
+1,1,3,2,'3-2,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Ross,Vargas,R,R,Breaking Ball,Strikeout Swinging,,,0,-1.04779,-0.496213
+1,2,0,0,'0-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Moreno,Vargas,L,R,Breaking Ball,Called Strike,,,0,0.0630657,0.857856
+1,2,0,1,'0-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Moreno,Vargas,L,R,Fastball,Single,Ground Ball,Opposite Field,0,1.10727,0.646832
+1,2,0,0,'0-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Castaldo,Vargas,L,R,Fastball,Ball,,,100,-1.13666,0.638039
+1,2,1,0,'1-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Castaldo,Vargas,L,R,Breaking Ball,Ball,,,100,1.39609,-0.100543
+1,2,2,0,'2-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Castaldo,Vargas,L,R,Breaking Ball,Ball,,,100,1.56272,0.849063
+1,2,3,0,'3-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Castaldo,Vargas,L,R,Fastball,Walk,,,100,1.28501,0.347882
+1,2,0,0,'0-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Knecht,Vargas,R,R,Breaking Ball,Groundout,Ground Ball,Straightaway,110,-0.492363,0.365467
+2,0,0,0,'0-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Ibarra,Sato,R,R,Offspeed,Swinging Strike,,,0,-0.78119,0.347882
+2,0,0,1,'0-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Ibarra,Sato,R,R,Breaking Ball,Popout,Pop Up,Opposite Field,0,0.040849,0.163236
+2,1,0,0,'0-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Towers,Sato,L,R,Fastball,Ball,,,0,1.28501,0.514942
+2,1,1,0,'1-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Towers,Sato,L,R,Breaking Ball,Ball,,,0,0.018631,-0.54897
+2,1,2,0,'2-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Towers,Sato,L,R,Breaking Ball,Called Strike,,,0,1.21836,0.224785
+2,1,2,1,'2-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Towers,Sato,L,R,Fastball,Foul,,,0,1.17392,-0.08296
+2,1,2,2,'2-2,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Towers,Sato,L,R,Breaking Ball,Foul,,,0,-1.09223,0.172029
+2,1,2,2,'2-2,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Towers,Sato,L,R,Breaking Ball,Strikeout Swinging,,,0,-1.15888,-0.19726
+2,2,0,0,'0-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Cabral,Sato,R,R,Breaking Ball,Groundout,Ground Ball,Opposite Field,0,-0.00359,0.602869
+2,0,0,0,'0-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Dei Banning,Vargas,R,R,Fastball,Called Strike,,,0,0.685146,0.189614
+2,0,0,1,'0-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Dei Banning,Vargas,R,R,Fastball,Called Strike,,,0,-0.93671,0.532527
+2,0,0,2,'0-2,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Dei Banning,Vargas,R,R,Breaking Ball,Ball,,,0,-0.20354,-0.24123
+2,0,1,2,'1-2,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Dei Banning,Vargas,R,R,Fastball,Ball,,,0,-0.89227,0.040139
+2,0,2,2,'2-2,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Dei Banning,Vargas,R,R,Breaking Ball,Strikeout Swinging,,,0,-0.69232,0.470979
+2,1,0,0,'0-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Cecchetto,Vargas,R,R,Breaking Ball,Ball,,,0,-1.62544,-0.41708
+2,1,1,0,'1-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Cecchetto,Vargas,R,R,Breaking Ball,Called Strike,,,0,-0.71453,0.119273
+2,1,1,1,'1-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Cecchetto,Vargas,R,R,Breaking Ball,Ball,,,0,1.28501,0.638039
+2,1,2,1,'2-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Cecchetto,Vargas,R,R,Fastball,Swinging Strike,,,0,-0.44793,0.550113
+2,1,2,2,'2-2,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Cecchetto,Vargas,R,R,Fastball,Ball,,,0,1.24057,0.119273
+2,1,3,2,'3-2,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Cecchetto,Vargas,R,R,Fastball,Walk,,,0,1.46275,-0.19726
+2,1,0,0,'0-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,D. Marra,Vargas,R,R,Fastball,Ball,,,100,1.35166,0.761136
+2,1,1,0,'1-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,D. Marra,Vargas,R,R,Breaking Ball,Ball,,,100,-1.46992,-0.53138
+2,1,2,0,'2-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,D. Marra,Vargas,R,R,Breaking Ball,Called Strike,,,10,-0.6701,0.928197
+2,1,2,1,'2-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,D. Marra,Vargas,R,R,Breaking Ball,Foul,,,10,0.285237,0.585283
+2,1,2,2,'2-2,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,D. Marra,Vargas,R,R,Breaking Ball,Single,Ground Ball,Straightaway,10,-0.8034,0.136858
+2,1,0,0,'0-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,J. Marra,Vargas,L,R,Fastball,Called Strike,,,101,0.396323,0.488564
+2,1,0,1,'0-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,J. Marra,Vargas,L,R,Fastball,Foul,,,101,0.462974,0.690795
+2,1,0,2,'0-2,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,J. Marra,Vargas,L,R,Fastball,Ball,,,101,1.5294,0.224785
+2,1,1,2,'1-2,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,J. Marra,Vargas,L,R,Fastball,Ball,,,101,1.6627,0.769929
+2,1,2,2,'2-2,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,J. Marra,Vargas,L,R,Fastball,Foul,,,11,1.12949,0.312711
+2,1,2,2,'2-2,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,J. Marra,Vargas,L,R,Fastball,Popout,Pop Up,Straightaway,11,1.15171,0.427016
+2,2,0,0,'0-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Dos Santos,Vargas,L,R,Fastball,Called Strike,,,11,0.840666,0.251163
+2,2,0,1,'0-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Dos Santos,Vargas,L,R,Fastball,Ball,,,11,1.55161,0.875441
+2,2,1,1,'1-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Dos Santos,Vargas,L,R,Breaking Ball,Ball,,,11,0.462974,-0.19726
+2,2,2,1,'2-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Dos Santos,Vargas,L,R,Breaking Ball,Ball,,,11,0.063066,-0.21485
+2,2,3,1,'3-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Dos Santos,Vargas,L,R,Fastball,Walk,,,11,1.48496,0.787514
+2,2,0,0,'0-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Ross,Vargas,R,R,Fastball,Called Strike,,,111,0.707363,0.743551
+2,2,0,1,'0-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Ross,Vargas,R,R,Fastball,Ball,,,111,0.218586,1.19198
+2,2,1,1,'1-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Ross,Vargas,R,R,Breaking Ball,Ball,,,111,0.529626,-0.31157
+2,2,2,1,'2-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Ross,Vargas,R,R,Fastball,Groundout,Ground Ball,Pull,111,0.285237,0.532527
+3,0,0,0,'0-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Kowara,Lepard,R,R,Fastball,Swinging Strike,,,0,0.57406,0.655625
+3,0,0,1,'0-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Kowara,Lepard,R,R,Fastball,Foul,,,0,0.596277,0.444601
+3,0,0,2,'0-2,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Kowara,Lepard,R,R,Fastball,Ball,,,0,1.41831,0.180821
+3,0,1,2,'1-2,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Kowara,Lepard,R,R,Fastball,Ball,,,0,-0.0702371,1.09526
+3,0,2,2,'2-2,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Kowara,Lepard,R,R,Fastball,Strikeout Looking,,,0,0.0852829,0.523735
+3,1,0,0,'0-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Cain-Plante,Lepard,R,R,Fastball,Swinging Strike,,,0,-0.04802,0.849063
+3,1,0,1,'0-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Cain-Plante,Lepard,R,R,Fastball,Foul,,,0,0.596277,0.585283
+3,1,0,2,'0-2,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Cain-Plante,Lepard,R,R,Breaking Ball,Strikeout Swinging,,,0,-0.847837,0.066517
+3,2,0,0,'0-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Lawson,Lepard,R,R,Fastball,Ball,,,0,-1.35883,0.0137611
+3,2,1,0,'1-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Lawson,Lepard,R,R,Fastball,Swinging Strike,,,0,0.507409,0.339089
+3,2,1,1,'1-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Lawson,Lepard,R,R,Breaking Ball,Ball,,,0,-0.714534,-0.0477874
+3,2,2,1,'2-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Lawson,Lepard,R,R,Fastball,Ball,,,0,-1.15888,0.54132
+3,2,3,1,'3-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Lawson,Lepard,R,R,Fastball,Single,Line Drive,Pull,0,0.529626,0.558905
+3,2,0,0,'0-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Kyrose,Lepard,R,R,Fastball,Called Strike,,,100,-0.247974,0.734758
+3,2,0,1,'0-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Kyrose,Lepard,R,R,Breaking Ball,Called Strike,,,100,0.907317,0.629247
+3,2,0,2,'0-2,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Kyrose,Lepard,R,R,Breaking Ball,Ball,,,100,-1.22553,-0.250018
+3,2,1,2,'1-2,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,,,,,,Truncated Out,,,,\N,\N
+3,0,0,0,'0-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Moreno,Vargas,L,R,Fastball,Single,Line Drive,Pull,0,0.685146,0.180821
+3,0,0,0,'0-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Castaldo,Vargas,L,R,Breaking Ball,Ball,,,10,-0.625666,-0.258811
+3,0,1,0,'1-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Castaldo,Vargas,L,R,Breaking Ball,Ball,,,10,0.996186,1.23594
+3,0,2,0,'2-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Castaldo,Vargas,L,R,Breaking Ball,Ball,,,10,0.440757,-0.557761
+3,0,3,0,'3-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Castaldo,Vargas,L,R,Fastball,Called Strike,,,1,0.796231,0.620454
+3,0,3,1,'3-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Castaldo,Vargas,L,R,Breaking Ball,Swinging Strike,,,1,0.596277,-0.214848
+3,0,3,2,'3-2,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Castaldo,Vargas,L,R,Offspeed,Walk,,,1,1.26279,-0.250018
+3,0,0,0,'0-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,1,1,Knecht,Vargas,R,R,Breaking Ball,Ball,,,101,-1.46992,-0.548968
+3,0,1,0,'1-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Knecht,Vargas,R,R,Breaking Ball,Ball,,,10,-0.82562,-0.628102
+3,0,2,0,'2-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Knecht,Vargas,R,R,Fastball,Called Strike,,,10,0.840666,0.550113
+3,0,2,1,'2-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Knecht,Vargas,R,R,Breaking Ball,Flyout,Fly Ball,Straightaway,10,-0.625666,0.145651
+3,1,0,0,'0-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Dei Banning,Vargas,R,R,Fastball,Foul,,,10,0.674037,0.8051
+3,1,0,1,'0-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Dei Banning,Vargas,R,R,Breaking Ball,Called Strike,,,10,-0.736751,0.066517
+3,1,0,2,'0-2,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Dei Banning,Vargas,R,R,Breaking Ball,Strikeout Looking,,,10,-0.470146,0.330297
+3,2,0,0,'0-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Cecchetto,Vargas,L,R,Breaking Ball,Ball,,,10,-1.89204,0.427016
+3,2,1,0,'1-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,1,0,Cecchetto,Vargas,L,R,Breaking Ball,Single,Ground Ball,Pull,10,0.72958,0.8051
+3,2,0,0,'0-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,D. Marra,Vargas,R,R,Breaking Ball,Ball,,,10,-1.82539,-0.250018
+3,2,1,0,'1-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,D. Marra,Vargas,R,R,Breaking Ball,Called Strike,,,10,-0.6701,0.286333
+3,2,1,1,'1-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,D. Marra,Vargas,R,R,Breaking Ball,Ball,,,10,-0.847837,0.066517
+3,2,2,1,'2-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,D. Marra,Vargas,R,R,Fastball,Ball,,,10,1.24057,0.136858
+3,2,3,1,'3-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,D. Marra,Vargas,R,R,Breaking Ball,Called Strike,,,10,-0.692317,0.119273
+3,2,3,2,'3-2,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,D. Marra,Vargas,R,R,Breaking Ball,Single,,,10,0.685146,0.479772
+3,2,0,0,'0-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,J.Marra,Vargas,L,R,Fastball,Ball,,,10,-0.35906,1.11284
+3,2,1,0,'1-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,J.Marra,Vargas,L,R,Fastball,Swinging Strike,,,10,0.0186314,0.629247
+3,2,1,1,'1-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,J.Marra,Vargas,L,R,Fastball,Ball,,,10,1.32944,1.24473
+3,2,2,1,'2-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,J.Marra,Vargas,L,R,Breaking Ball,Swinging Strike,,,10,-0.181323,0.119273
+3,2,2,2,'2-2,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,J.Marra,Vargas,L,R,Fastball,Strikeout Looking,,,10,0.718471,0.281937
+4,0,0,0,'0-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Kyrose,Lepard,R,R,Fastball,Called Strike,,,0,-0.225757,0.875441
+4,0,0,1,'0-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Kyrose,Lepard,R,R,Fastball,Swinging Strike,,,0,-0.04802,0.787514
+4,0,0,2,'0-2,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Kyrose,Lepard,R,R,Fastball,Strikeout Swinging,,,0,0.774014,0.725966
+4,1,0,0,'0-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Penalver,Lepard,L,R,Fastball,Called Strike,,,0,0.618494,0.286333
+4,1,0,1,'0-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Penalver,Lepard,L,R,Fastball,Single,Line Drive,Pull,0,0.685146,0.189614
+4,1,0,0,'0-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Parsons,Lepard,R,R,Fastball,Swinging Strike,,,100,0.662929,0.558905
+4,1,0,1,'0-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Parsons,Lepard,R,R,Fastball,Ball,,,100,-0.225757,1.1656
+4,1,1,1,'1-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Parsons,Lepard,R,R,Breaking Ball,Foul,,,100,-0.647883,0.303919
+4,1,1,2,'1-2,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Parsons,Lepard,R,R,Fastball,Strikeout Swinging,,,100,0.640711,0.638039
+4,2,0,0,'0-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Ibarra,Lepard,R,R,,Error,,,100,\N,\N
+4,2,0,0,'0-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Towers,Lepard,L,R,Breaking Ball,Swinging Strike,,,110,-1.42548,0.00496848
+4,2,0,1,'0-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Towers,Lepard,L,R,Fastball,Groundout,Ground Ball,Pull,110,0.707363,0.682003
+4,0,0,0,'0-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Dos Santos,Martinez,L,R,Fastball,Called Strike,,,0,0.551843,0.198407
+4,0,0,1,'0-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Dos Santos,Martinez,L,R,Fastball,Ball,,,0,1.41831,1.01612
+4,0,1,1,'1-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Dos Santos,Martinez,L,R,Fastball,Called Strike,,,0,1.24057,0.787514
+4,0,1,2,'1-2,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Dos Santos,Martinez,L,R,Fastball,Ball,,,0,1.12949,-0.0214095
+4,0,2,2,'2-2,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Dos Santos,Martinez,L,R,Fastball,Ball,,,0,1.35166,0.576491
+4,0,3,2,'3-2,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Dos Santos,Martinez,L,R,Fastball,Foul,,,0,0.685146,0.813892
+4,0,3,2,'3-2,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Dos Santos,Martinez,L,R,Breaking Ball,Strikeout Looking,,,0,-0.136889,0.11048
+4,1,0,0,'0-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Dos Santos,Martinez,L,R,Breaking Ball,Ball,,,0,-1.22553,0.215992
+4,1,1,0,'1-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Dos Santos,Martinez,L,R,Fastball,Groundout,,,0,0.685146,0.67321
+4,2,0,0,'0-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Moreno,Martinez,L,R,Fastball,Ball,,,0,1.35166,0.128066
+4,2,1,0,'1-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Moreno,Martinez,L,R,Breaking Ball,Foul,,,0,0.485191,0.514942
+4,2,1,1,'1-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Moreno,Martinez,L,R,Breaking Ball,Ball,,,0,0.685146,-0.258811
+4,2,2,1,'2-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Moreno,Martinez,L,R,Fastball,Called Strike,,,0,0.796231,0.594076
+4,2,2,2,'2-2,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Moreno,Martinez,L,R,Breaking Ball,Strikeout Swinging,,,0,-1.24775,0.0313464
+5,0,0,0,'0-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Cabral,Rodriguez,R,R,Fastball,Ball,,,0,0.0852829,-0.206055
+5,0,1,0,'1-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Cabral,Rodriguez,R,R,Fastball,Ball,,,0,0.751797,1.08646
+5,0,2,0,'2-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Cabral,Rodriguez,R,R,Fastball,Ball,,,0,0.640711,1.14801
+5,0,3,0,'3-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Cabral,Rodriguez,R,R,Fastball,Called Strike,,,0,-0.00358571,0.743551
+5,0,3,1,'3-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Cabral,Rodriguez,R,R,Fastball,Single,Line Drive,Straightaway,0,0.640711,0.383052
+5,0,0,0,'0-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Kowara,Rodriguez,R,R,Fastball,Single,,,100,-0.04802,0.207199
+5,0,0,0,'0-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Cain-Plante,Rodriguez,L,R,Breaking Ball,Ball,,,110,-0.136889,-0.214848
+5,0,1,0,'1-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Cain-Plante,Rodriguez,L,R,Breaking Ball,Ball,,,110,1.48496,0.725966
+5,0,2,0,'2-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Cain-Plante,Rodriguez,L,R,Fastball,Flyout,Fly Ball,Opposite Field,110,-0.04802,0.936989
+5,1,0,0,'0-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Lawson,Rodriguez,R,R,Fastball,Swinging Strike,,,110,0.0408486,0.84027
+5,1,0,1,'0-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Lawson,Rodriguez,R,R,Breaking Ball,Ball,,,11,-1.26996,-0.232433
+5,1,1,1,'1-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Lawson,Rodriguez,R,R,Fastball,Foul,,,11,0.840666,0.708381
+5,1,1,2,'1-2,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Lawson,Rodriguez,R,R,Breaking Ball,Ball,,,11,1.24057,0.189614
+5,1,2,2,'2-2,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,1,1,Lawson,Rodriguez,R,R,Fastball,Single,Line Drive,Straightaway,11,0.0186314,0.664417
+5,1,0,0,'0-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Kyrose,Rodriguez,R,R,Breaking Ball,Called Strike,,,101,0.818449,0.558905
+5,1,0,1,'0-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Kyrose,Rodriguez,R,R,Breaking Ball,Foul,,,101,-0.447929,0.259955
+5,1,0,2,'0-2,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Kyrose,Rodriguez,R,R,Fastball,Ball,,,101,1.0184,1.11284
+5,1,1,2,'1-2,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Kyrose,Rodriguez,R,R,Breaking Ball,Foul,,,101,0.751797,0.339089
+5,1,1,2,'1-2,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Kyrose,Rodriguez,R,R,Fastball,Ball,,,101,0.796231,1.17439
+5,1,2,2,'2-2,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,1,1,Kyrose,Rodriguez,R,R,Breaking Ball,Strikeout Swinging,,,101,-0.78119,0.119273
+5,2,0,0,'0-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Penalver,Rodriguez,L,R,Fastball,Ball,,,10,1.28501,0.594076
+5,2,1,0,'1-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Penalver,Rodriguez,L,R,Breaking Ball,Called Strike,,,10,0.818449,0.092895
+5,2,1,1,'1-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Penalver,Rodriguez,L,R,Breaking Ball,Ball,,,10,-0.6701,-0.38191
+5,2,2,1,'2-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Penalver,Rodriguez,L,R,Breaking Ball,Ball,,,10,-2.24752,-0.23243
+5,2,3,1,'3-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Penalver,Rodriguez,L,R,Fastball,Called Strike,,,10,0.485191,0.936989
+5,2,3,2,'3-2,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Penalver,Rodriguez,L,R,Fastball,Groundout,Ground Ball,Pull,10,0.907317,0.682003
+5,0,0,0,'0-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Castaldo,Martinez,L,R,Fastball,Ball,,,0,0.929534,1.09526
+5,0,1,0,'1-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Castaldo,Martinez,L,R,Fastball,Ball,,,0,1.28501,0.611661
+5,0,2,0,'2-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Castaldo,Martinez,L,R,Fastball,Ball,,,0,0.840666,1.20077
+5,0,3,0,'3-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Castaldo,Martinez,L,R,Fastball,Called Strike,,,0,0.0408486,0.945782
+5,0,3,1,'3-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Castaldo,Martinez,L,R,Breaking Ball,Single,,,0,0.285237,0.215992
+5,0,0,0,'0-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Knecht,Martinez,R,R,Breaking Ball,Groundout,Ground Ball,Opposite Field,100,-0.559014,0.37426
+5,1,0,0,'0-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,2,2,Dei Banning,Martinez,R,R,Fastball,Home Run,Fly Ball,Opposite Field,100,0.285237,0.268748
+5,1,0,0,'0-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Cecchetto,Martinez,R,R,Fastball,Ball,,,0,-0.98114,1.20077
+5,1,1,0,'1-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Cecchetto,Martinez,R,R,Breaking Ball,Groundout,Ground Ball,Pull,0,-0.381277,0.479772
+5,2,0,0,'0-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,D. Marra,Martinez,R,R,Fastball,Called Strike,,,0,-0.6701,0.303919
+5,2,0,1,'0-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,D. Marra,Martinez,R,R,Fastball,Ball,,,0,-0.8034,-0.07417
+5,2,1,1,'1-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,D. Marra,Martinez,R,R,Breaking Ball,Called Strike,,,0,-0.6701,0.558905
+5,2,1,2,'1-2,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,D. Marra,Martinez,R,R,Breaking Ball,Flyout,Fly Ball,Opposite Field,0,-0.8034,0.07531
+6,0,0,0,'0-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Parsons,Alvarado,R,L,Fastball,Ball,,,0,1.44053,-0.02141
+6,0,1,0,'1-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Parsons,Alvarado,R,L,Fastball,Double,,,0,-0.62567,0.725966
+6,0,0,0,'0-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Ibarra,Alvarado,R,L,Fastball,Ball,,,10,-1.3144,1.03371
+6,0,1,0,'1-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,1,1,Ibarra,Alvarado,R,L,Breaking Ball,Single,Ground Ball,Pull,10,0.41854,0.479772
+6,0,0,0,'0-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Towers,Alvarado,L,L,Fastball,Hit By Pitch,,,100,-1.75874,1.0425
+6,0,0,0,'0-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Cabral,Alvarado,R,L,Fastball,Ball,,,110,-1.35883,0.752344
+6,0,1,0,'1-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Cabral,Alvarado,R,L,Fastball,Swinging Strike,,,110,-0.38128,0.963367
+6,0,1,1,'1-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Cabral,Alvarado,R,L,Breaking Ball,Ball,,,110,-1.64765,0.629247
+6,0,2,1,'2-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Cabral,Alvarado,R,L,Breaking Ball,Flyout,Fly Ball,Pull,110,0.973969,0.066517
+6,1,0,0,'0-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Kowara,Alvarado,R,L,Fastball,Ball,,,110,1.26279,-0.575346
+6,1,1,0,'1-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Kowara,Alvarado,R,L,Fastball,Called Strike,,,11,0.818449,0.699588
+6,1,1,1,'1-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Kowara,Alvarado,R,L,Breaking Ball,Called Strike,,,11,-0.714534,0.558905
+6,1,1,2,'1-2,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,1,1,Kowara,Alvarado,R,L,Breaking Ball,Ball,,,11,1.64048,-0.346738
+6,1,2,2,'2-2,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Kowara,Alvarado,R,L,Breaking Ball,Ball,,,1,-1.42548,-0.162092
+6,1,3,2,'3-2,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Kowara,Alvarado,R,L,Fastball,Foul,,,1,-0.381277,0.585283
+6,1,3,2,'3-2,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Kowara,Alvarado,R,L,Fastball,Foul,,,1,0.929534,0.418223
+6,1,3,2,'3-2,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,1,1,Kowara,Alvarado,R,L,Fastball,Sacrifice Fly,Fly Ball,Straightaway,1,-0.51458,0.50615
+6,2,0,0,'0-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Cain-Plante,Alvarado,L,L,Fastball,Called Strike,,,0,0.307454,0.532528
+6,2,0,1,'0-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Cain-Plante,Alvarado,L,L,Breaking Ball,Ball,,,0,0.1075,-0.241226
+6,2,1,1,'1-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Cain-Plante,Alvarado,L,L,Breaking Ball,Ball,,,0,-1.13666,0.576491
+6,2,2,1,'2-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Cain-Plante,Alvarado,L,L,Fastball,Swinging Strike,,,0,-0.736751,0.497357
+6,2,2,2,'2-2,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Cain-Plante,Alvarado,L,L,Breaking Ball,Ball,,,0,1.41831,-0.329152
+6,2,3,2,'3-2,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Cain-Plante,Alvarado,L,L,Fastball,Foul,,,0,-1.13666,0.875441
+6,2,3,2,'3-2,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Cain-Plante,Alvarado,L,L,Fastball,Single,Ground Ball,Opposite Field,0,-0.736751,0.849063
+6,2,0,0,'0-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Lawson,Alvarado,R,L,Breaking Ball,Ball,,,100,-1.95869,1.13922
+6,2,1,0,'1-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Lawson,Alvarado,R,L,Fastball,Double,Line Drive,Pull,100,0.329671,0.585283
+6,2,0,0,'0-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Kyrose,Alvarado,R,L,Fastball,Ball,,,11,-1.53657,1.13043
+6,2,1,0,'1-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Kyrose,Alvarado,R,L,Fastball,Called Strike,,,11,0.307454,0.725966
+6,2,1,1,'1-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Kyrose,Alvarado,R,L,Fastball,Ball,,,11,-1.69209,1.17439
+6,2,2,1,'2-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Kyrose,Alvarado,R,L,Fastball,Foul,,,11,-1.20331,0.884233
+6,2,2,2,'2-2,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Kyrose,Alvarado,R,L,Fastball,Strikeout Swinging,,,11,0.57406,0.857856
+6,0,0,0,'0-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,J.Marra,Martinez,L,R,Fastball,Called Strike,,,0,0.618494,0.233577
+6,0,0,1,'0-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,J.Marra,Martinez,L,R,Breaking Ball,Ball,,,0,0.951751,-0.32036
+6,0,1,1,'1-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,J.Marra,Martinez,L,R,Fastball,Called Strike,,,0,0.618494,0.136858
+6,0,1,2,'1-2,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,J.Marra,Martinez,L,R,Fastball,Ball,,,0,1.21836,0.488564
+6,0,2,2,'2-2,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,J.Marra,Martinez,L,R,Breaking Ball,Single,Line Drive,Straightaway,0,0.951751,0.11048
+6,0,0,0,'0-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Dos Santos,Martinez,L,R,Fastball,Single,Line Drive,Opposite Field,100,0.41854,0.391845
+6,0,0,0,'0-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Lampreia,Martinez,R,R,Fastball,Called Strike,,,110,0.8851,0.488564
+6,0,0,1,'0-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Lampreia,Martinez,R,R,Fastball,Groundout,Ground Ball,Straightaway,110,0.840666,0.224785
+6,1,0,0,'0-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Moreno,Martinez,L,R,Fastball,Ball,,,110,1.97374,0.321504
+6,1,1,0,'1-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Moreno,Martinez,L,R,Breaking Ball,Called Strike,,,110,0.818449,0.435808
+6,1,1,1,'1-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Moreno,Martinez,L,R,Breaking Ball,Ball,,,110,1.5294,0.470979
+6,1,2,1,'2-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Moreno,Martinez,L,R,Fastball,Ball,,,110,1.30723,0.136858
+6,1,3,1,'3-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Moreno,Martinez,L,R,Fastball,Flyout,Fly Ball,Pull,110,0.8851,-0.0741654
+6,2,0,0,'0-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Castaldo,Martinez,L,R,Fastball,Ball,,,101,1.41831,0.743551
+6,2,1,0,'1-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Castaldo,Martinez,L,R,Fastball,Called Strike,,,101,1.24057,0.339089
+6,2,1,1,'1-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Castaldo,Martinez,L,R,Fastball,Ball,,,101,1.5294,0.954575
+6,2,2,1,'2-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Castaldo,Martinez,L,R,Fastball,Ball,,,101,1.19614,0.550113
+6,2,3,1,'3-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Castaldo,Martinez,L,R,Fastball,Walk,,,101,1.12949,0.136858
+6,2,0,0,'0-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Knecht,Martinez,R,R,Breaking Ball,Called Strike,,,111,0.929534,0.761136
+6,2,0,1,'0-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,1,1,Knecht,Martinez,R,R,Fastball,Single,Ground Ball,Pull,111,-0.270191,0.893026
+6,2,0,0,'0-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Carrington,Martinez,L,R,Breaking Ball,Ball,,,101,1.46275,0.136858
+6,2,1,0,'1-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Carrington,Martinez,L,R,Fastball,Called Strike,,,101,0.774014,0.497357
+6,2,1,1,'1-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Carrington,Martinez,L,R,Fastball,Called Strike,,,101,1.12949,0.321504
+6,2,1,2,'1-2,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Carrington,Martinez,L,R,Breaking Ball,Strikeout Swinging,,,101,1.19614,0.312711
+7,0,0,0,'0-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Penalver,Newton,L,R,Fastball,Called Strike,,,0,0.662929,0.251163
+7,0,0,1,'0-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Penalver,Newton,L,R,Breaking Ball,Ball,,,0,1.26279,1.21835
+7,0,1,1,'1-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Penalver,Newton,L,R,Breaking Ball,Ball,,,0,1.0184,1.35024
+7,0,2,1,'2-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Penalver,Newton,L,R,Breaking Ball,Called Strike,,,0,-0.470146,0.884233
+7,0,2,2,'2-2,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Penalver,Newton,L,R,Fastball,Foul,,,0,0.240803,0.444601
+7,0,2,2,'2-2,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Penalver,Newton,L,R,Breaking Ball,Ball,,,0,0.929534,1.20077
+7,0,3,2,'3-2,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Penalver,Newton,L,R,Fastball,Groundout,Ground Ball,Pull,0,-0.181323,0.321504
+7,1,0,0,'0-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Parsons,Newton,R,R,Fastball,Ball,,,0,-1.22553,1.05129
+7,1,1,0,'1-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Parsons,Newton,R,R,Fastball,Flyout,Fly Ball,Straightaway,0,0.440757,0.470979
+7,2,0,0,'0-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Ibarra,Newton,R,R,Fastball,Ball,,,0,-0.536797,1.10405
+7,2,1,0,'1-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Ibarra,Newton,R,R,Breaking Ball,Swinging Strike,,,0,-1.02557,0.470979
+7,2,1,1,'1-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Ibarra,Newton,R,R,Breaking Ball,Single,Line Drive,Pull,0,-0.781186,0.339089
+7,2,0,0,'0-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Ibarra,Newton,L,R,Fastball,Called Strike,,,100,-0.381277,0.717173
+7,2,0,1,'0-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Ibarra,Newton,L,R,Breaking Ball,Ball,,,100,1.32944,0.743551
+7,2,1,1,'1-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Ibarra,Newton,L,R,Fastball,Foul,,,100,0.8851,0.286333
+7,2,1,2,'1-2,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Ibarra,Newton,L,R,Breaking Ball,Strikeout Swinging,,,100,-1.20331,-0.170885
+7,0,0,0,'0-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Cecchetto,Martinez,R,R,Fastball,Ball,,,0,-0.82562,0.453394
+7,0,1,0,'1-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Cecchetto,Martinez,R,R,Breaking Ball,Swinging Strike,,,0,-0.625666,0.0577244
+7,0,1,1,'1-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Cecchetto,Martinez,R,R,Fastball,Single,Pop Up,Straightaway,0,0.26302,0.479772
+7,0,0,0,'0-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Cecchetto,Martinez,R,R,,Called Strike,,,100,-0.714534,0.312711
+7,0,0,1,'0-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Cecchetto,Martinez,R,R,Breaking Ball,Ball,,,100,-0.6701,-0.197262
+7,0,1,1,'1-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Cecchetto,Martinez,R,R,Breaking Ball,Foul,,,100,0.640711,0.479772
+7,0,1,2,'1-2,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Cecchetto,Martinez,R,R,Breaking Ball,Popout,Pop Up,Pull,100,0.685146,0.119273
+7,1,0,0,'0-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,J.Marra,Martinez,L,R,Fastball,Ball,,,100,1.48496,-0.153299
+7,1,1,0,'1-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,J.Marra,Martinez,L,R,Fastball,Called Strike,,,100,1.17392,0.594076
+7,1,1,1,'1-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,J.Marra,Martinez,L,R,Fastball,Ball,,,100,1.24057,0.215992
+7,1,2,1,'2-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,J.Marra,Martinez,L,R,Fastball,Ball,,,100,1.15171,0.128066
+7,1,3,1,'3-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,J.Marra,Martinez,L,R,Fastball,Called Strike,,,100,-0.00358571,0.813892
+7,1,3,2,'3-2,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,J.Marra,Martinez,L,R,,Pickoff,,,100,\N,\N
+7,2,0,0,'0-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,J.Marra,Martinez,L,R,Fastball,Foul,,,100,-0.0258029,0.717173
+7,2,0,1,'0-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,J.Marra,Martinez,L,R,Breaking Ball,Ball,,,100,-0.381277,-0.267604
+7,2,1,1,'1-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Dos Santos,Martinez,L,R,Fastball,Groundout,Ground Ball,Straightaway,100,0.8851,0.321504
+8,0,0,0,'0-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Cabral,Newton,R,R,Breaking Ball,Ball,,,0,-0.6701,1.20956
+8,0,1,0,'1-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Cabral,Newton,R,R,Fastball,Ball,,,0,-1.15888,0.725966
+8,0,2,0,'2-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Cabral,Newton,R,R,Fastball,Popout,Pop Up,Opposite Field,0,0.929534,0.550113
+8,1,0,0,'0-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Kowara,Newton,R,R,Breaking Ball,Ball,,,0,-0.51458,0.0401391
+8,1,1,0,'1-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Kowara,Newton,R,R,Fastball,Called Strike,,,0,0.1075,0.50615
+8,1,1,1,'1-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Kowara,Newton,R,R,Breaking Ball,Ball,,,0,0.951751,1.20077
+8,1,2,1,'2-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,1,1,Kowara,Newton,R,R,Fastball,Home Run,Fly Ball,Straightaway,0,-0.381277,0.145651
+8,1,0,0,'0-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Bauer,Newton,L,R,Fastball,Ball,,,0,1.15171,1.13043
+8,1,1,0,'1-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Bauer,Newton,L,R,Fastball,Called Strike,,,0,0.8851,0.470979
+8,1,1,1,'1-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Bauer,Newton,L,R,Fastball,Groundout,Ground Ball,Pull,0,0.662929,0.128066
+8,2,0,0,'0-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Lawson,Richardson,R,L,Fastball,Swinging Strike,,,0,0.240803,0.893026
+8,2,0,1,'0-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Lawson,Richardson,R,L,Fastball,Called Strike,,,0,0.618494,0.664417
+8,2,0,2,'0-2,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Lawson,Richardson,R,L,Fastball,Foul,,,0,-0.04802,0.857856
+8,2,0,2,'0-2,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Lawson,Richardson,R,L,Fastball,Foul,,,0,0.662929,0.778722
+8,2,0,2,'0-2,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Lawson,Richardson,R,L,Fastball,Foul,,,0,0.462974,0.488564
+8,2,0,2,'0-2,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Lawson,Richardson,R,L,Breaking Ball,Groundout,Ground Ball,Pull,0,0.796231,0.066517
+8,0,0,0,'0-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Lampreia,Martinez,R,R,Fastball,Called Strike,,,0,0.41854,0.831478
+8,0,0,1,'0-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Lampreia,Martinez,R,R,Breaking Ball,Swinging Strike,,,0,-0.847837,0.066517
+8,0,0,2,'0-2,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Lampreia,Martinez,R,R,Fastball,Foul,,,0,0.796231,0.866648
+8,0,0,2,'0-2,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Lampreia,Martinez,R,R,Breaking Ball,Flyout,,,0,-0.736751,0.172029
+8,1,0,0,'0-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Moreno,Martinez,L,R,Fastball,Foul,,,0,0.907317,0.37426
+8,1,0,1,'0-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Moreno,Martinez,L,R,Breaking Ball,Ball,,,0,0.596277,-0.18847
+8,1,1,1,'1-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Moreno,Martinez,L,R,Breaking Ball,Swinging Strike,,,0,0.507409,-0.241226
+8,1,1,2,'1-2,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Moreno,Martinez,L,R,Breaking Ball,Foul,,,0,0.285237,0.400638
+8,1,1,2,'1-2,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Moreno,Martinez,L,R,Fastball,Foul,,,0,1.50718,0.0313464
+8,1,1,2,'1-2,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Moreno,Martinez,L,R,Fastball,Ball,,,0,1.59605,-0.197262
+8,1,2,2,'2-2,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Moreno,Martinez,L,R,Fastball,Strikeout Looking,,,0,0.818449,0.97216
+8,2,0,0,'0-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Castaldo,Martinez,L,R,Fastball,Foul,,,0,0.862883,0.163236
+8,2,0,1,'0-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Castaldo,Martinez,L,R,Fastball,Swinging Strike,,,0,0.818449,0.24237
+8,2,0,2,'0-2,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Castaldo,Martinez,L,R,Fastball,Strikeout Swinging,,,0,0.751797,-0.0477874
+9,0,0,0,'0-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Kyrose,Richardson,R,L,Fastball,Swinging Strike,,,0,0.57406,0.233577
+9,0,0,1,'0-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Kyrose,Richardson,R,L,Breaking Ball,Double,,,0,0.818449,0.136858
+9,0,0,0,'0-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Penalver,Richardson,L,L,Fastball,Foul,,,10,1.06284,0.787514
+9,0,0,1,'0-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Penalver,Richardson,,,Breaking Ball,Ball,,,10,1.35166,-0.214848
+9,0,1,1,'1-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,,,,,,Truncated Out,,,10,\N,\N
+9,1,0,0,'0-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Penalver,Richardson,L,L,Fastball,Called Strike,,,0,0.907317,0.427016
+9,1,0,1,'0-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Penalver,Richardson,L,L,Fastball,Single,Ground Ball,Pull,0,0.640711,0.54132
+9,1,0,0,'0-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Parsons,Richardson,R,L,Fastball,Foul,,,100,0.707363,0.884233
+9,1,0,1,'0-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Parsons,Richardson,R,L,Fastball,Ball,,,100,-0.270191,1.1656
+9,1,1,1,'1-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Parsons,Richardson,R,L,Fastball,Ball,,,100,-1.78096,1.15681
+9,1,2,1,'2-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Parsons,Richardson,R,L,Fastball,Ball,,,10,-1.33661,1.13922
+9,1,3,1,'3-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Parsons,Richardson,R,L,Fastball,Swinging Strike,,,10,1.12949,0.910611
+9,1,3,2,'3-2,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Parsons,Richardson,R,L,Fastball,Strikeout Swinging,,,10,-0.247974,1.10405
+9,2,0,0,'0-0,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Ibarra,Richardson,R,L,Breaking Ball,Called Strike,,,10,1.17392,0.611661
+9,2,0,1,'0-1,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Ibarra,Richardson,R,L,Fastball,Foul,,,10,1.10727,0.884233
+9,2,0,2,'0-2,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Ibarra,Richardson,R,L,Fastball,Ball,,,10,1.5294,0.339089
+9,2,1,2,'1-2,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Ibarra,Richardson,R,L,Fastball,Foul,,,10,-0.98114,1.13922
+9,2,1,2,'1-2,2025-05-11,Kitchener Panthers,Toronto Maple Leafs,0,0,Ibarra,Richardson,R,L,Fastball,Popout,Pop Up,Straightaway,10,0.662929,1.07767
+9,0,0,0,'0-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Knecht,Mauris,R,R,Fastball,Foul,,,0,-0.159106,0.664417
+9,0,0,1,'0-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Knecht,Mauris,R,R,Fastball,Ball,,,0,-0.425711,0.092895
+9,0,1,1,'1-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Knecht,Mauris,R,R,Breaking Ball,Called Strike,,,0,-0.603449,0.550113
+9,0,1,2,'1-2,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Knecht,Mauris,R,R,Breaking Ball,Ball,,,0,-1.22553,-0.179677
+9,0,2,2,'2-2,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Knecht,Mauris,R,R,Breaking Ball,Flyout,Fly Ball,Straightaway,0,-0.114671,0.523735
+9,1,0,0,'0-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Mejia,Mauris,R,R,Breaking Ball,Called Strike,,,0,1.15171,0.444601
+9,1,0,1,'0-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Mejia,Mauris,R,R,Breaking Ball,Swinging Strike,,,0,0.72958,0.0841023
+9,1,0,2,'0-2,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Mejia,Mauris,R,R,Breaking Ball,Strikeout Swinging,,,0,-1.15888,-0.329152
+9,2,0,0,'0-0,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Cecchetto,Mauris,R,R,Fastball,Called Strike,,,0,-0.447929,0.611661
+9,2,0,1,'0-1,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Cecchetto,Mauris,R,R,Breaking Ball,Swinging Strike,,,0,0.862883,0.347882
+9,2,0,2,'0-2,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Cecchetto,Mauris,R,R,Breaking Ball,Foul,,,0,-0.847837,-0.0917507
+9,2,0,2,'0-2,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Cecchetto,Mauris,R,R,Breaking Ball,Ball,,,0,-1.26996,-0.267604
+9,2,1,2,'1-2,2025-05-11,Toronto Maple Leafs,Kitchener Panthers,0,0,Cecchetto,Mauris,R,R,Breaking Ball,Strikeout Swinging,,,0,-0.0702371,0.0401391
+1,0,0,0,'0-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Ethan Paulos,Drew Howard,L,R,Fastball,Called Strike,,,0,0.848071429,0.204268551
+1,0,0,1,'0-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Ethan Paulos,Drew Howard,L,R,Fastball,Ball,,,0,0.570357143,-0.220709541
+1,0,1,1,'1-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Ethan Paulos,Drew Howard,L,R,Fastball,Swinging Strike,,,0,0.774014286,0.629246643
+1,0,1,2,'1-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Ethan Paulos,Drew Howard,L,R,Fastball,Strikeout Looking,,,0,0.848071429,0.057724382
+1,1,0,0,'0-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Christian Ortega,Drew Howard,R,R,Offspeed,Swinging Strike,,,0,-0.781185714,0.109014841
+1,1,0,1,'0-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Christian Ortega,Drew Howard,R,R,Offspeed,Ball,,,0,-1.725414286,-0.037529329
+1,1,1,1,'1-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Christian Ortega,Drew Howard,R,R,Fastball,Single,Line Drive,Straightaway,0,-0.2813,0.555974558
+1,1,0,0,'0-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Tim Holyk,Drew Howard,R,R,Fastball,Called Strike,,,100,-0.003585714,0.724500353
+1,1,0,1,'0-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Tim Holyk,Drew Howard,R,R,Offspeed,Ball,,,100,-1.429185714,-0.286654417
+1,1,1,1,'1-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,2,2,Tim Holyk,Drew Howard,R,R,Fastball,Home Run,Fly Ball,Pull,10,0.014928571,0.614592226
+1,1,0,0,'0-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Cassidy Watt,Drew Howard,R,R,Fastball,Foul,,,0,-0.355357143,0.783118021
+1,1,0,1,'0-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Cassidy Watt,Drew Howard,R,R,Offspeed,Ball,,,0,0.033442857,0.922334982
+1,1,1,1,'1-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Cassidy Watt,Drew Howard,R,R,Fastball,Foul,,,0,0.163042857,0.658555477
+1,1,1,2,'1-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Cassidy Watt,Drew Howard,R,R,Offspeed,Groundout,Ground Ball,Pull,0,0.070471429,0.519338516
+1,2,0,0,'0-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Matt Torresan,Drew Howard,R,R,Fastball,Swinging Strike,,,0,-0.0221,0.819754064
+1,2,0,1,'0-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Matt Torresan,Drew Howard,R,R,Offspeed,Ball,,,0,-1.169985714,-0.074165371
+1,2,1,1,'1-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Matt Torresan,Drew Howard,R,R,Offspeed,Swinging Strike,,,0,-0.9293,-0.074165371
+1,2,1,2,'1-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Matt Torresan,Drew Howard,R,R,Offspeed,Single,Ground Ball,Straightaway,0,-0.4109,0.109014841
+1,2,0,0,'0-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Lucas Bateman,Drew Howard,R,R,Fastball,Swinging Strike,,,100,0.588871429,0.98095265
+1,2,0,1,'0-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Lucas Bateman,Drew Howard,R,R,Fastball,Swinging Strike,,,100,-0.0221,1.090860777
+1,2,0,2,'0-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Lucas Bateman,Drew Howard,R,R,Fastball,Strikeout Looking,,,100,0.033442857,0.834408481
+1,0,0,0,'0-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Ryan Dos Santos,Nicholai Arbach,R,R,Fastball,Ball,,,0,0.051957143,0.929662191
+1,0,1,0,'1-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Ryan Dos Santos,Nicholai Arbach,R,R,Offspeed,Ball,,,0,-1.373642857,-0.022874912
+1,0,2,0,'2-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Ryan Dos Santos,Nicholai Arbach,R,R,Offspeed,Ball,,,0,1.181328571,0.109014841
+1,0,3,0,'3-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Ryan Dos Santos,Nicholai Arbach,R,R,Fastball,Called Strike,,,0,-0.133185714,0.152978092
+1,0,3,1,'3-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Ryan Dos Santos,Nicholai Arbach,R,R,Offspeed,Called Strike,,,0,0.736985714,0.292195053
+1,0,3,2,'3-2,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Ryan Dos Santos,Nicholai Arbach,R,R,Offspeed,Walk,,,0,1.459042857,0.45339364
+1,0,0,0,'0-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Jhon Javier,Nicholai Arbach,R,R,Fastball,Called Strike,,,100,0.311157143,0.101687633
+1,0,0,1,'0-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Jhon Javier,Nicholai Arbach,R,R,Offspeed,Swinging Strike,,,100,0.699957143,0.775790813
+1,0,0,2,'0-2,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Jhon Javier,Nicholai Arbach,R,R,Offspeed,Foul,,,100,-0.651585714,0.431412014
+1,0,0,2,'0-2,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Jhon Javier,Nicholai Arbach,R,R,Fastball,Flyout,Line Drive,Opposite Field,100,0.181557143,0.841735689
+1,1,0,0,'0-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Rando Moreno,Nicholai Arbach,L,R,Fastball,Ball,,,100,1.1443,0.731827562
+1,1,1,0,'1-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Rando Moreno,Nicholai Arbach,L,R,Offspeed,Ball,,,100,1.347957143,-0.015547703
+1,1,2,0,'2-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Rando Moreno,Nicholai Arbach,L,R,Offspeed,Swinging Strike,,,100,1.051728571,-0.037529329
+1,1,2,1,'2-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Rando Moreno,Nicholai Arbach,L,R,Fastball,Ball,,,100,-0.355357143,-0.301308834
+1,1,3,1,'3-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Rando Moreno,Nicholai Arbach,L,R,Offspeed,Single,Line Drive,Pull,10,0.7555,0.145650883
+1,1,0,0,'0-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,1,1,,,,,,,,,,,
+1,1,0,0,'0-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Jordan Castaldo,Nicholai Arbach,L,R,Fastball,Called Strike,,,10,0.829557143,0.512011307
+1,1,0,1,'0-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Jordan Castaldo,Nicholai Arbach,L,R,Offspeed,Groundout,Ground Ball,Pull,10,0.644414286,0.145650883
+1,2,0,0,'0-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Justin Marra,Nicholai Arbach,L,R,Offspeed,Called Strike,,,1,0.699957143,0.21159576
+1,2,0,1,'0-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Justin Marra,Nicholai Arbach,L,R,Fastball,Ball,,,1,1.199842857,0.64390106
+1,2,1,1,'1-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Justin Marra,Nicholai Arbach,L,R,Offspeed,Foul,,,1,0.385214286,0.174959717
+1,2,1,2,'1-2,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Justin Marra,Nicholai Arbach,L,R,Fastball,Foul,,,1,0.348185714,0.783118021
+1,2,1,2,'1-2,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Justin Marra,Nicholai Arbach,L,R,Offspeed,Ball,,,1,1.125785714,0.057724382
+1,2,2,2,'2-2,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Justin Marra,Nicholai Arbach,L,R,Offspeed,Ball,,,1,-1.503242857,0.358139929
+1,2,3,2,'3-2,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Justin Marra,Nicholai Arbach,L,R,Offspeed,Walk,,,1,0.718471429,-0.242691166
+1,2,0,0,'0-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Marcus Knecht,Nicholai Arbach,R,R,Offspeed,Called Strike,,,101,-0.299814286,0.504684099
+1,2,0,1,'0-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Marcus Knecht,Nicholai Arbach,R,R,Offspeed,Lineout,Line Drive,Opposite Field,101,0.8851,0.387448763
+2,0,0,0,'0-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Graham Tebbit,Drew Howard,R,R,Fastball,Foul,,,0,0.070471429,0.174959717
+2,0,0,1,'0-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Graham Tebbit,Drew Howard,R,R,Offspeed,Swinging Strike,,,0,-1.207014286,-0.066838163
+2,0,0,2,'0-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Graham Tebbit,Drew Howard,R,R,Fastball,Ball,,,0,-1.373642857,0.687864311
+2,0,1,2,'1-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Graham Tebbit,Drew Howard,R,R,Fastball,Ball,,,0,-0.651585714,-0.17674629
+2,0,2,2,'2-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Graham Tebbit,Drew Howard,R,R,Fastball,Single,Pop Up,Straightaway,0,0.2371,0.533992933
+2,0,0,0,'0-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Brody Black,Drew Howard,R,R,Fastball,Ball,,,100,-1.429185714,0.145650883
+2,0,1,0,'1-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Brody Black,Drew Howard,R,R,Fastball,Ball,,,100,-1.281071429,0.336158304
+2,0,2,0,'2-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Brody Black,Drew Howard,R,R,Fastball,Foul,,,100,-0.355357143,0.49735689
+2,0,2,1,'2-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Brody Black,Drew Howard,R,R,Fastball,Ball,,,100,1.236871429,0.555974558
+2,0,3,1,'3-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Brody Black,Drew Howard,R,R,Fastball,Foul,,,10,1.107271429,0.673209894
+2,0,3,2,'3-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Brody Black,Drew Howard,R,R,Fastball,Foul,,,10,0.051957143,0.321503887
+2,0,3,2,'3-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Brody Black,Drew Howard,R,R,Offspeed,Walk,,,10,-1.4477,-0.037529329
+2,0,0,0,'0-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Max Schmarder,Drew Howard,R,R,Fastball,Ball,,,110,1.255385714,0.819754064
+2,0,1,0,'1-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Max Schmarder,Drew Howard,R,R,Fastball,Groundout,Ground Ball,Opposite Field,11,0.311157143,0.665882686
+2,1,0,0,'0-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Ethan Paulos,Drew Howard,L,R,Fastball,Foul,,,11,0.533328571,0.863717314
+2,1,0,1,'0-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,1,1,Ethan Paulos,Drew Howard,L,R,Fastball,Sacrifice Fly,Fly Ball,Opposite Field,11,0.588871429,0.673209894
+2,2,0,0,'0-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Christian Ortega,Drew Howard,R,R,Fastball,Called Strike,,,1,0.163042857,0.49735689
+2,2,0,1,'0-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Christian Ortega,Drew Howard,R,R,Fastball,Ball,,,1,-1.632842857,0.695191519
+2,2,1,1,'1-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Christian Ortega,Drew Howard,R,R,Offspeed,Ball,,,1,-1.466214286,-0.242691166
+2,2,2,1,'2-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,2,2,Christian Ortega,Drew Howard,R,R,Fastball,Home Run,Fly Ball,Straightaway,1,-0.392385714,0.599937809
+2,2,0,0,'0-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Tim Holyk,Drew Howard,R,R,Offspeed,Popout,Pop Up,Straightaway,0,-0.744157143,0.49735689
+2,0,0,0,'0-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Dan Marra,Nicholai Arbach,R,R,Offspeed,Called Strike,,,0,-0.6701,0.438739223
+2,0,0,1,'0-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Dan Marra,Nicholai Arbach,R,R,Offspeed,Ball,,,0,0.1075,0.218922968
+2,0,1,1,'1-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Dan Marra,Nicholai Arbach,R,R,Offspeed,Ball,,,0,-0.892271429,-0.184073498
+2,0,2,1,'2-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Dan Marra,Nicholai Arbach,R,R,Offspeed,Swinging Strike,,,0,-1.114442857,0.174959717
+2,0,2,2,'2-2,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Dan Marra,Nicholai Arbach,R,R,Offspeed,Ball,,,0,1.292414286,0.057724382
+2,0,3,2,'3-2,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Dan Marra,Nicholai Arbach,R,R,Fastball,Walk,,,0,-0.6701,-0.08149258
+2,0,0,0,'0-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Spenser Ross,Nicholai Arbach,R,R,Offspeed,Hit By Pitch,,,100,2.144071429,0.218922968
+2,0,0,0,'0-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Matt Brandt,Nicholai Arbach,L,R,Fastball,Ball,,,110,1.514585714,0.629246643
+2,0,1,0,'1-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Matt Brandt,Nicholai Arbach,L,R,Offspeed,Foul,,,110,0.718471429,0.152978092
+2,0,1,1,'1-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Matt Brandt,Nicholai Arbach,L,R,Offspeed,Double Play,Ground Ball,Pull,110,-0.4109,0.116342049
+2,2,0,0,'0-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Ryan Dos Santos,Nicholai Arbach,L,R,Offspeed,Ball,,,1,1.2739,0.475375265
+2,2,1,0,'1-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Ryan Dos Santos,Nicholai Arbach,L,R,Offspeed,Ball,,,1,0.903614286,-0.242691166
+2,2,2,0,'2-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Ryan Dos Santos,Nicholai Arbach,L,R,Fastball,Called Strike,,,1,0.774014286,0.468048057
+2,2,2,1,'2-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Ryan Dos Santos,Nicholai Arbach,L,R,Fastball,Ball,,,1,1.162814286,0.365467138
+2,2,3,1,'3-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Ryan Dos Santos,Nicholai Arbach,L,R,Offspeed,Walk,,,1,1.496071429,0.167632509
+2,2,0,0,'0-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Jhon Javier,Nicholai Arbach,R,R,Fastball,Ball,,,1,-0.225757143,1.120169611
+2,2,1,0,'1-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,1,,,,,,,,,,10,,
+2,2,0,0,'0-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Jhon Javier,Nicholai Arbach,R,R,Offspeed,Called Strike,,,10,0.644414286,0.21159576
+2,2,0,1,'0-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Jhon Javier,Nicholai Arbach,R,R,Fastball,Groundout,,,10,-0.7997,0.336158304
+3,0,0,0,'0-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Cassidy Watt,Adam Jafine,R,L,Fastball,Called Strike,,,0,-0.596042857,0.189614134
+3,0,0,1,'0-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Cassidy Watt,Adam Jafine,R,L,Offspeed,Ball,,,0,-0.707128571,1.068879152
+3,0,1,1,'1-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Cassidy Watt,Adam Jafine,R,L,Offspeed,Ball,,,0,-1.169985714,0.057724382
+3,0,2,1,'2-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Cassidy Watt,Adam Jafine,R,L,Fastball,Groundout,Ground Ball,Straightaway,0,0.533328571,0.900353357
+3,1,0,0,'0-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Matt Torresan,Adam Jafine,R,L,Fastball,Called Strike,,,0,0.607385714,0.248231802
+3,1,0,1,'0-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Matt Torresan,Adam Jafine,R,L,Offspeed,Swinging Strike,,,0,0.922128571,-0.191400707
+3,1,0,2,'0-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Matt Torresan,Adam Jafine,R,L,Fastball,Ball,,,0,-1.114442857,0.218922968
+3,1,1,2,'1-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Matt Torresan,Adam Jafine,R,L,Offspeed,Ball,,,0,-1.558785714,1.200768905
+3,1,2,2,'2-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Matt Torresan,Adam Jafine,R,L,Fastball,Ball,,,0,0.903614286,-0.286654417
+3,1,3,2,'3-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Matt Torresan,Adam Jafine,R,L,Fastball,Foul,,,0,0.662928571,0.094360424
+3,1,3,2,'3-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Matt Torresan,Adam Jafine,R,L,Offspeed,Groundout,Ground Ball,Straightaway,0,-0.466442857,0.958971025
+3,2,0,0,'0-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Lucas Bateman,Adam Jafine,R,L,Fastball,Foul,,,0,-0.207242857,0.819754064
+3,2,0,1,'0-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Lucas Bateman,Adam Jafine,R,L,Offspeed,Ball,,,0,1.199842857,0.783118021
+3,2,1,1,'1-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Lucas Bateman,Adam Jafine,R,L,Offspeed,Ball,,,0,-1.503242857,0.585283392
+3,2,2,1,'2-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Lucas Bateman,Adam Jafine,R,L,Fastball,Called Strike,,,0,1.162814286,0.292195053
+3,2,2,2,'2-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Lucas Bateman,Adam Jafine,R,L,Offspeed,Single,Line Drive,Opposite Field,0,-0.855242857,0.336158304
+3,2,0,0,'0-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Graham Tebbit,Adam Jafine,R,L,Fastball,Ball,,,100,0.014928571,0.966298233
+3,2,1,0,'1-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Graham Tebbit,Adam Jafine,R,L,Fastball,Ball,,,100,-1.169985714,0.526665724
+3,2,2,0,'2-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Graham Tebbit,Adam Jafine,R,L,Fastball,Called Strike,,,100,0.718471429,-0.191400707
+3,2,2,1,'2-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Graham Tebbit,Adam Jafine,R,L,Fastball,Ball,,,100,1.310928571,0.123669258
+3,2,3,1,'3-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Graham Tebbit,Adam Jafine,R,L,Fastball,Foul,,,100,-0.7997,0.929662191
+3,2,3,2,'3-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Graham Tebbit,Adam Jafine,R,L,Fastball,Foul,,,100,-0.614557143,0.775790813
+3,2,3,2,'3-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Graham Tebbit,Adam Jafine,R,L,Offspeed,Walk,,,100,-1.558785714,0.504684099
+3,2,0,0,'0-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Brody Black,Adam Jafine,R,L,Fastball,Called Strike,,,110,1.125785714,0.709845936
+3,2,0,1,'0-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Brody Black,Adam Jafine,R,L,Fastball,Called Strike,,,110,-0.707128571,0.490029682
+3,2,0,2,'0-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Brody Black,Adam Jafine,R,L,Fastball,Ball,,,110,-1.669871429,0.416757597
+3,2,1,2,'1-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Brody Black,Adam Jafine,R,L,Fastball,Ball,,,110,-1.151471429,0.958971025
+3,2,2,2,'2-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Brody Black,Adam Jafine,R,L,Offspeed,Foul,,,110,-0.484957143,0.057724382
+3,2,2,2,'2-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Brody Black,Adam Jafine,R,L,Fastball,Ball,,,110,1.514585714,-0.140110247
+3,2,3,2,'3-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Brody Black,Adam Jafine,R,L,Fastball,Strikeout Swinging,,,110,-0.521985714,0.658555477
+3,0,0,0,'0-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Rando Moreno,Nicholai Arbach,L,R,Offspeed,Ball,,,0,-0.447928571,-0.198727915
+3,0,1,0,'1-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Rando Moreno,Nicholai Arbach,L,R,Offspeed,Groundout,Ground Ball,Pull,0,0.088985714,0.094360424
+3,1,0,0,'0-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Jordan Castaldo,Nicholai Arbach,L,R,Fastball,Swinging Strike,,,0,0.662928571,0.592610601
+3,1,0,1,'0-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Jordan Castaldo,Nicholai Arbach,L,R,Fastball,Called Strike,,,0,0.718471429,0.233577385
+3,1,0,2,'0-2,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Jordan Castaldo,Nicholai Arbach,L,R,Fastball,Ball,,,0,1.181328571,0.087033216
+3,1,1,2,'1-2,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Jordan Castaldo,Nicholai Arbach,L,R,Offspeed,Ball,,,0,1.440528571,0.753809187
+3,1,2,2,'2-2,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Jordan Castaldo,Nicholai Arbach,L,R,Offspeed,Groundout,Ground Ball,Pull,0,0.811042857,0.094360424
+3,2,0,0,'0-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Justin Marra,Nicholai Arbach,L,R,Fastball,Ball,,,0,-0.6701,-0.110801413
+3,2,1,0,'1-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Justin Marra,Nicholai Arbach,L,R,Fastball,Called Strike,,,0,0.866585714,0.482702473
+3,2,1,1,'1-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Justin Marra,Nicholai Arbach,L,R,Fastball,Ball,,,0,1.459042857,0.314176678
+3,2,2,1,'2-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,1,1,Justin Marra,Nicholai Arbach,L,R,Fastball,Home Run,Fly Ball,Opposite Field,0,0.607385714,0.240904594
+3,2,0,0,'0-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Marcus Knecht,Nicholai Arbach,L,R,Fastball,Called Strike,,,0,-0.373871429,0.226250177
+3,2,0,1,'0-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Marcus Knecht,Nicholai Arbach,L,R,Fastball,Single,Fly Ball,Straightaway,0,0.051957143,0.321503887
+3,2,0,0,'0-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Dan Marra,Nicholai Arbach,R,R,Fastball,Called Strike,,,100,0.459271429,0.226250177
+3,2,0,1,'0-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Dan Marra,Nicholai Arbach,R,R,Fastball,Error,Ground Ball,Pull,100,-0.466442857,0.174959717
+3,2,0,0,'0-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Spenser Ross,Nicholai Arbach,R,R,Offspeed,Ball,,,110,1.736757143,-0.147437456
+3,2,1,0,'1-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Spenser Ross,Nicholai Arbach,R,R,Offspeed,Called Strike,,,110,0.903614286,0.336158304
+3,2,1,1,'1-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Spenser Ross,Nicholai Arbach,R,R,Offspeed,Single,Line Drive,Pull,110,0.163042857,0.533992933
+3,2,0,0,'0-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Matt Brandt,Nicholai Arbach,R,R,,Ball,,,111,0.903614286,-0.235363958
+3,2,1,0,'1-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Matt Brandt,Nicholai Arbach,R,R,Fastball,Ball,,,111,0.848071429,0.409430389
+3,2,2,0,'2-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Matt Brandt,Nicholai Arbach,R,R,Fastball,Ball,,,111,-0.2813,-0.213382332
+3,2,3,0,'3-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Matt Brandt,Nicholai Arbach,R,R,Fastball,Called Strike,,,111,-0.873757143,0.167632509
+3,2,3,1,'3-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,1,,Matt Brandt,Nicholai Arbach,R,R,Fastball,Walk,,,111,1.162814286,0.468048057
+3,2,0,0,'0-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Ryan Dos Santos,Nicholai Arbach,L,R,Fastball,Called Strike,,,111,0.792528571,0.761136396
+3,2,0,1,'0-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Ryan Dos Santos,Nicholai Arbach,L,R,Fastball,Ball,,,111,1.625671429,0.244568198
+3,2,1,1,'1-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Ryan Dos Santos,Nicholai Arbach,L,R,Fastball,Ball,,,111,1.236871429,1.112842403
+3,2,2,1,'2-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Ryan Dos Santos,Nicholai Arbach,L,R,Offspeed,Ball,,,111,1.236871429,0.519338516
+3,2,3,1,'3-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Ryan Dos Santos,Nicholai Arbach,L,R,Fastball,Called Strike,,,111,0.588871429,0.218922968
+3,2,3,2,'3-2,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Ryan Dos Santos,Nicholai Arbach,L,R,Fastball,Flyout,Fly Ball,Opposite Field,111,0.440757143,0.255559011
+4,0,0,0,'0-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Max Schmarder,Sam Spencer,R,R,,Foul,,,0,,
+4,0,0,1,'0-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Max Schmarder,Sam Spencer,R,R,Offspeed,Ball,,,0,-1.3181,-0.286654417
+4,0,1,1,'1-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Max Schmarder,Sam Spencer,R,R,Fastball,Ball,,,0,-1.262557143,0.145650883
+4,0,2,1,'2-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Max Schmarder,Sam Spencer,R,R,Fastball,Foul,,,0,-0.003585714,0.73915477
+4,0,2,2,'2-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Max Schmarder,Sam Spencer,R,R,Offspeed,Strikeout Looking,,,0,0.070471429,0.460720848
+4,1,0,0,'0-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Ethan Paulos,Sam Spencer,L,R,Fastball,Called Strike,,,0,0.533328571,0.240904594
+4,1,0,1,'0-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Ethan Paulos,Sam Spencer,L,R,Fastball,Ball,,,0,0.866585714,-0.074165371
+4,1,1,1,'1-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Ethan Paulos,Sam Spencer,L,R,Offspeed,Ball,,,0,-0.614557143,-0.220709541
+4,1,2,1,'2-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Ethan Paulos,Sam Spencer,L,R,Fastball,Ball,,,0,-0.336842857,-0.147437456
+4,1,3,1,'3-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Ethan Paulos,Sam Spencer,L,R,Fastball,Called Strike,,,0,0.681442857,0.138323675
+4,1,3,2,'3-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Ethan Paulos,Sam Spencer,L,R,Fastball,Walk,,,0,-1.132957143,0.380121555
+4,1,0,0,'0-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Christian Ortega,Sam Spencer,R,R,Fastball,Ball,,,100,-1.169985714,0.270213428
+4,1,1,0,'1-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Christian Ortega,Sam Spencer,R,R,Fastball,Called Strike,,,100,0.311157143,0.541320141
+4,1,1,1,'1-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Christian Ortega,Sam Spencer,R,R,Offspeed,Called Strike,,,0,-0.633071429,0.299522261
+4,1,1,2,'1-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,,,,,,Caught Stealing,,,,,
+4,2,0,0,'0-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Christian Ortega,Sam Spencer,R,R,Offspeed,Single,Fly Ball,Opposite Field,0,-0.6701,0.167632509
+4,2,1,0,'1-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Tim Holyk,Sam Spencer,R,R,Fastball,Ball,,,100,1.422014286,0.665882686
+4,2,2,0,'2-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Tim Holyk,Sam Spencer,R,R,Fastball,Ball,,,100,0.607385714,-0.074165371
+4,2,2,1,'2-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Tim Holyk,Sam Spencer,R,R,Fastball,Foul,,,100,0.292642857,0.240904594
+4,2,3,1,'3-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,2,2,Tim Holyk,Sam Spencer,R,R,Fastball,Ball,,,100,1.088757143,1.134824028
+4,2,0,0,'0-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Tim Holyk,Sam Spencer,R,R,Fastball,Home Run,Fly Ball,Pull,10,0.570357143,0.365467138
+4,2,0,1,'0-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Cassidy Watt,Sam Spencer,R,R,Fastball,Foul,,,0,-0.4109,0.636573852
+4,2,0,2,'0-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Cassidy Watt,Sam Spencer,R,R,Offspeed,Called Strike,,,0,-0.207242857,0.519338516
+4,2,1,2,'1-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Cassidy Watt,Sam Spencer,R,R,Offspeed,Ball,,,0,-1.8365,-0.272
+4,2,1,2,'1-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Cassidy Watt,Sam Spencer,R,R,Offspeed,Foul,,,0,0.477785714,0.570628975
+4,2,1,2,'1-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Cassidy Watt,Sam Spencer,R,R,Fastball,Foul,,,0,-0.707128571,0.585283392
+4,2,0,0,'0-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Cassidy Watt,Sam Spencer,R,R,Offspeed,Strikeout Swinging,,,0,0.459271429,-0.140110247
+4,0,0,1,'0-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Jhon Javier,Nicholai Arbach,R,R,Fastball,Called Strike,,,0,-0.559014286,0.218922968
+4,0,0,0,'0-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Jhon Javier,Nicholai Arbach,R,R,Fastball,Flyout,Fly Ball,Straightaway,0,0.570357143,0.54864735
+4,1,0,0,'0-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Rando Moreno,Nicholai Arbach,L,R,Fastball,Single,Fly Ball,Pull,0,-0.688614286,0.490029682
+4,1,0,1,'0-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Jordan Castaldo,Nicholai Arbach,L,R,Offspeed,Foul,,,100,0.422242857,0.196941343
+4,1,0,2,'0-2,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Jordan Castaldo,Nicholai Arbach,L,R,Fastball,Foul,,,100,-0.244271429,0.79044523
+4,1,0,2,'0-2,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Jordan Castaldo,Nicholai Arbach,L,R,Fastball,Foul,,,100,0.607385714,0.797772438
+4,1,0,0,'0-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Jordan Castaldo,Nicholai Arbach,L,R,Fastball,Groundout,Ground Ball,Pull,100,0.3667,0.651228269
+4,2,0,1,'0-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Justin Marra,Nicholai Arbach,L,R,Fastball,Called Strike,,,100,0.348185714,0.343485512
+4,2,0,2,'0-2,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Justin Marra,Nicholai Arbach,L,R,Fastball,Called Strike,,,100,0.792528571,0.468048057
+4,2,0,0,'0-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Justin Marra,Nicholai Arbach,L,R,Fastball,Strikeout Swinging,,,100,-0.910785714,0.79044523
+5,0,1,0,'1-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Matt Torresan,Sam Spencer,R,R,Fastball,Ball,,,0,-0.559014286,-0.088819788
+5,0,1,1,'1-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Matt Torresan,Sam Spencer,R,R,Fastball,Foul,,,0,0.3667,0.541320141
+5,0,2,1,'2-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Matt Torresan,Sam Spencer,R,R,Offspeed,Ball,,,0,-1.114442857,-0.198727915
+5,0,2,2,'2-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Matt Torresan,Sam Spencer,R,R,Fastball,Foul,,,0,0.866585714,0.270213428
+5,0,0,0,'0-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Matt Torresan,Sam Spencer,R,R,Offspeed,Strikeout Swinging,,,0,0.662928571,0.174959717
+5,1,0,0,'0-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Lucas Bateman,Sam Spencer,R,R,Fastball,Groundout,Ground Ball,Opposite Field,0,-0.596042857,0.592610601
+5,2,0,1,'0-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Graham Tebbit,Sam Spencer,R,R,Fastball,Foul,,,0,0.8851,0.358139929
+5,2,0,2,'0-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Graham Tebbit,Sam Spencer,R,R,Offspeed,Called Strike,,,0,-0.6701,0.204268551
+5,2,0,0,'0-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Graham Tebbit,Sam Spencer,R,R,Offspeed,Groundout,Ground Ball,Pull,0,-0.077642857,0.123669258
+5,0,1,0,'1-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Marcus Knecht,Nicholai Arbach,R,R,Fastball,Ball,,,0,-1.095928571,-0.103474205
+5,0,1,1,'1-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Marcus Knecht,Nicholai Arbach,R,R,Offspeed,Foul,,,0,1.125785714,0.226250177
+5,0,1,2,'1-2,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Marcus Knecht,Nicholai Arbach,R,R,Offspeed,Swinging Strike,,,0,1.0147,-0.103474205
+5,0,2,2,'2-2,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Marcus Knecht,Nicholai Arbach,R,R,Fastball,Ball,,,0,1.162814286,0.863717314
+5,0,3,2,'3-2,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Marcus Knecht,Nicholai Arbach,R,R,,Ball,,,0,,
+5,0,0,0,'0-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Marcus Knecht,Nicholai Arbach,R,R,Offspeed,Walk,,,0,1.477557143,0.021088339
+5,0,0,0,'0-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Dan Marra,Nicholai Arbach,R,R,,Groundout,Ground Ball,Pull,100,,
+5,1,1,0,'1-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Spenser Ross,Nicholai Arbach,R,R,Fastball,Ball,,,10,-1.132957143,-0.220709541
+5,1,0,0,'0-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Spenser Ross,Nicholai Arbach,R,R,Fastball,Groundout,Ground Ball,Opposite Field,10,0.588871429,0.380121555
+5,2,1,0,'1-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Matt Brandt,Nicholai Arbach,L,R,Fastball,Ball,,,1,0.699957143,0.936989399
+5,2,1,1,'1-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Matt Brandt,Nicholai Arbach,L,R,Fastball,Called Strike,,,1,-1.132957143,0.424084806
+5,2,1,2,'1-2,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Matt Brandt,Nicholai Arbach,L,R,Fastball,Foul,,,1,-0.688614286,0.328831095
+5,2,1,2,'1-2,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Matt Brandt,Nicholai Arbach,L,R,Offspeed,Foul,,,1,-0.170214286,0.365467138
+5,2,1,2,'1-2,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Matt Brandt,Nicholai Arbach,L,R,Fastball,Foul,,,1,-0.521985714,0.152978092
+5,2,0,0,'0-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Matt Brandt,Nicholai Arbach,L,R,Offspeed,Groundout,Ground Ball,Opposite Field,1,0.699957143,-0.066838163
+6,0,0,1,'0-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Brody Black,Jeremy Newton,R,R,Offspeed,Swinging Strike,,,0,0.707362857,-0.232433074
+6,0,0,2,'0-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Brody Black,Jeremy Newton,R,R,Offspeed,Called Strike,,,0,-0.692317143,0.576490742
+6,0,0,2,'0-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Brody Black,Jeremy Newton,R,R,Offspeed,Ball,,,0,-1.225528571,0.383052438
+6,0,1,2,'1-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Brody Black,Jeremy Newton,R,R,Offspeed,Ball,,,0,-1.625437143,-0.250018375
+6,0,2,2,'2-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Brody Black,Jeremy Newton,R,R,Offspeed,Ball,,,0,-1.314397143,0.752343746
+6,0,3,2,'3-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Brody Black,Jeremy Newton,R,R,Fastball,Strikeout Swinging,,,0,0.907317143,0.936989399
+6,1,0,0,'0-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Max Schmarder,Jeremy Newton,R,R,Offspeed,Called Strike,,,0,-0.625665714,0.638039293
+6,1,0,1,'0-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Max Schmarder,Jeremy Newton,R,R,Offspeed,Called Strike,,,0,-0.114671429,0.391845088
+6,1,0,2,'0-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Max Schmarder,Jeremy Newton,R,R,Fastball,Ball,,,0,-0.6701,1.279902756
+6,1,1,2,'1-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Max Schmarder,Jeremy Newton,R,R,Offspeed,Groundout,Ground Ball,Pull,0,-1.114442857,-0.01261682
+6,2,0,0,'0-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Ethan Paulos,Jeremy Newton,L,R,Fastball,Double,Fly Ball,Straightaway,0,0.151934286,0.97216
+6,2,0,0,'0-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Christian Ortega,Jeremy Newton,R,R,Offspeed,Ball,,,10,-0.647882857,1.200768905
+6,2,1,0,'1-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Christian Ortega,Jeremy Newton,R,R,Fastball,Foul,,,10,-0.314625714,0.9545747
+6,2,1,1,'1-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Christian Ortega,Jeremy Newton,R,R,Offspeed,Ball,,,10,-1.60322,0.013761131
+6,2,2,1,'2-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Christian Ortega,Jeremy Newton,R,R,Fastball,Error,Ground Ball,Straightaway,10,-0.625665714,0.49735689
+6,2,0,0,'0-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Tim Holyk,Jeremy Newton,R,R,Offspeed,Ball,,,101,-1.358831429,0.682002544
+6,2,1,0,'1-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Tim Holyk,Jeremy Newton,R,R,Offspeed,Ball,,,101,0.085282857,1.279902756
+6,2,2,0,'2-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Tim Holyk,Jeremy Newton,R,R,Fastball,Ball,,,101,-1.558785714,0.189614134
+6,2,3,0,'3-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Tim Holyk,Jeremy Newton,R,R,Fastball,Walk,,,101,1.19614,1.086464452
+6,2,0,0,'0-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Cassidy Watt,Jeremy Newton,R,R,Fastball,Ball,,,111,-0.781185714,1.130427703
+6,2,1,0,'1-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Cassidy Watt,Jeremy Newton,R,R,Fastball,Ball,,,111,0.72958,1.253524806
+6,2,2,0,'2-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Cassidy Watt,Jeremy Newton,R,R,Fastball,Ball,,,111,-0.247974286,1.191976254
+6,2,3,0,'3-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Cassidy Watt,Jeremy Newton,R,R,Fastball,Called Strike,,,111,-0.803402857,0.831477597
+6,2,3,1,'3-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Cassidy Watt,Jeremy Newton,R,R,Fastball,Swinging Strike,,,111,-0.447928571,1.095257102
+6,2,3,2,'3-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Cassidy Watt,Jeremy Newton,R,R,Fastball,Flyout,Fly Ball,Straightaway,111,0.1075,0.919404099
+6,0,0,0,'0-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Ryan Dos Santos,Koki Togashi,L,R,Fastball,Called Strike,,,0,0.485191429,0.339089187
+6,0,0,1,'0-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Ryan Dos Santos,Koki Togashi,L,R,Fastball,Ball,,,0,0.329671429,1.095257102
+6,0,1,1,'1-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Ryan Dos Santos,Koki Togashi,L,R,Fastball,Ball,,,0,1.218357143,1.139220353
+6,0,2,1,'2-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Ryan Dos Santos,Koki Togashi,L,R,Fastball,Ball,,,0,-1.114442857,0.699587845
+6,0,3,1,'3-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Ryan Dos Santos,Koki Togashi,L,R,Fastball,Flyout,Fly Ball,Opposite Field,0,0.774014286,0.136858233
+6,1,0,0,'0-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Jhon Javier,Koki Togashi,R,R,Fastball,Called Strike,,,0,-0.003585714,0.813892297
+6,1,0,1,'0-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Jhon Javier,Koki Togashi,R,R,Fastball,Foul,,,0,1.107271429,0.46218629
+6,1,0,2,'0-2,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Jhon Javier,Koki Togashi,R,R,Offspeed,Strikeout Swinging,,,0,-1.092225714,0.259955336
+6,2,0,0,'0-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Rando Moreno,Koki Togashi,L,R,Fastball,Single,Line Drive,Straightaway,0,0.26302,0.769929046
+6,2,0,0,'0-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Jordan Castaldo,Koki Togashi,L,R,Fastball,Swinging Strike,,,100,0.618494286,0.47977159
+6,2,0,1,'0-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Jordan Castaldo,Koki Togashi,L,R,Fastball,Flyout,Fly Ball,Opposite Field,100,0.174151429,0.629246643
+7,0,0,0,'0-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Matt Torresan,Chris Nagorski,R,R,Fastball,Foul,,,0,-0.20354,0.383052438
+7,0,0,1,'0-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Matt Torresan,Chris Nagorski,R,R,Fastball,Foul,,,0,-0.559014286,0.602868693
+7,0,0,2,'0-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Matt Torresan,Chris Nagorski,R,R,Fastball,Foul,,,0,-0.559014286,0.857855548
+7,0,0,2,'0-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Matt Torresan,Chris Nagorski,R,R,Fastball,Strikeout Looking,,,0,-0.625665714,0.224784735
+7,1,0,0,'0-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Lucas Bateman,Chris Nagorski,R,R,Offspeed,Ball,,,0,-1.13666,-0.206055124
+7,1,1,0,'1-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Lucas Bateman,Chris Nagorski,R,R,Fastball,Swinging Strike,,,0,1.085054286,-0.082958021
+7,1,1,1,'1-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Lucas Bateman,Chris Nagorski,R,R,Fastball,Called Strike,,,0,-0.559014286,0.347881837
+7,1,1,2,'1-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Lucas Bateman,Chris Nagorski,R,R,Offspeed,Ball,,,0,-1.647654286,0.418223039
+7,1,2,2,'2-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Lucas Bateman,Chris Nagorski,R,R,Fastball,Groundout,Ground Ball,Straightaway,0,-0.536797143,0.831477597
+7,2,0,0,'0-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Graham Tebbit,Chris Nagorski,R,R,Offspeed,Called Strike,,,0,0.57406,0.638039293
+7,2,0,1,'0-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Graham Tebbit,Chris Nagorski,R,R,Offspeed,Ball,,,0,-1.225528571,-0.100543322
+7,2,1,1,'1-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Graham Tebbit,Chris Nagorski,R,R,Fastball,Ball,,,0,-1.492134286,-0.170884523
+7,2,2,1,'2-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Graham Tebbit,Chris Nagorski,R,R,Offspeed,Swinging Strike,,,0,-0.003585714,-0.056580071
+7,2,2,2,'2-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Graham Tebbit,Chris Nagorski,R,R,Fastball,Foul,,,0,-0.20354,0.813892297
+7,2,2,2,'2-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Graham Tebbit,Chris Nagorski,R,R,Fastball,Ball,,,0,-0.292408571,1.130427703
+7,2,3,2,'3-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Graham Tebbit,Chris Nagorski,R,R,Offspeed,Popout,Pop Up,Straightaway,0,-0.714534286,-0.074165371
+7,0,0,0,'0-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Justin Marra,Koki Togashi,L,R,Offspeed,Called Strike,,,0,-0.003585714,0.638039293
+7,0,0,1,'0-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Justin Marra,Koki Togashi,L,R,Fastball,Called Strike,,,0,0.507408571,0.259955336
+7,0,0,2,'0-2,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Justin Marra,Koki Togashi,L,R,Offspeed,Ball,,,0,0.26302,-0.373115477
+7,0,1,2,'1-2,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Justin Marra,Koki Togashi,L,R,Fastball,Single,Ground Ball,Opposite Field,0,0.907317143,0.752343746
+7,0,0,0,'0-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Marcus Knecht,Koki Togashi,R,R,Offspeed,Ball,,,100,-0.625665714,1.156805654
+7,0,1,0,'1-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Marcus Knecht,Koki Togashi,R,R,Fastball,Swinging Strike,,,100,-0.51458,0.928196749
+7,0,1,1,'1-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Marcus Knecht,Koki Togashi,R,R,Fastball,Double,Fly Ball,Opposite Field,100,0.41854,0.602868693
+7,0,0,0,'0-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Dan Marra,Koki Togashi,R,R,Fastball,Ball,,,11,1.285008571,0.47097894
+7,0,1,0,'1-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Dan Marra,Koki Togashi,R,R,Offspeed,Ball,,,11,0.840665714,1.209561555
+7,0,2,0,'2-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,3,3,Dan Marra,Koki Togashi,R,R,Fastball,Home Run,Fly Ball,Pull,11,0.57406,0.558905442
+7,0,0,0,'0-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Spenser Ross,Aidan Armitage,R,R,Offspeed,Ball,,,0,-1.203311429,-0.206055124
+7,0,1,0,'1-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Spenser Ross,Aidan Armitage,R,R,Fastball,Ball,,,0,0.751797143,0.796306996
+7,0,2,0,'2-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Spenser Ross,Aidan Armitage,R,R,Offspeed,Ball,,,0,-0.492362857,1.104049753
+7,0,3,0,'3-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Spenser Ross,Aidan Armitage,R,R,Fastball,Called Strike,,,0,0.640711429,0.409430389
+7,0,3,1,'3-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Spenser Ross,Aidan Armitage,R,R,Offspeed,Groundout,Ground Ball,Pull,0,-0.803402857,0.268747986
+7,1,0,0,'0-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Matt Brandt,Aidan Armitage,L,R,Offspeed,Ball,,,0,1.640482857,0.523734841
+7,1,1,0,'1-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Matt Brandt,Aidan Armitage,L,R,Fastball,Ball,,,0,0.707362857,-0.056580071
+7,1,2,0,'2-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Matt Brandt,Aidan Armitage,L,R,Fastball,Flyout,Fly Ball,Opposite Field,0,0.596277143,0.567698092
+7,2,0,0,'0-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Ryan Dos Santos,Aidan Armitage,L,R,Offspeed,Ball,,,0,1.19614,0.207199435
+7,2,1,0,'1-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Ryan Dos Santos,Aidan Armitage,L,R,Offspeed,Ball,,,0,1.107271429,0.075309682
+7,2,2,0,'2-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Ryan Dos Santos,Aidan Armitage,L,R,Offspeed,Called Strike,,,0,0.440757143,0.796306996
+7,2,2,1,'2-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Ryan Dos Santos,Aidan Armitage,L,R,Offspeed,Called Strike,,,0,0.040848571,0.48856424
+7,2,2,2,'2-2,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Ryan Dos Santos,Aidan Armitage,L,R,Fastball,Single,Ground Ball,Opposite Field,0,0.551842857,0.339089187
+7,2,0,0,'0-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Dennis Dei Banning,Aidan Armitage,R,R,Offspeed,Ball,,,0,-1.314397143,-0.258811025
+7,2,1,0,'1-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Dennis Dei Banning,Aidan Armitage,R,R,Fastball,Called Strike,,,0,-0.892271429,0.435808339
+7,2,1,1,'1-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Dennis Dei Banning,Aidan Armitage,R,R,Offspeed,Called Strike,,,0,-1.347722857,0.303918587
+7,2,1,2,'1-2,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Dennis Dei Banning,Aidan Armitage,R,R,Offspeed,Foul,,,0,0.218585714,0.532527491
+7,2,1,2,'1-2,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Dennis Dei Banning,Aidan Armitage,R,R,Offspeed,Strikeout Swinging,,,0,-1.247745714,0.558905442
+8,0,0,0,'0-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Rene Tachioka,Ayami Sato,L,R,Offspeed,Ball,,,0,-0.51458,-0.188469823
+8,0,1,0,'1-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Rene Tachioka,Ayami Sato,L,R,Fastball,Foul,,,0,-0.20354,0.145650883
+8,0,1,1,'1-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Rene Tachioka,Ayami Sato,L,R,Offspeed,Foul,,,0,0.307454286,0.268747986
+8,0,1,2,'1-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Rene Tachioka,Ayami Sato,L,R,Offspeed,Strikeout Swinging,,,0,0.41854,0.092894982
+8,1,0,0,'0-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Max Schmarder,Ayami Sato,R,R,Offspeed,Flyout,Fly Ball,Opposite Field,0,-0.647882857,0.268747986
+8,2,0,0,'0-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Ethan Paulos,Ayami Sato,L,R,Fastball,Ball,,,0,1.173922857,0.101687633
+8,2,1,0,'1-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Ethan Paulos,Ayami Sato,L,R,Offspeed,Ball,,,0,1.19614,0.303918587
+8,2,2,0,'2-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Ethan Paulos,Ayami Sato,L,R,Offspeed,Single,Line Drive,Straightaway,0,-0.136888571,0.506149541
+8,2,0,0,'0-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Christian Ortega,Ayami Sato,R,R,Fastball,Ball,,,100,0.840665714,0.435808339
+8,2,1,0,'1-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,,,,,,Caught Stealing,,,100,,
+8,0,0,0,'0-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Rando Moreno,Colby Klepper,L,R,Fastball,Called Strike,,,0,-0.003585714,0.638039293
+8,0,0,1,'0-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Rando Moreno,Colby Klepper,L,R,Fastball,Foul,,,0,0.462974286,0.611661343
+8,0,0,2,'0-2,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Rando Moreno,Colby Klepper,L,R,Offspeed,Strikeout Swinging,,,0,-0.35906,-0.197262473
+8,1,0,0,'0-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Jordan Castaldo,Colby Klepper,L,R,Fastball,Ball,,,0,-1.425482857,0.901818799
+8,1,1,0,'1-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Jordan Castaldo,Colby Klepper,L,R,Fastball,Called Strike,,,0,-0.692317143,0.594076042
+8,1,1,1,'1-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,1,1,Jordan Castaldo,Colby Klepper,L,R,Fastball,Home Run,Fly Ball,Opposite Field,0,0.57406,0.47977159
+8,1,0,0,'0-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Justin Marra,Colby Klepper,L,R,Fastball,Ball,,,0,-0.803402857,1.104049753
+8,1,1,0,'1-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Justin Marra,Colby Klepper,L,R,Fastball,Ball,,,0,1.329442857,0.514942191
+8,1,2,0,'2-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Justin Marra,Colby Klepper,L,R,Fastball,Called Strike,,,0,0.618494286,0.277540636
+8,1,2,1,'2-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,1,1,Justin Marra,Colby Klepper,L,R,Fastball,Home Run,Fly Ball,Opposite Field,0,0.57406,0.682002544
+8,1,0,0,'0-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Marcus Knecht,Colby Klepper,R,R,Offspeed,Ball,,,0,-2.136431429,-0.329152226
+8,1,1,0,'1-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Marcus Knecht,Colby Klepper,R,R,Offspeed,Swinging Strike,,,0,-0.625665714,0.321503887
+8,1,1,1,'1-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Marcus Knecht,Colby Klepper,R,R,Fastball,Flyout,Fly Ball,Opposite Field,0,-0.647882857,0.172028834
+8,2,0,0,'0-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Dan Marra,Colby Klepper,R,R,Offspeed,Ball,,,0,-1.114442857,-0.575346431
+8,2,1,0,'1-0,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Dan Marra,Colby Klepper,R,R,Fastball,Called Strike,,,0,0.507408571,0.365467138
+8,2,1,1,'1-1,01-Jun-25,Toronto Maple Leafs,Brantford Red Sox,,,Dan Marra,Colby Klepper,R,R,Fastball,Flyout,Fly Ball,Straightaway,0,-0.092454286,0.928196749
+9,0,0,0,'0-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Christian Ortega,Taylor Lepard,R,R,Fastball,Called Strike,,,0,-0.425711429,0.295125936
+9,0,0,1,'0-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,1,1,Christian Ortega,Taylor Lepard,R,R,Fastball,Home Run,Fly Ball,Straightaway,0,-0.225757143,0.822684947
+9,0,0,0,'0-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Tim Holyk,Taylor Lepard,R,R,Offspeed,Ball,,,0,-0.736751429,1.297488057
+9,0,1,0,'1-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Tim Holyk,Taylor Lepard,R,R,Fastball,Flyout,Fly Ball,Pull,0,0.618494286,0.251162686
+9,1,0,0,'0-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Cassidy Watt,Taylor Lepard,R,R,Fastball,Foul,,,0,0.685145714,0.787514346
+9,1,0,1,'0-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Cassidy Watt,Taylor Lepard,R,R,Offspeed,Ball,,,0,-0.403494286,-0.170884523
+9,1,1,1,'1-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Cassidy Watt,Taylor Lepard,R,R,Offspeed,Called Strike,,,0,0.551842857,0.761136396
+9,1,1,2,'1-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Cassidy Watt,Taylor Lepard,R,R,Fastball,Foul,,,0,0.329671429,0.717173145
+9,1,1,2,'1-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Cassidy Watt,Taylor Lepard,R,R,Offspeed,Ball,,,0,-1.536568571,0.180821484
+9,1,2,2,'2-2,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Cassidy Watt,Taylor Lepard,R,R,Offspeed,Groundout,Ground Ball,Straightaway,0,-0.003585714,0.805099647
+9,2,0,0,'0-0,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Matt Torresan,Taylor Lepard,R,R,Offspeed,Swinging Strike,,,0,0.018631429,0.725965795
+9,2,0,1,'0-1,01-Jun-25,Brantford Red Sox,Toronto Maple Leafs,,,Matt Torresan,Taylor Lepard,R,R,Fastball,Groundout,Ground Ball,Pull,0,-0.003585714,0.655624594
+1,0,0,0,'0-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Jose Vinicio,Owen Boon,L,R,Fastball,Called Strike,,,0,-0.40325,0.718427
+1,0,0,1,'0-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Jose Vinicio,Owen Boon,L,R,Offspeed,Called Strike,,,0,0.411239,0.031702
+1,0,0,2,'0-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Jose Vinicio,Owen Boon,L,R,Fastball,Ball,,,0,0.800775,1.339751
+1,0,1,2,'1-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Jose Vinicio,Owen Boon,L,R,Offspeed,Groundout,Ground Ball,Pull,0,0.057114,0.709084
+1,1,0,0,'0-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Brody Black,Owen Boon,R,R,,Foul,,,0,0.847992,0.442803
+1,1,0,1,'0-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Brody Black,Owen Boon,R,R,Fastball,Single,Line Drive,Straightaway,0,-0.01371,0.255939
+1,1,0,0,'0-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Brody Black,Owen Boon,R,R,,Pickoff,,,100,,
+1,2,0,0,'0-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Tim Holyk,Owen Boon,R,R,Fastball,Ball,,,0,-0.24979,0.933321
+1,2,1,0,'1-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Tim Holyk,Owen Boon,R,R,Fastball,Ball,,,0,-1.1115,1.01741
+1,2,2,0,'2-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Tim Holyk,Owen Boon,R,R,Fastball,Foul,,,0,-0.72196,0.849232
+1,2,2,1,'2-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Tim Holyk,Owen Boon,R,R,Offspeed,Called Strike,,,0,-0.14356,0.816531
+1,2,2,2,'2-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Tim Holyk,Owen Boon,R,R,Offspeed,Ball,,,0,0.269589,0.190536
+1,2,3,2,'3-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Tim Holyk,Owen Boon,R,R,Fastball,Walk,,,0,-1.02887,-0.12246
+1,2,0,0,'0-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Christian Ortega,Owen Boon,R,R,Fastball,Ball,,,100,-0.10814,1.166901
+1,2,1,0,'1-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Christian Ortega,Owen Boon,R,R,Fastball,Ball,,,100,-1.02887,1.026753
+1,2,2,0,'2-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Christian Ortega,Owen Boon,R,R,Fastball,Called Strike,,,100,-0.81639,0.466161
+1,2,2,1,'2-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Christian Ortega,Owen Boon,R,R,Fastball,Foul,,,100,-0.68655,0.190536
+1,2,2,2,'2-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Christian Ortega,Owen Boon,R,R,Offspeed,Ball,,,100,0.175156,1.096827
+1,2,3,2,'3-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Christian Ortega,Owen Boon,R,R,Fastball,Single,Line Drive,Opposite Field,100,-0.65113,0.232581
+1,2,0,0,'0-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Cassidy Watt,Owen Boon,R,R,Offspeed,Called Strike,,,101,-0.74557,0.886605
+1,2,0,1,'0-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,1,,Cassidy Watt,Owen Boon,R,R,Offspeed,Error,,,101,-0.60392,0.031702
+1,2,0,0,'0-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Jeremie Veilleux,Owen Boon,R,R,Fastball,Called Strike,,,110,-0.75737,0.606309
+1,2,0,1,'0-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Jeremie Veilleux,Owen Boon,R,R,Fastball,Ball,,,110,-1.21773,-0.10845
+1,2,1,1,'1-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Jeremie Veilleux,Owen Boon,R,R,Offspeed,Foul,,,110,-0.63933,0.326013
+1,2,1,2,'1-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Jeremie Veilleux,Owen Boon,R,R,Offspeed,Strikeout Swinging,,,110,-0.43866,0.050388
+1,0,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Jaden Brown,Nicholai Arbach,R,R,Fastball,Ball,,,0,1.450003,-0.00567
+1,0,1,0,'1-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Jaden Brown,Nicholai Arbach,R,R,Fastball,Ball,,,0,1.509024,0.49419
+1,0,2,0,'2-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Jaden Brown,Nicholai Arbach,R,R,Offspeed,Called Strike,,,0,-1.32397,0.14382
+1,0,2,1,'2-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Jaden Brown,Nicholai Arbach,R,R,Fastball,Swinging Strike,,,0,1.225724,0.134477
+1,0,2,2,'2-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Jaden Brown,Nicholai Arbach,R,R,Offspeed,Ball,,,0,-1.24134,-0.11779
+1,0,3,2,'3-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Jaden Brown,Nicholai Arbach,R,R,Fastball,Strikeout Looking,,,0,-1.1351,0.162506
+1,1,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tyler Duncan,Nicholai Arbach,L,R,Offspeed,Ball,,,0,1.721498,-0.05239
+1,1,1,0,'1-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tyler Duncan,Nicholai Arbach,L,R,Offspeed,Foul,,,0,0.847992,0.540906
+1,1,1,1,'1-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tyler Duncan,Nicholai Arbach,L,R,Offspeed,Ball,,,0,1.379178,0.704413
+1,1,2,1,'2-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tyler Duncan,Nicholai Arbach,L,R,Fastball,Lineout,Line Drive,,0,-0.72196,0.470832
+1,2,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,July Vittini,Nicholai Arbach,R,R,Offspeed,Ball,,,0,1.438199,0.779158
+1,2,1,0,'1-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,July Vittini,Nicholai Arbach,R,R,Fastball,Called Strike,,,0,-0.86361,0.681055
+1,2,1,1,'1-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,July Vittini,Nicholai Arbach,R,R,Offspeed,Ball,,,0,-1.85516,0.681055
+1,2,2,1,'2-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,July Vittini,Nicholai Arbach,R,R,Offspeed,Ball,,,0,1.308353,0.624995
+1,2,3,1,'3-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,July Vittini,Nicholai Arbach,R,R,Offspeed,Called Strike,,,0,0.482063,0.723099
+1,2,3,2,'3-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,July Vittini,Nicholai Arbach,R,R,Fastball,Walk,,,0,-1.32397,0.723099
+1,2,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Johnathan Solazzo,Nicholai Arbach,L,R,Fastball,Called Strike,,,100,0.812579,0.737114
+1,2,0,1,'0-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Johnathan Solazzo,Nicholai Arbach,L,R,Fastball,Swinging Strike,,,100,0.281393,0.970694
+1,2,0,2,'0-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Johnathan Solazzo,Nicholai Arbach,L,R,Fastball,Ball,,,100,1.119487,1.25099
+1,2,1,2,'1-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Johnathan Solazzo,Nicholai Arbach,L,R,,Foul,,,100,-0.32062,0.648353
+1,2,1,2,'1-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Johnathan Solazzo,Nicholai Arbach,L,R,Offspeed,Ball,,,100,1.402787,0.61098
+1,2,2,2,'2-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Johnathan Solazzo,Nicholai Arbach,L,R,Offspeed,Ball,,,100,1.544436,0.340027
+1,2,3,2,'3-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Johnathan Solazzo,Nicholai Arbach,L,R,Offspeed,Walk,,,100,1.379178,0.49419
+1,2,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Josh Williams,Nicholai Arbach,L,R,Offspeed,Swinging Strike,,,110,1.095879,0.129805
+1,2,0,1,'0-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Josh Williams,Nicholai Arbach,L,R,Fastball,Ball,,,110,1.060466,1.040768
+1,2,1,1,'1-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Josh Williams,Nicholai Arbach,L,R,Offspeed,Ball,,,110,1.367374,0.536235
+1,2,2,1,'2-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Josh Williams,Nicholai Arbach,L,R,Offspeed,Swinging Strike,,,110,1.190312,0.863247
+1,2,2,2,'2-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Josh Williams,Nicholai Arbach,L,R,Offspeed,Groundout,Ground Ball,Straightaway,110,0.635517,0.078418
+2,0,0,0,'0-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Nick Burdett,Owen Boon,L,R,Offspeed,Ball,,,0,1.261136884,0.681054538
+2,0,1,0,'1-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Nick Burdett,Owen Boon,L,R,Fastball,Foul,,,0,0.139743264,0.844560693
+2,0,1,1,'1-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Nick Burdett,Owen Boon,L,R,Offspeed,Ball,,,0,1.154899593,0.213894094
+2,0,2,1,'2-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Nick Burdett,Owen Boon,L,R,Fastball,Swinging Strike,,,0,-0.639330198,0.886605133
+2,0,2,2,'2-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Nick Burdett,Owen Boon,L,R,Offspeed,Foul,,,0,-0.438659761,0.064402751
+2,0,2,2,'2-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Nick Burdett,Owen Boon,L,R,Fastball,Strikeout Swinging,,,0,1.060466446,0.99872364
+2,1,0,0,'0-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Matt Torresan,Owen Boon,R,R,,Ball,,,0,-1.38299123,0.900619946
+2,1,1,0,'1-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Matt Torresan,Owen Boon,R,R,Fastball,Foul,,,0,-0.639330198,0.330684205
+2,1,1,1,'1-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Matt Torresan,Owen Boon,R,R,Fastball,Called Strike,,,0,-0.863608922,0.064402751
+2,1,1,2,'1-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Matt Torresan,Owen Boon,R,R,Offspeed,Ball,,,0,-0.037318887,-0.215893515
+2,1,2,2,'2-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Matt Torresan,Owen Boon,R,R,Fastball,Ball,,,0,-0.001906457,-0.122461426
+2,1,3,2,'3-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Matt Torresan,Owen Boon,R,R,Offspeed,Strikeout Swinging,,,0,0.12793912,-0.131804635
+2,2,0,0,'0-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Max Schmarder,Owen Boon,R,R,Offspeed,Ball,,,0,-1.273849793,-0.109249514
+2,2,1,0,'1-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Max Schmarder,Owen Boon,R,R,Fastball,Ball,,,0,0.520741291,1.24018152
+2,2,2,0,'2-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Max Schmarder,Owen Boon,R,R,Fastball,Called Strike,,,0,-0.655712864,0.52995466
+2,2,2,1,'2-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Max Schmarder,Owen Boon,R,R,Fastball,Ball,,,0,-1.174150288,-0.274969114
+2,2,3,1,'3-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Max Schmarder,Owen Boon,R,R,Fastball,Strikeout Swinging,,,0,0.261522579,1.066570509
+2,0,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Max Schmarder,Owen Boon,R,R,Fastball,Strikeout Swinging,,,0,-1.174150288,0.18273264
+2,0,1,0,'1-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tanner Rempel,Nicholai Arbach,R,R,Offspeed,Ball,,,0,-1.571857524,0.036373125
+2,0,2,0,'2-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tanner Rempel,Nicholai Arbach,R,R,Fastball,Ball,,,0,-1.501032664,0.1157904
+2,0,2,1,'2-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tanner Rempel,Nicholai Arbach,R,R,Fastball,Swinging Strike,,,0,-0.887217209,0.634338493
+2,0,3,1,'3-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tanner Rempel,Nicholai Arbach,R,R,Offspeed,Ball,,,0,0.387630275,-0.103775008
+2,0,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tanner Rempel,Nicholai Arbach,R,R,Offspeed,Hit By Pitch,,,0,1.438199034,0.428787898
+2,0,0,1,'0-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Yolki Pena,Nicholai Arbach,L,R,Offspeed,Called Strike,,,100,0.812579436,0.456817524
+2,0,1,1,'1-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Yolki Pena,Nicholai Arbach,L,R,Offspeed,Ball,,,100,1.048662303,0.821202671
+2,0,1,2,'1-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Yolki Pena,Nicholai Arbach,L,R,Offspeed,Swinging Strike,,,100,1.202116167,0.480175547
+2,0,2,2,'2-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Yolki Pena,Nicholai Arbach,L,R,Fastball,Ball,,,100,-1.253145653,-0.117789822
+2,0,3,2,'3-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Yolki Pena,Nicholai Arbach,L,R,Offspeed,Ball,,,100,1.792323335,0.484847151
+2,0,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Yolki Pena,Nicholai Arbach,L,R,Offspeed,Walk,,,100,1.520828038,0.690397747
+2,0,0,1,'0-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Niko Kekatos,Nicholai Arbach,R,R,Offspeed,Foul,,,110,0.847991866,0.218565698
+2,0,1,1,'1-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Niko Kekatos,Nicholai Arbach,R,R,Fastball,Ball,,,110,-0.072731317,1.110842146
+2,0,1,2,'1-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Niko Kekatos,Nicholai Arbach,R,R,Fastball,Called Strike,,,110,0.068918404,0.807187858
+2,1,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Niko Kekatos,Nicholai Arbach,R,R,Fastball,Strikeout Looking,,,110,-1.13510422,0.737113791
+2,2,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tommy Reyes-Cruz,Nicholai Arbach,L,R,Fastball,Groundout,Ground Ball,Opposite Field,110,-0.934433782,0.354042227
+2,2,0,1,'0-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Jaden Brown,Nicholai Arbach,R,R,Offspeed,Called Strike,,,110,-0.851804779,0.143820027
+2,2,0,2,'0-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Jaden Brown,Nicholai Arbach,R,R,Fastball,Foul,,,110,-0.438659761,0.5362348
+3,0,0,0,'0-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Jaden Brown,Nicholai Arbach,R,R,Offspeed,Popout,Pop Up,Opposite Field,110,0.02170183,0.512876778
+3,0,1,0,'1-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Jose Vinicio,Owen Boon,L,R,Fastball,Ball,,,0,0.446650991,-0.17852068
+3,1,0,0,'0-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Jose Vinicio,Owen Boon,L,R,Offspeed,Flyout,Fly Ball,Straightaway,0,0.127939,0.844561
+3,1,1,0,'1-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Brody Black,Owen Boon,R,R,Fastball,Ball,,,0,-0.65113,0.793173
+3,1,1,1,'1-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Brody Black,Owen Boon,R,R,Fastball,Swinging Strike,,,0,1.1549,1.171573
+3,1,2,1,'2-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Brody Black,Owen Boon,R,R,Offspeed,Ball,,,0,-0.58031,0.737114
+3,1,2,2,'2-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Brody Black,Owen Boon,R,R,Fastball,Swinging Strike,,,0,-0.60392,0.508205
+3,2,0,0,'0-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Brody Black,Owen Boon,R,R,Fastball,Strikeout Looking,,,0,-0.60392,0.816531
+3,2,1,0,'1-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Tim Holyk,Owen Boon,R,R,Offspeed,Ball,,,0,-0.03732,0.863247
+3,2,2,0,'2-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Tim Holyk,Owen Boon,R,R,Offspeed,Ball,,,0,-0.93443,-0.0337
+3,2,3,0,'3-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Tim Holyk,Owen Boon,R,R,Fastball,Ball,,,0,-0.60392,0.582951
+3,2,3,1,'3-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Tim Holyk,Owen Boon,R,R,Fastball,Swinging Strike,,,0,-0.8518,0.382072
+3,2,0,0,'0-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Tim Holyk,Owen Boon,R,R,Fastball,Single,Ground Ball,Straightaway,0,-0.08454,0.844561
+3,0,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Christian Ortega,Owen Boon,L,R,Fastball,Popout,Pop Up,Straightaway,100,0.552888,0.428788
+3,0,0,1,'0-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tyler Duncan,Nicholai Arbach,L,R,Fastball,Foul,,,0,1.910365,0.199879
+3,0,1,1,'1-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tyler Duncan,Nicholai Arbach,L,R,Offspeed,Ball,,,0,0.033506,0.269953
+3,0,1,2,'1-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tyler Duncan,Nicholai Arbach,L,R,Fastball,Foul,,,0,1.261137,1.110842
+3,0,2,2,'2-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tyler Duncan,Nicholai Arbach,L,R,Fastball,Ball,,,0,-0.03732,0.484847
+3,0,2,2,'2-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tyler Duncan,Nicholai Arbach,L,R,Offspeed,Foul,,,0,1.343766,0.283968
+3,0,3,2,'3-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tyler Duncan,Nicholai Arbach,L,R,Offspeed,Ball,,,0,0.38763,0.620324
+3,1,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tyler Duncan,Nicholai Arbach,L,R,Offspeed,Groundout,Ground Ball,Opposite Field,0,1.261137,0.438131
+3,1,1,0,'1-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,July Vittini,Nicholai Arbach,R,R,Offspeed,Ball,,,0,-0.72196,0.536235
+3,1,1,1,'1-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,July Vittini,Nicholai Arbach,R,R,Fastball,Called Strike,,,0,-1.87877,0.326013
+3,1,2,1,'2-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,July Vittini,Nicholai Arbach,R,R,Fastball,Ball,,,0,-1.24134,0.49419
+3,1,3,1,'3-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,July Vittini,Nicholai Arbach,R,R,Fastball,Ball,,,0,-1.09969,0.064403
+3,1,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,July Vittini,Nicholai Arbach,R,R,Offspeed,Walk,,,0,0.883404,0.578279
+3,1,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Johnathan Solazzo,Nicholai Arbach,L,R,Offspeed,Single,Line Drive,Opposite Field,100,0.52928,0.536235
+3,1,0,1,'0-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Josh Williams,Nicholai Arbach,L,R,Offspeed,Swinging Strike,,,110,0.316805,0.246595
+3,1,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,2,2,Josh Williams,Nicholai Arbach,L,R,Offspeed,Double,Fly Ball,Opposite Field,110,0.918817,0.241924
+3,1,0,1,'0-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tanner Rempel,Nicholai Arbach,R,R,Offspeed,Called Strike,,,10,1.272941,0.774487
+3,1,1,1,'1-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tanner Rempel,Nicholai Arbach,R,R,Offspeed,Ball,,,10,0.163352,0.830546
+3,1,1,2,'1-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tanner Rempel,Nicholai Arbach,R,R,Offspeed,Foul,,,10,-1.21773,1.031425
+3,1,2,2,'2-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tanner Rempel,Nicholai Arbach,R,R,Fastball,Ball,,,10,0.954229,0.653025
+3,2,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tanner Rempel,Nicholai Arbach,R,R,Offspeed,Strikeout Swinging,,,10,0.907013,0.807188
+3,2,0,1,'0-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Yolki Pena,Nicholai Arbach,L,R,Offspeed,Foul,,,10,-0.39144,0.106447
+3,2,1,1,'1-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Yolki Pena,Nicholai Arbach,L,R,Offspeed,Ball,,,10,1.509024,0.050388
+3,2,2,1,'2-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Yolki Pena,Nicholai Arbach,L,R,Offspeed,Ball,,,10,1.308353,0.568936
+3,2,3,1,'3-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Yolki Pena,Nicholai Arbach,L,R,Offspeed,Ball,,,10,-1.91418,0.452146
+3,2,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Yolki Pena,Nicholai Arbach,L,R,Offspeed,Walk,,,10,0.812579,0.653025
+3,2,0,1,'0-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Niko Kekatos,Nicholai Arbach,R,R,Offspeed,Foul,,,110,0.8716,0.456818
+4,0,0,0,'0-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Niko Kekatos,Nicholai Arbach,R,R,Fastball,Groundout,Ground Ball,Opposite Field,110,-0.60392,1.059454
+4,0,0,1,'0-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Cassidy Watt,Owen Boon,R,R,Fastball,Swinging Strike,,,0,-0.39144,0.63901
+4,0,0,2,'0-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Cassidy Watt,Owen Boon,R,R,Offspeed,Called Strike,,,0,-0.56851,0.821203
+4,0,0,2,'0-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Cassidy Watt,Owen Boon,R,R,Fastball,Foul,,,0,-1.06428,-0.0337
+4,1,0,0,'0-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Cassidy Watt,Owen Boon,R,R,Offspeed,Strikeout Swinging,,,0,0.375826,0.050388
+4,1,0,1,'0-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Jeremie Veilleux,Owen Boon,R,R,Offspeed,Swinging Strike,,,0,-1.43021,1.236975
+4,1,1,1,'1-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Jeremie Veilleux,Owen Boon,R,R,Fastball,Ball,,,0,-1.25315,1.073469
+4,1,2,1,'2-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Jeremie Veilleux,Owen Boon,R,R,Fastball,Ball,,,0,0.234176,-0.16451
+4,1,3,1,'3-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Jeremie Veilleux,Owen Boon,R,R,Fastball,Ball,,,0,-0.78098,-0.29998
+4,1,0,0,'0-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Jeremie Veilleux,Owen Boon,R,R,Fastball,Walk,,,0,-0.56851,-0.20655
+4,1,1,0,'1-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Nick Burdett,Owen Boon,L,R,Offspeed,Ball,,,100,-0.21438,1.194931
+4,1,2,0,'2-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Nick Burdett,Owen Boon,L,R,Fastball,Ball,,,100,0.552888,0.919306
+4,1,2,1,'2-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Nick Burdett,Owen Boon,L,R,Fastball,Called Strike,,,100,0.033506,-0.27662
+4,1,3,1,'3-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Nick Burdett,Owen Boon,L,R,Offspeed,Ball,,,100,0.564692,0.718427
+4,1,3,2,'3-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Nick Burdett,Owen Boon,L,R,Fastball,Foul,,,100,-0.79278,-0.29064
+4,1,0,0,'0-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Nick Burdett,Owen Boon,L,R,Fastball,Walk,,,100,-0.14356,-0.28597
+4,1,1,0,'1-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Matt Torresan,Owen Boon,R,R,Fastball,Ball,,,110,-0.00191,0.606309
+4,1,1,1,'1-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Matt Torresan,Owen Boon,R,R,Offspeed,Swinging Strike,,,11,-0.67474,0.760472
+4,1,0,0,'0-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,2,2,Matt Torresan,Owen Boon,R,R,Offspeed,Single,Ground Ball,Straightaway,11,-1.04067,-0.14582
+4,1,1,0,'1-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Max Schmarder,Owen Boon,R,R,Fastball,Ball,,,100,-1.154210387,-0.085575285
+4,1,1,1,'1-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Max Schmarder,Owen Boon,R,R,Fastball,Called Strike,,,100,-0.815232071,0.119601363
+4,1,1,2,'1-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Max Schmarder,Owen Boon,R,R,Fastball,Swinging Strike,,,100,-0.536073458,0.545737479
+4,2,2,2,'2-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Max Schmarder,Owen Boon,R,R,Fastball,Strikeout Swinging,,,100,0.401101885,0.758805537
+4,2,2,2,'2-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Jose Vinicio,Owen Boon,L,R,Fastball,Ball,,,100,0.812579,1.25099
+4,2,2,2,'2-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Jose Vinicio,Owen Boon,L,R,Fastball,Foul,,,100,0.52928,0.414773
+4,2,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Jose Vinicio,Owen Boon,L,R,Fastball,Swinging Strike,,,100,0.104331,1.124857
+4,0,1,0,'1-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Jose Vinicio,Owen Boon,L,R,,Caught Stealing,,,100,,
+4,0,1,1,'1-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tommy Reyes-Cruz,Nicholai Arbach,L,R,Fastball,Ball,,,0,-0.863608922,0.1157904
+4,0,2,1,'2-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tommy Reyes-Cruz,Nicholai Arbach,L,R,Fastball,Foul,,,0,-0.22618518,0.695069351
+4,0,2,2,'2-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tommy Reyes-Cruz,Nicholai Arbach,L,R,Offspeed,Ball,,,0,1.367374174,0.003671894
+4,0,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tommy Reyes-Cruz,Nicholai Arbach,L,R,Offspeed,Called Strike,,,0,0.458455135,0.676382933
+4,1,0,1,'0-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tommy Reyes-Cruz,Nicholai Arbach,L,R,Offspeed,Groundout,Ground Ball,Opposite Field,0,0.871600153,0.078417565
+4,1,0,2,'0-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Jaden Brown,Nicholai Arbach,R,R,Offspeed,Called Strike,,,0,-1.17051665,0.835217484
+4,1,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Jaden Brown,Nicholai Arbach,R,R,Offspeed,Swinging Strike,,,0,-0.686546772,0.765143418
+4,2,0,1,'0-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Jaden Brown,Nicholai Arbach,R,R,Offspeed,Flyout,Fly Ball,Straightaway,0,0.163351551,0.807187858
+5,2,0,0,'0-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Tyler Duncan,Nicholai Arbach,L,R,Fastball,Foul,,,0,0.02170183,0.947335991
+5,0,0,1,'0-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Tyler Duncan,Nicholai Arbach,L,R,Offspeed,Flyout,Fly Ball,Straightaway,0,-0.780979919,0.400758271
+5,0,0,2,'0-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Jose Vinicio,Caleb Seroski,L,R,Fastball,Called Strike,,,0,0.812579436,0.606308867
+5,0,0,0,'0-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Jose Vinicio,Caleb Seroski,L,R,Fastball,Called Strike,,,0,-0.792784062,0.354042227
+5,1,1,0,'1-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Jose Vinicio,Caleb Seroski,L,R,Offspeed,Strikeout Swinging,,,0,1.296549314,-0.047715755
+5,1,1,1,'1-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Brody Black,Caleb Seroski,R,R,Offspeed,Ball,,,0,-1.182320793,0.676382933
+5,1,1,2,'1-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Brody Black,Caleb Seroski,R,R,Fastball,Called Strike,,,0,-0.934433782,0.414773085
+5,1,2,2,'2-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Brody Black,Caleb Seroski,R,R,Offspeed,Swinging Strike,,,0,-0.816392349,0.66236812
+5,1,0,0,'0-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Brody Black,Caleb Seroski,R,R,Offspeed,Ball,,,0,-1.595465811,0.484847151
+5,2,0,1,'0-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Brody Black,Caleb Seroski,R,R,Fastball,Strikeout Swinging,,,0,-0.674742628,0.143820027
+5,2,0,2,'0-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Tim Holyk,Caleb Seroski,R,R,Offspeed,Called Strike,,,0,0.529279995,0.844560693
+5,2,1,2,'1-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Tim Holyk,Caleb Seroski,R,R,Fastball,Foul,,,0,-0.721959202,0.456817524
+5,2,1,2,'1-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Tim Holyk,Caleb Seroski,R,R,Offspeed,Ball,,,0,-1.288558083,-0.131804635
+5,2,2,2,'2-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Tim Holyk,Caleb Seroski,R,R,Fastball,Foul,,,0,-0.297010041,0.550249613
+5,2,3,2,'3-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Tim Holyk,Caleb Seroski,R,R,Offspeed,Ball,,,0,2.181860066,0.709084164
+5,2,0,0,'0-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Tim Holyk,Caleb Seroski,R,R,Offspeed,Ball,,,0,-1.524640951,-0.17852068
+5,2,0,1,'0-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Tim Holyk,Caleb Seroski,R,R,Fastball,Walk,,,0,-0.403247331,-0.206550306
+5,2,1,1,'1-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Christian Ortega,Caleb Seroski,R,R,Fastball,Called Strike,,,100,-0.686546772,0.19987928
+5,2,2,1,'2-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Christian Ortega,Caleb Seroski,R,R,Offspeed,Ball,,,100,1.202116167,-0.05238736
+5,2,0,0,'0-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Christian Ortega,Caleb Seroski,R,R,Offspeed,Ball,,,100,-0.934433782,-0.402757693
+5,2,0,1,'0-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,1,,Christian Ortega,Caleb Seroski,R,R,Offspeed,Error,Ground Ball,Straightaway,10,-0.426855618,0.886605133
+5,2,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Cassidy Watt,Caleb Seroski,R,R,Fastball,Called Strike,,,100,-0.391443188,0.522219987
+5,0,1,0,'1-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Cassidy Watt,Caleb Seroski,R,R,Fastball,Popout,Pop Up,Straightaway,100,-0.544897051,0.596965658
+5,0,2,0,'2-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,July Vittini,Nicholai Arbach,R,R,Offspeed,Ball,,,0,-0.816392349,-0.313997208
+5,0,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,July Vittini,Nicholai Arbach,R,R,Offspeed,Ball,,,0,1.768715048,0.204550885
+5,1,0,1,'0-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,July Vittini,Nicholai Arbach,R,R,Offspeed,Groundout,Ground Ball,Straightaway,0,0.269588841,0.66236812
+5,1,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Johnathan Solazzo,Nicholai Arbach,L,R,Offspeed,Called Strike,,,0,0.907012583,0.45214592
+5,2,0,1,'0-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Johnathan Solazzo,Nicholai Arbach,L,R,Offspeed,Groundout,Ground Ball,Opposite Field,0,-0.639330198,0.050387938
+5,2,1,1,'1-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Josh Williams,Nicholai Arbach,L,R,Offspeed,Called Strike,,,0,-0.08453546,0.732442187
+5,2,1,2,'1-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Josh Williams,Nicholai Arbach,L,R,Fastball,Ball,,,0,1.131291307,0.835217484
+5,2,2,2,'2-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Josh Williams,Nicholai Arbach,L,R,Offspeed,Swinging Strike,,,0,0.600104855,0.232580511
+5,2,3,2,'3-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Josh Williams,Nicholai Arbach,L,R,Offspeed,Ball,,,0,1.296549314,-0.229908328
+5,2,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Josh Williams,Nicholai Arbach,L,R,Fastball,Ball,,,0,1.225724453,0.484847151
+5,2,0,1,'0-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Josh Williams,Nicholai Arbach,L,R,Offspeed,Walk,,,0,1.225724453,0.41010148
+5,2,0,2,'0-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tanner Rempel,Nicholai Arbach,R,R,Offspeed,Foul,,,100,-0.0137106,0.428787898
+5,2,1,2,'1-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tanner Rempel,Nicholai Arbach,R,R,Offspeed,Called Strike,,,100,-0.721959202,0.5362348
+6,2,0,0,'0-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Tanner Rempel,Nicholai Arbach,R,R,Offspeed,Ball,,,100,-0.320618327,0.91463476
+6,0,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tanner Rempel,Nicholai Arbach,R,R,Offspeed,Strikeout Swinging,,,100,-0.426855618,0.718427373
+6,1,0,1,'0-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Jeremie Veilleux,Caleb Seroski,R,R,Fastball,Flyout,Fly Ball,Opposite Field,0,0.517476,0.064403
+6,1,0,2,'0-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Nick Burdett,Caleb Seroski,L,R,Fastball,Called Strike,,,0,0.812579,0.410101
+6,1,0,2,'0-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Nick Burdett,Caleb Seroski,L,R,Offspeed,Foul,,,0,-0.07273,0.120462
+6,1,1,2,'1-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Nick Burdett,Caleb Seroski,L,R,Offspeed,Foul,,,0,0.635517,0.947336
+6,1,1,2,'1-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Nick Burdett,Caleb Seroski,L,R,Offspeed,Ball,,,0,0.482063,-0.0664
+6,1,1,2,'1-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Nick Burdett,Caleb Seroski,L,R,Fastball,Foul,,,0,-0.15536,0.036373
+6,1,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Nick Burdett,Caleb Seroski,L,R,Offspeed,Foul,,,0,-1.07608,0.176521
+6,2,0,1,'0-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Nick Burdett,Caleb Seroski,L,R,Fastball,Strikeout Swinging,,,0,0.564692,1.026753
+6,2,0,2,'0-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Matt Torresan,Caleb Seroski,R,R,Offspeed,Called Strike,,,0,-0.8282,0.648353
+6,2,1,2,'1-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Matt Torresan,Caleb Seroski,R,R,Offspeed,Called Strike,,,0,-0.8518,0.568936
+7,2,0,0,'0-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Matt Torresan,Caleb Seroski,R,R,Offspeed,Ball,,,0,-0.92263,-0.10378
+7,0,1,0,'1-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Matt Torresan,Caleb Seroski,R,R,Fastball,Strikeout Swinging,,,0,-0.39144,0.947336
+7,0,2,0,'2-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Yolki Pena,Koki Takashi,L,R,Fastball,Ball,,,0,1.1549,1.059454
+7,0,3,0,'3-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Yolki Pena,Koki Takashi,L,R,Fastball,Ball,,,0,1.615261,0.87259
+7,0,0,0,'0-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Yolki Pena,Koki Takashi,L,R,Fastball,Ball,,,0,0.234176,0.933321
+7,0,0,1,'0-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Yolki Pena,Koki Takashi,L,R,Offspeed,Walk,,,0,1.379178,1.110842
+7,0,0,2,'0-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Niko Kekatos,Koki Takashi,R,R,Fastball,Called Strike,,,100,0.777167,0.87259
+7,0,0,0,'0-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Niko Kekatos,Koki Takashi,R,R,Fastball,Foul,,,100,-0.15536,0.877262
+7,0,1,0,'1-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Niko Kekatos,Koki Takashi,R,R,Fastball,Single,Line Drive,Opposite Field,100,0.694538,0.849232
+7,0,1,1,'1-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Tommy Reyes-Cruz,Koki Takashi,L,R,Fastball,Ball,,,110,1.166704,0.984709
+7,0,1,2,'1-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Tommy Reyes-Cruz,Koki Takashi,L,R,Fastball,Called Strike,,,110,0.918817,0.844561
+7,0,2,2,'2-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Tommy Reyes-Cruz,Koki Takashi,L,R,Fastball,Foul,,,110,0.659126,0.975366
+7,0,3,2,'3-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Tommy Reyes-Cruz,Koki Takashi,L,R,Fastball,Ball,,,110,1.485416,0.886605
+7,0,3,2,'3-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Tommy Reyes-Cruz,Koki Takashi,L,R,Fastball,Ball,,,110,1.756911,0.891277
+7,0,0,0,'0-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Tommy Reyes-Cruz,Koki Takashi,L,R,Fastball,Foul,,,110,0.635517,0.970694
+7,0,1,0,'1-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Tommy Reyes-Cruz,Koki Takashi,L,R,Fastball,Walk,,,110,-1.06428,-0.33268
+7,0,1,1,'1-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Jaden Brown,Koki Takashi,R,R,Offspeed,Ball,,,111,0.706342,0.933321
+7,0,1,2,'1-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Jaden Brown,Koki Takashi,R,R,Fastball,Foul,,,111,0.52928,0.157835
+7,0,0,0,'0-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Jaden Brown,Koki Takashi,R,R,Fastball,Foul,,,111,0.954229,0.891277
+7,2,0,1,'0-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,1,1,Jaden Brown,Koki Takashi,R,R,Fastball,Double Play,Ground Ball,Straightaway,111,-0.28521,0.045716
+7,2,1,1,'1-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Tyler Duncan,Koki Takashi,L,R,Fastball,Foul,,,100,-1.21773,0.844561
+7,2,2,1,'2-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Tyler Duncan,Koki Takashi,L,R,Fastball,Ball,,,100,1.331962,-0.06173
+7,2,3,1,'3-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Tyler Duncan,Koki Takashi,L,R,Fastball,Ball,,,10,1.509024,1.194931
+7,2,3,2,'3-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Tyler Duncan,Koki Takashi,L,R,Fastball,Ball,,,10,1.379178,1.171573
+7,2,0,0,'0-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Tyler Duncan,Koki Takashi,L,R,Fastball,Foul,,,10,0.836188,0.821203
+7,2,0,1,'0-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Tyler Duncan,Koki Takashi,L,R,Fastball,Walk,,,10,1.579849,0.914635
+7,2,0,2,'0-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,July Vittini,Koki Takashi,R,R,Offspeed,Called Strike,,,110,0.210568,0.232581
+7,2,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,July Vittini,Koki Takashi,R,R,Fastball,Called Strike,,,110,-0.8282,0.526892
+7,0,1,0,'1-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,July Vittini,Koki Takashi,R,R,Offspeed,Strikeout Swinging,,,110,-0.86361,0.050388
+7,0,1,1,'1-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Max Schmarder,Corben Peters,R,R,Fastball,Ball,,,0,1.190312023,0.984708826
+7,0,2,1,'2-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Max Schmarder,Corben Peters,R,R,Fastball,Swinging Strike,,,0,-0.816392349,0.255938534
+7,0,2,2,'2-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Max Schmarder,Corben Peters,R,R,Offspeed,Ball,,,0,0.387630275,0.877261924
+7,0,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Max Schmarder,Corben Peters,R,R,Fastball,Swinging Strike,,,0,-0.639330198,0.554921218
+7,1,0,1,'0-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Max Schmarder,Corben Peters,R,R,Fastball,Strikeout Swinging,,,0,-0.721959202,0.802516253
+7,1,1,1,'1-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Jose Vinicio,Corben Peters,L,R,Fastball,Foul,,,0,-1.040671073,0.723098978
+7,1,1,2,'1-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Jose Vinicio,Corben Peters,L,R,Offspeed,Ball,,,0,-1.359382944,-0.005671315
+7,1,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Jose Vinicio,Corben Peters,L,R,Offspeed,Called Strike,,,0,-0.757371632,0.9566792
+7,1,1,0,'1-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Jose Vinicio,Corben Peters,L,R,Fastball,Error,Line Drive,Straightaway,0,-0.04912303,0.975365617
+7,1,1,1,'1-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Brody Black,Corben Peters,R,R,Fastball,Ball,,,100,-1.394795374,0.877261924
+7,1,2,1,'2-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Brody Black,Corben Peters,R,R,Fastball,Swinging Strike,,,100,0.446650991,0.709084164
+7,1,2,2,'2-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Brody Black,Corben Peters,R,R,Fastball,Ball,,,100,-1.111495933,-0.159834262
+7,1,2,2,'2-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Brody Black,Corben Peters,R,R,Fastball,Foul,,,100,-0.615721912,0.45214592
+7,1,3,2,'3-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Brody Black,Corben Peters,R,R,Fastball,Foul,,,100,-1.13510422,0.36805704
+7,1,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Brody Black,Corben Peters,R,R,Fastball,Ball,,,100,-1.27675394,-0.13647624
+7,2,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Brody Black,Corben Peters,R,R,Offspeed,Strikeout Looking,,,100,-0.922629639,0.66236812
+7,0,1,0,'1-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Brody Black,Corben Peters,R,R,,Caught Stealing,,,100,,
+7,0,1,1,'1-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Johnathan Solazzo,Koki Takashi,L,R,Offspeed,Ball,,,0,-1.31216637,-0.164505866
+7,0,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Johnathan Solazzo,Koki Takashi,L,R,Fastball,Called Strike,,,0,0.659125572,0.821202671
+7,0,0,1,'0-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Johnathan Solazzo,Koki Takashi,L,R,Fastball,Double,,,0,0.281392984,0.760471813
+7,0,1,1,'1-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Josh Williams,Koki Takashi,L,R,Offspeed,Foul,,,10,-0.686546772,0.512876778
+7,0,1,2,'1-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Josh Williams,Koki Takashi,L,R,Fastball,Ball,,,10,0.446650991,-0.248594746
+7,0,2,2,'2-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Josh Williams,Koki Takashi,L,R,Fastball,Swinging Strike,,,10,0.989641586,0.087760774
+7,0,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Josh Williams,Koki Takashi,L,R,Fastball,Ball,,,10,1.438199034,-0.089760195
+7,1,0,1,'0-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Josh Williams,Koki Takashi,L,R,Fastball,Groundout,Ground Ball,Straightaway,10,0.977837443,0.526891591
+7,1,1,1,'1-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tanner Rempel,Koki Takashi,R,R,Fastball,Called Strike,,,10,-0.367834901,0.400758271
+7,1,2,1,'2-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tanner Rempel,Koki Takashi,R,R,Fastball,Ball,,,10,0.411238561,-0.17852068
+7,1,2,2,'2-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tanner Rempel,Koki Takashi,R,R,Offspeed,Ball,,,1,0.765362862,0.849232298
+7,1,3,2,'3-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tanner Rempel,Koki Takashi,R,R,Fastball,Foul,,,1,-0.356030757,-0.299982395
+7,1,3,2,'3-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tanner Rempel,Koki Takashi,R,R,Offspeed,Ball,,,1,-0.001906457,0.087760774
+7,1,3,2,'3-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tanner Rempel,Koki Takashi,R,R,Fastball,Foul,,,1,0.907012583,1.180916213
+7,1,3,2,'3-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tanner Rempel,Koki Takashi,R,R,Fastball,Foul,,,1,-0.710155058,-0.131804635
+7,1,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tanner Rempel,Koki Takashi,R,R,Offspeed,Foul,,,1,-1.41840366,-0.145819448
+7,1,1,0,'1-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tanner Rempel,Koki Takashi,R,R,Offspeed,Hit By Pitch,,,1,0.175155694,0.9566792
+7,1,1,1,'1-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Yolki Pena,Koki Takashi,L,R,Fastball,Ball,,,101,1.343765887,1.12485696
+7,1,1,2,'1-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Yolki Pena,Koki Takashi,L,R,Fastball,Foul,,,11,1.190312023,1.054782893
+7,1,2,2,'2-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Yolki Pena,Koki Takashi,L,R,Fastball,Foul,,,11,0.777167006,0.667039724
+7,1,3,2,'3-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,1,1,Yolki Pena,Koki Takashi,L,R,Fastball,Ball,,,11,1.804127478,1.227632257
+7,1,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Yolki Pena,Koki Takashi,L,R,Fastball,Ball,,,1,1.331961744,1.04076808
+7,1,1,0,'1-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Yolki Pena,Koki Takashi,L,R,Fastball,Walk,,,1,1.792323335,0.975365617
+7,1,2,0,'2-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,1,1,Niko Kekatos,Aidan Armitage,R,R,Fastball,Ball,,,101,-1.701703101,-0.285967582
+7,1,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Niko Kekatos,Aidan Armitage,R,R,Offspeed,Ball,,,10,-1.465620234,-0.047715755
+7,2,0,1,'0-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Niko Kekatos,Aidan Armitage,R,R,Fastball,Groundout,Ground Ball,Opposite Field,10,-0.356030757,0.802516253
+7,2,1,1,'1-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tommy Reyes-Cruz,Aidan Armitage,L,R,Offspeed,Swinging Strike,,,1,-1.13510422,-0.192535493
+7,2,1,2,'1-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tommy Reyes-Cruz,Aidan Armitage,L,R,Offspeed,Ball,,,1,1.863148195,1.115513751
+7,2,2,2,'2-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tommy Reyes-Cruz,Aidan Armitage,L,R,Offspeed,Foul,,,1,1.308353457,0.470832338
+7,2,3,2,'3-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tommy Reyes-Cruz,Aidan Armitage,L,R,Offspeed,Ball,,,1,-0.497680478,-0.374728066
+7,2,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tommy Reyes-Cruz,Aidan Armitage,L,R,Offspeed,Ball,,,1,-1.607269954,0.498861964
+7,2,0,1,'0-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,1,1,Tommy Reyes-Cruz,Aidan Armitage,L,R,Offspeed,Double,Line Drive,Pull,1,-0.509484621,1.180916213
+7,2,1,1,'1-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Jaden Brown,Aidan Armitage,R,R,Offspeed,Swinging Strike,,,10,-0.792784062,0.059731147
+7,2,1,2,'1-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Jaden Brown,Aidan Armitage,R,R,Offspeed,Ball,,,10,-1.146908363,-0.131804635
+8,2,0,0,'0-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Jaden Brown,Aidan Armitage,R,R,Offspeed,Called Strike,,,10,-1.323970513,0.176521258
+8,0,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Jaden Brown,Aidan Armitage,R,R,Offspeed,Strikeout Swinging,,,10,-0.11994789,0.03170152
+8,1,1,0,'1-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tim Holyk,Corben Peters,R,R,Fastball,Popout,Pop Up,,0,0.104330834,0.91463476
+8,1,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Christian Ortega,Corben Peters,R,R,Offspeed,Ball,,,0,-1.784332105,0.1157904
+8,1,0,1,'0-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Christian Ortega,Corben Peters,R,R,Fastball,Double,Line Drive,Straightaway,0,-0.792784062,0.877261924
+8,1,1,1,'1-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Cassidy Watt,Corben Peters,R,R,Offspeed,Called Strike,,,10,-0.745567489,0.57827924
+8,1,1,2,'1-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Cassidy Watt,Corben Peters,R,R,Offspeed,Ball,,,10,-1.09969179,-0.080416986
+8,1,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Cassidy Watt,Corben Peters,R,R,Fastball,Swinging Strike,,,10,-1.13510422,1.003395244
+8,2,1,0,'1-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Cassidy Watt,Corben Peters,R,R,Fastball,Strikeout Looking,,,10,-0.863608922,0.143820027
+8,2,1,1,'1-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Jeremie Veilleux,Corben Peters,R,R,Offspeed,Ball,,,10,1.013249873,0.634338493
+8,2,1,2,'1-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Jeremie Veilleux,Corben Peters,R,R,Offspeed,Called Strike,,,10,-0.710155058,0.844560693
+8,2,2,2,'2-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Jeremie Veilleux,Corben Peters,R,R,Offspeed,Called Strike,,,10,1.131291307,0.456817524
+9,2,0,0,'0-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Jeremie Veilleux,Corben Peters,R,R,Fastball,Ball,,,10,-0.072731317,1.152886586
+9,0,1,0,'1-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Jeremie Veilleux,Corben Peters,R,R,Offspeed,Groundout,Ground Ball,Straightaway,10,0.02170183,0.928649573
+9,0,2,0,'2-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Tyler Duncan,Jose Rodriguez,L,R,Offspeed,Ball,,,0,0.907012583,1.068797706
+9,0,3,0,'3-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Tyler Duncan,Jose Rodriguez,L,R,Fastball,Ball,,,0,-2.06763,-0.37006
+9,0,0,0,'0-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Tyler Duncan,Jose Rodriguez,L,R,Offspeed,Ball,,,0,1.933973,1.059454
+9,0,1,0,'1-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Tyler Duncan,Jose Rodriguez,L,R,Offspeed,Walk,,,0,2.299901,1.101499
+9,0,2,0,'2-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,July Vittini,Jose Rodriguez,R,R,Fastball,Ball,,,100,-2.03222,-0.28597
+9,0,2,1,'2-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,July Vittini,Jose Rodriguez,R,R,Fastball,Ball,,,10,-2.38634,-0.18786
+9,0,2,2,'2-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,July Vittini,Jose Rodriguez,R,R,Offspeed,Called Strike,,,1,-0.68655,0.933321
+9,0,3,2,'3-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,July Vittini,Jose Rodriguez,R,R,Offspeed,Called Strike,,,1,-1.21773,0.554921
+9,0,3,2,'3-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,July Vittini,Jose Rodriguez,R,R,Offspeed,Ball,,,1,-1.04067,-0.23458
+9,0,0,0,'0-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,July Vittini,Jose Rodriguez,R,R,Offspeed,Foul,,,1,-1.45382,0.008343
+9,0,1,0,'1-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,July Vittini,Jose Rodriguez,R,R,Offspeed,Walk,,,1,-1.4184,0.751129
+9,0,2,0,'2-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Johnathan Solazzo,Jose Rodriguez,L,R,Offspeed,Ball,,,101,-2.10304,-0.34203
+9,0,3,0,'3-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Johnathan Solazzo,Jose Rodriguez,L,R,Offspeed,Ball,,,101,0.198764,1.157558
+9,0,0,0,'0-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Johnathan Solazzo,Jose Rodriguez,L,R,Offspeed,Ball,,,101,1.910365,1.227632
+9,0,0,1,'0-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Johnathan Solazzo,Jose Rodriguez,L,R,Offspeed,Walk,,,101,-0.81639,-0.35604
+9,0,0,2,'0-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Josh Williams,Jose Rodriguez,L,R,Offspeed,Swinging Strike,,,111,0.847992,0.92865
+9,0,1,2,'1-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Josh Williams,Jose Rodriguez,L,R,Offspeed,Swinging Strike,,,111,0.836188,0.410101
+9,0,0,0,'0-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Josh Williams,Jose Rodriguez,L,R,Offspeed,Ball,,,111,-1.20593,0.891277
+9,1,0,1,'0-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Josh Williams,Jose Rodriguez,L,R,Offspeed,Strikeout Swinging,,,111,0.847992,0.92865
+9,1,1,1,'1-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Andrew Johnston,Jose Rodriguez,R,R,Offspeed,Foul,,,111,-0.61572,0.849232
+9,1,2,1,'2-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Andrew Johnston,Jose Rodriguez,R,R,Offspeed,Ball,,,111,-1.35938,0.269953
+9,1,3,1,'3-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Andrew Johnston,Jose Rodriguez,R,R,Offspeed,Ball,,,111,0.706342,1.143543
+9,1,3,2,'3-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Andrew Johnston,Jose Rodriguez,R,R,Offspeed,Ball,,,111,1.025054,1.087484
+9,1,0,0,'0-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Andrew Johnston,Jose Rodriguez,R,R,Offspeed,Foul,,,111,-0.67474,1.031425
+9,2,1,0,'1-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Andrew Johnston,Jose Rodriguez,R,R,Offspeed,Strikeout Looking,,,111,-1.06428,0.858576
+9,2,2,0,'2-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Yolki Pena,Jose Rodriguez,L,R,Fastball,Ball,,,111,2.004798,1.110842
+9,2,2,1,'2-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Yolki Pena,Jose Rodriguez,L,R,Fastball,Ball,,,111,1.969385,1.447198
+9,2,3,1,'3-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Yolki Pena,Jose Rodriguez,L,R,Offspeed,Swinging Strike,,,111,-1.17052,0.059731
+9,2,0,0,'0-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Yolki Pena,Jose Rodriguez,L,R,Offspeed,Ball,,,111,-1.09969,-0.29998
+9,2,0,1,'0-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,1,1,Yolki Pena,Jose Rodriguez,L,R,Offspeed,Walk,,,111,-0.92263,0.66704
+9,2,1,1,'1-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Niko Kekatos,Gabe Bruder,R,R,Fastball,Called Strike,,,111,-1.06428,0.554921
+9,2,1,2,'1-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Niko Kekatos,Gabe Bruder,R,R,Fastball,Ball,,,111,0.021702,1.227632
+9,2,1,2,'1-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Niko Kekatos,Gabe Bruder,R,R,Offspeed,Called Strike,,,111,0.635517,1.04544
+9,2,2,2,'2-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Niko Kekatos,Gabe Bruder,R,R,Fastball,Foul,,,111,-1.1351,0.022358
+9,2,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Niko Kekatos,Gabe Bruder,R,R,Offspeed,Ball,,,111,0.493868,1.143543
+10,0,0,0,'0-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Niko Kekatos,Gabe Bruder,R,R,Fastball,Flyout,Fly Ball,Straightaway,111,0.175156,0.914635
+10,1,0,1,'0-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Nick Burdett,Fernando Rodney,L,R,Fastball,Flyout,Fly Ball,Pull,0,-1.14691,0.592294
+10,1,0,0,'0-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Matt Torresan,Fernando Rodney,R,R,Offspeed,Called Strike,,,0,-1.18232,0.092432
+10,2,0,0,'0-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Matt Torresan,Fernando Rodney,R,R,Fastball,Groundout,Ground Ball,Pull,0,-0.78098,0.947336
+10,2,0,1,'0-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Graham Tebbit,Fernando Rodney,R,R,Fastball,Double,Line Drive,Opposite Field,0,0.907013,0.255939
+10,2,1,1,'1-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Jose Vinicio,Fernando Rodney,L,R,Fastball,Called Strike,,,10,-0.88722,0.11579
+10,2,1,2,'1-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Jose Vinicio,Fernando Rodney,L,R,Offspeed,Ball,,,10,1.308353,1.01741
+10,2,0,0,'0-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Jose Vinicio,Fernando Rodney,L,R,Fastball,Swinging Strike,,,1,-0.89902,0.428788
+10,2,1,0,'1-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,1,1,Jose Vinicio,Fernando Rodney,L,R,Fastball,Single,Line Drive,Straightaway,1,-0.88722,0.596966
+10,2,1,1,'1-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Brody Black,Fernando Rodney,R,R,Offspeed,Ball,,,100,0.907013,0.830546
+10,2,2,1,'2-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Brody Black,Fernando Rodney,R,R,Fastball,Swinging Strike,,,100,-0.79278,0.316669
+10,2,3,1,'3-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Brody Black,Fernando Rodney,R,R,Fastball,Ball,,,100,1.225724,1.012738
+10,2,0,0,'0-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Brody Black,Fernando Rodney,R,R,Fastball,Ball,,,100,1.331962,-0.13648
+10,2,1,0,'1-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Brody Black,Fernando Rodney,R,R,Fastball,Walk,,,100,-1.28856,-0.0337
+10,2,1,1,'1-1,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Tim Holyk,Fernando Rodney,R,R,Fastball,Ball,,,110,-1.14691,0.540906
+10,2,1,2,'1-2,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Tim Holyk,Fernando Rodney,R,R,Offspeed,Called Strike,,,110,-0.86361,0.368057
+10,2,0,0,'0-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,,,Tim Holyk,Fernando Rodney,R,R,Fastball,Called Strike,,,110,-0.92263,0.456818
+10,2,1,0,'1-0,16-May-25,Brantford Red Sox,Hamilton Cardinals,3,3,Tim Holyk,Fernando Rodney,R,R,Fastball,Home Run,Fly Ball,Pull,110,0.482063,0.87259
+10,2,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Christian Ortega,Fernando Rodney,R,R,Fastball,Ball,,,0,-1.20593,-0.17852
+10,0,1,0,'1-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Christian Ortega,Fernando Rodney,R,R,Fastball,Groundout,Ground Ball,Opposite Field,0,-0.04912,0.92865
+10,0,1,1,'1-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tommy Reyes-Cruz,Gabe Bruder,L,R,Fastball,Ball,,,0,0.918816726,0.101775587
+10,0,2,1,'2-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tommy Reyes-Cruz,Gabe Bruder,L,R,Offspeed,Swinging Strike,,,0,-0.356030757,0.606308867
+10,0,3,1,'3-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tommy Reyes-Cruz,Gabe Bruder,L,R,Offspeed,Ball,,,0,1.485415608,0.424116293
+10,0,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tommy Reyes-Cruz,Gabe Bruder,L,R,Offspeed,Ball,,,0,1.874952339,0.344699018
+10,0,1,0,'1-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tommy Reyes-Cruz,Gabe Bruder,L,R,Fastball,Walk,,,0,1.697890188,-0.201878702
+10,0,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Jaden Brown,Gabe Bruder,R,R,Offspeed,Ball,,,100,-1.38299123,0.610980471
+10,1,0,1,'0-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Jaden Brown,Gabe Bruder,R,R,Offspeed,Groundout,Ground Ball,Pull,100,1.402786604,0.91463476
+10,1,1,1,'1-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tyler Duncan,Gabe Bruder,L,R,Offspeed,Called Strike,,,10,-0.780979919,0.213894094
+10,1,2,1,'2-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tyler Duncan,Gabe Bruder,L,R,Fastball,Ball,,,10,1.520828038,1.213617444
+10,1,2,2,'2-2,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tyler Duncan,Gabe Bruder,L,R,Offspeed,Ball,,,10,1.874952339,0.466160733
+10,1,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tyler Duncan,Gabe Bruder,L,R,Offspeed,Called Strike,,,10,1.237528597,0.5362348
+10,1,0,1,'0-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Tyler Duncan,Gabe Bruder,L,R,Offspeed,Error,Fly Ball,Pull,10,-0.710155058,0.288639765
+10,1,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,July Vittini,Gabe Bruder,R,R,Offspeed,Foul,,,11,-0.08453546,0.900619946
+10,2,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,July Vittini,Gabe Bruder,R,R,Offspeed,Popout,Pop Up,Straightaway,11,-0.15536032,0.428787898
+10,2,1,0,'1-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Johnathan Solazzo,Gabe Bruder,R,R,,Intentional Walk,,,11,,
+10,2,2,0,'2-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Josh Williams,Gabe Bruder,L,R,Fastball,Ball,,,111,2.052014489,0.891276738
+10,2,2,1,'2-1,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Josh Williams,Gabe Bruder,L,R,Fastball,Ball,,,111,2.217272496,0.624995284
+10,2,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,,,Josh Williams,Gabe Bruder,L,R,Offspeed,Swinging Strike,,,111,0.600104855,0.143820027
+10,2,0,0,'0-0,16-May-25,Hamilton Cardinals,Brantford Red Sox,2,2,Josh Williams,Gabe Bruder,L,R,Offspeed,Single,Fly Ball,Straightaway,111,-0.391443188,0.204550885
