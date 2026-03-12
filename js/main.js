@@ -28,7 +28,7 @@ function resolveTeam(rawName) {
   }) || null;
 }
 
-let DATA = { summary: [], pitches: [] };
+let DATA = { summary: [], pitches: [], pitchers: [] };
 
 // ── INIT ──────────────────────────────────────────
 async function init() {
@@ -46,14 +46,17 @@ async function init() {
 async function loadAll() {
   try {
     const base = getBase();
-    const [sumRes, pitRes] = await Promise.all([
+    const [sumRes, pitRes, pitcherRes] = await Promise.all([
       fetch(base + 'data/summary.json'),
-      fetch(base + 'data/pitches.json')
+      fetch(base + 'data/pitches.json'),
+      fetch(base + 'data/pitchers.json')
     ]);
-    if (sumRes.ok)  DATA.summary = await sumRes.json();
-    if (pitRes.ok)  DATA.pitches = await pitRes.json();
+    if (sumRes.ok)     DATA.summary  = await sumRes.json();
+    if (pitRes.ok)     DATA.pitches  = await pitRes.json();
+    if (pitcherRes.ok) DATA.pitchers = await pitcherRes.json();
     console.log('summary players:', DATA.summary.length);
     console.log('pitches players:', DATA.pitches.length);
+    console.log('pitchers:', DATA.pitchers.length);
   } catch(e) {
     console.error('loadAll failed:', e.message);
   }
@@ -296,30 +299,7 @@ function renderHittingLeaderboards(container) {
 }
 
 function renderPitchingLeaderboards(container) {
-  const pitcherMap = {};
-  DATA.pitches.forEach(function(bp) {
-    if (!bp.scatter) return;
-    bp.scatter.forEach(function(s) {
-      if (!s.pitcher) return;
-      if (!pitcherMap[s.pitcher]) {
-        pitcherMap[s.pitcher] = { name: s.pitcher, pitches: 0, k: 0, bb: 0, hits: 0, strikes: 0, balls: 0, team: '' };
-      }
-      const p = pitcherMap[s.pitcher];
-      p.pitches++;
-      if (s.outcome === 'Strikeout Swinging' || s.outcome === 'Strikeout Looking') p.k++;
-      if (s.outcome === 'Walk' || s.outcome === 'Intentional Walk') p.bb++;
-      if (['Single','Double','Triple','Home Run'].includes(s.outcome)) p.hits++;
-      if (['Called Strike','Swinging Strike','Foul','Strikeout Swinging','Strikeout Looking'].includes(s.outcome)) p.strikes++;
-      if (s.outcome === 'Ball') p.balls++;
-    });
-  });
-
-  const pitchers = Object.values(pitcherMap).map(function(p) {
-    p.k_pct    = p.pitches > 0 ? Math.round(p.k / p.pitches * 1000) / 10 : null;
-    p.bb_pct   = p.pitches > 0 ? Math.round(p.bb / p.pitches * 1000) / 10 : null;
-    p.str_pct  = p.pitches > 0 ? Math.round(p.strikes / p.pitches * 1000) / 10 : null;
-    return p;
-  });
+  const pitchers = DATA.pitchers;
 
   if (!pitchers.length) {
     container.innerHTML = '<div class="empty-state"><div class="empty-state-icon">⚾</div><h3>No pitcher data</h3></div>';
@@ -327,31 +307,36 @@ function renderPitchingLeaderboards(container) {
   }
 
   const boards = [
-    { title: 'K%',     key: 'k_pct',   fmt: function(v) { return fmt1(v) + '%'; }, desc: true  },
-    { title: 'STR%',   key: 'str_pct', fmt: function(v) { return fmt1(v) + '%'; }, desc: true  },
-    { title: 'BB%',    key: 'bb_pct',  fmt: function(v) { return fmt1(v) + '%'; }, desc: false },
-    { title: 'PITCHES',key: 'pitches', fmt: fmtN, desc: true }
+    { title: 'ERA',     key: 'ERA',       fmt: function(v) { return fmt2(v); },       desc: false },
+    { title: 'WHIP',    key: 'WHIP',      fmt: function(v) { return fmt2(v); },       desc: false },
+    { title: 'K%',      key: 'K_pct',     fmt: function(v) { return fmt1(v) + '%'; }, desc: true  },
+    { title: 'K-BB%',   key: 'K_BB',      fmt: function(v) { return fmt1(v) + '%'; }, desc: true  },
+    { title: 'STR%',    key: 'STR_pct',   fmt: function(v) { return fmt1(v) + '%'; }, desc: true  },
+    { title: 'BB%',     key: 'BB_pct',    fmt: function(v) { return fmt1(v) + '%'; }, desc: false },
+    { title: 'EARLY%',  key: 'Early_pct', fmt: function(v) { return fmt1(v) + '%'; }, desc: true  },
+    { title: 'AHEAD%',  key: 'Ahead_pct', fmt: function(v) { return fmt1(v) + '%'; }, desc: true  },
+    { title: 'PITCHES', key: 'total_pitches', fmt: fmtN, desc: true }
   ];
 
   const grid = document.createElement('div');
   grid.className = 'leaderboard-grid fade-up';
 
   boards.forEach(function(board) {
-    const sorted = pitchers.slice().sort(function(a,b) {
-      const av = a[board.key] != null ? a[board.key] : (board.desc ? -Infinity : Infinity);
-      const bv = b[board.key] != null ? b[board.key] : (board.desc ? -Infinity : Infinity);
-      return board.desc ? bv - av : av - bv;
-    }).slice(0, 5);
+    const sorted = pitchers.filter(function(p) { return p[board.key] != null; })
+      .slice().sort(function(a,b) {
+        return board.desc ? b[board.key] - a[board.key] : a[board.key] - b[board.key];
+      }).slice(0, 5);
 
     const card = document.createElement('div');
     card.className = 'leader-card';
     card.innerHTML = '<div class="leader-card-header">' + board.title + '</div>' +
       sorted.map(function(p, i) {
+        const team = resolveTeam(p.pitcher_team);
         const rankClass = i === 0 ? 'gold' : i === 1 ? 'silver' : i === 2 ? 'bronze' : '';
-        return '<div class="leader-row" data-name="' + p.name + '" data-type="pitcher">' +
+        return '<div class="leader-row" data-name="' + p.pitcher + '" data-type="pitcher">' +
           '<span class="leader-rank ' + rankClass + '">' + (i+1) + '</span>' +
-          '<span class="leader-name">' + p.name + '</span>' +
-          '<span class="leader-team"></span>' +
+          '<span class="leader-name">' + p.pitcher + '</span>' +
+          '<span class="leader-team">' + (team ? team.abbreviation : '') + '</span>' +
           '<span class="leader-val">' + board.fmt(p[board.key]) + '</span>' +
           '</div>';
       }).join('');
@@ -624,7 +609,7 @@ function renderPlayerDetail(name, type, content) {
     });
   } else if (type === 'pitcher' && pitchData && pitchData.scatter) {
     const sc  = pitchData.scatter;
-    const tot = sc.length;
+    const tot = sc.filter(function(s) { return s.outcome && s.outcome !== ''; }).length;
     const ks  = sc.filter(function(s) { return s.outcome === 'Strikeout Swinging' || s.outcome === 'Strikeout Looking'; }).length;
     const bbs = sc.filter(function(s) { return s.outcome === 'Walk' || s.outcome === 'Intentional Walk'; }).length;
     const strPct = tot > 0 ? Math.round(sc.filter(function(s) { return ['Called Strike','Swinging Strike','Foul','Strikeout Swinging','Strikeout Looking'].includes(s.outcome); }).length / tot * 100) : 0;
@@ -709,7 +694,7 @@ function renderOverview(name, type, sum, pitch) {
 
   if (type === 'pitcher' && pitch && pitch.scatter) {
     const sc  = pitch.scatter;
-    const tot = sc.length;
+    const tot = sc.filter(function(s) { return s.outcome && s.outcome !== ''; }).length;
     const ks  = sc.filter(function(s) { return s.outcome === 'Strikeout Swinging' || s.outcome === 'Strikeout Looking'; }).length;
     const bbs = sc.filter(function(s) { return s.outcome === 'Walk' || s.outcome === 'Intentional Walk'; }).length;
     const str = sc.filter(function(s) { return ['Called Strike','Swinging Strike','Foul','Strikeout Swinging','Strikeout Looking'].includes(s.outcome); }).length;
@@ -765,24 +750,40 @@ function renderSeasonStats(name, type, sum, pitch) {
 
   if (type === 'pitcher' && pitch && pitch.scatter) {
     const sc  = pitch.scatter;
-    const tot = sc.length;
+    const tot = sc.filter(function(s) { return s.outcome && s.outcome !== ''; }).length;
     const ks  = sc.filter(function(s) { return s.outcome === 'Strikeout Swinging' || s.outcome === 'Strikeout Looking'; }).length;
     const bbs = sc.filter(function(s) { return s.outcome === 'Walk' || s.outcome === 'Intentional Walk'; }).length;
     const str = sc.filter(function(s) { return ['Called Strike','Swinging Strike','Foul','Strikeout Swinging','Strikeout Looking'].includes(s.outcome); }).length;
     const swStr = sc.filter(function(s) { return s.outcome === 'Swinging Strike'; }).length;
     const calStr = sc.filter(function(s) { return s.outcome === 'Called Strike'; }).length;
     const inZone = sc.filter(function(s) { return s.x >= -1 && s.x <= 1 && s.y >= 0 && s.y <= 1.5; }).length;
+
+    // Pull extra stats from pitchers.json
+    const pd = DATA.pitchers.find(function(p) { return p.pitcher === name; }) || {};
+    const era   = pd.ERA  != null ? fmt2(pd.ERA)  : '—';
+    const whip  = pd.WHIP != null ? fmt2(pd.WHIP) : '—';
+    const kbb   = pd.K_BB != null ? fmt1(pd.K_BB) + '%' : '—';
+    const ip    = pd.IP   != null ? fmt1(pd.IP)   : '—';
+    const early = pd.Early_pct != null ? fmt1(pd.Early_pct) + '%' : '—';
+    const ahead = pd.Ahead_pct != null ? fmt1(pd.Ahead_pct) + '%' : '—';
+
     return '<div class="stat-card"><div class="stat-card-header"><span class="stat-card-title">Full Season Pitching</span></div>' +
       '<div class="table-wrap"><table class="stat-table"><thead><tr>' +
-      '<th>PITCHES</th><th>K</th><th>BB</th><th>K%</th><th>BB%</th><th>STR%</th><th>ZN%</th><th>SW-STR</th><th>CL-STR</th>' +
+      '<th>IP</th><th>ERA</th><th>WHIP</th><th>PITCHES</th><th>K</th><th>BB</th><th>K%</th><th>BB%</th><th>K-BB%</th><th>STR%</th><th>ZN%</th><th>EARLY%</th><th>AHEAD%</th><th>SW-STR</th><th>CL-STR</th>' +
       '</tr></thead><tbody><tr>' +
-      '<td class="highlight-val">' + tot + '</td>' +
+      '<td>' + ip + '</td>' +
+      '<td class="highlight-val">' + era + '</td>' +
+      '<td class="highlight-val">' + whip + '</td>' +
+      '<td>' + tot + '</td>' +
       '<td>' + ks + '</td>' +
       '<td>' + bbs + '</td>' +
       '<td class="highlight-val">' + fmt1(ks/tot*100) + '%</td>' +
       '<td>' + fmt1(bbs/tot*100) + '%</td>' +
+      '<td class="highlight-val">' + kbb + '</td>' +
       '<td>' + fmt1(str/tot*100) + '%</td>' +
       '<td>' + fmt1(inZone/tot*100) + '%</td>' +
+      '<td>' + early + '</td>' +
+      '<td>' + ahead + '</td>' +
       '<td>' + swStr + '</td>' +
       '<td>' + calStr + '</td>' +
       '</tr></tbody></table></div></div>';
@@ -1538,7 +1539,7 @@ function buildPitcherListTable(names) {
       if (!bp.scatter) return;
       bp.scatter.forEach(function(s) { if (s.pitcher === name) pts.push(s); });
     });
-    const tot = pts.length;
+    const tot = pts.filter(function(s) { return s.outcome && s.outcome !== ''; }).length;
     const ks  = pts.filter(function(s) { return s.outcome === 'Strikeout Swinging' || s.outcome === 'Strikeout Looking'; }).length;
     const bbs = pts.filter(function(s) { return s.outcome === 'Walk'; }).length;
     const str = pts.filter(function(s) { return ['Called Strike','Swinging Strike','Foul','Strikeout Swinging','Strikeout Looking'].includes(s.outcome); }).length;
