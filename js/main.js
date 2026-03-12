@@ -754,8 +754,9 @@ function renderOverview(name, type, sum, pitch) {
           '<div class="sbr-label" style="width:80px;flex-shrink:0">' + b.lbl + '</div>' +
           '<div style="flex:1;position:relative;height:10px;background:rgba(255,255,255,0.06);border-radius:5px;margin:0 8px">' +
             '<div class="sbr-fill" style="position:absolute;left:0;top:0;height:10px;width:0%;background:' + color + ';border-radius:5px;transition:width 0.8s cubic-bezier(0.4,0,0.2,1)" data-width="' + widthPct + '%"></div>' +
-            '<div class="savant-bubble" style="position:absolute;top:50%;transform:translate(-50%,-50%);left:0%;width:26px;height:26px;border-radius:50%;background:' + color + ';display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#fff;font-family:var(--font-mono);z-index:2;transition:left 0.8s cubic-bezier(0.4,0,0.2,1);box-shadow:0 1px 4px rgba(0,0,0,0.4)" data-left="' + widthPct + '">' + b.val + '</div>' +
+            '<div class="savant-bubble" style="position:absolute;top:50%;transform:translate(-50%,-50%);left:0%;width:26px;height:26px;border-radius:50%;background:' + color + ';display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#fff;font-family:var(--font-mono);z-index:2;transition:left 0.8s cubic-bezier(0.4,0,0.2,1);box-shadow:0 1px 4px rgba(0,0,0,0.4)" data-left="' + widthPct + '">●</div>' +
           '</div>' +
+          '<div style="width:60px;text-align:right;font-family:var(--font-mono);font-size:13px;font-weight:600;color:' + color + ';flex-shrink:0">' + b.val + '</div>' +
         '</div>';
       }).join('') + '</div></div>';
   }
@@ -1201,7 +1202,7 @@ function renderZone(name, type, pitch, container) {
 
     var GW = 64, GH = 64;
     var density = new Float32Array(GW * GH);
-    var SIGMA = 5.0;
+    var SIGMA = 3.0;
 
     filtered.forEach(function(s) {
       var gx = ((s.x - X_MIN) / (X_MAX - X_MIN)) * GW;
@@ -1232,10 +1233,18 @@ function renderZone(name, type, pitch, container) {
         var val = density[py * GW + px] / maxD;
         if (val < 0.01) continue;
         var r, g, b;
-        // blue (40,80,220) to red (220,40,40)
-        r = Math.round(40  + val * (220 - 40));
-        g = Math.round(80  + val * (40  - 80));
-        b = Math.round(220 + val * (40  - 220));
+        // blue (58,130,210) → light (200,200,220) → red (220,40,40)
+        if (val < 0.5) {
+          var t = val / 0.5;
+          r = Math.round(58  + t * (200 - 58));
+          g = Math.round(130 + t * (200 - 130));
+          b = Math.round(210 + t * (220 - 210));
+        } else {
+          var t = (val - 0.5) / 0.5;
+          r = Math.round(200 + t * (220 - 200));
+          g = Math.round(200 + t * (40  - 200));
+          b = Math.round(220 + t * (40  - 220));
+        }
         var idx = (py * GW + px) * 4;
         imgData.data[idx]   = r;
         imgData.data[idx+1] = g;
@@ -1253,7 +1262,8 @@ function renderZone(name, type, pitch, container) {
 
     var scaleX=PAD_L+PW+4, scaleH=PH*0.6, scaleY=PAD_T+PH*0.2;
     var grad=ctx.createLinearGradient(0,scaleY,0,scaleY+scaleH);
-    grad.addColorStop(0,'rgb(220,40,40)'); grad.addColorStop(1,'rgb(40,80,220)');
+    grad.addColorStop(0,'rgb(220,40,40)'); grad.addColorStop(0.5,'rgb(200,200,220)');
+    grad.addColorStop(1,'rgb(58,130,210)');
     ctx.fillStyle=grad; ctx.fillRect(scaleX,scaleY,7,scaleH);
     ctx.strokeStyle='rgba(255,255,255,0.15)'; ctx.lineWidth=0.5;
     ctx.strokeRect(scaleX,scaleY,7,scaleH);
