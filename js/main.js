@@ -668,6 +668,9 @@ function renderPlayerDetail(name, type, content) {
       panel.querySelectorAll('.sbr-fill').forEach(function(el) {
         if (el.dataset.width) el.style.width = el.dataset.width;
       });
+      panel.querySelectorAll('.savant-bubble').forEach(function(el) {
+        if (el.dataset.left) el.style.left = el.dataset.left;
+      });
     }, 60);
   }
 
@@ -735,22 +738,25 @@ function renderOverview(name, type, sum, pitch) {
         var p = Math.max(0, Math.min(1, b.pct || 0));
         var r, g, bl;
         if (p <= 0.5) {
-          // blue (0,100,220) to grey (136,136,136)
           var t = p * 2;
-          r  = Math.round(0   + t * (136 - 0));
-          g  = Math.round(100 + t * (136 - 100));
-          bl = Math.round(220 + t * (136 - 220));
+          r  = Math.round(58  + t * (180 - 58));
+          g  = Math.round(130 + t * (180 - 130));
+          bl = Math.round(210 + t * (180 - 210));
         } else {
-          // grey (136,136,136) to red (220,40,40)
           var t = (p - 0.5) * 2;
-          r  = Math.round(136 + t * (220 - 136));
-          g  = Math.round(136 + t * (40  - 136));
-          bl = Math.round(136 + t * (40  - 136));
+          r  = Math.round(180 + t * (210 - 180));
+          g  = Math.round(180 + t * (50  - 180));
+          bl = Math.round(180 + t * (50  - 180));
         }
         var color = 'rgb(' + r + ',' + g + ',' + bl + ')';
-        return '<div class="stat-bar-row"><div class="sbr-label">' + b.lbl + '</div>' +
-          '<div class="sbr-bar"><div class="sbr-fill" style="width:0%;background:' + color + '" data-width="' + Math.min((b.pct||0)*100,100).toFixed(1) + '%"></div></div>' +
-          '<div class="sbr-val">' + b.val + '</div></div>';
+        var widthPct = (p * 100).toFixed(1);
+        return '<div class="stat-bar-row" style="align-items:center;margin-bottom:10px">' +
+          '<div class="sbr-label" style="width:80px;flex-shrink:0">' + b.lbl + '</div>' +
+          '<div style="flex:1;position:relative;height:10px;background:rgba(255,255,255,0.06);border-radius:5px;margin:0 8px">' +
+            '<div class="sbr-fill" style="position:absolute;left:0;top:0;height:10px;width:0%;background:' + color + ';border-radius:5px;transition:width 0.8s cubic-bezier(0.4,0,0.2,1)" data-width="' + widthPct + '%"></div>' +
+            '<div class="savant-bubble" style="position:absolute;top:50%;transform:translate(-50%,-50%);left:0%;width:26px;height:26px;border-radius:50%;background:' + color + ';display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#fff;font-family:var(--font-mono);z-index:2;transition:left 0.8s cubic-bezier(0.4,0,0.2,1);box-shadow:0 1px 4px rgba(0,0,0,0.4)" data-left="' + widthPct + '">' + b.val + '</div>' +
+          '</div>' +
+        '</div>';
       }).join('') + '</div></div>';
   }
 
@@ -1226,15 +1232,10 @@ function renderZone(name, type, pitch, container) {
         var val = density[py * GW + px] / maxD;
         if (val < 0.01) continue;
         var r, g, b;
-        if (val < 0.25) {
-          var t=val/0.25; r=0; g=Math.round(t*120); b=Math.round(180+t*75);
-        } else if (val < 0.5) {
-          var t=(val-0.25)/0.25; r=0; g=Math.round(120+t*135); b=Math.round(255-t*255);
-        } else if (val < 0.75) {
-          var t=(val-0.5)/0.25; r=Math.round(t*255); g=255; b=0;
-        } else {
-          var t=(val-0.75)/0.25; r=255; g=Math.round(255-t*255); b=0;
-        }
+        // blue (40,80,220) to red (220,40,40)
+        r = Math.round(40  + val * (220 - 40));
+        g = Math.round(80  + val * (40  - 80));
+        b = Math.round(220 + val * (40  - 220));
         var idx = (py * GW + px) * 4;
         imgData.data[idx]   = r;
         imgData.data[idx+1] = g;
@@ -1252,8 +1253,7 @@ function renderZone(name, type, pitch, container) {
 
     var scaleX=PAD_L+PW+4, scaleH=PH*0.6, scaleY=PAD_T+PH*0.2;
     var grad=ctx.createLinearGradient(0,scaleY,0,scaleY+scaleH);
-    grad.addColorStop(0,'#ff0000'); grad.addColorStop(0.33,'#ffff00');
-    grad.addColorStop(0.66,'#00ff78'); grad.addColorStop(1,'#0000b4');
+    grad.addColorStop(0,'rgb(220,40,40)'); grad.addColorStop(1,'rgb(40,80,220)');
     ctx.fillStyle=grad; ctx.fillRect(scaleX,scaleY,7,scaleH);
     ctx.strokeStyle='rgba(255,255,255,0.15)'; ctx.lineWidth=0.5;
     ctx.strokeRect(scaleX,scaleY,7,scaleH);
