@@ -732,8 +732,24 @@ function renderOverview(name, type, sum, pitch) {
       '<span class="stat-card-subtitle">' + tot + ' pitches</span></div>' +
       '<div style="padding:16px 24px">' +
       bars.map(function(b) {
+        var p = Math.max(0, Math.min(1, b.pct || 0));
+        var r, g, bl;
+        if (p <= 0.5) {
+          // blue (0,100,220) to grey (136,136,136)
+          var t = p * 2;
+          r  = Math.round(0   + t * (136 - 0));
+          g  = Math.round(100 + t * (136 - 100));
+          bl = Math.round(220 + t * (136 - 220));
+        } else {
+          // grey (136,136,136) to red (220,40,40)
+          var t = (p - 0.5) * 2;
+          r  = Math.round(136 + t * (220 - 136));
+          g  = Math.round(136 + t * (40  - 136));
+          bl = Math.round(136 + t * (40  - 136));
+        }
+        var color = 'rgb(' + r + ',' + g + ',' + bl + ')';
         return '<div class="stat-bar-row"><div class="sbr-label">' + b.lbl + '</div>' +
-          '<div class="sbr-bar"><div class="sbr-fill" style="width:0%" data-width="' + Math.min((b.pct||0)*100,100).toFixed(1) + '%"></div></div>' +
+          '<div class="sbr-bar"><div class="sbr-fill" style="width:0%;background:' + color + '" data-width="' + Math.min((b.pct||0)*100,100).toFixed(1) + '%"></div></div>' +
           '<div class="sbr-val">' + b.val + '</div></div>';
       }).join('') + '</div></div>';
   }
