@@ -1159,11 +1159,11 @@ function renderZone(name, type, pitch, container) {
     var cellPxH = SY2 - SY1;
     var sqW = (cellPxW / 3);
     var sqH = (cellPxH / 3);
-    // 4 corner cells — top-left, top-right, bottom-left, bottom-right
-    outer[0].px = { x:SX1-GAP-sqW, y:SY1,          w:sqW, h:sqH };  // TL
-    outer[1].px = { x:SX2+GAP,     y:SY1,          w:sqW, h:sqH };  // TR
-    outer[2].px = { x:SX1-GAP-sqW, y:SY2-sqH,      w:sqW, h:sqH };  // BL
-    outer[3].px = { x:SX2+GAP,     y:SY2-sqH,      w:sqW, h:sqH };  // BR
+    // 4 corner cells pushed to corners of the zone box
+    outer[0].px = { x:SX1-sqW, y:SY1,      w:sqW, h:sqH };  // TL
+    outer[1].px = { x:SX2,     y:SY1,      w:sqW, h:sqH };  // TR
+    outer[2].px = { x:SX1-sqW, y:SY2-sqH,  w:sqW, h:sqH };  // BL
+    outer[3].px = { x:SX2,     y:SY2-sqH,  w:sqW, h:sqH };  // BR
 
     outer[0].intensity = maxOuter > 0 ? outer[0].count/maxOuter : 0;
     outer[1].intensity = maxOuter > 0 ? outer[1].count/maxOuter : 0;
