@@ -28,7 +28,7 @@ function resolveTeam(rawName) {
   }) || null;
 }
 
-let DATA = { summary: [], pitches: [], pitchers: [] };
+let DATA = { summary: [], pitches: [], pitchers: [], iblHistory: {} };
 
 // ── INIT ──────────────────────────────────────────
 async function init() {
@@ -46,17 +46,20 @@ async function init() {
 async function loadAll() {
   try {
     const base = getBase();
-    const [sumRes, pitRes, pitcherRes] = await Promise.all([
+    const [sumRes, pitRes, pitcherRes, iblRes] = await Promise.all([
       fetch(base + 'data/summary.json'),
       fetch(base + 'data/pitches.json'),
-      fetch(base + 'data/pitchers.json')
+      fetch(base + 'data/pitchers.json'),
+      fetch(base + 'data/ibl_history.json')
     ]);
-    if (sumRes.ok)     DATA.summary  = await sumRes.json();
-    if (pitRes.ok)     DATA.pitches  = await pitRes.json();
-    if (pitcherRes.ok) DATA.pitchers = await pitcherRes.json();
+    if (sumRes.ok)     DATA.summary    = await sumRes.json();
+    if (pitRes.ok)     DATA.pitches    = await pitRes.json();
+    if (pitcherRes.ok) DATA.pitchers   = await pitcherRes.json();
+    if (iblRes.ok)     DATA.iblHistory = await iblRes.json();
     console.log('summary players:', DATA.summary.length);
     console.log('pitches players:', DATA.pitches.length);
     console.log('pitchers:', DATA.pitchers.length);
+    console.log('ibl history players:', Object.keys(DATA.iblHistory).length);
   } catch(e) {
     console.error('loadAll failed:', e.message);
   }
@@ -589,12 +592,27 @@ function renderPlayerDetail(name, type, content) {
     '<a href="players.html">Players</a><span>/</span>' +
     (team ? '<a href="teams.html?team=' + team.id + '">' + team.abbreviation + '</a><span>/</span>' : '') +
     '<span>' + name + '</span></div>' +
-    '<div class="player-badges">' +
-    '<span class="badge badge-pos">' + (type === 'pitcher' ? 'P' : 'H') + '</span>' +
-    (team ? '<span class="badge badge-team">' + team.abbreviation + '</span>' : '') +
-    '</div>' +
-    '<h1 class="player-name-hero">' + name.toUpperCase() + '</h1>' +
-    (team ? '<p class="player-meta"><span>' + team.name + '</span></p>' : '') +
+    (function() {
+      var iblSeasons = DATA.iblHistory[name];
+      var ibl = iblSeasons && iblSeasons.length ? iblSeasons[0] : null;
+      var pos    = ibl && ibl.pos    ? ibl.pos    : (type === 'pitcher' ? 'P' : '—');
+      var bats   = ibl && ibl.bats   ? ibl.bats   : null;
+      var thr    = ibl && ibl.throws ? ibl.throws : null;
+      var height = ibl && ibl.height ? ibl.height : null;
+      var weight = ibl && ibl.weight ? ibl.weight : null;
+      var teamName = team ? team.name : (ibl && ibl.team ? ibl.team : null);
+      var badges = '<div class="player-badges">' +
+        '<span class="badge badge-pos">' + pos + '</span>' +
+        (team ? '<span class="badge badge-team">' + team.abbreviation + '</span>' : '') +
+        '</div>';
+      var meta = '<p class="player-meta">';
+      if (teamName) meta += '<span>' + teamName + '</span>';
+      if (bats || thr) meta += '<span>Bats: ' + (bats || '?') + ' / Throws: ' + (thr || '?') + '</span>';
+      if (height) meta += '<span>HT: ' + height + '</span>';
+      if (weight) meta += '<span>WT: ' + weight + ' lbs</span>';
+      meta += '</p>';
+      return badges + '<h1 class="player-name-hero">' + name.toUpperCase() + '</h1>' + meta;
+    }()) +
     '<div class="headline-stats" id="headline-stats"></div>' +
     '</div></section>' +
     '<div class="tabs-bar" style="margin-top:0"><div class="container"><div class="tabs">' +
@@ -766,74 +784,82 @@ function renderOverview(name, type, sum, pitch) {
 
 // ── SEASON STATS TAB ──────────────────────────────
 function renderSeasonStats(name, type, sum, pitch) {
-  if (type === 'batter' && sum) {
-    return '<div class="stat-card"><div class="stat-card-header"><span class="stat-card-title">Full Season Hitting</span></div>' +
-      '<div class="table-wrap"><table class="stat-table"><thead><tr>' +
-      '<th>AVG</th><th>OBP</th><th>SLG</th><th>OPS</th><th>AB</th><th>H</th><th>1B</th><th>2B</th><th>3B</th><th>HR</th><th>BB</th><th>K</th>' +
-      '</tr></thead><tbody><tr>' +
-      '<td class="highlight-val">' + fmt3(sum.AVG) + '</td>' +
-      '<td>' + fmt3(sum.OBP) + '</td>' +
-      '<td>' + fmt3(sum.SLG) + '</td>' +
-      '<td class="highlight-val">' + fmt3(sum.OPS) + '</td>' +
-      '<td>' + fmtN(sum.AB) + '</td>' +
-      '<td>' + fmtN(sum.H) + '</td>' +
-      '<td>' + fmtN(sum['1B']) + '</td>' +
-      '<td>' + fmtN(sum['2B']) + '</td>' +
-      '<td>' + fmtN(sum['3B']) + '</td>' +
-      '<td>' + fmtN(sum.HR) + '</td>' +
-      '<td>' + fmtN(sum.BB) + '</td>' +
-      '<td>' + fmtN(sum.K) + '</td>' +
-      '</tr></tbody></table></div></div>';
+  var allSeasons = DATA.iblHistory[name] || [];
+
+  var seasons = allSeasons.filter(function(s) {
+    return type === 'pitcher'
+      ? (s.IP != null && s.IP > 0)
+      : (s.AB != null && s.AB > 0);
+  });
+
+  if (!seasons.length) {
+    return '<div class="empty-state"><div class="empty-state-icon">📊</div><h3>No historical data available</h3></div>';
   }
 
-  if (type === 'pitcher' && pitch && pitch.scatter) {
-    const sc  = pitch.scatter;
-    const tot = sc.filter(function(s) { return s.outcome && s.outcome !== ''; }).length;
-    const ks  = sc.filter(function(s) { return s.outcome === 'Strikeout Swinging' || s.outcome === 'Strikeout Looking'; }).length;
-    const bbs = sc.filter(function(s) { return s.outcome === 'Walk' || s.outcome === 'Intentional Walk'; }).length;
-    const str = sc.filter(function(s) { return ['Called Strike','Swinging Strike','Foul','Strikeout Swinging','Strikeout Looking'].includes(s.outcome); }).length;
-    const swStr = sc.filter(function(s) { return s.outcome === 'Swinging Strike'; }).length;
-    const calStr = sc.filter(function(s) { return s.outcome === 'Called Strike'; }).length;
-    const inZone = sc.filter(function(s) { return s.x >= -1 && s.x <= 1 && s.y >= 0 && s.y <= 1.5; }).length;
+  var html = '<div class="stat-card"><div class="stat-card-header">' +
+    '<span class="stat-card-title">Full Season Stats</span>' +
+    '<span class="stat-card-subtitle">' + seasons.length + ' season' + (seasons.length !== 1 ? 's' : '') + '</span>' +
+    '</div><div class="table-wrap"><table class="stat-table"><thead><tr>';
 
-    // Pull extra stats from pitchers.json
-    const pd = DATA.pitchers.find(function(p) { return p.pitcher === name; }) || {};
-    const era   = pd.ERA      != null ? fmt2(pd.ERA)      : '—';
-    const whip  = pd.WHIP     != null ? fmt2(pd.WHIP)     : '—';
-    const kbb   = pd.K_BB     != null ? fmt2(pd.K_BB)        : '—';
-    const ip    = pd.IP       != null ? fmtIP(pd.IP)      : '—';
-    const early = pd.Early_pct != null ? fmt1(pd.Early_pct) + '%' : '—';
-    const ahead = pd.Ahead_pct != null ? fmt1(pd.Ahead_pct) + '%' : '—';
-    const ea    = pd.EA_pct   != null ? fmt1(pd.EA_pct) + '%'  : '—';
-    const bf    = pd.BF       != null ? fmtN(pd.BF)      : '—';
-
-    return '<div class="stat-card"><div class="stat-card-header"><span class="stat-card-title">Full Season Pitching</span></div>' +
-      '<div class="table-wrap"><table class="stat-table"><thead><tr>' +
-      '<th>IP</th><th>BF</th><th>ERA</th><th>WHIP</th><th>PITCHES</th><th>K</th><th>BB</th><th>K%</th><th>BB%</th><th>K/BB</th><th>STR%</th><th>ZN%</th><th>E+A%</th><th>EARLY%</th><th>AHEAD%</th><th>SW-STR</th><th>CL-STR</th>' +
-      '</tr></thead><tbody><tr>' +
-      '<td>' + ip + '</td>' +
-      '<td>' + bf + '</td>' +
-      '<td class="highlight-val">' + era + '</td>' +
-      '<td class="highlight-val">' + whip + '</td>' +
-      '<td>' + tot + '</td>' +
-      '<td>' + ks + '</td>' +
-      '<td>' + bbs + '</td>' +
-      '<td class="highlight-val">' + fmt1(ks/tot*100) + '%</td>' +
-      '<td>' + fmt1(bbs/tot*100) + '%</td>' +
-      '<td class="highlight-val">' + kbb + '</td>' +
-      '<td>' + fmt1(str/tot*100) + '%</td>' +
-      '<td>' + fmt1(inZone/tot*100) + '%</td>' +
-      '<td class="highlight-val">' + ea + '</td>' +
-      '<td>' + early + '</td>' +
-      '<td>' + ahead + '</td>' +
-      '<td>' + swStr + '</td>' +
-      '<td>' + calStr + '</td>' +
-      '</tr></tbody></table></div></div>';
+  if (type === 'pitcher') {
+    html += '<th>Season</th><th>Team</th>' +
+      '<th>W</th><th>L</th><th>ERA</th><th>G</th><th>GS</th><th>SV</th>' +
+      '<th>IP</th><th>H</th><th>ER</th><th>BB</th><th>K</th><th>WP</th>';
+  } else {
+    html += '<th>Season</th><th>Team</th><th>Pos</th>' +
+      '<th>G</th><th>AB</th><th>R</th><th>H</th>' +
+      '<th>2B</th><th>3B</th><th>HR</th><th>RBI</th>' +
+      '<th>SB</th><th>BB</th><th>SO</th>' +
+      '<th>AVG</th><th>OBP</th><th>SLG</th><th>OPS</th>';
   }
 
-  return '<div class="empty-state"><div class="empty-state-icon">📊</div><h3>No data available</h3></div>';
+  html += '</tr></thead><tbody>';
+
+  seasons.forEach(function(s) {
+    html += '<tr>';
+    html += '<td style="color:var(--text-dim);white-space:nowrap">' + s.season + '</td>';
+    html += '<td style="white-space:nowrap">' + (s.team || '—') + '</td>';
+
+    if (type === 'pitcher') {
+      html +=
+        '<td>' + (s.W   != null ? s.W   : '—') + '</td>' +
+        '<td>' + (s.L   != null ? s.L   : '—') + '</td>' +
+        '<td class="highlight-val">' + (s.ERA != null ? fmt2(s.ERA) : '—') + '</td>' +
+        '<td>' + (s.G   != null ? s.G   : '—') + '</td>' +
+        '<td>' + (s.GS  != null ? s.GS  : '—') + '</td>' +
+        '<td>' + (s.SV  != null ? s.SV  : '—') + '</td>' +
+        '<td>' + (s.IP  != null ? fmtIP(s.IP) : '—') + '</td>' +
+        '<td>' + (s.HA  != null ? s.HA  : '—') + '</td>' +
+        '<td>' + (s.ER  != null ? s.ER  : '—') + '</td>' +
+        '<td>' + (s.BBA != null ? s.BBA : '—') + '</td>' +
+        '<td class="highlight-val">' + (s.KP  != null ? s.KP  : '—') + '</td>' +
+        '<td>' + (s.WP  != null ? s.WP  : '—') + '</td>';
+    } else {
+      html +=
+        '<td>' + (s.pos  != null ? s.pos  : '—') + '</td>' +
+        '<td>' + (s.G    != null ? s.G    : '—') + '</td>' +
+        '<td>' + (s.AB   != null ? s.AB   : '—') + '</td>' +
+        '<td>' + (s.R    != null ? s.R    : '—') + '</td>' +
+        '<td>' + (s.H    != null ? s.H    : '—') + '</td>' +
+        '<td>' + (s['2B']!= null ? s['2B']: '—') + '</td>' +
+        '<td>' + (s['3B']!= null ? s['3B']: '—') + '</td>' +
+        '<td>' + (s.HR   != null ? s.HR   : '—') + '</td>' +
+        '<td>' + (s.RBI  != null ? s.RBI  : '—') + '</td>' +
+        '<td>' + (s.SB   != null ? s.SB   : '—') + '</td>' +
+        '<td>' + (s.BB   != null ? s.BB   : '—') + '</td>' +
+        '<td>' + (s.SO   != null ? s.SO   : '—') + '</td>' +
+        '<td class="highlight-val">' + (s.AVG != null ? fmt3(s.AVG) : '—') + '</td>' +
+        '<td>' + (s.OBP  != null ? fmt3(s.OBP) : '—') + '</td>' +
+        '<td>' + (s.SLG  != null ? fmt3(s.SLG) : '—') + '</td>' +
+        '<td class="highlight-val">' + (s.OPS  != null ? fmt3(s.OPS) : '—') + '</td>';
+    }
+
+    html += '</tr>';
+  });
+
+  html += '</tbody></table></div></div>';
+  return html;
 }
-
 // ── STRIKE ZONE TAB ───────────────────────────────
 function renderZone(name, type, pitch, container) {
   var points = [];
@@ -1038,14 +1064,12 @@ function renderZone(name, type, pitch, container) {
     }
   }
 
-  // ── Strike zone box — uses CLEAN_BOUNDS so size is identical on all views ──
-  // Zone is x: -1 to 1, y: 0 to 1.5  (taller/slimmer rectangle)
+  // ── Strike zone box — uses current active bounds so dots and box align ──
   function drawStrikeZone() {
-    var cb = CLEAN_BOUNDS;
-    function czx(x) { return PAD_L + ((x - cb.xMin) / (cb.xMax - cb.xMin)) * PW; }
-    function czy(y) { return PAD_T + PH - ((y - cb.yMin) / (cb.yMax - cb.yMin)) * PH; }
+    function czx(x) { return toCanvasX(x); }
+    function czy(y) { return toCanvasY(y); }
     var zx1=czx(ZONE_X1), zx2=czx(ZONE_X2);
-    var zy1=czy(ZONE_Y2), zy2=czy(ZONE_Y1);   // zy1=top of zone (y=1.5), zy2=bottom (y=0)
+    var zy1=czy(ZONE_Y2), zy2=czy(ZONE_Y1);   // zy1=top of zone, zy2=bottom
     ctx.fillStyle = 'rgba(255,184,28,0.03)';
     ctx.fillRect(zx1, zy1, zx2-zx1, zy2-zy1);
     ctx.strokeStyle = 'rgba(255,184,28,0.85)';
@@ -1135,12 +1159,11 @@ function renderZone(name, type, pitch, container) {
     var cellPxH = SY2 - SY1;
     var sqW = (cellPxW / 3);
     var sqH = (cellPxH / 3);
-    // 4 outer corner cells: TL, TR, BL, BR — each at the actual corners of the strike zone
-    var outerH = sqH;  // each outer cell is one-third of zone height
-    outer[0].px = { x:SX1-GAP-sqW, y:SY1,          w:sqW, h:outerH };  // TL
-    outer[1].px = { x:SX2+GAP,     y:SY1,          w:sqW, h:outerH };  // TR
-    outer[2].px = { x:SX1-GAP-sqW, y:SY2-outerH,   w:sqW, h:outerH };  // BL
-    outer[3].px = { x:SX2+GAP,     y:SY2-outerH,   w:sqW, h:outerH };  // BR
+    var outerH = sqH;
+    outer[0].px = { x:SX1-GAP-sqW, y:SY1,        w:sqW, h:outerH };  // TL
+    outer[1].px = { x:SX2+GAP,     y:SY1,        w:sqW, h:outerH };  // TR
+    outer[2].px = { x:SX1-GAP-sqW, y:SY2-outerH, w:sqW, h:outerH };  // BL
+    outer[3].px = { x:SX2+GAP,     y:SY2-outerH, w:sqW, h:outerH };  // BR
 
     outer[0].intensity = maxOuter > 0 ? outer[0].count/maxOuter : 0;
     outer[1].intensity = maxOuter > 0 ? outer[1].count/maxOuter : 0;
@@ -1201,11 +1224,8 @@ function renderZone(name, type, pitch, container) {
   function drawHeatmap(filtered) {
     if (!filtered.length) return;
 
-    // Higher resolution grid for smoother output
     var GW = 200, GH = 200;
     var density = new Float32Array(GW * GH);
-
-    // Scale sigma based on pitch count — more pitches = tighter kernel
     var SIGMA = Math.max(6, Math.min(14, 120 / Math.sqrt(filtered.length + 1)));
 
     filtered.forEach(function(s) {
@@ -1222,7 +1242,6 @@ function renderZone(name, type, pitch, container) {
       }
     });
 
-    // Use 95th percentile as max to avoid single outlier washing out colours
     var vals = [];
     for (var i = 0; i < density.length; i++) { if (density[i] > 0) vals.push(density[i]); }
     if (!vals.length) return;
@@ -1240,9 +1259,7 @@ function renderZone(name, type, pitch, container) {
       for (var px = 0; px < GW; px++) {
         var val = Math.min(density[py * GW + px] / maxD, 1.0);
         if (val < 0.01) continue;
-
         var r, g, b, a;
-        // 5-stop colour scale: dark navy → blue → cyan → green → yellow → red
         if (val < 0.2) {
           var t = val / 0.2;
           r = Math.round(8   + t * (30  - 8));
@@ -1267,12 +1284,9 @@ function renderZone(name, type, pitch, container) {
           var t = (val - 0.8) / 0.2;
           r = Math.round(240 + t * (220 - 240));
           g = Math.round(210 + t * (20  - 210));
-          b = Math.round(0);
+          b = 0;
         }
-
-        // Alpha: transparent at low density, opaque at high
         a = Math.round(Math.pow(val, 0.5) * 230);
-
         var idx = (py * GW + px) * 4;
         imgData.data[idx]   = r;
         imgData.data[idx+1] = g;
@@ -1282,14 +1296,12 @@ function renderZone(name, type, pitch, container) {
     }
     octx.putImageData(imgData, 0, 0);
 
-    // Draw stretched to canvas with bilinear smoothing for the continuous look
     ctx.save();
     ctx.imageSmoothingEnabled = true;
     ctx.imageSmoothingQuality = 'high';
     ctx.drawImage(offscreen, 0, 0, W, H);
     ctx.restore();
 
-    // Legend scale bar
     var scaleX=PAD_L+PW+4, scaleH=PH*0.6, scaleY=PAD_T+PH*0.2;
     var grad=ctx.createLinearGradient(0,scaleY,0,scaleY+scaleH);
     grad.addColorStop(0,   'rgb(220,20,0)');
