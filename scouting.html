@@ -574,9 +574,20 @@
       </div>
     </div>
 
-    <div class="cheat-sheet-section" id="fielder-cheat-section" style="display:none">
-      <div class="cheat-sheet-title">Fielder Cheat Sheet — Opponent Batters</div>
-      <div class="cheat-cards-grid" id="fielder-cards-grid"></div>
+    <div id="fielder-cheat-section" style="display:none;margin-top:48px">
+      <div class="cheat-sheet-title" id="fielder-cheat-title">Fielder Cheat Sheet</div>
+      <!-- 3x5 card -->
+      <div id="fielder-card-wrap" style="
+        width:7.5in; max-width:100%;
+        background:#0e1525;
+        border:1.5px solid rgba(255,184,28,0.4);
+        border-radius:6px;
+        padding:10px 14px;
+        font-family:'DM Mono',monospace;
+        overflow-x:auto;
+      ">
+        <table id="fielder-card-table" style="width:100%;border-collapse:collapse;font-size:9px;"></table>
+      </div>
     </div>
 
   </div>
@@ -1067,133 +1078,80 @@
     d.save('scouting_'+player.name.replace(/ /g,'_')+'_pitcher.pdf');
   }
 
-  // ── Fielder Cheat Sheet ────────────────────────────────────────────
-  // Shows every batter as a fielder: where they hit the ball (spray + contact)
-  // so fielders know where to position
+  // Fielder Cheat Sheet — compact table showing all batters on selected team
   function buildFielderCheatSheet(teamId) {
     var section = document.getElementById('fielder-cheat-section');
-    var grid    = document.getElementById('fielder-cards-grid');
+    var table   = document.getElementById('fielder-card-table');
     if (selType !== 'batter') { section.style.display = 'none'; return; }
 
     var team = TEAMS_SC.find(function(t){ return t.id === teamId; });
 
-    // Get ALL batters across all teams — fielders need to know opponents
-    // Filter to batters who have faced this team's pitchers
-    var allBatters = DATA.pitches.filter(function(e) {
-      // Include batters whose scatter has at least one pitch from this team's pitchers
-      if (!e.scatter) return false;
-      return e.scatter.some(function(s){ 
-        var pt = resolveTeam(s.pitcher_team);
-        return pt && pt.id === teamId;
-      });
-    });
-
-    // If no opponent data, just show all batters with pitch data excluding this team
-    if (!allBatters.length) {
-      allBatters = DATA.pitches.filter(function(e) {
-        var t = resolveTeam(e.team);
-        return !(t && t.id === teamId);
-      });
-    }
-
-    // Fallback: show all batters not on this team from summary
-    var batterNames = DATA.summary.filter(function(p){
-      var t = resolveTeam(p.batter_team);
-      return !(t && t.id === teamId);
-    }).map(function(p){ return p.batter; });
-
-    if (!batterNames.length && !allBatters.length) { section.style.display = 'none'; return; }
-    section.style.display = 'block';
-    grid.innerHTML = '';
-
-    // Build from pitches.json — one card per batter not on this team
     var seen = {};
     DATA.pitches.forEach(function(e) {
       if (!e.scatter || !e.scatter.length) return;
       var t = resolveTeam(e.team);
-      if (t && t.id === teamId) return; // skip this team's own batters
+      if (!(t && t.id === teamId)) return;
       if (seen[e.batter]) return;
       seen[e.batter] = e;
     });
 
-    var opponents = Object.values(seen).sort(function(a,b){ return a.batter.localeCompare(b.batter); });
+    var batters = Object.values(seen).sort(function(a,b){ return a.batter.localeCompare(b.batter); });
+    if (!batters.length) { section.style.display = 'none'; return; }
 
-    if (!opponents.length) { section.style.display = 'none'; return; }
+    document.getElementById('fielder-cheat-title').textContent = team.name.toUpperCase() + ' — FIELDER CHEAT SHEET';
+    section.style.display = 'block';
 
-    opponents.forEach(function(entry) {
+    var rows = batters.map(function(entry) {
       var sc = entry.scatter || [];
       var batted = sc.filter(function(s) {
         return ['Groundout','Flyout','Single','Double','Triple','Home Run',
                 'Lineout','Popout','Error','Double Play','Sacrifice Fly'].includes(s.outcome);
       });
-
       var pull     = batted.filter(function(s){ return s.spray === 'Pull'; }).length;
       var straight = batted.filter(function(s){ return s.spray === 'Straightaway'; }).length;
       var opp      = batted.filter(function(s){ return s.spray === 'Opposite Field'; }).length;
       var sprayTot = pull + straight + opp;
-
       var gb = batted.filter(function(s){ return s.contact === 'Ground Ball'; }).length;
       var fb = batted.filter(function(s){ return s.contact === 'Fly Ball'; }).length;
       var ld = batted.filter(function(s){ return s.contact === 'Line Drive'; }).length;
       var pu = batted.filter(function(s){ return s.contact === 'Pop Up'; }).length;
       var contactTot = gb + fb + ld + pu;
-
-      // Get batting team color
-      var batterTeam = resolveTeam(entry.team);
-      var tc = batterTeam ? (batterTeam.primaryColor || batterTeam.color || '#FFB81C') : '#FFB81C';
-
-      // Get summary stats if available
-      var sumEntry = DATA.summary.find(function(p){ return p.batter === entry.batter; });
-
-      function pct(n, tot){ return tot ? Math.round(n/tot*100)+'%' : '—'; }
-      function bar(n, tot, color){
-        var w = tot ? Math.round(n/tot*100) : 0;
-        return '<div class="cheat-stat-bar"><div class="cheat-stat-bar-fill" style="width:'+w+'%;background:'+color+'"></div></div>';
-      }
-
-      var card = document.createElement('div');
-      card.className = 'cheat-card';
-      card.style.setProperty('--tc', tc);
-
-      var metaStr = '';
-      if (sumEntry) {
-        metaStr = f3(sumEntry.AVG) + ' AVG &nbsp;|&nbsp; ' + fN(sumEntry.HR) + ' HR &nbsp;|&nbsp; ' + fN(sumEntry.K) + ' K';
-      } else if (batterTeam) {
-        metaStr = batterTeam.name;
-      }
-
-      card.innerHTML =
-        '<div class="cheat-card-header">' +
-          '<div class="cheat-card-name">' + entry.batter + '</div>' +
-          '<div class="cheat-card-meta">' + metaStr + '</div>' +
-        '</div>' +
-        '<div class="cheat-card-body">' +
-          '<div class="cheat-stat-group">' +
-            '<div class="cheat-stat-group-label">Spray Direction</div>' +
-            '<div class="cheat-stat-row"><span class="cheat-stat-label">Pull</span><span class="cheat-stat-val">' + pct(pull,sprayTot) + '</span></div>' +
-            bar(pull,sprayTot,'#f87171') +
-            '<div class="cheat-stat-row" style="margin-top:4px"><span class="cheat-stat-label">Straightaway</span><span class="cheat-stat-val">' + pct(straight,sprayTot) + '</span></div>' +
-            bar(straight,sprayTot,'#FFB81C') +
-            '<div class="cheat-stat-row" style="margin-top:4px"><span class="cheat-stat-label">Opposite</span><span class="cheat-stat-val">' + pct(opp,sprayTot) + '</span></div>' +
-            bar(opp,sprayTot,'#60a5fa') +
-            (sprayTot ? '<div style="font-family:DM Mono,monospace;font-size:8px;color:rgba(255,255,255,0.2);margin-top:5px">' + sprayTot + ' batted balls</div>' : '<div style="font-family:DM Mono,monospace;font-size:8px;color:rgba(255,255,255,0.15);margin-top:5px">no batted ball data</div>') +
-          '</div>' +
-          '<div class="cheat-stat-group">' +
-            '<div class="cheat-stat-group-label">Contact Type</div>' +
-            '<div class="cheat-stat-row"><span class="cheat-stat-label">Ground Ball</span><span class="cheat-stat-val">' + pct(gb,contactTot) + '</span></div>' +
-            bar(gb,contactTot,'#34d399') +
-            '<div class="cheat-stat-row" style="margin-top:4px"><span class="cheat-stat-label">Fly Ball</span><span class="cheat-stat-val">' + pct(fb,contactTot) + '</span></div>' +
-            bar(fb,contactTot,'#a78bfa') +
-            '<div class="cheat-stat-row" style="margin-top:4px"><span class="cheat-stat-label">Line Drive</span><span class="cheat-stat-val">' + pct(ld,contactTot) + '</span></div>' +
-            bar(ld,contactTot,'#fb923c') +
-            '<div class="cheat-stat-row" style="margin-top:4px"><span class="cheat-stat-label">Pop Up</span><span class="cheat-stat-val">' + pct(pu,contactTot) + '</span></div>' +
-            bar(pu,contactTot,'#6b7280') +
-            (contactTot ? '<div style="font-family:DM Mono,monospace;font-size:8px;color:rgba(255,255,255,0.2);margin-top:5px">' + contactTot + ' tracked</div>' : '<div style="font-family:DM Mono,monospace;font-size:8px;color:rgba(255,255,255,0.15);margin-top:5px">no contact data</div>') +
-          '</div>' +
-        '</div>';
-
-      grid.appendChild(card);
+      function pct(n, tot) { return tot ? Math.round(n/tot*100)+'%' : '—'; }
+      var sum = DATA.summary.find(function(p){ return p.batter === entry.batter; });
+      return {
+        name: entry.batter,
+        avg:  sum ? f3(sum.AVG) : '—',
+        hr:   sum ? fN(sum.HR)  : '—',
+        pull: pct(pull,sprayTot), straight: pct(straight,sprayTot), opp: pct(opp,sprayTot),
+        gb:   pct(gb,contactTot), fb: pct(fb,contactTot), ld: pct(ld,contactTot), pu: pct(pu,contactTot),
+        bip:  batted.length
+      };
     });
+
+    var gold = '#FFB81C';
+    var headers = ['PLAYER','AVG','HR','PULL%','STR%','OPP%','GB%','FB%','LD%','PU%'];
+    var html = '<thead><tr>';
+    headers.forEach(function(h, i) {
+      var sep  = (i===3||i===6) ? 'border-left:1px solid rgba(255,255,255,0.1);' : '';
+      var align = i===0 ? 'text-align:left' : 'text-align:center';
+      html += '<th style="padding:4px 7px;'+align+';'+sep+'color:'+gold+';font-size:8px;letter-spacing:1.2px;font-weight:500;white-space:nowrap;border-bottom:1px solid rgba(255,184,28,0.45)">'+h+'</th>';
+    });
+    html += '</tr></thead><tbody>';
+
+    rows.forEach(function(r, i) {
+      var bg = i%2===0 ? 'rgba(255,255,255,0.025)' : 'transparent';
+      var vals = [r.name, r.avg, r.hr, r.pull, r.straight, r.opp, r.gb, r.fb, r.ld, r.pu];
+      html += '<tr style="background:'+bg+'">';
+      vals.forEach(function(v, ci) {
+        var sep   = (ci===3||ci===6) ? 'border-left:1px solid rgba(255,255,255,0.07);' : '';
+        var align = ci===0 ? 'text-align:left;color:#fff;font-weight:500' : 'text-align:center;color:rgba(255,255,255,0.8)';
+        var extra = ci===10 ? 'font-size:8px;color:rgba(255,255,255,0.28)' : 'font-size:9px';
+        html += '<td style="padding:2px 7px;'+align+';'+sep+extra+';border-bottom:1px solid rgba(255,255,255,0.04);white-space:nowrap">'+v+'</td>';
+      });
+      html += '</tr>';
+    });
+    html += '</tbody>';
+    table.innerHTML = html;
   }
 
     buildTeamPicker();
