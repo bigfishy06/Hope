@@ -859,7 +859,6 @@ function renderOverview(name, type, sum, pitch) {
             // Re-trigger bar animations
             wrap.querySelectorAll('.sbr-fill').forEach(function(el){ if(el.dataset.width) el.style.width=el.dataset.width; });
             wrap.querySelectorAll('.savant-bubble').forEach(function(el){ if(el.dataset.left) el.style.left=el.dataset.left; });
-          });
         });
       }
     }, 50);
