@@ -1081,14 +1081,28 @@ function renderZone(name, type, pitch, container) {
 
   var dateFilterHTML = '';
   if (type === 'pitcher' && allDates.length > 1) {
-    var dateOptions = '<option value="all">Season</option>' +
+    // Season options: one per unique year e.g. "Summer 2025"
+    var seasonOptions = '<option value="all">All</option>' +
+      allYears.map(function(y) { return '<option value="year:'+y+'">Summer '+y+'</option>'; }).join('');
+
+    // Game date options
+    var dateOptions = '<option value="all">All</option>' +
       allDates.map(function(d) { return '<option value="'+d+'">'+d+'</option>'; }).join('');
 
     dateFilterHTML =
-      '<div style="margin-bottom:16px">' +
+      '<div style="margin-bottom:16px;display:flex;gap:20px;flex-wrap:wrap">' +
+
+      '<div>' +
+      '<div style="font-family:var(--font-mono);font-size:10px;color:var(--text-dim);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px">Date Filter</div>' +
+      '<select id="zone-season-select" style="background:#0e1525;border:1.5px solid rgba(255,184,28,0.35);border-radius:6px;color:#FFB81C;font-family:var(--font-mono);font-size:11px;padding:8px 12px;cursor:pointer;outline:none;letter-spacing:0.5px;">' + seasonOptions + '</select>' +
+      '</div>' +
+
+      '<div>' +
       '<div style="font-family:var(--font-mono);font-size:10px;color:var(--text-dim);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px">Game Date</div>' +
-      '<select id="zone-date-select" style="background:#0e1525;border:1.5px solid rgba(255,184,28,0.35);border-radius:6px;color:#FFB81C;font-family:var(--font-mono);font-size:11px;padding:8px 12px;cursor:pointer;outline:none;letter-spacing:0.5px;">' +
-      dateOptions + '</select></div>';
+      '<select id="zone-date-select" style="background:#0e1525;border:1.5px solid rgba(255,184,28,0.35);border-radius:6px;color:#FFB81C;font-family:var(--font-mono);font-size:11px;padding:8px 12px;cursor:pointer;outline:none;letter-spacing:0.5px;">' + dateOptions + '</select>' +
+      '</div>' +
+
+      '</div>';
   }
 
   container.innerHTML =
@@ -1532,7 +1546,10 @@ function renderZone(name, type, pitch, container) {
       if (!resultMatch(s, activeResult)) return false;
       if (activeType !== 'all' && (s.pitch_type || s.type || 'Unknown') !== activeType) return false;
       if (activeHand !== 'all' && (s.batter_side || s.side || '') !== activeHand) return false;
-      if (allDates.length > 1 && activeZoneDate !== 'all' && s.date !== activeZoneDate) return false;
+      if (allDates.length > 1) {
+        if (activeSeasonFilter !== 'all' && s.date && !s.date.startsWith(activeSeasonFilter.replace('year:',''))) return false;
+        if (activeZoneDate !== 'all' && s.date !== activeZoneDate) return false;
+      }
       return true;
     });
 
@@ -1568,7 +1585,10 @@ function renderZone(name, type, pitch, container) {
       if (!resultMatch(s, activeResult)) return false;
       if (activeType !== 'all' && (s.pitch_type || s.type || 'Unknown') !== activeType) return false;
       if (activeHand !== 'all' && (s.batter_side || s.side || '') !== activeHand) return false;
-      if (allDates.length > 1 && activeZoneDate !== 'all' && s.date !== activeZoneDate) return false;
+      if (allDates.length > 1) {
+        if (activeSeasonFilter !== 'all' && s.date && !s.date.startsWith(activeSeasonFilter.replace('year:',''))) return false;
+        if (activeZoneDate !== 'all' && s.date !== activeZoneDate) return false;
+      }
       return true;
     });
     filtered.forEach(function(s) {
@@ -1644,12 +1664,24 @@ function renderZone(name, type, pitch, container) {
     });
   });
 
-  // ── Date filter (pitcher only) ────────────────
+  // ── Date filters (pitcher only) ───────────────
   if (type === 'pitcher' && allDates.length > 1) {
+    var activeSeasonFilter = 'all';
+
     var zoneDateSel = document.getElementById('zone-date-select');
     if (zoneDateSel) {
       zoneDateSel.addEventListener('change', function() {
         activeZoneDate = this.value;
+        drawZone();
+      });
+    }
+
+    var zoneSeasonSel = document.getElementById('zone-season-select');
+    if (zoneSeasonSel) {
+      zoneSeasonSel.addEventListener('change', function() {
+        activeSeasonFilter = this.value;
+        // Reset game date to all when season changes
+        if (zoneDateSel) { zoneDateSel.value = 'all'; activeZoneDate = 'all'; }
         drawZone();
       });
     }
