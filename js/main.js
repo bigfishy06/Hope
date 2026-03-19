@@ -820,7 +820,7 @@ function renderOverview(name, type, sum, pitch) {
     var seasonLabel = pmYears.length ? pmYears[0] + ' Summer' : 'Season';
     var pmDateFilterHTML = '<div style="margin-bottom:16px;padding:0 24px">' +
       '<div style="font-family:var(--font-mono);font-size:10px;color:var(--text-dim);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px">Season</div>' +
-      '<select id="pm-season-select" style="background:#0e1525;border:1.5px solid rgba(255,184,28,0.35);border-radius:6px;color:#FFB81C;font-family:var(--font-mono);font-size:11px;padding:8px 28px 8px 12px;cursor:pointer;outline:none;letter-spacing:0.5px;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23FFB81C'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center;">' +
+      '<select id="pm-season-select" style="background:#0e1525;border:1.5px solid rgba(255,184,28,0.35);border-radius:6px;color:#FFB81C;font-family:var(--font-mono);font-size:11px;padding:8px 12px;cursor:pointer;outline:none;letter-spacing:0.5px;">' +
         '<option value="season">Season</option>' +
         (pmYears.length ? '<option value="'+pmYears[0]+'">Summer '+pmYears[0]+'</option>' : '') +
       '</select></div>';
@@ -1087,7 +1087,7 @@ function renderZone(name, type, pitch, container) {
     dateFilterHTML =
       '<div style="margin-bottom:16px">' +
       '<div style="font-family:var(--font-mono);font-size:10px;color:var(--text-dim);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px">Game Date</div>' +
-      '<select id="zone-date-select" style="background:#0e1525;border:1.5px solid rgba(255,184,28,0.35);border-radius:6px;color:#FFB81C;font-family:var(--font-mono);font-size:11px;padding:8px 28px 8px 12px;cursor:pointer;outline:none;letter-spacing:0.5px;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23FFB81C'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center;">' +
+      '<select id="zone-date-select" style="background:#0e1525;border:1.5px solid rgba(255,184,28,0.35);border-radius:6px;color:#FFB81C;font-family:var(--font-mono);font-size:11px;padding:8px 12px;cursor:pointer;outline:none;letter-spacing:0.5px;">' +
       dateOptions + '</select></div>';
   }
 
